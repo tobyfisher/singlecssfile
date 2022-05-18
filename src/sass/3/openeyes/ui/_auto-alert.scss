@@ -1,0 +1,93 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Auto alerts
+// System generated flags
+.auto-alert {
+	padding: 4px 10px 4px 28px; // allow for icons
+	margin: 3px 0;
+
+	@include font-size(13);
+	font-weight: $oe-font-medium;
+	color: $oe-text;
+
+	border: 1.5px solid $oe-line;
+	border-radius: 15px;
+
+	&.pad-v {
+		margin: 5px 0;
+	}
+
+	background: 8px 6px / 12px $oe-text-inverted url(svg-all("i/flag-grey")) no-repeat;
+
+	&.inline {
+		@include font-size(11);
+		display: inline-block;
+		padding: 1px 10px 1px 25px;
+		background-position: 8px 3px;
+		background-size: 11px;
+
+		&.dismissible::after {
+			width: 11px;
+			height: 11px;
+			top:3px;
+		}
+	}
+
+	&.green {
+		background-image: url(svg-all("i/flag-green"));
+		border-color: $oe-status-green;
+
+		&.risk {
+			background-image: url(svg-all("i/triangle-green"));
+		}
+	}
+
+	&.red {
+		background-image: url(svg-all("i/flag-red"));
+		border-color: $oe-status-red;
+
+		&.risk {
+			background-image: url(svg-all("i/triangle-red"));
+		}
+	}
+
+	&.amber {
+		background-image: url(svg-all("i/flag-orange"));
+		border-color: $oe-status-amber;
+
+		&.risk {
+			background-image: url(svg-all("i/triangle-orange"));
+		}
+	}
+
+	// dismissible
+	&.dismissible {
+		cursor: pointer;
+		position: relative;
+		padding-right: 25px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 5px;
+			top: 5.5px;
+			width: 15px;
+			height: 15px;
+			background: center / contain url(svg-themed("i/remove-circle")) no-repeat;
+			opacity: 0.5;
+		}
+
+		&:focus,
+		&:hover,
+		&:active {
+			background-color: $oe-btn-blue-hint;
+			border-color: $oe-text-light;
+
+			&::after {
+				opacity: 1;
+			}
+		}
+	}
+}

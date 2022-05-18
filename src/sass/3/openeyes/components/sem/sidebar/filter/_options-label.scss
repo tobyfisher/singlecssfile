@@ -1,0 +1,35 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Sidebar - Filter Options
+
+.sidebar-filter-options {
+
+	// Pro-theme label highlights
+	label {
+		&.highlight {
+			color:$oe-dark-user-input-text;
+			background:rgba($oe-dark-user-inputs,0.6);
+			
+			&:hover, &:focus, &:active {
+				background:rgba($oe-dark-user-inputs,0.8);
+			}
+			
+			// due to the styling the white (not checked)
+			// 'looks' more prominent that the checked state
+			// so... 	
+			input[type=checkbox] {
+				opacity:0.1;
+				&:checked  {
+					opacity:1;
+				}
+			} 
+			
+		}
+	}
+	
+}
+
+
+

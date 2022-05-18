@@ -1,0 +1,109 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.fast-date-picker {
+	
+	.year {
+		@include flex( flex-start, flex-start ); 
+		
+		.century {
+			div {
+				@include flex( center, center ); 
+				background-color: $oe-adder-option;
+				cursor: pointer;
+				@include font-size(21);
+				
+				width: 45px;
+				margin:0 2px 0 0;
+				
+				// 1900
+				&:first-child{
+					height: 93px;
+					margin-bottom: 2px;
+				}
+				// 2000
+				&:last-child{
+					height:133px;
+				}
+				
+				&:hover, 
+				&:focus { 
+					color: #fff; 
+					background-color: $oe-adder-option-hover;
+				}
+				
+				&.selected {
+					color: #fff; 
+					background-color: $oe-btn-blue;
+				}
+			}
+		}
+		
+		// decade and single combined
+		ul.years {
+			height: 231px; // #{38.5px * 6};
+			overflow-x: hidden; 
+			overflow-y: auto; 
+			
+			&::-webkit-scrollbar { display: none; } // Chrome, Safari
+			-ms-overflow-style: none;  //  Edge
+			scrollbar-width: none;  // Firefox
+			
+			// style the same as 'numbers' in 'add-options' in adder
+			li {
+				@include flex( center, center );
+				@include font-size(16);
+				width: 64px;
+				height: 36.5px;
+				cursor: pointer;
+				margin:0 2px 2px 0;
+				background-color: $oe-adder-option;
+				
+				&:hover, 
+				&:focus { 
+					color: #fff; 
+					background-color: $oe-adder-option-hover;
+				}
+				
+				&.selected {
+					color: #fff; 
+					background-color: $oe-btn-blue;
+				}
+				
+			}
+		}
+		
+		// grid
+		// <ul>
+		.decade, 
+		.single {
+			// style the same as 'numbers' in 'add-options' in adder
+			li {
+				display:block;
+				width: 32px;
+				cursor: pointer;
+				padding:3px 8px;
+				margin:0 4px 2px 0;
+				background-color: $oe-adder-option;
+				text-align: center;
+				
+				&:hover, 
+				&:focus { 
+					color: #fff; 
+					background-color: $oe-adder-option-hover;
+				}
+				
+				&.selected {
+					color: #fff; 
+					background-color: $oe-btn-blue;
+				}
+				
+			}
+		}
+	}
+}
+
+
+
+

@@ -1,0 +1,59 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// Timeline options
+
+// starting with strict coupling...
+.oe-lightning-viewer {
+	.lightning-timeline {
+		
+		z-index:$lightning-z-timeline-options; // for the timeline options popup. 
+		
+		// popup options.
+		// like Shortcuts BUT this is theme-able! 
+		.timeline-options {
+			
+			.change-timeline {
+				position:absolute;
+				top:100%;
+				left:0;
+				width:300px; // arbitury
+				
+				background:$oe-btn-blue;
+				padding:12px;
+				
+				@include font-size(12);
+				font-weight:400;
+				color:rgb(205,205,205);
+				
+				li {
+					display:block; // not using flex, block works better here (because of the columns)
+					margin:0 0 2px 0;
+					height:19px;
+					@include flex( center, flex-start );
+					@include font-size(12);
+					font-weight:400;
+					//background: ;
+					cursor: pointer;
+					
+					&:hover, &:active, &:focus, 
+					&.selected {
+						background-color:$oe-btn-blue-dark;
+						color:#fff;
+					}
+					
+					&:last-child {
+						margin:0 0 0 0;
+					}
+					
+					// icon
+					i {
+						margin:0 10px 0 0;
+					}
+				}
+							
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Header area.
+
+@import "_base"; 
+@import "flags"; // for openERS
+
+@import "oe-patient/_all";
+@import "oe-user"; 
+@import "oe-nav/_all";
+
+// Worklists v2!
+@import "clinic-context";
+
+// a basic header layout. created for Cataract Audit 
+// but made generic...
+@import "basic/_base";

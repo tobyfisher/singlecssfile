@@ -1,0 +1,41 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Printing from Browser (Ctrl-P)
+// is not allowed and should be  
+// restricted as much as possible!
+
+#oe-restrict-print {
+	display:none;
+	width: 100%;
+	margin: 2em 0; 
+	padding: 1em;
+	
+	h1 {
+		font-size:2em;
+	}
+	
+}
+
+@media print {
+	
+	html {
+		background: white;
+	}	
+	
+	body.open-eyes {
+		display:block !important;
+		width:100%;
+		background: white;
+		color: black; 
+		  
+		> * {
+		 display:none !important;
+		}
+		
+		#oe-restrict-print {
+			display:block !important;
+		} 
+	}
+}

@@ -1,0 +1,94 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE PRINT
+// CSS grabbed and modified from OE v2 print styling.
+// not great v3.0 requires a quick fix to work with current DOM
+
+html {
+	background: #fff;
+}
+
+body {
+	font-family: 'Roboto','Helvetica','Arial',sans-serif;
+	font-weight:400;
+	font-size: $fontsize-base;
+	line-height: 1.3;
+	
+	margin:0;
+	
+	@media screen {
+		// when view in iframe in a popup it needs padding, not need when printed
+		padding:20px; 
+	}
+	
+	// Signature pad JS only screen: 
+	&.full-signature-pad{
+		height:100vh; 
+		display:flex;
+	}
+
+	&.void {
+		background: center / 50% url(build-svg-path('print','void')) repeat-y;
+	}
+
+}
+
+// empty <div>
+.spacer {
+	height:1rem;
+}
+
+.group {
+	margin:2rem 0;
+}
+
+.pageBreak, 
+.break {
+	page-break-after: always !important;
+}
+
+hr {
+	border-top:2px solid #ddd;
+	
+	&.divider {
+		display:block;
+		margin:20px 0; 
+		border: 0;
+		border-top:4px solid #bbb;
+	}
+}
+
+// match a hidden table with it's border
+.box {
+	width: 100%;
+	border:2px solid $table-border-color;
+	padding:5px 8px;
+	margin:0.5em 0 1em 0;
+	
+	// try to avoid breaking up box data
+	page-break-inside:avoid !important;	
+	break-inside:avoid !important;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+// clearfix is unnecessary (should be flex)
+// but keeping in case it helps 
+// with DOM transition 
+.clearfix {
+	zoom: 1;
+	&:before, &:after { content: ""; display: table; }
+	&:after { clear: both; }
+}
+
+div.clearfix {
+    clear: both;
+}
+
+
+
+

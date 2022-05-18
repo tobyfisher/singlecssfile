@@ -1,0 +1,59 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Elements
+
+@import "_base"; 	
+
+// VIEW / EDIT states:
+@import "element-data-view";
+@import "element-fields-edit";
+@import "active-inactive";
+
+@import "full-extended";
+@import "element-eyes";
+@import "tiles";
+@import "element-both-eyes";
+
+@import "eye-divider";
+@import "element-header";
+@import "header-actions";
+@import "element-actions";
+@import "tables";
+@import "data-grouping";				// replaces 'data-row', 'field-row' AND adds <hr> divider
+@import "typography";					// None, Note, Large-text, etc
+@import "restrict-data-height";
+@import "eye-icon-header";
+@import "add-user-comments";
+
+// Eyedraw (v2.5)
+@import "eyedraw/_ed25";
+
+// Specific elements
+@import "specific/correspondence/_all";		// letter layout for correspondence
+@import "specific/table-calendar";   		// Schedule Op Calendar table
+@import "specific/table-medications";   		// Schedule Op Calendar table
+@import "specific/search-in-event"; 		// only used in Examination (at the moment)
+@import "specific/upload-box"; 				// only used in Document Upload
+@import "specific/strabismus/_all"; 		// Strabismus custom elements
+@import "specific/message-states"; 		
+@import "specific/injection-mgmt/_all";  // injection management
+@import "specific/drug-admin";  // injection management 
+@import "specific/botox/_all";  // injection management
+@import "specific/attachments";
+@import "specific/question-answer";
+@import "specific/diagnosis-mgmt";
+
+// IDG concept work
+@import "idg/reduce-height";
+	
+	
+
+
+
+
+
+
+
+

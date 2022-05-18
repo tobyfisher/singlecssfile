@@ -1,0 +1,19 @@
+// old approach was to class attribute
+// however, this is slow and no all ed
+// icons have a specific general class
+
+// [class*="icon-ed-"] -- old (slow) method
+.ed-i {
+	display: inline-block;
+	vertical-align: middle;
+	width: 32px;
+	height: 32px;
+
+	// SpriteSmith generates png
+	background-image: url('../img/eyedraw-doodle-icons-32x32.png');
+
+	&.small {
+		width: 16px;
+		height: 16px;
+	}
+}

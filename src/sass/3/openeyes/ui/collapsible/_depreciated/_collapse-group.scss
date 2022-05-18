@@ -1,0 +1,135 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// Collapse GROUP
+// Provides a DOM structure to show/hide
+// grouped content in UI.
+// Uses + and ^ icons. Used in the sidebar
+// it visually shows a UI area
+.collapse-group {
+	position:relative;
+	width:100%;
+
+	// combines: 
+	// "collapse-group-icon" + "collapse-group-header"
+	// icon is then controlled through CSS classes
+	.header-icon {
+		position:relative;
+		@include font-size(14);
+		font-weight:$oe-font-medium;
+		color:$oe-text-highlight;
+		padding:0 30px 0 0;    // allow for icon background
+		margin:5px 0;
+		cursor:pointer;  
+			
+		// no background-opacity in CSS ... 
+		// using collapse-data approach
+		&:after {
+			content: "";
+			position: absolute;
+			top:1px;
+			bottom:0;  // fill vertical area
+			right:2px; 	// visual alignment tweak
+			width:19px; // allow for bigger icons (if needed)
+			
+			
+			// put the expand collapse icon into the background
+			background: url( svg-themed('i/plus-bold') ) right top no-repeat;
+			background-size: 15px;
+			
+			opacity:$oe-icon-opacity; //  now i can use opacity
+		}
+	
+		// '.expand' is the default icon state, as content should be hidden
+		// no need to explictly state the 'expand class', JS will add this.
+		&.collapse {
+			&:after {
+				background-image: url( svg-themed('i/arrow-up-bold') );
+			}
+		}
+		
+		// show user interaction
+		&:hover, &:active {
+			&:after {
+				opacity: 1;
+			}	
+		}
+		
+		.count {
+			font-size:80%;
+		}
+	}
+
+	
+	// **** Replaced by above class: header-icon
+	.collapse-group-icon {
+		display:block; position:absolute; top:5px; right:3px; cursor: pointer;
+	}	
+	// **** Replaced by above class: header-icon
+	.collapse-group-header {	
+		cursor: pointer;
+	} 		
+	
+	// content area to expand/collapse (hook for JS)
+	// but I may need to style it... you never know!
+	// .collapse-group-content {}	
+	
+	
+	// 'highlight' the collapse AREA
+	// only used in CVI Disorders (EDIT) but might be useful elsewhere...
+	&.highlight {
+		background-color: rgba($oe-user-inputs,0.4);
+		padding:2px 5px 8px 5px;
+		margin:0 0 4px 0;
+		
+		.header-icon {
+			&:after {
+				right:5px; // icon needs moving in a bit
+			}
+		}
+		
+		&:hover, &:focus {
+			.collapse-group-header {
+				color:$oe-text-highlight;
+			}
+		}
+	}
+}
+
+// Collapse GROUP 
+// Usage variations... 
+
+.sidebar {
+	// PRO-theme!
+	//
+	.header-icon {
+		@include font-size(12);
+		padding-left:5px;
+		margin:12px 0 6px 0; 
+		color: $oe-dark-text-light;
+		font-weight: $oe-font-light;
+		
+		&:after {
+			background-image: url( svg-dark-fixed('i/plus') );
+		}
+		
+		&.collapse {
+			&:after {
+				background-image: url( svg-dark-fixed('i/arrow-up') );
+			}
+		}
+
+		&:hover, &:focus {
+			color: $oe-dark-text;
+		}
+	}
+
+	// **** Replaced by above class: header-icon
+	h3.collapse-group-header {
+		@include font-size(13); font-weight:300; color: $oe-dark-text-light; padding:10px 25px 5px 5px;   
+		&:hover, &:focus {
+			color: $oe-dark-text;
+		}
+	}	
+}

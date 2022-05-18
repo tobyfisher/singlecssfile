@@ -1,0 +1,69 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// Patient Overview page, is in SEM, and has Element content
+// it also have some different styling options for 'overview' content
+// this is content pulled from the pop
+
+.main-event {
+	
+	// patient overview content is split over 2 columns
+	// it's wrapped inside 'flex' 
+	.patient-overview {
+
+		width:50%;
+		&:first-child {
+			width:47%;
+			padding-left:20px;
+		}
+		padding:0 10px;
+		
+		&:first-child {
+			margin-left:3px;
+		}
+		
+		
+		table.standard {
+			// allow the wrapper to pad this:
+			margin-top:0; 
+			
+			td {
+				// when adding a 4th row for CCT it was requested 
+				// the text was the same size as other data in Overview. 
+				// overide the font size in "standard"
+				@include font-size( 12 );
+			}
+			
+			// reduce height of <td> as Event icons increase it
+			&.clickable-rows {
+				td {
+					// careful! only update the required ones:
+					padding-top: 3px;
+					padding-bottom: 3px;
+				}
+			}
+			
+			tbody {
+				tr {
+					border-top-color: $oe-sem-element-bg;
+				}
+			}
+		}
+	}
+	
+	
+	table.situational-awareness {
+		.data {
+			margin:0 8px 0 0 ;
+			&:after {
+				content:'<span class="fade"> /</span>';
+			}
+			
+			&:last-child {
+				margin:0 0 0 0;
+			}
+		}
+	}
+	
+}

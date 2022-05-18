@@ -1,0 +1,61 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Header 
+// Provides a generic title and a 'right' space area
+// see Cataract Audit v2 skinning for example
+
+// title
+// positioned next to the logo
+.oe-hd-title {
+	position:absolute;
+	top:0; 
+	left:180px; 
+	height:$oe-header-height;
+	
+	@include flex(center, flex-start);
+	
+	@include font-size(16);
+	color:$oe-dark-text-light; 	// not themed
+	font-weight: 300;
+	
+	@include handheld(){
+		@include font-size(24);
+		font-weight: 400;
+	}
+	
+	
+	// in Whiteboard using dot-list.
+	// needs a slight tweak
+	ul.dot-list {
+		li {
+			margin-bottom:0;
+		}
+	}
+	
+}
+
+// right container
+.oe-hd-actions {
+	position:absolute;
+	top:0; 
+	right:10px; 
+	height:$oe-header-height;
+	@include flex(center, flex-start);
+	
+	@include font-size(16);
+	color:$oe-dark-text-light; 	// not themed
+	
+	button {
+		margin:0 8px 0 0;
+		&:last-child {
+			margin-right:0;
+		}
+	}
+	
+	// provide a "grouping" mechanism
+	.group {
+		margin:0 32px 0 0;
+	}
+}

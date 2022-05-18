@@ -1,0 +1,19 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Scrollbars
+// Chrome & Safari... (make it Appy!)
+::-webkit-scrollbar {
+    width: 6px;
+    height: 5px;
+}
+::-webkit-scrollbar-track {  
+	background: $scroll-track;
+}
+::-webkit-scrollbar-track-piece { 
+	background: $scroll-track;
+}
+::-webkit-scrollbar-thumb { 
+	background-color: $scroll-thumb;
+}

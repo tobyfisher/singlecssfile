@@ -1,0 +1,50 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Event Icons
+// All event icons are in event-icons.png (760px x 760px)
+// icons are sized at 76px
+// default size: 19px (25%); (default, most common size)
+// large size: 38px (50%); for event header
+
+// DOM 
+// <i class="oe-i-e CiExamination [large]"></i>
+
+.oe-i-e {
+	display: inline-block;
+	vertical-align: middle;
+
+	background-image: url("../img/event-icons-76x76.png");
+	background-repeat: no-repeat;
+	//background-size - set automatically by SpriteSmith
+	//background-position - set automatically by SpriteSmith
+
+	width: 19px;
+	height: 19px;
+
+	&.large {
+		width: 38px;
+		height: 38px;
+	}
+
+	// used 'inline' to 'pad' out the icon
+	&.pad {
+		margin: 0 4px;
+	}
+
+	// icons before text
+	&.pad-right {
+		margin: 0 8px 0 0;
+	}
+
+	// icons after text
+	&.pad-left {
+		margin: 0 0 0 8px;
+	}
+
+}
+
+// SCSS file automatically created by SpriteSmith
+@import "../../spritesheet/icons-events-sprites";
+

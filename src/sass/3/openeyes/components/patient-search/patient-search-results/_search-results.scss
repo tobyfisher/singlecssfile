@@ -1,0 +1,26 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Home: Search Results
+// Patient Search Results - right hand side
+
+.patient-search-results {
+	
+	// wrapper for <table> .messages
+	.results-all {
+		padding:10px 10px 20px 0;
+	}
+	
+	// <table>
+	.search-results {
+		width: 100%; // calc(100% - 300px); was flex but changed sub-grid
+		margin:10px 30px 20px 0;	
+
+		// <tr> is clickable make <tr> more button-ish 
+		th, td, {
+			padding:10px 6px;
+		}
+	}
+}
+

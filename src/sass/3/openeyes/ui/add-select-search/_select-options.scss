@@ -1,0 +1,95 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Element - Add - Select or Search
+// Popup box showing the common options 
+// and an input to allow search with autocomplete
+
+// NOTE: As it may be placed within another <table>
+// need to help avoid cascade issues: wrapped with .open-eyes to provide greater specificity. 
+
+.open-eyes .oe-add-select-search {	
+
+	// Option <ul> select lists are laid out using <table>
+	// HOWEVER this can be an issue when inserted into another <table>
+	// THEREFORE ensure all styles are set here, rather than relying on cascades
+	
+	table.select-options {
+			
+		thead {
+			tr {
+				border-top: none;
+				border-bottom: none;
+			}
+			
+			th {
+				@include font-size(10);
+				text-align: left;
+				color:$oe-text-light;
+				font-weight:$oe-font-medium;
+				padding:0 2px 3px 5px;
+				
+				&:last-child {
+					text-align: left;
+				}
+			}
+		}
+		
+		tbody {
+			tr {
+				border-top: none;
+				border-bottom: none;
+			}
+			
+			td {
+				// duplicated (and apparently unnecessary) declarations 
+				// are here to avoid cascade issues!!
+				// Note-to-self! DO NOT remove any declarations! ;)
+				
+				white-space: normal; // if used in <td> with 'nowrap' this needs overwriting
+				
+				vertical-align: top;
+				
+				@include font-size(12);
+				text-align: left;
+				padding:0 5px 0 6px; // space the list groups 
+				
+				border-left:2px solid $oe-adder-line;
+				
+				&:last-child {
+					@include font-size(12);
+					padding:0 0 0 6px;
+					text-align: left;
+				}
+				
+				  
+				&:first-child {
+					@include font-size(12);
+					padding:0 5px 0 0;
+					border-left:none;
+				}
+				
+				
+				// wrapper multiple group lists in the td 
+				// (but used all the time, even for single lists)
+				.lists-layout {
+					display:flex;
+					align-items:flex-start;
+					justify-content:flex-start;
+					
+					.list-wrap {
+						margin:0 0 0 2px;
+						&:first-child {
+							margin:0 0 0 0;
+						}
+					}
+
+				}				
+			}
+		}		
+	}
+}
+
+
+

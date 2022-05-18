@@ -1,0 +1,35 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Theatre Diaries
+
+.oe-theatre-diaries {
+	
+	.theatres-list {
+		
+		// e.g Theatre One (Kings Hospital) 
+		// group header
+		h2 {
+			@include font-size(19);
+			font-weight:$oe-font-light; 
+			margin:20px 0 15px 0;
+			color:$oe-text-light;
+		}
+		
+		// Theatre diary schedule group
+		.schedule-group {
+			position:relative;
+			background:$oe-bg-highlight;
+			padding:10px 5px 10px 10px;
+			margin:0 0 20px 0;			
+		}
+	}
+}
+
+
+@import "schedule-group/heading-actions";
+@import "schedule-group/theatre-bookings";
+@import "schedule-group/session-comments";
+@import "schedule-group/session-options";
+

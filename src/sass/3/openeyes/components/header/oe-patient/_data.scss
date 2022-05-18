@@ -1,0 +1,110 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Header - Patient
+
+.oe-patient {
+	
+	color:$oe-dark-text;
+	@include font-size(11);
+	
+	.patient-name {
+		position:absolute;
+		top:12px; 
+		left:0;
+		@include font-size(17);
+		font-weight:400;
+		line-height: 1; // reset here
+		
+		a {
+			&:hover, 
+			&:focus, 
+			&:active {
+				color:$oe-dark-text-active;
+			}
+		}
+	}
+	
+	.patient-details {
+		position:absolute;
+		bottom:0; 
+		left:0;
+		padding:0 20px 0 0;
+	}
+	
+	.patient-demo-icon {
+		position:absolute;
+		bottom:4px; 
+		right:0;
+	}
+
+
+	// removed .warning it was causing a conflict
+	// with the highlighter class, if you need it back
+	// change to .patient-warning!!
+	.hospital-number, 
+	.nhs-number, 
+	.patient-gender, 
+	.patient-age, 
+	.patient-died {
+		display:inline-block;
+		padding:0 3px 5px 5px;
+		border-left:1px solid $oe-dark-line;	
+		span {
+			&:first-of-type{
+				opacity:0.5;
+			} 
+			 
+		}
+		em {
+			opacity:0.5;
+			@include font-size(10);
+		}	
+	}
+	
+	// NHS Number Trace warning
+	// uses an orange exclamination mark
+	// small size (13px) is too big so tweak it
+	.hospital-number,
+	.nhs-number {
+		.oe-i.small {
+			width:11px;
+			height:11px;
+			background-size:11px;
+			position: relative;
+			top:-1px;
+		}
+	}
+	
+	.hospital-number {
+		padding-left:0;
+		border-left:none;
+		@include font-size(13);
+	}
+	
+	// DECEASED
+	&.deceased {
+		.patient-name {
+			color:rgb(255,0,0);
+			font-weight:400;
+		}
+	}
+	
+	// replaces patient-age
+	.patient-died {
+		@include font-size(13);
+		color:rgb(255,0,0);
+		em {
+			opacity:0.75;
+			@include font-size(12);
+			&:nth-child(2){
+				em {
+					padding:0 0 0 3px;
+				}
+			}
+		}
+	}
+	
+}
+

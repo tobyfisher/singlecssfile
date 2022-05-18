@@ -1,0 +1,13 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Theatre Diaries
+// page class wrapper hook here
+// <div class="oe-full-content subgrid oe-theatre-diaries">
+
+.oe-theatre-diaries {
+	// set the full content background colour
+	background:$oe-blue-dark2; // theme changable
+}
+

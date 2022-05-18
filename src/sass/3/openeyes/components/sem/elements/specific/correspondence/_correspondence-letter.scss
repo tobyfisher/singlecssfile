@@ -1,0 +1,26 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Element - Correspondence Letter
+// Currently only used in the Correspondence Event
+
+// ***  NO LONGER USER (replaced by iframe)
+
+.main-event {
+	.element {
+	
+		// tiny tweak for Tiny buttons
+		.mce-tinymce button:hover {
+			background: rgb(200,230,255);
+		}
+
+		// make it easier to read the text
+		// (this is for the secretaries, who need glasses)
+		.correspondence-letter-text {
+			@include font-size(16);
+			font-weight:500;
+			padding:10px;
+		}	
+	}
+}

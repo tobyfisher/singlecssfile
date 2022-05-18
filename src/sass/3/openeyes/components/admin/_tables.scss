@@ -1,0 +1,85 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Admin
+
+
+.oe-admin {	
+	
+	.admin-main {
+	
+		// extend 'standard'
+		// used for all data layouts in admin
+		// used all over the place
+		table.standard {
+			th, td {
+				// reduce the 'standard' font
+				@include font-size(12);		
+			}
+			
+			&.valign-middle {
+				tbody {
+					td {
+						vertical-align: middle;
+					}
+				}
+			}
+			
+			
+			tbody {
+				td {
+					vertical-align: top;			// make sure all data is:
+					padding:6px 10px 4px 0; 		// increase vertical padding slightly
+					
+					&:first-child {
+						padding-left:3px;
+					}
+				}
+			}
+			
+			tfoot {
+				td {
+					padding:20px 0 0 0;
+					margin:20px 0 0 0;
+				}
+			}
+		}
+		
+		
+		// 'large' 
+		//  vertically aligned and larger table option
+		//  this is for searches and for settings
+		
+		table.large {
+			width:100%;
+			
+			th, td {
+				// reduce the 'standard' font
+				@include font-size(13);		
+			}
+			
+			tbody {
+				tr {
+					border-top:1px solid $oe-line;
+					&:first-child { 
+						border-top: none;
+					}
+				}
+				
+				td {
+					vertical-align: middle;			// make sure all data is:
+					padding:7px 10px 7px 0; 		// increase vertical padding slightly
+					
+					&:first-child {
+						padding-left:3px;
+					}
+				}
+			}
+		}
+	
+	}
+	
+}
+
+

@@ -1,0 +1,30 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE SEM (Single Event Model)
+
+@import "main-event"; 			// <main> wrapper for SEM
+@import "event-header/_all"; 		// Event Title, Event Extra info, Audit trail etc
+@import "event-footer-actions"; // buttons at the end of the event
+
+@import "removed-event-watermark"; // Viewing removed Event needs this.
+
+@import "sidebar-header"; 		// SEM sidebar
+@import "sidebar/_all";
+
+@import "header-icon-btns";
+
+@import "elements/_all"; 		// All aspects of Elements
+
+@import "oe-sem-no-events";		// No SEM Events page
+@import "patient-overview";		// Patient Overview new V3 page
+
+@import "esign-check";			// MEH new esign widget
+
+
+
+
+		
+
+

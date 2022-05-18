@@ -1,0 +1,35 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE User Profile
+// extends the basic:
+// layout oe-full
+// table standard layout
+
+.oe-user-profile {
+	background:$oe-blue-dark2; // theme changable
+	color:$oe-text;
+	
+	h2 {
+		@include font-size(19);
+		font-weight:$oe-font-light; 
+		color:$oe-text;
+		margin:20px 0 10px 0;
+	}
+	
+	table.standard {
+		input[type="text"], 
+		select {
+			width:75%;
+		}
+	}
+	
+	// buttons to save / update
+	.profile-actions {
+		margin:40px 0 0 0;
+	}
+	
+}
+
+

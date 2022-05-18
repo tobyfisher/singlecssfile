@@ -1,0 +1,13 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Element - Correspondence Letter
+// Currently only used in the Correspondence Event
+
+
+@import "tinyMCE";
+@import "correspondence-letter";		// HTML fallback if no PNGs 
+@import "correspondence-page-scroll";	// JS PNG page scroller
+@import "correspondence-print-iframe";	// iframe
+

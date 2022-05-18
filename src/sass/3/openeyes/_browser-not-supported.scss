@@ -1,0 +1,38 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE does some sniffing and if the users
+// browser isn't supported a simple 'Not Supported page'
+// is displayed. Basic HTML layout
+
+.browser-not-supported {
+	background:$oe-dark-blue;
+	color:$oe-dark-text;
+	margin:20px;
+	padding:20px;
+	
+	h3 {
+		@include font-size(26);
+		font-weight:300;
+		margin:0 0 20px 0;
+	}
+	
+	h4 {
+		@include font-size(18);
+		font-weight:300;
+		color:$oe-dark-text-light;
+		margin:20px 0 15px 0;
+	}
+	
+	p {
+		@include font-size(13);
+		font-weight:400;
+		margin:0 0 10px 0;
+		max-width:500px;
+	}
+	
+	a {
+		color:$oe-dark-text-highlight;
+	}
+}

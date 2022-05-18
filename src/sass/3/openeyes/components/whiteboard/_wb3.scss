@@ -1,0 +1,99 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Whiteboard
+// 2 Grid targest:
+// 1) minimum res. (with Portrait iPad in mind)
+// 2) landscape big touchscreen in Op. Room (main focus)
+
+.oe-whiteboard {
+
+	.wb3 {
+		height:calc(100vh - #{$oe-header-height});
+		// set up the grid
+		display: grid;
+		// Create a 3 x 3 grid, this flows L to R
+		// the data blocks fill in the grid as they are 
+		// added into the DOM, flow controls this.
+		grid: repeat(3, 1fr) / repeat(3, 1fr);
+		grid-auto-flow: row;
+		
+		// Risks and Allergies assigns ITSELF explicitly to a column 
+		// OUTSIDE the above Grid, therefore make sure it's the has the same width:
+		grid-auto-columns: 1fr;
+		
+		@include handheld(){
+			height:calc(90vh - #{$oe-header-height * 4});
+			// change the layout and flow:
+			grid: repeat(5, 1fr) / repeat(2, 1fr);
+			grid-auto-flow: column;
+			
+			// in handheld show the hidden actions down the bottom
+			grid-auto-rows: #{$oe-header-height * 2};
+		}
+		
+		.oe-wb-widget,
+		.oe-wb-special {
+			position: relative;
+			margin:4px;
+			padding:0 0 8px 0;
+			//border:2px solid $oe-text-light;
+			background: $oe-wb-widget-bg;
+			// border-radius:3px;  // take the edge off?
+			
+			overflow: hidden;		
+	
+			word-break:break-all; // make sure words
+			
+			// basic layout stuff:
+			h3 {
+				position:relative;
+				display:flex;
+				justify-content:flex-start;
+				align-content: center;
+				padding:3px 0 4px 0.5em;
+				margin:0 0 5px 0;
+				
+				font-size: $wb3-font-header;
+				font-weight: $oe-font-medium;
+
+				color:$oe-wb-widget-bg;
+				background:$oe-text;
+				
+				// edit widget btn:
+				// switch to show textarea to edit a widget
+				.edit-widget-btn {
+					position:absolute;
+					top:3px;
+					right:3px;
+					bottom:3px;
+					background:$oe-btn-blue;
+					padding:2px 4px;
+					border-radius:3px;
+					width:12%;
+					min-width:25px;
+					
+					display:flex;
+					.oe-i {
+						margin: auto;
+						width:100%;
+						height:100%;
+						background-size: contain;
+						opacity: 0.9;
+					}
+				}
+				
+			}
+
+			ul {
+				li {
+					margin-bottom:3px;
+				}
+			}			
+		}
+	}	
+}
+
+
+

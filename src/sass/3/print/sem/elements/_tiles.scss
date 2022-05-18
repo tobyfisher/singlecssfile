@@ -1,0 +1,33 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// Simplified Element layouts for print
+
+// tiles
+// group of 3 'tile' elements in rank
+	
+.element-tile-group {
+	@include flex( stretch, flex-start );
+	
+	// over specifify to correct layout in tiles
+	// stack the header above the data
+	.element {
+		padding:10px 5px 10px 5px;
+		.element-header {
+			position:static !important;
+			max-width: none;
+		}
+	}
+	
+}
+
+.element {
+	&.tile {
+		width: 33.33333%;
+		margin:0 3px 3px 0;
+		&:last-child {
+			margin-right:0;
+		}
+	}
+}

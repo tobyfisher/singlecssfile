@@ -1,0 +1,54 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Sidebar Header
+.sidebar-header {
+	
+	display:flex;
+	background:$oe-dark-grey;
+	
+	// button
+	.manage-elements, 
+	.add-event {
+		margin:0;
+		height:$oe-event-header-height;
+		flex-grow: 3; // allow buttons to fill remain space
+		color: $oe-dark-user-input-text; 		// Pro-theme
+		background: $oe-dark-user-inputs; 	    // Pro-theme
+		border-radius:0;
+		
+		// when disable make 'pro-themed'
+		// disable is designed to overwrite 
+		// other styles.
+		&.disabled {
+			color: rgba($oe-dark-text-light,0.6) !important;
+			background: rgba($oe-dark-grey,0.8) !important;
+			border:1px solid rgba($oe-dark-text-light,0.1);
+		}
+		
+		&.selected {
+			color:rgb(255,255,255);
+			background:$oe-btn-green-hint;
+		}
+
+	}
+	
+	.title {
+		@include font-size(13);
+		font-weight:300;
+		color:$oe-dark-text-light;				// Pro-theme
+		margin:auto;
+		padding:0 8px;
+	}
+	
+	// anything in here should be Pro themed 
+	input, textarea, select {
+		color: $oe-dark-user-input-text;
+		background-color: $oe-dark-user-inputs;
+		border-radius:0;
+	}
+}
+
+
+

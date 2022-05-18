@@ -1,0 +1,96 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.set-date-range {
+	// fast date range is used in sidebars
+	// under 'from' and 'to' dates
+	margin: 0 0 10px 0;
+	
+	// used in worklist panel
+	.oe-worklists-panel & {
+		margin:10px;
+	} 
+
+	// from / to <inputs>
+	.date-inputs {
+		@include flex(center, space-between);
+		gap:5px;
+		margin: 0 0 5px 0;
+	}
+	
+	// group selectors together
+	// and layout in a row
+	.selectors {
+		@include flex( center , space-between );
+		
+		// updated range selectors <div> to radio group 
+		// there should only be one selected at time
+		// Also update the UIX for date selection
+		
+		label {
+			// reset the cascade
+			display: block; 
+			white-space: normal; 
+			margin:0;
+			padding:0;
+			flex:1;
+			.btn {
+				width: 100%;
+				@include flex( center, flex-start );
+				cursor: pointer;
+				height:24px; // 28px is btn height.
+				padding:0 2px;
+				@include font-size(11);
+				color: $oe-text-light;
+				
+			}
+			
+			
+			
+			> input[type="radio"] {
+				display: none;
+				// CSS magic '+' next sibling! 
+				+ .btn {
+					&:hover, 
+					&:focus {
+						color:$oe-text-active;
+					}
+				}
+				&:checked + .btn {
+					color:$oe-text-highlight;
+				}
+			}
+		}
+		
+		
+		
+		
+		
+		// <div> JS will hook into these
+		// e.g 'Today', 'Last week'
+		.range {
+			flex:1;
+			border-radius:3px;
+			cursor:pointer;
+			color:$oe-text-light;
+			background:$oe-user-inputs-hint;
+			padding:4px 8px; // this was 3px 6px
+			margin:2px 0;
+			
+			&:hover, 
+			&:focus {
+				color:$oe-text-active;
+			}
+		}
+		
+	}
+	
+	.date-inputs {
+		@include flex( center, space-between ); 
+		input {
+			flex:1; 
+			margin:0 1px;
+		}
+	}
+}

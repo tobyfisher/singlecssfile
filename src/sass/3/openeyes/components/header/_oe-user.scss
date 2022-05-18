@@ -1,0 +1,83 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Header - User
+
+.oe-user {
+	
+	// anchored to right of screen so that it 
+	// can expand with screen (pushed to right)
+	position:absolute;
+	top:0; 
+	right:210px; // positioned allow for the big icon nav!
+	display:flex;	// use flex to position user-profile
+	height:$oe-header-height;
+
+	@include extended(){ 
+		right:250px; 
+	}
+	
+	// No space for User info in handheld mode!!
+	// Turnning this off makes changing context impossible!
+	// But, this should be dealt with in a differnt way. 
+	// Note: Officially still not supporting tablets.
+	@include handheld(){ 
+		display: none;
+	}
+	
+	// animate
+	transition: right 0.5s ease-out; 
+
+	// <ul>
+	.oe-user-profile-context {
+		// uses flex to vertically center
+		// the user profile info within container
+		margin:auto 0; // flex magic.
+		width:255px;
+		color:$oe-dark-text;
+		padding:0 0 0 8px;
+		
+		// restriced to stop over-lap with icons 
+		@include extended(){
+			width:365px; 
+			border-left:3px solid $oe-dark-line;
+		}
+
+		// animate
+		transition: width 0.5s ease-out; // smooth it 
+			
+		li {  
+			position: relative;
+			@include font-size(10);
+			opacity:0.8;
+			
+			// this handles: user / site / context 
+			// to save space these have been removed
+			// but leaving in case they are added back
+			em { 
+				@include font-size(9); 
+				opacity:0.5; 
+				font-style:normal; 
+				font-weight:300; 
+			}
+			
+			a { 
+				@include font-size(9); 
+				color:#fff;
+				margin-left:10px; 
+				opacity:0.5;
+				
+				&:hover, &:focus, &:active {
+					opacity:1;
+					color:$oe-dark-text-highlight;
+				}
+				
+			}
+			
+		}
+								
+	}
+
+}
+

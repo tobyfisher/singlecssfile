@@ -1,0 +1,128 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Header - Patient
+
+.oe-patient {
+	
+	// icons buttons for...
+	.patient-quicklook, 
+	.patient-demographics, 
+	.patient-management,
+	.patient-oescape,
+	.patient-local-edit,
+	.patient-oescape,
+	.patient-extra {
+		position:absolute;
+		padding:6px 8px 4px 8px; // increase icon hitarea
+		cursor:pointer;
+	
+		
+		svg {
+			pointer-events: none; // allow JS delegation
+		}
+		
+		// svg icon btn
+		.icon {
+			display:inline-block;
+			fill:#fff;
+			opacity: 0.8;				
+		}	
+		
+		// js controlled interaction... 
+		&.open, &.active {
+			.icon {
+				fill: $oe-dark-text-highlight;
+			}
+		}
+		
+	}
+	
+	// this will space out the icons on handhelds
+	$space-out-icons:20px;
+	
+	// info 
+	.patient-demographics {
+		bottom:0;
+		right:119px;
+	
+		.icon {
+			width:16px;  
+			height:16px;			
+		} 
+		
+		// avoid a gap between 
+		// allergies and info icon hitarea
+		padding-left:14px; 
+	}
+	
+	// dude
+	.patient-management {
+		bottom:0;
+		right:86px;
+		padding-bottom:3px;
+		
+		.icon {
+			width:18px;  
+			height:18px;		
+		}
+	}
+
+	// Eye
+	.patient-quicklook {
+		bottom:0;
+		right:56px;	
+		
+		.icon {
+			width:16px;  
+			height:16px;
+		}
+	}
+	
+	// OEscape 
+	.patient-oescape {
+		bottom:0;
+		right:24px;	
+		
+		.icon {
+			width:16px;  
+			height:16px;
+		}
+	}
+	
+	// Extra space for 4th Patient icon
+	// created for trials (CERA) not v3 core 
+	// but left as generic container for future use
+	.patient-extra {
+		bottom:0;
+		right:-8px; // allows for the padding	
+		
+		.icon {
+			width:16px;  
+			height:16px;
+		}
+	}
+	
+	// Edit Patient when (local)
+	// i.e, they are not a PAS integrated patient.
+	.patient-local-edit {
+		top:5px;
+		right:-7px;
+		
+		.icon {
+			width:15px;  
+			height:15px;
+			
+			&:hover, 
+			&:focus, 
+			&:active {
+				opacity: 1;
+			}
+			
+		}
+	}
+
+
+}
+

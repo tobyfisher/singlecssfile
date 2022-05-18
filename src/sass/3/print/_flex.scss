@@ -1,0 +1,41 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE Print flex 
+// a basic version of the main UI flex
+.flex-layout {
+	@include flex( flex-start, space-between );
+	
+	// horizontal alignments
+	&.flex-right {
+		justify-content:flex-end; 		// group items to the right
+	}
+	
+	&.flex-left {
+		justify-content:flex-start; 	// group items to the left
+	}
+	
+	&.flex-center {
+		justify-content:center; 		// group items in the center
+	}
+}
+
+// simplified the classes above
+.flex {
+	@include flex( flex-start, space-between );
+}
+
+.flex-l {
+	@include flex( flex-start, flex-start );
+}
+
+.flex-r {
+	@include flex( flex-start, flex-end );
+}
+
+.flex-c {
+	@include flex( flex-start, center );
+}
+
+

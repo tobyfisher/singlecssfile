@@ -1,0 +1,101 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE alert boxes
+// 
+// Standardised from v2.0 UI
+// Hard to know how many of these will be required in OEv3
+.alert-box {
+	padding:4px 10px;
+	margin:3px 0;
+
+	// default alert
+	@include font-size(13);
+	color:$oe-blue;
+	background:$oe-text-highlight;
+	
+	border-radius:3px;
+	
+	// types of alerts
+	// added opacity to allow colour bg tinting
+	$alert-text-color: rgba(250,250,250,0.9);
+	
+	&.info {
+		color: $alert-text-color;
+		background: $oe-alert-grey;
+	}
+	
+	&.success {
+		color: $alert-text-color;
+		background: $oe-alert-green;
+	}
+	
+	&.alert,
+	&.issue {
+		color: $alert-text-color;
+		background:$oe-alert-orange;
+	}
+	
+	&.warning,
+	&.error, 
+	&.injection-warning  {
+		color: $alert-text-color;
+		background: $oe-alert-red;
+	}
+	
+	// used for Risks and Allergies
+	&.patient {
+		color: $alert-text-color;
+		background:$oe-risks-warning;
+	}
+	
+	a {
+		text-decoration: underline;
+	}
+	
+	// if there are list of issues or warnings:
+	ul {
+		list-style: disc inside;
+		margin:5px 0;
+		li {
+			margin-bottom: 3px; 
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	// actions, buttons and clost icons
+	
+	&.has-actions {
+		position:relative;
+		padding-right:200px; 	// allow space for a long named button 
+		min-height: 32px;  		// otherwise button overlaps button background
+		
+		.alert-actions {
+			position: absolute;
+			right:8px;
+			top:4px;
+		}
+	}
+
+	// dismissible
+	&.dismissible {
+		cursor: pointer;
+		background-repeat: no-repeat;
+		background-position: top 5px right 5px;
+		background-image: url(svg-dark-fixed("i/remove-circle"));
+		background-size:17px;
+		padding-right:30px; // allow for the background icon
+
+		&:focus,
+		&:hover,
+		&:active {
+			background-color:$oe-btn-blue-hint;
+		}
+	}
+	
+	
+	
+}

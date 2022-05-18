@@ -1,0 +1,36 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+ul.dot-list {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 2px 0 0 0;
+
+	li {
+		@include inline-flex(center, flex-start);
+		margin: 0 0 5px 0; // if dot list wraps onto another line then it needs leading
+		padding: 0 8px 0 12px;
+
+		background: 0 center / 5px url(svg-all("ui/list-dot")) no-repeat;
+
+		&:first-child {
+			margin-left: 0;
+			padding-left: 0;
+			background-image: none;
+		}
+
+		// allow a "paragraph" break as in "notes-list"
+		&.paragraph {
+			background: left center / 1em url(svg-all("ui/type-paragraph")) no-repeat;
+			padding-left: 1.5em;
+		}
+	}
+
+	// if the dot-list is used inline with other elements need to remove the leading
+	&.inline {
+		margin: 0;
+		li {
+			margin: 0;
+		}
+	}
+}
