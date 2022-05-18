@@ -1,25 +1,22 @@
 'use strict';
 
 /**
-This will pull in all the individual icons for either
-Events or Eyedraw doodles and build the appropriate assets
------------------------------
-* Event icon
-ALL Event icons must be 76px x 76px
-They are used by CSS at 50% and at 25% e.g. 38px & 19px
-- outputs:
-- PNG: 	dist/img/event-icons-76x76.png
-- SCSS: src/sass/spritesheet/_icons-events-sprites.scss
------------------------------
-* Eyedraw doodles
-The doodle icons are ancient, and they are used by CSS at 100%
-- outputs:
-- PNG: 	dist/img/eyedraw-doodle-icons-32x32.png
-- SCSS: src/sass/spritesheet/_eyedraw-doodle-sprites.scss
-*/
+ * Build iconsets (raster PNG spritesheet)
+ *
+ * 1) Event iconography
+ * Event icons must be 76px x 76px
+ * They are used by CSS at 50% and at 25% e.g. 38px & 19px
+ * - output:
+ * - PNG: dist/img/event-icons-76x76.png
+ * - SCSS: src/sass/spritesheet/_icons-events-sprites.scss
+ *
+ * 2) Eyedraw doodles
+ * Eyedraw doodle icons are ancient, they are used by CSS at 100%
+ * - PNG: 	dist/img/eyedraw-doodle-icons-32x32.png
+ * - SCSS: src/sass/spritesheet/_eyedraw-doodle-sprites.scss
+ */
 
-// make some nice stdout with chalk! ;)
-const chalk = require('chalk');
+const chalk = require('chalk'); // make some nice stdout with chalk! ;)
 const cyan = chalk.bold.cyan;
 const red = chalk.bold.red;
 const log = console.log;
@@ -31,7 +28,9 @@ const fg = require('fast-glob');
 const Spritesmith = require('spritesmith');
 const Jimp = require('jimp');
 
-// check CLI argument for which icon set to build
+/**
+ * check CLI argument for which iconset to build
+ */
 const iconset  = process.argv[2] == "eyedraw" ? "eyedraw" : "events";
 log( cyan(`>>> newblue build iconset: ${iconset.toUpperCase()}`));
 
@@ -42,7 +41,6 @@ log( cyan(`>>> newblue build iconset: ${iconset.toUpperCase()}`));
 * 3a) Jimp uses the image buffer to create the PNG spritesheet
 * 3b) Write out the updated SCSS file
 */
-
 let config;
 
 if( iconset == "events" ){
@@ -58,12 +56,9 @@ if( iconset == "events" ){
 			// this needs to Sass, not CSS!
 			return [
 				`.i-${name} {`,
-				`background-size: ${sheetSize.quarter.w}px ${sheetSize.quarter.h}px;`,
 				`background-position: ${0-x/4}px ${0-y/4}px;`,
-				`&.large {`,
-				`background-size: ${sheetSize.half.w}px ${sheetSize.half.h}px;`,
-				`background-position: ${0-x/2}px ${0-y/2}px;`,
-				`}}`,
+				`&.large { background-position: ${0-x/2}px ${0-y/2}px; }`,
+				`}`,
 				``,
 			].join('\n');
 		} 
@@ -109,6 +104,7 @@ const spritePNG = ( buffer ) => {
 				.write(`${config.png}`); // write out 
 			
 			log( cyan('>>> png created: ') + config.png );
+			log('(needs copying over to iDG)');
 		})
 		.catch( err => log( red('Jimp error: ') +  err ));
 };
@@ -137,32 +133,33 @@ const buildSCSS = ( coordinates, properties ) => {
 			h: properties.height / 2
 		}
 	};
-	
+
 	// build all the Sass classes
 	let sassContents = [];
 	Object.entries( coordinates ).forEach( sprite => {
 		// build file contents, using appropriate template
 		sassContents.push( config.sassTemplate( sprite, sheetSize ));
 	});
-	
+
 	// write out the file
 	fs.writeFile(`${config.scss}`, `${comments} ${sassContents.join('')}`, err => {
 	  if (err) {
 		log( red('scss error: ') +  err );
 		return;
 	  }
+
 	  log( cyan('>>> scss created: ') + config.scss);
 	  log( cyan('>>> Notes'));
-		log('Updated PNG spritesheet will need copying over into iDG');
-	  
 	  if( iconset == "events" ){
 		  log('Newblue CSS will now need rebuilding ... (then a quick check on iDG that they look OK!)');
 		  log('Run: npm run css');
+		  log( red('Important: Update CSS background-size (see: _icons-events.scss)'));
+		  log(`background-size: ${sheetSize.quarter.w}px ${sheetSize.quarter.h}px;`);
+		  log(`.large = background-size: ${sheetSize.half.w}px ${sheetSize.half.h}px;`,)
 	  } else {
 		  log('Eyedraw CSS will now need rebuilding ... (then a quick check on iDG that they look OK!)');
 		  log('Run: npm run css:eyedraw');
 	  }
-	  
 	})
 };
 
