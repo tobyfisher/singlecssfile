@@ -7,11 +7,6 @@
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 
-// This is a hack. Dart Sass inserts a Byte_order_mark instead of the @charset
-// this was caused the first @font-face not to work (i.e 100 fonts were showing as 300)
-// adding this sorted it, in "expanded" mode it was fine.
-.newblue::cue{color:blue;}
-
 /* roboto-100 - latin_greek */
 @font-face {
   font-family: 'Roboto';

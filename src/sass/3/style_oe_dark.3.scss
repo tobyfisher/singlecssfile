@@ -5,15 +5,15 @@
 // PRO (dark) theme
 @charset "UTF-8"; 
 
-@import 'local_fonts'; // localhost for Roboto https://fonts.google.com/specimen/Roboto 
+@import "src/sass/local_fonts"; // localhost for Roboto https://fonts.google.com/specimen/Roboto
 
 // Based on HTML5 Boilerplate v4.3.0
-@import 'base/mixins'; 		// mixins 
-@import "base/resets";		// reset (selected normalize)
-@import "base/h5bp";		// H5BP, some opinionated defaults 
-@import "base/grid";		// Simple grid layout 
+@import "src/sass/base/mixins"; 		// mixins
 
-@import "base/keyframes";	// Keyframes
+@import "src/sass/base/h5bp";		// H5BP, some opinionated defaults
+@import "src/sass/base/grid";		// Simple grid layout
+
+@import "src/sass/base/keyframes";	// Keyframes
 
 /* OpenEyes UI v3.0 */
 /* ------ PRO theme ------- */
