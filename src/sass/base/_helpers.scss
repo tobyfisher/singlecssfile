@@ -14,7 +14,7 @@
 }
 
 // use visibility to 'hide' a <tr>
-// hidden & space occupied is removed (as if display: none).
+// DOM is hidden & space occupied is removed (as if display: none).
 // BUT! - rows and columns are still calculated as though the cells
 // in the collapsed row(s) or column(s) are still present.
 .tr-collapse {

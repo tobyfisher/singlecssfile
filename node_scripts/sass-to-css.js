@@ -3,14 +3,33 @@
 /**
  * Build CSS files for OpenEyes
  * Production:
- * dist/css/style_oe_dark.3.css // Dark theme (compressed)
- * dist/css/style_oe_light.3.css // Light theme (compressed)
- * dist/css/style_oe_print.3.css // Print only, PDFs (compressed)
+ * 1) style_openeyes.css (dark/light theme)
+ * 2) style_oe_print.3.css (Print, used for PDF creation)
+ * 3) style_eyedraw_doodles.css (Eyedraw doodle icon sprite sheet, only loaded for Eyedraw editting)
  *
  * iDG copies are prefixed with VERSION_TAG numbers, to allow testing
  * of different TAGs within iDG
+ *
+ * Check node arguments to see what CSS file to build. Default is 1.
  */
+let buildMode = "style_openeyes";
 
+const nodeArg = process.argv[2];
+if( nodeArg !== undefined ){
+	if(nodeArg === "print") buildMode = "style_oe_print.3";
+	if(nodeArg === "eyedraw") buildMode = "style_eyedraw_doodles";
+}
+
+const config = {
+	src: './src/sass/',
+	dist: './dist/css/',
+	idg: '../idg/src/build/newblue/dist/css/'
+};
+
+/**
+ * Get git tag version, this is the version CSS is aiming to release
+ * next into the master branch (i.e. it's under development on iDG current)
+ */
 require('dotenv').config()
 const tag = process.env.VERSION_TAG;
 
@@ -18,27 +37,17 @@ const chalk = require('chalk');
 const cyan = chalk.bold.cyan;
 const red = chalk.bold.red;
 const log = console.log;
-
 const fs = require('fs');
 const sass = require('sass');
 const chokidar = require('chokidar');
 
-// By default this will build the Dark and Light CSS.
-// However, if the eyedraw icons are updated their CSS needs building
-const mode = process.argv[2] == "eyedraw" ? "eyedraw" : "styles";
-
-log(cyan(`>>> newblue synchronous build: CSS ${mode}`));
+log(cyan(`>>> newblue building: ${buildMode}.css`));
 log(sass.info);
-log( chalk.bgYellow(`--- git tag version = ${tag} ---`));
-
-const config = {
-	src: './src/sass/3/',
-	dist: './dist/css/',
-	idg: '../idg/src/build/newblue/dist/css/'
-};
+log(chalk.bgYellow(`--- git tag version = ${tag} ---`));
 
 // build a dateStamp for the CSS, useful for debugging deployments
-const dateStamp = '/* ' + new Date(Date.now()) + ' */ \n';
+const nowDate = new Date(Date.now());
+const dateStamp = `/* ${tag} - ${nowDate} */ \n`;
 
 // Legals required on the CSS files.
 const headerLegals = [
@@ -77,11 +86,14 @@ const dartSass = ( style ) => {
 		 */
 		const result = sass.renderSync({
 			file: `${config.src}${style}.scss`,
-			outputStyle: 'compressed', // "expanded" or "compressed"
+			outputStyle: 'expanded', // "expanded" or "compressed"
 			charset: true,
 			precision: 5, // numeric precision	
 		});
 
+		/**
+		 * Output CSS with headerLegals, datetime stamp
+		 */
 		log(cyan(`CSS: `) + `${cssOutput}`);
 		const distStream = fs.createWriteStream(`${cssOutput}`);
 		distStream.write(headerLegals);
@@ -89,7 +101,7 @@ const dartSass = ( style ) => {
 		distStream.end(result.css);
 
 		/**
-		 * TAG prefixed file version for iDG
+		 * TAG prefixed file version for iDG development area
 		 */
 		log(cyan(`iDG copy: `) + `${tag}_${style}`);
 		const idgStream = fs.createWriteStream(`${cssIDG}`);
@@ -104,26 +116,14 @@ const dartSass = ( style ) => {
 };
 
 /**
- * Default action is to build the dark and light CSS files
+ * Build required CSS file (production & iDG tagged copy)
  */
 const buildCSS = () => {
-	dartSass('style_oe_dark.3');
-	dartSass('style_oe_light.3');
-	dartSass('style_oe_print.3');
-	// then initialize FS watcher.
-	log(cyan(`... watching Sass files for updates ... `));
+	dartSass(buildMode);
+	log(cyan(`... watching ... `));
 }
 
-/**
- * Check build mode
- */
-if ( mode == "eyedraw" ){
-	// only need to run this once
-	dartSass('style_eyedraw_doodles');
-} else {
-	// run default build CSS 
-	buildCSS();
-}
+buildCSS();
 
 chokidar.watch(`${config.src}**/*.scss`, {
 	ignored: /(^|[\/\\])\../, // ignore dotfiles
