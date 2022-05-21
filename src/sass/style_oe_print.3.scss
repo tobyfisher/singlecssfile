@@ -1,13 +1,12 @@
-@charset "UTF-8";
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 // * OE v3.0 Print styles
+@charset "UTF-8";
 
 // localhost for Roboto https://fonts.google.com/specimen/Roboto
 @use "local_fonts";
 
-// Based on HTML5 Boilerplate v4.3.0
 @use "base/resets";		// reset (selected normalize)
 @use "base/h5bp";		// H5BP, some opinionated defaults
 @use "base/grid";		// Simple grid layout

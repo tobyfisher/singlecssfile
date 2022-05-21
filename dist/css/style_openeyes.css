@@ -1,0 +1,456 @@
+/**
+*  (C) OpenEyes Foundation, 2018 
+*  This file is part of OpenEyes. 
+*
+* OpenEyes is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+* OpenEyes is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+* You should have received a copy of the GNU Affero General Public License along with OpenEyes in a file titled COPYING. If not, see www.gnu.org/licenses.
+*
+* @link www.openeyes.org.uk
+*
+* @author OpenEyes info@openeyes.org.uk
+* @copyright Copyright (C) 2018, OpenEyes Foundation
+* @license www.gnu.org/licenses/agpl-3.0.html The GNU Affero General Public License V3.0
+*
+*/
+
+/* 6.0.0 - Sat May 21 2022 09:28:31 GMT+0100 (British Summer Time) */ 
+/* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
+/* FONT: Roboto - latin_greek, local hosting */
+/* roboto-100 - latin_greek */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 100;
+  src: local(""), url("../fonts/roboto-v27-latin_greek/roboto-v27-latin_greek-100.woff2") format("woff2");
+}
+/* roboto-300 - latin_greek */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  src: local(""), url("../fonts/roboto-v27-latin_greek/roboto-v27-latin_greek-300.woff2") format("woff2");
+}
+/* roboto-regular - latin_greek */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("../fonts/roboto-v27-latin_greek/roboto-v27-latin_greek-regular.woff2") format("woff2");
+}
+/* roboto-italic - latin_greek */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("../fonts/roboto-v27-latin_greek/roboto-v27-latin_greek-italic.woff2") format("woff2");
+}
+/* roboto-500 - latin_greek */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("../fonts/roboto-v27-latin_greek/roboto-v27-latin_greek-500.woff2") format("woff2");
+}
+/* roboto-500italic - latin_greek */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 500;
+  src: local(""), url("../fonts/roboto-v27-latin_greek/roboto-v27-latin_greek-500italic.woff2") format("woff2");
+}
+/* roboto-700 - latin_greek */
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""), url("../fonts/roboto-v27-latin_greek/roboto-v27-latin_greek-700.woff2") format("woff2");
+}
+/* roboto-700italic - latin_greek */
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 700;
+  src: local(""), url("../fonts/roboto-v27-latin_greek/roboto-v27-latin_greek-700italic.woff2") format("woff2");
+}
+/* normalize (opinionated version) */
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font-kerning: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+section,
+nav,
+header,
+footer,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+::selection {
+  color: #fff;
+  background: #009;
+  text-shadow: none;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #999;
+  margin: 1em 0;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.cols-left, .cols-right {
+  width: 49%;
+}
+
+.cols-fifth {
+  width: 20%;
+}
+
+.cols-center {
+  margin: 0 auto;
+}
+
+.cols-icon {
+  width: 40px;
+  white-space: nowrap;
+}
+
+.cols-1 {
+  width: 8.33333%;
+}
+
+.cols-2 {
+  width: 16.66667%;
+}
+
+.cols-3, .cols-quarter {
+  width: 25%;
+}
+
+.cols-4 {
+  width: 33.33333%;
+}
+
+.cols-5 {
+  width: 41.66667%;
+}
+
+.cols-6, .cols-half {
+  width: 50%;
+}
+
+.cols-7 {
+  width: 58.33333%;
+}
+
+.cols-8 {
+  width: 66.66667%;
+}
+
+.cols-9 {
+  width: 75%;
+}
+
+.cols-10 {
+  width: 83.33333%;
+}
+
+.cols-11 {
+  width: 91.66667%;
+}
+
+.cols-12, .cols-full {
+  width: 100%;
+}
+
+.col-gap > div,
+.col-gap tbody > tr > td,
+.col-gap > td {
+  padding-right: 25px !important;
+  padding-left: 5px;
+}
+.col-gap > div:first-child,
+.col-gap tbody > tr > td:first-child,
+.col-gap > td:first-child {
+  padding-left: 0 !important;
+}
+.col-gap > div:last-child,
+.col-gap tbody > tr > td:last-child,
+.col-gap > td:last-child {
+  padding-right: 0 !important;
+}
+
+.col-gap-small > div[class^=cols-],
+.col-gap-small > td {
+  padding-right: 3px !important;
+}
+.col-gap-small > div[class^=cols-]:last-child,
+.col-gap-small > td:last-child {
+  padding-right: 0 !important;
+}
+
+.hidden {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.tr-collapse {
+  visibility: collapse;
+}
+
+:root {
+  --i-opacity: 0.5;
+  --i-ui-triangle-amber: url("../svg/in-css/all/i/triangle-amber.svg");
+  --i-ui-triangle-blue: url("../svg/in-css/all/i/triangle-blue.svg");
+  --i-ui-triangle-green: url("../svg/in-css/all/i/triangle-green.svg");
+  --i-ui-triangle-grey: url("../svg/in-css/all/i/triangle-grey.svg");
+  --i-ui-triangle-red: url("../svg/in-css/all/i/triangle-red.svg");
+  --i-ui-triangle-orange: url("../svg/in-css/all/i/triangle-orange.svg");
+  --i-ui-list-dot: url("../svg/in-css/all/ui/list-dot.svg");
+  --i-ui-search: url("../svg/in-css/all/ui/search.svg");
+  --i-ui-note: url("../svg/in-css/all/ui/note.svg");
+  --i-ui-plus-bold: url("../svg/in-css/all/ui/plus-bold.svg");
+  --i-ui-remove: url("../svg/in-css/all/ui/remove.svg");
+  --i-ui-cross-red: url("../svg/in-css/all/ui/cross-red.svg");
+}
+
+html.theme-dark {
+  --i-arrow-right-bold: url("../svg/in-css/dark/i/arrow-right-bold.svg");
+  --i-arrow-down-bold: url("../svg/in-css/dark/i/arrow-down-bold.svg");
+  --i-direction-right: url("../svg/in-css/dark/i/direction-right.svg");
+  --i-area-expand: url("../svg/in-css/dark/i/area-expand.svg");
+  --i-area-reduce: url("../svg/in-css/dark/i/area-reduce.svg");
+  --i-lat-L-inactive: url("../svg/in-css/dark/i/lat-L-inactive.svg");
+  --i-lat-L-red: url("../svg/in-css/dark/i/lat-L-red.svg");
+  --i-lat-L: url("../svg/in-css/dark/i/lat-L.svg");
+  --i-lat-NA: url("../svg/in-css/dark/i/lat-NA.svg");
+  --i-lat-R-green: url("../svg/in-css/dark/i/lat-R-green.svg");
+  --i-lat-R-inactive: url("../svg/in-css/dark/i/lat-R-inactive.svg");
+  --i-lat-R: url("../svg/in-css/dark/i/lat-R.svg");
+  --i-menu: url("../svg/in-css/dark/i/menu.svg");
+  --i-more-h: url("../svg/in-css/dark/i/more-h.svg");
+  --i-search: url("../svg/in-css/dark/i/search.svg");
+  --i-tick-green: url("../svg/in-css/dark/i/tick-green.svg");
+  --i-tick-chunky: url("../svg/in-css/dark/i/tick-chunky.svg");
+  --i-pencil: url("../svg/in-css/dark/i/pencil.svg");
+  --i-pencil-blue: url("../svg/in-css/dark/i/pencil-blue.svg");
+  --i-status-query: url("../svg/in-css/dark/i/status-query.svg");
+  --i-status-urgent: url("../svg/in-css/dark/i/status-urgent.svg");
+  --i-no-permissions: url("../svg/in-css/dark/i/no-permissions.svg");
+  --i-zoom-in: url("../svg/in-css/dark/i/zoom-in.svg");
+  --bg-html: #31353C;
+  --bg-max: #000;
+  --bg-nav: #08141E;
+  --bg-title: #273943;
+  --bg-event: #1E2E42;
+  --bg-data: #121A22;
+  --bg-grey: rgb(40, 52, 66);
+  --text-base: rgb(220, 220, 220);
+  --text-light: rgb(140, 140, 140);
+  --text-active: rgb(90, 180, 180);
+  --text-highlight: rgb(0, 255, 255);
+  --text-invert: rgb(13, 13, 13);
+  --font-light: 300;
+  --font-medium: 400;
+  --font-bold: 500;
+  --gui-spinner: rgb(0, 255, 255);
+  --gui-line: rgb(38, 48, 61);
+  --gui-scroll-track: rgb(10, 10, 15);
+  --gui-scroll-thumb: rgb(55, 55, 60);
+  --btn-text: rgb(230, 230, 230);
+  --btn-base: rgb(5, 55, 125);
+  --btn-base-hover: rgb(0, 35, 93);
+  --btn-base-dull: rgb(30, 40, 60);
+  --btn-green: rgb(16, 120, 20);
+  --btn-green-hover: hsl(122deg, 77%, 22%);
+  --btn-green-active: hsl(122deg, 77%, 17%);
+  --btn-red: rgb(153, 14, 14);
+  --btn-red-hover: hsl(0deg, 83%, 28%);
+  --btn-red-active: hsl(0deg, 83%, 23%);
+  --btn-disabled: rgb(80, 80, 80);
+  --alert-green: rgb(0, 105, 0);
+  --alert-red: rgb(155, 0, 0);
+  --alert-orange: rgb(160, 85, 0);
+  --alert-grey: rgb(80, 80, 80);
+  --input-scheme: dark;
+  --input-focus-outline: rgb(9, 108, 154);
+  --input-base: rgb(0, 0, 0);
+  --input-text: rgb(255, 255, 255);
+  --input-border: rgb(70, 70, 70);
+  --input-placeholder: rgb(100, 100, 100);
+  --input-blue: rgb(0, 120, 255);
+  --input-label: rgb(30, 30, 30);
+  --adder-base: rgb(83, 80, 80);
+  --adder-option: rgb(73, 70, 70);
+  --adder-option-hover: rgb(53, 50, 50);
+}
+
+html.theme-light {
+  --i-arrow-right-bold: url("../svg/in-css/light/i/arrow-right-bold.svg");
+  --i-arrow-down-bold: url("../svg/in-css/light/i/arrow-down-bold.svg");
+  --i-direction-right: url("../svg/in-css/light/i/direction-right.svg");
+  --i-area-expand: url("../svg/in-css/light/i/area-expand.svg");
+  --i-area-reduce: url("../svg/in-css/light/i/area-reduce.svg");
+  --i-lat-L-inactive: url("../svg/in-css/light/i/lat-L-inactive.svg");
+  --i-lat-L-red: url("../svg/in-css/light/i/lat-L-red.svg");
+  --i-lat-L: url("../svg/in-css/light/i/lat-L.svg");
+  --i-lat-NA: url("../svg/in-css/light/i/lat-NA.svg");
+  --i-lat-R-green: url("../svg/in-css/light/i/lat-R-green.svg");
+  --i-lat-R-inactive: url("../svg/in-css/light/i/lat-R-inactive.svg");
+  --i-lat-R: url("../svg/in-css/light/i/lat-R.svg");
+  --i-menu: url("../svg/in-css/light/i/menu.svg");
+  --i-more-h: url("../svg/in-css/light/i/more-h.svg");
+  --i-search: url("../svg/in-css/light/i/search.svg");
+  --i-tick-green: url("../svg/in-css/light/i/tick-green.svg");
+  --i-tick-chunky: url("../svg/in-css/light/i/tick-chunky.svg");
+  --i-pencil: url("../svg/in-css/light/i/pencil.svg");
+  --i-pencil-blue: url("../svg/in-css/light/i/pencil-blue.svg");
+  --i-status-query: url("../svg/in-css/light/i/status-query.svg");
+  --i-status-urgent: url("../svg/in-css/light/i/status-urgent.svg");
+  --i-no-permissions: url("../svg/in-css/light/i/no-permissions.svg");
+  --i-zoom-in: url("../svg/in-css/light/i/zoom-in.svg");
+  --bg-html: #F1F0F0;
+  --bg-max: #FFF;
+  --bg-nav: #ECEBEB;
+  --bg-title: #DDDCDC;
+  --bg-event: #F5F5F5;
+  --bg-data: #E1E0E0;
+  --bg-grey: rgb(220, 220, 220);
+  --text-base: rgb(10, 10, 10);
+  --text-light: rgb(80, 80, 100);
+  --text-active: rgb(0, 0, 180);
+  --text-highlight: rgb(0, 0, 255);
+  --text-invert: rgb(240, 240, 240);
+  --font-light: 400;
+  --font-medium: 500;
+  --font-bold: 700;
+  --gui-spinner: rgb(0, 180, 255);
+  --gui-line: rgb(162, 160, 160);
+  --gui-scroll-track: rgb(95, 95, 100);
+  --gui-scroll-thumb: rgb(170, 170, 170);
+  --btn-text: rgb(255, 255, 255);
+  --btn-base: rgb(7, 79, 182);
+  --btn-base-hover: rgb(6, 68, 147);
+  --btn-base-dull: rgb(145, 150, 170);
+  --btn-green: rgb(14, 144, 25);
+  --btn-green-hover: hsl(125deg, 82%, 26%);
+  --btn-green-active: hsl(125deg, 82%, 21%);
+  --btn-red: rgb(153, 14, 14);
+  --btn-red-hover: hsl(0deg, 83%, 28%);
+  --btn-red-active: hsl(0deg, 83%, 23%);
+  --btn-disabled: rgb(150, 150, 150);
+  --alert-green: rgb(0, 155, 0);
+  --alert-red: rgb(205, 0, 0);
+  --alert-orange: rgb(220, 115, 5);
+  --alert-grey: rgb(140, 140, 140);
+  --input-scheme: light;
+  --input-focus-outline: rgb(7, 1, 224);
+  --input-base: rgb(255, 255, 255);
+  --input-text: rgb(0, 0, 0);
+  --input-border: rgb(210, 210, 210);
+  --input-placeholder: rgb(181, 181, 181);
+  --input-blue: rgb(0, 50, 255);
+  --input-label: rgba(255, 255, 255, 0.5);
+  --adder-base: rgb(243, 240, 240);
+  --adder-option: rgb(213, 210, 210);
+  --adder-option-hover: rgb(233, 230, 230);
+}

@@ -5,4 +5,30 @@
 // localhost for Roboto https://fonts.google.com/specimen/Roboto
 @use "local_fonts";
 
-@use "base/resets"; // reset (selected normalize)
+// reset (selected normalize)
+@use "base/resets";
+// H5BP, some opinionated defaults
+@use "base/h5bp";
+// Simple 12 column grid layout
+@use "base/grid";
+// Universal helpers
+@use "base/helpers";
+
+// Theme, globals, mixins
+@use "openeyes/theme";
+
+
+
+// |-- {module}/        # Folder for all SCSS files
+// |   |-- __all.scss   # Include to get all files for module
+// |   |-- __base.scss  # (optional) defaults / module specific configs
+
+
+
+
+
+// Waiting for this library to be depreciated.
+// it needs to be removed and replaced with <input type="date">
+// however, until that time...
+//@use "pickmeup/pickmeup";
+
