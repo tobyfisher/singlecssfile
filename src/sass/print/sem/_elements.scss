@@ -1,17 +1,13 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// Element CSS for printing
-// simplified verions of the View CSS
-
-@import "elements/element";
-@import "elements/element-header";
-@import "elements/element-eyes";
-@import "elements/element-divider";
-@import "elements/tiles";
-@import "elements/element-data";
-@import "elements/tables";
-@import "elements/element-both-eyes";
-@import "elements/listview-expand-collapse";
-@import "elements/eyedraw";
+@use "elements/element";
+@use "elements/element-header";
+@use "elements/element-eyes";
+@use "elements/element-divider";
+@use "elements/tiles";
+@use "elements/element-data";
+@use "elements/tables";
+@use "elements/element-both-eyes";
+@use "elements/listview-expand-collapse";
+@use "elements/eyedraw";

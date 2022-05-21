@@ -1,7 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
+@use "_mix" as *;
 
 body.e-sign-tablet {
 	// e-sign on tablet based on MEH implementation
@@ -10,7 +10,7 @@ body.e-sign-tablet {
 	background: #1e2d42;
 	// fill space, or you see the white background
 	height:100vh; 
-	overflow: none;
+	overflow: hidden;
 	
 	// center main content area using some flex magic
 	@include flex( center, center );
@@ -77,8 +77,8 @@ body.e-sign-tablet {
 						opacity: 0.5;
 						height:64px;
 						width:64px;
-						background: center/contain url('../svg/in-css/icons/sync.svg') no-repeat; 
-						
+						background: center/contain url('../svg/in-css/dark/i/sync.svg') no-repeat;
+
 						@keyframes spin { 
 							100% { transform:rotate(360deg); } 
 						}

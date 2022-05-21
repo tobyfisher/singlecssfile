@@ -7,44 +7,43 @@
 // indicate place to input data with 
 // dotted line - single line
 .dotted-write {
-	display:inline-block;
-	height:2rem;
-	width:98%;
+	display: inline-block;
+	height: 2rem;
+	width: 98%;
 	margin: 0 1%;
-	border-bottom:1px dashed rgb(120,120,120);
-	
-	&.cols-half, 
+	border-bottom: 1px dashed rgb(120, 120, 120);
+
+	&.cols-half,
 	&.half {
-		width:50%;
+		width: 50%;
 	}
 }
 
 // assumes it will have a label
 .dotted-area {
-	position:relative;
-	display:block;
-	min-height:50px; // needs to match esign img heights
-	
+	position: relative;
+	@include flex(flex-end, flex-start);
+	flex: 1 1 0;
+
+	min-height: 50px; // needs to match esign img heights
+
 	img.signature {
 		height: 45px;
 		width: auto;
-		margin:0 0 0 80px; // allow for label
+		margin: 0 0 0 80px; // allow for label
 	}
-	
-	@include flex( flex-end, flex-start );
-	flex: 1 1 0;
-	
-	font-weight:500;
-	padding:24px 0 5px 1rem;
+
+	font-weight: 500;
+	padding: 24px 0 5px 1rem; // padding allows for label
 	margin: 0.2rem 0.5rem;
-	
-	border-bottom:1px dashed rgb(120,120,120);
-	
+
+	border-bottom: 1px dashed rgb(120, 120, 120);
+
 	.label {
 		position: absolute;
-		top:0;
-		left:0;
+		top: 0;
+		left: 0;
 		font-size: $fontsize-small;
-		font-weight:400;
+		font-weight: 400;
 	}
 }
