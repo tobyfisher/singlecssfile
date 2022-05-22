@@ -2,6 +2,10 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 @charset "UTF-8";
 
+// |-- {module}/        # Folder for all SCSS files
+// |   |-- __all.scss   # Include to get all files for module
+// |   |-- __base.scss  # (optional) defaults / module specific configs
+
 // localhost for Roboto https://fonts.google.com/specimen/Roboto
 @use "local_fonts";
 
@@ -17,14 +21,12 @@
 // Theme, globals, mixins
 @use "openeyes/theme";
 
-
-
-// |-- {module}/        # Folder for all SCSS files
-// |   |-- __all.scss   # Include to get all files for module
-// |   |-- __base.scss  # (optional) defaults / module specific configs
-
-
-
+// structure & core
+@use "openeyes/structure/html";
+@use "openeyes/structure/oe-grid";
+@use "openeyes/core/admin-notification";
+@use "openeyes/core/print-block-browser";
+@use "openeyes/core/minimum-width-warning";
 
 
 // Waiting for this library to be depreciated.

@@ -1,13 +1,11 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// When OE is nearlive it can be confusing for Users 
-// as they are unable to visually tell the difference. 
-// by adding "training-mode" to <body> we can target
-// elements and make them more obvious!
+// OE near-live testing environments be confusing for Users
+// Training mode clearly flags the environment the difference.
+// requires: adding "training-mode" to <body>
+// <body>
 .training-mode {
-
 	// Make OE logo yellow:
 	.openeyes-brand .oe-logo {
 		.oe-openeyes {
@@ -53,7 +51,7 @@
 		}
 
 		// make icon black rather than white
-		.oe-i.info.pro-theme {
+		.oe-i.info {
 			background-image: url("../svg/in-css/light/i/asterisk.svg");
 		}
 	}

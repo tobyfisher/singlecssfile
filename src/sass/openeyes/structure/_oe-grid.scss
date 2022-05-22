@@ -1,0 +1,177 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "src/sass/openeyes/var" as *;
+@use "src/sass/openeyes/mix" as *;
+
+.oe-grid {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+
+	// anything outside the grid should be hidden, the grid contains everything
+	overflow: hidden;
+
+	// General "basic" page structure: 3 rows
+	grid:   "header" #{$oe-header-height}
+			"pageheader" #{$oe-event-header-height}
+			"main" 1fr / 1fr;
+
+	// SEM pages (Overview/Events) require a different structure
+	// 3 rows, 2 columns:
+	&.sem {
+		grid: 	"header header" #{$oe-header-height}
+				"addevent eventheader" #{$oe-event-header-height}
+				"sidebar main" 1fr
+				/ #{$oe-event-sidebar-width} 1fr;
+	}
+
+	// Logo, Patient, User, etc
+	.oe-header {
+		grid-area: header;
+	}
+
+	// SEM sidebar content
+	// (Add New Event button, etc)
+	.sidebar-header {
+		height: $oe-event-header-height;
+		width: $oe-event-sidebar-width;
+		grid-area: addevent;
+	}
+	// (Summaries, Event list, etc)
+	.sidebar {
+		width: $oe-event-sidebar-width;
+		grid-area: sidebar;
+		overflow-y: auto;
+	}
+
+	// --------------------------------------- Restrict Widths
+
+	// 2 fix widths to better handle complex data layouts in SEM and lightning viewer
+	.event-header,
+	.oe-lightning-viewer,
+	.main-event {
+		width: 100%; // $oe-event-main-default-width;
+
+		// must allow space for the hotlist being fixed
+		@include fix-hotlist() {
+			width: $oe-event-main-extended-width; // 1240px (not including sidebar: 200px = 1440px )
+		}
+
+		// the 100px improves the screen balance between the content and the hotlist
+		@include super-wide() { // 2048px+
+			width: $oe-event-main-max;
+		}
+
+
+		@include below-minimum() {
+			// this is now below anything supported 
+			// now restrict the width
+			width: #{$oe-minimum-viewport-width - $oe-event-sidebar-width};
+		}
+	}
+
+	// full width header and content allows for the 
+	// hotlist panel which is fixed at large resolutions. 
+	// JS controls the fixing: fixed at 1800px;
+	.oe-full-header,
+	.oe-full-content,
+	.oe-allow-for-fixing-hotlist {
+		// "oe-allow-fixing-hotlist" - is probably now redundant
+		// however, it might be used somewhere in production! (this needs reviewing)
+		// -
+		// "oe-full" layouts by default will allow for the hotlist panel to fix
+		// in place (when there is enough width), however many layouts now need to use the full width
+		// and hotlist can not fix open. Adding "use-full-screen" will override the default
+		// behaviour and allow the content to use full width. JS will look for this
+		// class to see if can fix open the hotlist panel or not
+
+		&:not(.use-full-screen) {
+
+			@include fix-hotlist() {
+				width: $oe-extended-browser-size; // 1440px;
+			}
+
+			// stretch to fill on super wide displays
+			// works for most standard page layouts
+			@include super-wide() { // 2048px+
+				width: 69vw;
+			}
+		}
+	}
+
+	// Event Header (View, Edit, Print, Save, etc)
+	.event-header {
+		z-index: 1;
+		height: $oe-event-header-height;
+
+		// for Edge < 16
+		-ms-grid-column: 2;
+		-ms-grid-row: 2;
+		// CSS3
+		grid-area: eventheader;
+	}
+
+	.main-event {
+		// for Edge < 16
+		-ms-grid-column: 2;
+		-ms-grid-row: 3;
+		// CSS3
+		grid-area: main;
+		overflow-y: auto;
+	}
+
+	// --------------------------------------- Lightening Viewer
+	// replaces event-header & main-event area
+	.oe-lightning-viewer {
+		// for Edge < 16
+		-ms-grid-column: 2;
+		-ms-grid-row: 2;
+		-ms-grid-row-span: 2;
+		// CSS3
+		grid-area: 2 / 2 / 4 / 3; // can't use the areas (areas are setup for SEM layout)
+		overflow-y: auto;
+	}
+
+	// --------------------------------------- Home & Whiteboard
+	.oe-home,
+	.oe-whiteboard {
+		// for Edge < 16
+		-ms-grid-column: 1;
+		-ms-grid-row: 1;
+		-ms-grid-column-span: 2;
+		-ms-grid-row-span: 2;
+		// CSS3
+		grid-area: 2 / 1 / 4 / 3;
+		overflow-y: auto;
+	}
+
+	// --------------------------------------- OE Full width (allows for activity panel to be fixed)
+	// --------------------------------------- + OEscape, Analytics
+	// OE Full Width, OEscape, Analytics
+	// full width header
+	.oe-full-header,
+	.oescape-header,
+	.analytics-header {
+		// for Edge < 16
+		-ms-grid-column: 1;
+		-ms-grid-row: 2;
+		-ms-grid-column-span: 2;
+		// CSS3
+		grid-area: 2 / 1 / 3 / 3;
+	}
+
+	// & full width content area
+	.oe-full-content,
+	.oescape,
+	.oe-analytics {
+		// for Edge < 16
+		-ms-grid-column: 1;
+		-ms-grid-row: 2;
+		-ms-grid-column-span: 2;
+		// CSS3
+		grid-area: 3 / 1 / 4 / 3;
+		overflow-y: auto;
+	}
+
+}

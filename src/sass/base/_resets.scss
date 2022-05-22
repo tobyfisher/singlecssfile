@@ -7,7 +7,7 @@
 // Correct the line height in all browsers.
 // Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS
 html {
-	line-height: 1.15; // note! print CSS uses reset, do not change this
+	line-height: 1.15; // note! Print CSS uses this reset as well, do not change this
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	font-kerning: normal; // use font kerning

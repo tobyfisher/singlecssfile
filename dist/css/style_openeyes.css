@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sat May 21 2022 09:28:31 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun May 22 2022 09:51:41 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -344,11 +344,11 @@ html.theme-dark {
   --bg-event: #1E2E42;
   --bg-data: #121A22;
   --bg-grey: rgb(40, 52, 66);
-  --text-base: rgb(220, 220, 220);
-  --text-light: rgb(140, 140, 140);
-  --text-active: rgb(90, 180, 180);
-  --text-highlight: rgb(0, 255, 255);
-  --text-invert: rgb(13, 13, 13);
+  --txt-base: rgb(220, 220, 220);
+  --txt-light: rgb(140, 140, 140);
+  --txt-active: rgb(90, 180, 180);
+  --txt-highlight: rgb(0, 255, 255);
+  --txt-invert: rgb(13, 13, 13);
   --font-light: 300;
   --font-medium: 400;
   --font-bold: 500;
@@ -357,20 +357,24 @@ html.theme-dark {
   --gui-scroll-track: rgb(10, 10, 15);
   --gui-scroll-thumb: rgb(55, 55, 60);
   --btn-text: rgb(230, 230, 230);
-  --btn-base: rgb(5, 55, 125);
-  --btn-base-hover: rgb(0, 35, 93);
-  --btn-base-dull: rgb(30, 40, 60);
-  --btn-green: rgb(16, 120, 20);
-  --btn-green-hover: hsl(122deg, 77%, 22%);
+  --btn-blue: #1D2E50;
+  --btn-blue-hint: #074598;
+  --btn-blue-active: #00f;
+  --btn-green: #0E9019;
+  --btn-green-hint: #0E9019;
   --btn-green-active: hsl(122deg, 77%, 17%);
   --btn-red: rgb(153, 14, 14);
-  --btn-red-hover: hsl(0deg, 83%, 28%);
+  --btn-red-hint: hsl(0deg, 83%, 28%);
   --btn-red-active: hsl(0deg, 83%, 23%);
   --btn-disabled: rgb(80, 80, 80);
-  --alert-green: rgb(0, 105, 0);
-  --alert-red: rgb(155, 0, 0);
-  --alert-orange: rgb(160, 85, 0);
-  --alert-grey: rgb(80, 80, 80);
+  --btn-btn-icon-hover: none;
+  --color-highlighter: rgb(184, 171, 136);
+  --color-green: rgb(0, 105, 0);
+  --color-red: rgb(155, 0, 0);
+  --color-rust: rgb(107, 20, 0);
+  --color-orange: rgb(160, 85, 0);
+  --color-yellow: rgb(200, 180, 50);
+  --color-grey: rgb(80, 80, 80);
   --input-scheme: dark;
   --input-focus-outline: rgb(9, 108, 154);
   --input-base: rgb(0, 0, 0);
@@ -379,9 +383,6 @@ html.theme-dark {
   --input-placeholder: rgb(100, 100, 100);
   --input-blue: rgb(0, 120, 255);
   --input-label: rgb(30, 30, 30);
-  --adder-base: rgb(83, 80, 80);
-  --adder-option: rgb(73, 70, 70);
-  --adder-option-hover: rgb(53, 50, 50);
 }
 
 html.theme-light {
@@ -415,11 +416,11 @@ html.theme-light {
   --bg-event: #F5F5F5;
   --bg-data: #E1E0E0;
   --bg-grey: rgb(220, 220, 220);
-  --text-base: rgb(10, 10, 10);
-  --text-light: rgb(80, 80, 100);
-  --text-active: rgb(0, 0, 180);
-  --text-highlight: rgb(0, 0, 255);
-  --text-invert: rgb(240, 240, 240);
+  --txt-base: rgb(10, 10, 10);
+  --txt-light: rgb(80, 80, 100);
+  --txt-active: rgb(0, 0, 180);
+  --txt-highlight: rgb(0, 0, 255);
+  --txt-invert: rgb(240, 240, 240);
   --font-light: 400;
   --font-medium: 500;
   --font-bold: 700;
@@ -428,20 +429,24 @@ html.theme-light {
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
   --btn-text: rgb(255, 255, 255);
-  --btn-base: rgb(7, 79, 182);
-  --btn-base-hover: rgb(6, 68, 147);
-  --btn-base-dull: rgb(145, 150, 170);
+  --btn-blue: rgb(7, 79, 182);
+  --btn-blue-hint: rgb(6, 68, 147);
+  --btn-blue-active: #00f;
   --btn-green: rgb(14, 144, 25);
-  --btn-green-hover: hsl(125deg, 82%, 26%);
+  --btn-green-hint: hsl(125deg, 82%, 26%);
   --btn-green-active: hsl(125deg, 82%, 21%);
   --btn-red: rgb(153, 14, 14);
-  --btn-red-hover: hsl(0deg, 83%, 28%);
+  --btn-red-hint: hsl(0deg, 83%, 28%);
   --btn-red-active: hsl(0deg, 83%, 23%);
   --btn-disabled: rgb(150, 150, 150);
-  --alert-green: rgb(0, 155, 0);
-  --alert-red: rgb(205, 0, 0);
-  --alert-orange: rgb(220, 115, 5);
-  --alert-grey: rgb(140, 140, 140);
+  --btn-btn-icon-hover: invert(100%) grayscale(100%);
+  --color-highlighter: rgb(235, 211, 123);
+  --color-green: rgb(0, 155, 0);
+  --color-red: rgb(205, 0, 0);
+  --color-rust: rgb(117, 30, 0);
+  --color-orange: rgb(220, 115, 5);
+  --color-yellow: rgb(210, 170, 20);
+  --color-grey: rgb(140, 140, 140);
   --input-scheme: light;
   --input-focus-outline: rgb(7, 1, 224);
   --input-base: rgb(255, 255, 255);
@@ -450,7 +455,197 @@ html.theme-light {
   --input-placeholder: rgb(181, 181, 181);
   --input-blue: rgb(0, 50, 255);
   --input-label: rgba(255, 255, 255, 0.5);
-  --adder-base: rgb(243, 240, 240);
-  --adder-option: rgb(213, 210, 210);
-  --adder-option-hover: rgb(233, 230, 230);
+}
+
+html {
+  background: var(--bg-html, #000);
+  color: var(--txt-base, #fff);
+  font: 400 16px/1.4 "Roboto", Helvetica, Arial, sans-serif;
+}
+
+body.open-eyes {
+  min-width: 1199px;
+  padding: 0;
+  margin: 0;
+}
+
+.oe-grid {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  grid: "header" 60px "pageheader" 38px "main" 1fr/1fr;
+}
+.oe-grid.sem {
+  grid: "header header" 60px "addevent eventheader" 38px "sidebar main" 1fr/200px 1fr;
+}
+.oe-grid .oe-header {
+  grid-area: header;
+}
+.oe-grid .sidebar-header {
+  height: 38px;
+  width: 200px;
+  grid-area: addevent;
+}
+.oe-grid .sidebar {
+  width: 200px;
+  grid-area: sidebar;
+  overflow-y: auto;
+}
+.oe-grid .event-header,
+.oe-grid .oe-lightning-viewer,
+.oe-grid .main-event {
+  width: 100%;
+}
+@media only screen and (min-width: 1890px) {
+  .oe-grid .event-header,
+.oe-grid .oe-lightning-viewer,
+.oe-grid .main-event {
+    width: 1240px;
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .oe-grid .event-header,
+.oe-grid .oe-lightning-viewer,
+.oe-grid .main-event {
+    width: 59vw;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .oe-grid .event-header,
+.oe-grid .oe-lightning-viewer,
+.oe-grid .main-event {
+    width: 1000px;
+  }
+}
+@media only screen and (min-width: 1890px) {
+  .oe-grid .oe-full-header:not(.use-full-screen),
+.oe-grid .oe-full-content:not(.use-full-screen),
+.oe-grid .oe-allow-for-fixing-hotlist:not(.use-full-screen) {
+    width: 1440px;
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .oe-grid .oe-full-header:not(.use-full-screen),
+.oe-grid .oe-full-content:not(.use-full-screen),
+.oe-grid .oe-allow-for-fixing-hotlist:not(.use-full-screen) {
+    width: 69vw;
+  }
+}
+.oe-grid .event-header {
+  z-index: 1;
+  height: 38px;
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  grid-area: eventheader;
+}
+.oe-grid .main-event {
+  -ms-grid-column: 2;
+  -ms-grid-row: 3;
+  grid-area: main;
+  overflow-y: auto;
+}
+.oe-grid .oe-lightning-viewer {
+  -ms-grid-column: 2;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  grid-area: 2/2/4/3;
+  overflow-y: auto;
+}
+.oe-grid .oe-home,
+.oe-grid .oe-whiteboard {
+  -ms-grid-column: 1;
+  -ms-grid-row: 1;
+  -ms-grid-column-span: 2;
+  -ms-grid-row-span: 2;
+  grid-area: 2/1/4/3;
+  overflow-y: auto;
+}
+.oe-grid .oe-full-header,
+.oe-grid .oescape-header,
+.oe-grid .analytics-header {
+  -ms-grid-column: 1;
+  -ms-grid-row: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 2/1/3/3;
+}
+.oe-grid .oe-full-content,
+.oe-grid .oescape,
+.oe-grid .oe-analytics {
+  -ms-grid-column: 1;
+  -ms-grid-row: 2;
+  -ms-grid-column-span: 2;
+  grid-area: 3/1/4/3;
+  overflow-y: auto;
+}
+
+#oe-admin-notifcation {
+  position: fixed;
+  bottom: 8px;
+  right: 3px;
+  z-index: 999;
+  height: 30px;
+  padding: 0 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: rgb(110, 20, 5);
+  color: #eee;
+  border-radius: 3px;
+  font-size: 0.8125rem;
+}
+.user-login #oe-admin-notifcation {
+  justify-content: center;
+  left: 3px;
+}
+#oe-admin-notifcation a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+#oe-restrict-print {
+  display: none;
+  width: 100%;
+  margin: 2em 0;
+  padding: 1em;
+}
+#oe-restrict-print h1 {
+  font-size: 24pt;
+}
+
+@media print {
+  html {
+    background: white;
+  }
+
+  body.open-eyes {
+    display: block !important;
+    width: 100%;
+    background: white;
+    color: black;
+  }
+  body.open-eyes > * {
+    display: none !important;
+  }
+  body.open-eyes #oe-restrict-print {
+    display: block !important;
+  }
+}
+#oe-minimum-width-warning {
+  position: fixed;
+  top: 45%;
+  right: 0;
+  z-index: 9999;
+  writing-mode: vertical-rl;
+  padding: 10px 5px 30px 5px;
+  background: bottom 5px center/16px var(--color-red) url("../svg/in-css/dark/i/direction-right.svg") no-repeat;
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: #fff;
+  display: none;
+}
+@media only screen and (max-width: 1199px) {
+  #oe-minimum-width-warning {
+    display: block;
+  }
 }

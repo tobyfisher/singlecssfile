@@ -7,35 +7,35 @@
 // restricted as much as possible!
 
 #oe-restrict-print {
-	display:none;
+	display: none;
 	width: 100%;
-	margin: 2em 0; 
+	margin: 2em 0;
 	padding: 1em;
-	
+
 	h1 {
-		font-size:2em;
+		font-size: 24pt;
 	}
-	
 }
 
 @media print {
-	
 	html {
 		background: white;
-	}	
-	
+	}
+
 	body.open-eyes {
-		display:block !important;
-		width:100%;
+		display: block !important;
+		width: 100%;
 		background: white;
-		color: black; 
-		  
+		color: black;
+
+		// hide everything!
 		> * {
-		 display:none !important;
+			display: none !important;
 		}
-		
+
+		// show the warning message to not print this way!
 		#oe-restrict-print {
-			display:block !important;
-		} 
+			display: block !important;
+		}
 	}
 }

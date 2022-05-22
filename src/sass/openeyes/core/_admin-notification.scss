@@ -1,43 +1,40 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "src/sass/openeyes/mix" as *;
 
 // Admin Notifications
 // used for "System down..." , "demo", etc
-// default state is collapsed
-// only on LOGIN is it displayed full
+// default state is collapsed, on LOGIN display full screen width
 
+// Ooops! Old spelling error in the name.
+// Don't fix it, unless the production DOM can be updated too!
 #oe-admin-notifcation {
 	position:fixed;
 	bottom:8px;
 	right:3px;
 	z-index:999;
-	
 	height:30px;
 	padding:0 15px;
 	
 	@include flex( center, flex-start);
-	
-	
+
+	// Full screen it on Login
 	.user-login & {
 		justify-content: center;
 		left:3px;
 	}
 	
-	// fixed color!!
+	// theme neutral color
 	background:rgb(110,20,5);
 	color:#eee;
 	
 	border-radius:3px;
-	
 	@include font-size(13);
-	font-weight:400;
 	
 	a {
-		color:rgb(255,255,255);
+		color:#fff;
 		text-decoration: underline;
 	}
-	
-	// #notification-short {}
 }
 
