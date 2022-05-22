@@ -1,8 +1,8 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// OE Header - User
+@use "src/sass/openeyes/var" as *;
+@use "src/sass/openeyes/mix" as *;
 
 .oe-user {
 	
@@ -19,8 +19,8 @@
 	}
 	
 	// No space for User info in handheld mode!!
-	// Turnning this off makes changing context impossible!
-	// But, this should be dealt with in a differnt way. 
+	// Turning this off makes changing context impossible!
+	// But, this should be dealt with in a different way.
 	// Note: Officially still not supporting tablets.
 	@include handheld(){ 
 		display: none;

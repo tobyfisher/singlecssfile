@@ -84,11 +84,9 @@ const dartSass = ( style ) => {
 		 * Create compressed version for Production and a TAG prefixed
 		 * version for iDG to use
 		 */
-		const result = sass.renderSync({
-			file: `${config.src}${style}.scss`,
-			outputStyle: 'expanded', // "expanded" or "compressed"
-			charset: true,
-			precision: 5, // numeric precision	
+		const result = sass.compile(`${config.src}${style}.scss`,{
+			style: 'expanded', // "expanded" or "compressed"
+			loadPaths: ['src/sass/']
 		});
 
 		/**

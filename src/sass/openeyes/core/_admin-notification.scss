@@ -1,7 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-@use "src/sass/openeyes/mix" as *;
+@use "openeyes/mix" as *;
 
 // Admin Notifications
 // used for "System down..." , "demo", etc
@@ -26,7 +26,7 @@
 	}
 	
 	// theme neutral color
-	background:rgb(110,20,5);
+	background:var(--color-burgundy);
 	color:#eee;
 	
 	border-radius:3px;
