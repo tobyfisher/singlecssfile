@@ -1,0 +1,29 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
+// Login, help message to draw users awareness to the logo
+.oe-logo-flag-help {
+	z-index:$oe-z-logo - 1;
+	position:absolute;
+	top:20px; 			// positioned by eye
+	left:200px;
+
+	@include flex( center, flex-start );
+
+	@include font-size(14);
+	font-weight: var(--font-light);
+
+	padding-left:20px; // allow for icon space
+	background: left center / 16px transparent url( svg-white-icon("i/direction-left") ) no-repeat;
+
+	opacity: 0.5;
+
+	// DOM still has <i> but, it needs removing but
+	// until that happens this will hide the DOM:
+	.oe-i {
+		display:none;
+	}
+}

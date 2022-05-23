@@ -9,7 +9,10 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	bottom:0;
+
+	// when info is hidden, this DOM collapses
+	// down to a height 0, removing the background
+	// but still showing the logo DOM for interaction
 	width: 280px;
 	background: var(--bg-popup);
 }

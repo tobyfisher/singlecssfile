@@ -16,10 +16,9 @@
 
 // ---- Backgrounds
 $bg: (
-	"html": #31353C,
+	"html": #1e242f,
 	"max": #000,
 	"popup":#0D161E,
-	"nav": #0d161e,
 	"title": #273943,
 	"event": #1E2E42,
 	"data": #121A22,
@@ -27,10 +26,9 @@ $bg: (
 );
 
 $bg-light: (
-	"html": #F1F0F0,
+	"html": #d7d6d6,
 	"max": #FFF,
-	"popup": #E1E0E0,
-	"nav": #ECEBEB,
+	"popup": #f1f0f0,
 	"title": #DDDCDC,
 	"event": #E1E0E0,
 	"data": #F5F5F5,
@@ -39,12 +37,14 @@ $bg-light: (
 
 // ---- Font weights (because white on dark bleeds...)
 $font-weight: (
+	"thin": 100,
 	"light": 300,
 	"medium": 400,
 	"bold": 500
 );
 
 $font-weight-light: (
+	"thin": 300,
 	"light": 400, // push 300 weights to 400 in 'light'
 	"medium": 500, // push 400 weights to 500
 	"bold": 700 // push 500 weights to 700 (no 600)
@@ -55,13 +55,13 @@ $txt: (
 	"base": rgb(220, 220, 220),
 	"light": rgb(140, 140, 140),
 	"active": rgb(90, 180, 180),
-	"highlight": rgb(0, 255, 255),
+	"highlight": rgb(0, 200, 205),
 	"invert": rgb(13, 13, 13)
 );
 
 $txt-light: (
 	"base": rgb(10, 10, 10),
-	"light": rgb(80, 80, 100),
+	"light": rgb(90, 90, 100),
 	"active": rgb(0, 0, 180),
 	"highlight": rgb(0, 0, 255),
 	"invert": rgb(240, 240, 240),
@@ -70,7 +70,7 @@ $txt-light: (
 // ---- GUI
 $gui: (
 	"spinner": rgb(0, 255, 255),
-	"line": rgb(38, 48, 61),
+	"line": rgb(0,60,70),
 	"scroll-track":rgb(10, 10, 15),
 	"scroll-thumb":rgb(55, 55, 60),
 );
@@ -118,9 +118,9 @@ $color: (
 	"highlighter": rgb(184, 171, 136),
 	"green": rgb(0, 105, 0),
 	"red": rgb(155, 0, 0),
-	"burgundy": rgb(107,20,0),
+	"burgundy": rgb(107, 20, 0),
 	"orange": rgb(160, 85, 0),
-	"yellow": rgb(200,180,50),
+	"yellow": rgb(200, 180, 50),
 	"grey": rgb(80, 80, 80),
 );
 
@@ -130,7 +130,7 @@ $color-light: (
 	"red": rgb(205, 0, 0),
 	"burgundy": rgb(117, 30, 0),
 	"orange": rgb(220, 115, 5),
-	"yellow": rgb(210,170,20),
+	"yellow": rgb(210, 170, 20),
 	"grey": rgb(140, 140, 140),
 );
 
