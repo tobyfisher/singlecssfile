@@ -43,6 +43,12 @@ $oe-extended-browser-size: (1280px + $oe-event-extension); // 1440px!
 // the next enhancement is to fix hotlist when there is enough width.
 $oe-js-browser-fix-size: 1890px;
 
+// set inputs and buttons to the same height
+$input-height: 24px;
+
+// default opacity setting
+$oe-icon-opacity: 0.5;
+
 // z
 $oe-z-top: 160; // VC ScratchPad
 $oe-z-popup: 150; // was 100, switched to above logo because of attachments

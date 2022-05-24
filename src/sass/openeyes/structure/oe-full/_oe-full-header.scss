@@ -1,15 +1,16 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
-// note: sizing controlled by oe-grid.scss
-
-// oe-full-header 
-// top strip?: Page name and buttons (like Print)
 .oe-full-header {
+	// see 'oe-grid' for media width restrictions
+	grid-area: pageheader;
+
 	position:relative;
-	background:$oe-grey;
-	padding:0 0 0 20px; // this aligns with content in sidepanel
+	background:var(--bg-title);
+	padding:0 0 0 20px; // align content with sidepanel
 	
 	@include flex( center, flex-start );
 
@@ -18,8 +19,8 @@
 		@include flex(center, flex-start);
 		@include font-size(24);
 		text-transform: uppercase;
-		font-weight:$oe-font-light;
-		color:$oe-text-light;
+		font-weight: var(--font-light);
+		color: var(--txt-light);
 		
 		// basic styling for title area
 		&.wordcaps {
@@ -31,7 +32,7 @@
 		}
 
 		b, strong {
-			font-weight:$oe-font-medium;
+			font-weight: var(--font-medium);
 		}
 		
 		// Analytics and OEscape fix the styling
@@ -51,7 +52,8 @@
 	}
 
 	// create 'tab' buttons (like Event Header)
-	@include buttons {
+	button,
+	.button {
 		vertical-align: top; // overwrite default 'bottom' to fix alignment issues
 		height:$oe-event-header-height;
 		padding:0 16px;

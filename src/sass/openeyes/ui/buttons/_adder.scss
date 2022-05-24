@@ -1,0 +1,38 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/var" as *;
+
+// Adder only
+button.adder {
+	&.square {
+		width: 25px;
+	}
+
+	width: 35px;
+	padding: 0;
+	background: var(--btn-green-hint);
+
+	&:after {
+		content: "";
+		pointer-events: none;
+		height: 19px;
+		width: 19px;
+		margin: auto;
+		position: relative;
+		top: 0.5px; // because the height is 24px, should be 25px to get the icon in the middle! darn it.
+		background: transparent url(svg-white-icon("i/plus")) center no-repeat;
+		background-size: 19px;
+		opacity: $oe-icon-opacity;
+	}
+
+	&:hover,
+	&:focus {
+		color: #fff;
+		background: var(--btn-green);
+
+		&:after {
+			opacity: 1;
+		}
+	}
+}

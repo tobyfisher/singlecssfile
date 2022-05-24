@@ -14,15 +14,6 @@
 
 	@include flex(center, center );
 
-	// js controlled interaction...
-	&.open,
-	&.active {
-		.oe-openeyes {
-			fill:var(--txt-active);
-			opacity:0.8;
-		}
-	}
-
 	// little sexy touch.
 	transition:left 0.5s ease;
 
@@ -39,6 +30,9 @@ svg.oe-openeyes {
 	$-svg-width: 110px;
 	width:$-svg-width;
 	height:( $-svg-width * 0.1844 );
-	fill: var(--txt-base);
-	opacity:0.3;
+	fill: var(--txt-light);
+	.active &,
+	.open & {
+		fill:var(--txt-active);
+	}
 }

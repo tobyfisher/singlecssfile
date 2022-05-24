@@ -1,14 +1,19 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-// i.e. <button>, .button, input[type="submit"]
-@include buttons {
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
+
+// HTML element and class because: <a class="button">
+button,
+.button {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 
-	// key-hint needed this
-	position:relative;
+	// sizes - standard:
+	height: $input-height;
 
 	// when used inline with other elements this is required
 	// to stop it jumping up (baseline is default)
@@ -19,29 +24,21 @@
 
 	// resets
 	border: 0;
-	outline: 0; // remove glow effect
+	outline: 0; // accessibility not required in OE App.
 	border-radius: 0 !important; // weird border-radius bug fix
 
 	@include font-size(12);
-	font-weight: $oe-font-medium;
-	color: $oe-text;
-	background: $oe-btn-default;
+	font-weight: var(--font-medium);
+	background: var(--btn-base);
 	cursor: pointer;
 
-	// sizes - standard:
-	height: 24px; // matches inputs heights
-
-	// browser will override the main line-height 1.4
+	// The browser will override the main line-height 1.4
 	// and reset <button> to normal, this won't affect
 	// <a> that are styled like buttons!
 	line-height: 1;
 
 	// increase hit area
 	padding: 0 8px;
-
-	.oe-full-header & {
-		margin:0; // override this for buttons in the header banner
-	}
 
 	// For: Analytics filters
 	// & 9 positions in Strab
@@ -53,15 +50,12 @@
 	&:disabled,
 	&.disabled,
 	&.inactive {
-		cursor:default;
-		color: rgba($oe-text-light,0.6) !important;
-		background: rgba($oe-grey,0.8) !important;
-		border:1px solid rgba($oe-text-light,0.1);
-		pointer-events: none; // disable pseudos
-
-		.oe-i {
-			opacity: 0.1;
-		}
+		cursor: default;
+		color: var(--txt-light) !important;
+		background: var(--color-grey) !important;
+		border: 1px solid var(--txt-light);
+		pointer-events: none; // disable
+		opacity:0.4;
 	}
 
 	// handle icons in buttons
@@ -69,21 +63,21 @@
 		pointer-events: none;
 	}
 
-	// .active class allows JS control
+	// Pseudo & JS class hooks
 	&:hover,
 	&:focus,
 	&:active,
 	&.active,
 	&.selected {
-		color:#fff;
-		background: $oe-btn-blue;
+		color: #fff;
+		background: var(--btn-blue);
 
 		// icons within buttons
 		.oe-i {
 			// if there is icon this make sure it shows the button hover effect
-			opacity:1;
+			opacity: 1;
 			// if in light mode the icon will need inverting
-			filter: $oe-btn-icon-hover;
+			filter: var(--btn-icon-hover-filter);
 		}
 	}
 }

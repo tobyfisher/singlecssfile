@@ -28,15 +28,16 @@
 	// SEM sidebar content
 	// (Add New Event button, etc)
 	.sidebar-header {
+		grid-area: addevent;
 		height: $oe-event-header-height;
 		width: $oe-event-sidebar-width;
-		grid-area: addevent;
+
 	}
 
 	// (Summaries, Event list, etc)
 	.sidebar {
-		width: $oe-event-sidebar-width;
 		grid-area: sidebar;
+		width: $oe-event-sidebar-width;
 		overflow-y: auto;
 	}
 
@@ -129,14 +130,12 @@
 	// --------------------------------------- + OEscape, Analytics
 	// OE Full Width, OEscape, Analytics
 	// full width header
-	.oe-full-header,
 	.oescape-header,
 	.analytics-header {
 		grid-area: 2 / 1 / 3 / 3;
 	}
 
 	// & full width content area
-	.oe-full-content,
 	.oescape,
 	.oe-analytics {
 		grid-area: 3 / 1 / 4 / 3;

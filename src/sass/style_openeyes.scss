@@ -20,6 +20,7 @@
 // structure & core
 @use "openeyes/structure/html";
 @use "openeyes/structure/oe-grid";
+@use "openeyes/structure/oe-full";
 @use "openeyes/core/admin-notification";
 @use "openeyes/core/print-block-browser";
 @use "openeyes/core/minimum-width-warning";
@@ -27,6 +28,13 @@
 // modules
 @use "openeyes/modules/brand";
 @use "openeyes/modules/header";
+
+@use "openeyes/modules/sync-data";
+
+
+
+// general UI
+@use "openeyes/ui/buttons";
 
 
 

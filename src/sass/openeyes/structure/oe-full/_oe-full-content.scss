@@ -1,14 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// DOM example
-// <div class="oe-full-content subgrid {page-specific}">
-
 .oe-full-content {
-	
-	// Default to be all themeable
-	// Can be overridden by {page-specific} CSS
-	color:$oe-text; 				
-	background:$oe-blue-dark2;		
+	// see 'oe-grid' for media width restrictions
+	grid-area: main;
 }

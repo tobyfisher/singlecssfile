@@ -16,10 +16,10 @@
 
 // ---- Backgrounds
 $bg: (
-	"html": #1e242f,
+	"html": #161e2a,
 	"max": #000,
 	"popup":#0D161E,
-	"title": #273943,
+	"title": #2a3441,
 	"event": #1E2E42,
 	"data": #121A22,
 	"grey": rgb(40, 52, 66)
@@ -35,7 +35,7 @@ $bg-light: (
 	"grey": rgb(220, 220, 220)
 );
 
-// ---- Font weights (because white on dark bleeds...)
+// ---- Font weights (because white on dark bleeds and looks thicker...)
 $font-weight: (
 	"thin": 100,
 	"light": 300,
@@ -45,9 +45,9 @@ $font-weight: (
 
 $font-weight-light: (
 	"thin": 300,
-	"light": 400, // push 300 weights to 400 in 'light'
-	"medium": 500, // push 400 weights to 500
-	"bold": 700 // push 500 weights to 700 (no 600)
+	"light": 400,
+	"medium": 500,
+	"bold": 700
 );
 
 // ---- Text
@@ -70,7 +70,7 @@ $txt-light: (
 // ---- GUI
 $gui: (
 	"spinner": rgb(0, 255, 255),
-	"line": rgb(0,60,70),
+	"line": rgb(0, 60, 70),
 	"scroll-track":rgb(10, 10, 15),
 	"scroll-thumb":rgb(55, 55, 60),
 );
@@ -95,7 +95,7 @@ $btn: (
 	"red-hint": hsl(360, 83%, 28%),
 	"red-active": hsl(360, 83%, 23%),
 	"disabled": rgb(80, 80, 80),
-	"btn-icon-hover": none,
+	"icon-hover-filter": none,
 );
 
 $btn-light: (
@@ -110,7 +110,7 @@ $btn-light: (
 	"red-hint": hsl(360, 83%, 28%),
 	"red-active": hsl(360, 83%, 23%),
 	"disabled": rgb(150, 150, 150),
-	"btn-icon-hover": invert(100%) grayscale(100%),
+	"icon-hover-filter": invert(100%) grayscale(100%),
 );
 
 // ---- Colors (alerts, flags, pathsteps, wait, etc)
@@ -160,18 +160,32 @@ $input-light: (
 
 // ---- SVG icons
 
-$themedIcons: ("arrow-right-bold", "arrow-down-bold", "direction-right", "area-expand", "area-reduce", "lat-L-inactive", "lat-L-red", "lat-L", "lat-NA", "lat-R-green", "lat-R-inactive", "lat-R", "menu", "more-h", "search", "tick-green", "tick-chunky", "pencil", "pencil-blue", "status-query", "status-urgent", "no-permissions", "zoom-in");
+$themedIcons: ("plus", "minus", "plus-bold", "minus-bold", "arrow-down", "arrow-up", "arrow-down-bold", "arrow-up-bold", "arrow-right-bold",
+"arrow-left-bold", "direction-up", "direction-down", "direction-right", "direction-left", "direction-horizontal",
+"direction-right-circle", "direction-left-circle", "direction-up-circle", "direction-down-circle", "remove-circle",
+"plus-circle", "tick-circle", "move", "child-arrow", "parent-arrow", "menu", "trash", "duplicate", "print", "search", "zoom-in",
+"zoom-out", "filter", "tick", "remove", "cog", "download", "info", "exclamation", "asterisk", "pencil", "eye",
+"comments", "comments-added", "comments-who", "start", "stop", "range", "top", "reduce-height", "increase-height", "change", "d-slash",
+"expand", "collapse", "downup", "rewind", "forward", "undo", "reset", "sync", "time", "audit-trail", "male", "female", "triangle",
+"drug-rx", "formulary", "injection", "drop", "drop-done", "flag", "flagline", "star", "starline", "no-permissions",
+"fork", "path-break", "waiting", "eyelat-R", "eyelat-L", "more-h", "status-urgent", "status-query", "doubt", "padlock");
+
+// not available via <i>, only for CSS
+$uiThemedIcons: ("face", "element-divider", "btn-goto", "tab-more-h", "tab-whiteboard", "tab-print", "tab-trash", "watermark-patient",
+"nystagmus-arrow-h-1", "nystagmus-arrow-h-2", "nystagmus-arrow-h-3");
+
 
 // -- these work across both themes:
-$rgbIcons: ("triangle-amber", "triangle-blue", "triangle-green", "triangle-grey", "triangle-red", "triangle-orange");
+$rgbIcons: ("circle-blue", "circle-green", "circle-yellow", "circle-orange", "circle-red", "circle-grey",
+"triangle-blue", "triangle-green", "triangle-orange", "triangle-red", "triangle-grey", "exclamation-green", "exclamation-orange", "exclamation-red",
+"flag-green", "flag-orange", "flag-red", "flag-grey", "mpr-green", "mpr-orange", "mpr-red", "warning-none", "warning", "cross-red",);
 
-$uiIcons: ("list-dot", "search", "note", "plus-bold", "remove", "cross-red");
+
+$uiIcons: ("list-dot");
 
 // *********************
 // CSS custom properties
 :root {
-
-	--i-opacity: 0.5; // (same across both themes)
 
 	// currently both groups use "--i-ui-" prefix but this might need changing (ok, for now)
 	@each $icon in $rgbIcons {
@@ -190,6 +204,10 @@ html.theme-dark {
 		--i-#{$icon}: url("../svg/in-css/dark/i/#{$icon}.svg");
 	}
 
+	@each $icon in $uiThemedIcons {
+		--i-#{$icon}: url("../svg/in-css/dark/ui/#{$icon}.svg");
+	}
+
 	@include cssVars("bg", $bg);
 	@include cssVars("txt", $txt);
 	@include cssVars("font", $font-weight);
@@ -206,6 +224,10 @@ html.theme-light {
 
 	@each $icon in $themedIcons {
 		--i-#{$icon}: url("../svg/in-css/light/i/#{$icon}.svg");
+	}
+
+	@each $icon in $uiThemedIcons {
+		--i-#{$icon}: url("../svg/in-css/light/ui/#{$icon}.svg");
 	}
 
 	@include cssVars("bg", $bg-light);

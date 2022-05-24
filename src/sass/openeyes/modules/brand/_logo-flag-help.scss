@@ -8,16 +8,17 @@
 .oe-logo-flag-help {
 	z-index:$oe-z-logo - 1;
 	position:absolute;
-	top:20px; 			// positioned by eye
+	top:24px; 			// positioned by eye
 	left:200px;
+	line-height: 1;
 
 	@include flex( center, flex-start );
 
-	@include font-size(14);
+	@include font-size(12);
 	font-weight: var(--font-light);
 
-	padding-left:20px; // allow for icon space
-	background: left center / 16px transparent url( svg-white-icon("i/direction-left") ) no-repeat;
+	padding-left:18px; // allow for icon
+	background: left center / 12px transparent var(--i-direction-left) no-repeat;
 
 	opacity: 0.5;
 

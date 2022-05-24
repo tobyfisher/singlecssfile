@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Mon May 23 2022 09:14:40 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Tue May 24 2022 21:19:54 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -298,49 +298,135 @@ textarea {
 }
 
 :root {
-  --i-opacity: 0.5;
-  --i-ui-triangle-amber: url("../svg/in-css/all/i/triangle-amber.svg");
+  --i-ui-circle-blue: url("../svg/in-css/all/i/circle-blue.svg");
+  --i-ui-circle-green: url("../svg/in-css/all/i/circle-green.svg");
+  --i-ui-circle-yellow: url("../svg/in-css/all/i/circle-yellow.svg");
+  --i-ui-circle-orange: url("../svg/in-css/all/i/circle-orange.svg");
+  --i-ui-circle-red: url("../svg/in-css/all/i/circle-red.svg");
+  --i-ui-circle-grey: url("../svg/in-css/all/i/circle-grey.svg");
   --i-ui-triangle-blue: url("../svg/in-css/all/i/triangle-blue.svg");
   --i-ui-triangle-green: url("../svg/in-css/all/i/triangle-green.svg");
-  --i-ui-triangle-grey: url("../svg/in-css/all/i/triangle-grey.svg");
-  --i-ui-triangle-red: url("../svg/in-css/all/i/triangle-red.svg");
   --i-ui-triangle-orange: url("../svg/in-css/all/i/triangle-orange.svg");
+  --i-ui-triangle-red: url("../svg/in-css/all/i/triangle-red.svg");
+  --i-ui-triangle-grey: url("../svg/in-css/all/i/triangle-grey.svg");
+  --i-ui-exclamation-green: url("../svg/in-css/all/i/exclamation-green.svg");
+  --i-ui-exclamation-orange: url("../svg/in-css/all/i/exclamation-orange.svg");
+  --i-ui-exclamation-red: url("../svg/in-css/all/i/exclamation-red.svg");
+  --i-ui-flag-green: url("../svg/in-css/all/i/flag-green.svg");
+  --i-ui-flag-orange: url("../svg/in-css/all/i/flag-orange.svg");
+  --i-ui-flag-red: url("../svg/in-css/all/i/flag-red.svg");
+  --i-ui-flag-grey: url("../svg/in-css/all/i/flag-grey.svg");
+  --i-ui-mpr-green: url("../svg/in-css/all/i/mpr-green.svg");
+  --i-ui-mpr-orange: url("../svg/in-css/all/i/mpr-orange.svg");
+  --i-ui-mpr-red: url("../svg/in-css/all/i/mpr-red.svg");
+  --i-ui-warning-none: url("../svg/in-css/all/i/warning-none.svg");
+  --i-ui-warning: url("../svg/in-css/all/i/warning.svg");
+  --i-ui-cross-red: url("../svg/in-css/all/i/cross-red.svg");
   --i-ui-list-dot: url("../svg/in-css/all/ui/list-dot.svg");
-  --i-ui-search: url("../svg/in-css/all/ui/search.svg");
-  --i-ui-note: url("../svg/in-css/all/ui/note.svg");
-  --i-ui-plus-bold: url("../svg/in-css/all/ui/plus-bold.svg");
-  --i-ui-remove: url("../svg/in-css/all/ui/remove.svg");
-  --i-ui-cross-red: url("../svg/in-css/all/ui/cross-red.svg");
 }
 
 html.theme-dark {
-  --i-arrow-right-bold: url("../svg/in-css/dark/i/arrow-right-bold.svg");
+  --i-plus: url("../svg/in-css/dark/i/plus.svg");
+  --i-minus: url("../svg/in-css/dark/i/minus.svg");
+  --i-plus-bold: url("../svg/in-css/dark/i/plus-bold.svg");
+  --i-minus-bold: url("../svg/in-css/dark/i/minus-bold.svg");
+  --i-arrow-down: url("../svg/in-css/dark/i/arrow-down.svg");
+  --i-arrow-up: url("../svg/in-css/dark/i/arrow-up.svg");
   --i-arrow-down-bold: url("../svg/in-css/dark/i/arrow-down-bold.svg");
+  --i-arrow-up-bold: url("../svg/in-css/dark/i/arrow-up-bold.svg");
+  --i-arrow-right-bold: url("../svg/in-css/dark/i/arrow-right-bold.svg");
+  --i-arrow-left-bold: url("../svg/in-css/dark/i/arrow-left-bold.svg");
+  --i-direction-up: url("../svg/in-css/dark/i/direction-up.svg");
+  --i-direction-down: url("../svg/in-css/dark/i/direction-down.svg");
   --i-direction-right: url("../svg/in-css/dark/i/direction-right.svg");
-  --i-area-expand: url("../svg/in-css/dark/i/area-expand.svg");
-  --i-area-reduce: url("../svg/in-css/dark/i/area-reduce.svg");
-  --i-lat-L-inactive: url("../svg/in-css/dark/i/lat-L-inactive.svg");
-  --i-lat-L-red: url("../svg/in-css/dark/i/lat-L-red.svg");
-  --i-lat-L: url("../svg/in-css/dark/i/lat-L.svg");
-  --i-lat-NA: url("../svg/in-css/dark/i/lat-NA.svg");
-  --i-lat-R-green: url("../svg/in-css/dark/i/lat-R-green.svg");
-  --i-lat-R-inactive: url("../svg/in-css/dark/i/lat-R-inactive.svg");
-  --i-lat-R: url("../svg/in-css/dark/i/lat-R.svg");
+  --i-direction-left: url("../svg/in-css/dark/i/direction-left.svg");
+  --i-direction-horizontal: url("../svg/in-css/dark/i/direction-horizontal.svg");
+  --i-direction-right-circle: url("../svg/in-css/dark/i/direction-right-circle.svg");
+  --i-direction-left-circle: url("../svg/in-css/dark/i/direction-left-circle.svg");
+  --i-direction-up-circle: url("../svg/in-css/dark/i/direction-up-circle.svg");
+  --i-direction-down-circle: url("../svg/in-css/dark/i/direction-down-circle.svg");
+  --i-remove-circle: url("../svg/in-css/dark/i/remove-circle.svg");
+  --i-plus-circle: url("../svg/in-css/dark/i/plus-circle.svg");
+  --i-tick-circle: url("../svg/in-css/dark/i/tick-circle.svg");
+  --i-move: url("../svg/in-css/dark/i/move.svg");
+  --i-child-arrow: url("../svg/in-css/dark/i/child-arrow.svg");
+  --i-parent-arrow: url("../svg/in-css/dark/i/parent-arrow.svg");
   --i-menu: url("../svg/in-css/dark/i/menu.svg");
-  --i-more-h: url("../svg/in-css/dark/i/more-h.svg");
+  --i-trash: url("../svg/in-css/dark/i/trash.svg");
+  --i-duplicate: url("../svg/in-css/dark/i/duplicate.svg");
+  --i-print: url("../svg/in-css/dark/i/print.svg");
   --i-search: url("../svg/in-css/dark/i/search.svg");
-  --i-tick-green: url("../svg/in-css/dark/i/tick-green.svg");
-  --i-tick-chunky: url("../svg/in-css/dark/i/tick-chunky.svg");
-  --i-pencil: url("../svg/in-css/dark/i/pencil.svg");
-  --i-pencil-blue: url("../svg/in-css/dark/i/pencil-blue.svg");
-  --i-status-query: url("../svg/in-css/dark/i/status-query.svg");
-  --i-status-urgent: url("../svg/in-css/dark/i/status-urgent.svg");
-  --i-no-permissions: url("../svg/in-css/dark/i/no-permissions.svg");
   --i-zoom-in: url("../svg/in-css/dark/i/zoom-in.svg");
-  --bg-html: #1e242f;
+  --i-zoom-out: url("../svg/in-css/dark/i/zoom-out.svg");
+  --i-filter: url("../svg/in-css/dark/i/filter.svg");
+  --i-tick: url("../svg/in-css/dark/i/tick.svg");
+  --i-remove: url("../svg/in-css/dark/i/remove.svg");
+  --i-cog: url("../svg/in-css/dark/i/cog.svg");
+  --i-download: url("../svg/in-css/dark/i/download.svg");
+  --i-info: url("../svg/in-css/dark/i/info.svg");
+  --i-exclamation: url("../svg/in-css/dark/i/exclamation.svg");
+  --i-asterisk: url("../svg/in-css/dark/i/asterisk.svg");
+  --i-pencil: url("../svg/in-css/dark/i/pencil.svg");
+  --i-eye: url("../svg/in-css/dark/i/eye.svg");
+  --i-comments: url("../svg/in-css/dark/i/comments.svg");
+  --i-comments-added: url("../svg/in-css/dark/i/comments-added.svg");
+  --i-comments-who: url("../svg/in-css/dark/i/comments-who.svg");
+  --i-start: url("../svg/in-css/dark/i/start.svg");
+  --i-stop: url("../svg/in-css/dark/i/stop.svg");
+  --i-range: url("../svg/in-css/dark/i/range.svg");
+  --i-top: url("../svg/in-css/dark/i/top.svg");
+  --i-reduce-height: url("../svg/in-css/dark/i/reduce-height.svg");
+  --i-increase-height: url("../svg/in-css/dark/i/increase-height.svg");
+  --i-change: url("../svg/in-css/dark/i/change.svg");
+  --i-d-slash: url("../svg/in-css/dark/i/d-slash.svg");
+  --i-expand: url("../svg/in-css/dark/i/expand.svg");
+  --i-collapse: url("../svg/in-css/dark/i/collapse.svg");
+  --i-downup: url("../svg/in-css/dark/i/downup.svg");
+  --i-rewind: url("../svg/in-css/dark/i/rewind.svg");
+  --i-forward: url("../svg/in-css/dark/i/forward.svg");
+  --i-undo: url("../svg/in-css/dark/i/undo.svg");
+  --i-reset: url("../svg/in-css/dark/i/reset.svg");
+  --i-sync: url("../svg/in-css/dark/i/sync.svg");
+  --i-time: url("../svg/in-css/dark/i/time.svg");
+  --i-audit-trail: url("../svg/in-css/dark/i/audit-trail.svg");
+  --i-male: url("../svg/in-css/dark/i/male.svg");
+  --i-female: url("../svg/in-css/dark/i/female.svg");
+  --i-triangle: url("../svg/in-css/dark/i/triangle.svg");
+  --i-drug-rx: url("../svg/in-css/dark/i/drug-rx.svg");
+  --i-formulary: url("../svg/in-css/dark/i/formulary.svg");
+  --i-injection: url("../svg/in-css/dark/i/injection.svg");
+  --i-drop: url("../svg/in-css/dark/i/drop.svg");
+  --i-drop-done: url("../svg/in-css/dark/i/drop-done.svg");
+  --i-flag: url("../svg/in-css/dark/i/flag.svg");
+  --i-flagline: url("../svg/in-css/dark/i/flagline.svg");
+  --i-star: url("../svg/in-css/dark/i/star.svg");
+  --i-starline: url("../svg/in-css/dark/i/starline.svg");
+  --i-no-permissions: url("../svg/in-css/dark/i/no-permissions.svg");
+  --i-fork: url("../svg/in-css/dark/i/fork.svg");
+  --i-path-break: url("../svg/in-css/dark/i/path-break.svg");
+  --i-waiting: url("../svg/in-css/dark/i/waiting.svg");
+  --i-eyelat-R: url("../svg/in-css/dark/i/eyelat-R.svg");
+  --i-eyelat-L: url("../svg/in-css/dark/i/eyelat-L.svg");
+  --i-more-h: url("../svg/in-css/dark/i/more-h.svg");
+  --i-status-urgent: url("../svg/in-css/dark/i/status-urgent.svg");
+  --i-status-query: url("../svg/in-css/dark/i/status-query.svg");
+  --i-doubt: url("../svg/in-css/dark/i/doubt.svg");
+  --i-padlock: url("../svg/in-css/dark/i/padlock.svg");
+  --i-face: url("../svg/in-css/dark/ui/face.svg");
+  --i-element-divider: url("../svg/in-css/dark/ui/element-divider.svg");
+  --i-btn-goto: url("../svg/in-css/dark/ui/btn-goto.svg");
+  --i-tab-more-h: url("../svg/in-css/dark/ui/tab-more-h.svg");
+  --i-tab-whiteboard: url("../svg/in-css/dark/ui/tab-whiteboard.svg");
+  --i-tab-print: url("../svg/in-css/dark/ui/tab-print.svg");
+  --i-tab-trash: url("../svg/in-css/dark/ui/tab-trash.svg");
+  --i-watermark-patient: url("../svg/in-css/dark/ui/watermark-patient.svg");
+  --i-nystagmus-arrow-h-1: url("../svg/in-css/dark/ui/nystagmus-arrow-h-1.svg");
+  --i-nystagmus-arrow-h-2: url("../svg/in-css/dark/ui/nystagmus-arrow-h-2.svg");
+  --i-nystagmus-arrow-h-3: url("../svg/in-css/dark/ui/nystagmus-arrow-h-3.svg");
+  --bg-html: #161e2a;
   --bg-max: #000;
   --bg-popup: #0D161E;
-  --bg-title: #273943;
+  --bg-title: #2a3441;
   --bg-event: #1E2E42;
   --bg-data: #121A22;
   --bg-grey: rgb(40, 52, 66);
@@ -368,7 +454,7 @@ html.theme-dark {
   --btn-red-hint: hsl(0deg, 83%, 28%);
   --btn-red-active: hsl(0deg, 83%, 23%);
   --btn-disabled: rgb(80, 80, 80);
-  --btn-btn-icon-hover: none;
+  --btn-icon-hover-filter: none;
   --color-highlighter: rgb(184, 171, 136);
   --color-green: rgb(0, 105, 0);
   --color-red: rgb(155, 0, 0);
@@ -387,29 +473,103 @@ html.theme-dark {
 }
 
 html.theme-light {
-  --i-arrow-right-bold: url("../svg/in-css/light/i/arrow-right-bold.svg");
+  --i-plus: url("../svg/in-css/light/i/plus.svg");
+  --i-minus: url("../svg/in-css/light/i/minus.svg");
+  --i-plus-bold: url("../svg/in-css/light/i/plus-bold.svg");
+  --i-minus-bold: url("../svg/in-css/light/i/minus-bold.svg");
+  --i-arrow-down: url("../svg/in-css/light/i/arrow-down.svg");
+  --i-arrow-up: url("../svg/in-css/light/i/arrow-up.svg");
   --i-arrow-down-bold: url("../svg/in-css/light/i/arrow-down-bold.svg");
+  --i-arrow-up-bold: url("../svg/in-css/light/i/arrow-up-bold.svg");
+  --i-arrow-right-bold: url("../svg/in-css/light/i/arrow-right-bold.svg");
+  --i-arrow-left-bold: url("../svg/in-css/light/i/arrow-left-bold.svg");
+  --i-direction-up: url("../svg/in-css/light/i/direction-up.svg");
+  --i-direction-down: url("../svg/in-css/light/i/direction-down.svg");
   --i-direction-right: url("../svg/in-css/light/i/direction-right.svg");
-  --i-area-expand: url("../svg/in-css/light/i/area-expand.svg");
-  --i-area-reduce: url("../svg/in-css/light/i/area-reduce.svg");
-  --i-lat-L-inactive: url("../svg/in-css/light/i/lat-L-inactive.svg");
-  --i-lat-L-red: url("../svg/in-css/light/i/lat-L-red.svg");
-  --i-lat-L: url("../svg/in-css/light/i/lat-L.svg");
-  --i-lat-NA: url("../svg/in-css/light/i/lat-NA.svg");
-  --i-lat-R-green: url("../svg/in-css/light/i/lat-R-green.svg");
-  --i-lat-R-inactive: url("../svg/in-css/light/i/lat-R-inactive.svg");
-  --i-lat-R: url("../svg/in-css/light/i/lat-R.svg");
+  --i-direction-left: url("../svg/in-css/light/i/direction-left.svg");
+  --i-direction-horizontal: url("../svg/in-css/light/i/direction-horizontal.svg");
+  --i-direction-right-circle: url("../svg/in-css/light/i/direction-right-circle.svg");
+  --i-direction-left-circle: url("../svg/in-css/light/i/direction-left-circle.svg");
+  --i-direction-up-circle: url("../svg/in-css/light/i/direction-up-circle.svg");
+  --i-direction-down-circle: url("../svg/in-css/light/i/direction-down-circle.svg");
+  --i-remove-circle: url("../svg/in-css/light/i/remove-circle.svg");
+  --i-plus-circle: url("../svg/in-css/light/i/plus-circle.svg");
+  --i-tick-circle: url("../svg/in-css/light/i/tick-circle.svg");
+  --i-move: url("../svg/in-css/light/i/move.svg");
+  --i-child-arrow: url("../svg/in-css/light/i/child-arrow.svg");
+  --i-parent-arrow: url("../svg/in-css/light/i/parent-arrow.svg");
   --i-menu: url("../svg/in-css/light/i/menu.svg");
-  --i-more-h: url("../svg/in-css/light/i/more-h.svg");
+  --i-trash: url("../svg/in-css/light/i/trash.svg");
+  --i-duplicate: url("../svg/in-css/light/i/duplicate.svg");
+  --i-print: url("../svg/in-css/light/i/print.svg");
   --i-search: url("../svg/in-css/light/i/search.svg");
-  --i-tick-green: url("../svg/in-css/light/i/tick-green.svg");
-  --i-tick-chunky: url("../svg/in-css/light/i/tick-chunky.svg");
-  --i-pencil: url("../svg/in-css/light/i/pencil.svg");
-  --i-pencil-blue: url("../svg/in-css/light/i/pencil-blue.svg");
-  --i-status-query: url("../svg/in-css/light/i/status-query.svg");
-  --i-status-urgent: url("../svg/in-css/light/i/status-urgent.svg");
-  --i-no-permissions: url("../svg/in-css/light/i/no-permissions.svg");
   --i-zoom-in: url("../svg/in-css/light/i/zoom-in.svg");
+  --i-zoom-out: url("../svg/in-css/light/i/zoom-out.svg");
+  --i-filter: url("../svg/in-css/light/i/filter.svg");
+  --i-tick: url("../svg/in-css/light/i/tick.svg");
+  --i-remove: url("../svg/in-css/light/i/remove.svg");
+  --i-cog: url("../svg/in-css/light/i/cog.svg");
+  --i-download: url("../svg/in-css/light/i/download.svg");
+  --i-info: url("../svg/in-css/light/i/info.svg");
+  --i-exclamation: url("../svg/in-css/light/i/exclamation.svg");
+  --i-asterisk: url("../svg/in-css/light/i/asterisk.svg");
+  --i-pencil: url("../svg/in-css/light/i/pencil.svg");
+  --i-eye: url("../svg/in-css/light/i/eye.svg");
+  --i-comments: url("../svg/in-css/light/i/comments.svg");
+  --i-comments-added: url("../svg/in-css/light/i/comments-added.svg");
+  --i-comments-who: url("../svg/in-css/light/i/comments-who.svg");
+  --i-start: url("../svg/in-css/light/i/start.svg");
+  --i-stop: url("../svg/in-css/light/i/stop.svg");
+  --i-range: url("../svg/in-css/light/i/range.svg");
+  --i-top: url("../svg/in-css/light/i/top.svg");
+  --i-reduce-height: url("../svg/in-css/light/i/reduce-height.svg");
+  --i-increase-height: url("../svg/in-css/light/i/increase-height.svg");
+  --i-change: url("../svg/in-css/light/i/change.svg");
+  --i-d-slash: url("../svg/in-css/light/i/d-slash.svg");
+  --i-expand: url("../svg/in-css/light/i/expand.svg");
+  --i-collapse: url("../svg/in-css/light/i/collapse.svg");
+  --i-downup: url("../svg/in-css/light/i/downup.svg");
+  --i-rewind: url("../svg/in-css/light/i/rewind.svg");
+  --i-forward: url("../svg/in-css/light/i/forward.svg");
+  --i-undo: url("../svg/in-css/light/i/undo.svg");
+  --i-reset: url("../svg/in-css/light/i/reset.svg");
+  --i-sync: url("../svg/in-css/light/i/sync.svg");
+  --i-time: url("../svg/in-css/light/i/time.svg");
+  --i-audit-trail: url("../svg/in-css/light/i/audit-trail.svg");
+  --i-male: url("../svg/in-css/light/i/male.svg");
+  --i-female: url("../svg/in-css/light/i/female.svg");
+  --i-triangle: url("../svg/in-css/light/i/triangle.svg");
+  --i-drug-rx: url("../svg/in-css/light/i/drug-rx.svg");
+  --i-formulary: url("../svg/in-css/light/i/formulary.svg");
+  --i-injection: url("../svg/in-css/light/i/injection.svg");
+  --i-drop: url("../svg/in-css/light/i/drop.svg");
+  --i-drop-done: url("../svg/in-css/light/i/drop-done.svg");
+  --i-flag: url("../svg/in-css/light/i/flag.svg");
+  --i-flagline: url("../svg/in-css/light/i/flagline.svg");
+  --i-star: url("../svg/in-css/light/i/star.svg");
+  --i-starline: url("../svg/in-css/light/i/starline.svg");
+  --i-no-permissions: url("../svg/in-css/light/i/no-permissions.svg");
+  --i-fork: url("../svg/in-css/light/i/fork.svg");
+  --i-path-break: url("../svg/in-css/light/i/path-break.svg");
+  --i-waiting: url("../svg/in-css/light/i/waiting.svg");
+  --i-eyelat-R: url("../svg/in-css/light/i/eyelat-R.svg");
+  --i-eyelat-L: url("../svg/in-css/light/i/eyelat-L.svg");
+  --i-more-h: url("../svg/in-css/light/i/more-h.svg");
+  --i-status-urgent: url("../svg/in-css/light/i/status-urgent.svg");
+  --i-status-query: url("../svg/in-css/light/i/status-query.svg");
+  --i-doubt: url("../svg/in-css/light/i/doubt.svg");
+  --i-padlock: url("../svg/in-css/light/i/padlock.svg");
+  --i-face: url("../svg/in-css/light/ui/face.svg");
+  --i-element-divider: url("../svg/in-css/light/ui/element-divider.svg");
+  --i-btn-goto: url("../svg/in-css/light/ui/btn-goto.svg");
+  --i-tab-more-h: url("../svg/in-css/light/ui/tab-more-h.svg");
+  --i-tab-whiteboard: url("../svg/in-css/light/ui/tab-whiteboard.svg");
+  --i-tab-print: url("../svg/in-css/light/ui/tab-print.svg");
+  --i-tab-trash: url("../svg/in-css/light/ui/tab-trash.svg");
+  --i-watermark-patient: url("../svg/in-css/light/ui/watermark-patient.svg");
+  --i-nystagmus-arrow-h-1: url("../svg/in-css/light/ui/nystagmus-arrow-h-1.svg");
+  --i-nystagmus-arrow-h-2: url("../svg/in-css/light/ui/nystagmus-arrow-h-2.svg");
+  --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
   --bg-html: #d7d6d6;
   --bg-max: #FFF;
   --bg-popup: #f1f0f0;
@@ -441,7 +601,7 @@ html.theme-light {
   --btn-red-hint: hsl(0deg, 83%, 28%);
   --btn-red-active: hsl(0deg, 83%, 23%);
   --btn-disabled: rgb(150, 150, 150);
-  --btn-btn-icon-hover: invert(100%) grayscale(100%);
+  --btn-icon-hover-filter: invert(100%) grayscale(100%);
   --color-highlighter: rgb(235, 211, 123);
   --color-green: rgb(0, 155, 0);
   --color-red: rgb(205, 0, 0);
@@ -482,13 +642,13 @@ body.open-eyes {
   grid: "header header" 60px "addevent eventheader" 38px "sidebar main" 1fr/200px 1fr;
 }
 .oe-grid .sidebar-header {
+  grid-area: addevent;
   height: 38px;
   width: 200px;
-  grid-area: addevent;
 }
 .oe-grid .sidebar {
-  width: 200px;
   grid-area: sidebar;
+  width: 200px;
   overflow-y: auto;
 }
 .oe-grid .event-header,
@@ -549,16 +709,154 @@ body.open-eyes {
   grid-area: 2/1/4/3;
   overflow-y: auto;
 }
-.oe-grid .oe-full-header,
 .oe-grid .oescape-header,
 .oe-grid .analytics-header {
   grid-area: 2/1/3/3;
 }
-.oe-grid .oe-full-content,
 .oe-grid .oescape,
 .oe-grid .oe-analytics {
   grid-area: 3/1/4/3;
   overflow-y: auto;
+}
+
+.oe-full-header {
+  grid-area: pageheader;
+  position: relative;
+  background: var(--bg-title);
+  padding: 0 0 0 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.oe-full-header .title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: var(--font-light);
+  color: var(--txt-light);
+}
+.oe-full-header .title.wordcaps {
+  text-transform: capitalize;
+}
+.oe-full-header .title.nocaps {
+  text-transform: none;
+}
+.oe-full-header .title b, .oe-full-header .title strong {
+  font-weight: var(--font-medium);
+}
+.oe-full-header .title .oe-area {
+  font-weight: 100;
+  font-size: 1.5rem;
+  padding: 0 8px 0 0;
+}
+.oe-full-header .options-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.oe-full-header button,
+.oe-full-header .button {
+  vertical-align: top;
+  height: 38px;
+  padding: 0 16px;
+}
+.oe-full-header button.icon,
+.oe-full-header .button.icon {
+  padding: 0 0;
+}
+.oe-full-header button.icon .oe-i,
+.oe-full-header .button.icon .oe-i {
+  padding: 0 20px;
+}
+
+.oe-full-content {
+  grid-area: main;
+}
+
+.oe-full-content.subgrid {
+  display: grid;
+  grid: "fullside fullmain" 1fr/300px 1fr;
+  grid-column-gap: 20px;
+}
+.oe-full-content.subgrid.wide-side-panel {
+  grid: 1fr/400px 1fr;
+}
+.oe-full-content.subgrid .oe-full-side-panel,
+.oe-full-content.subgrid .oe-full-main {
+  height: calc(100vh - 98px);
+  overflow-y: auto;
+}
+.oe-full-content.subgrid .oe-full-side-panel {
+  grid-area: fullside;
+}
+.oe-full-content.subgrid .oe-full-main {
+  grid-area: fullmain;
+}
+
+.oe-full-side-panel {
+  padding: 20px;
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+}
+.oe-full-side-panel h3 {
+  margin: 16px 0 8px 0;
+  font-size: 0.9375rem;
+  font-weight: var(--font-light);
+  color: var(--txt-light);
+}
+.oe-full-side-panel h4 {
+  font-size: 0.75rem;
+  margin: 12px 0 6px 0;
+  font-weight: var(--font-medium);
+  color: var(--txt-light);
+}
+.oe-full-side-panel h3:first-child,
+.oe-full-side-panel h4:first-child {
+  margin-top: 0;
+}
+.oe-full-side-panel p {
+  font-size: 0.75rem;
+  margin: 6px 0;
+}
+.oe-full-side-panel ul:not(.oe-multi-select), .oe-full-side-panel ul:not(.filter-list) {
+  margin: 10px 0;
+}
+.oe-full-side-panel ul:not(.oe-multi-select) li, .oe-full-side-panel ul:not(.filter-list) li {
+  font-size: 0.8125rem;
+  color: var(--txt-light);
+  padding: 0 0 10px 0;
+}
+.oe-full-side-panel ul:not(.oe-multi-select) li .count, .oe-full-side-panel ul:not(.filter-list) li .count {
+  font-size: 0.75rem;
+  padding: 0 0 0 5px;
+}
+.oe-full-side-panel table.standard {
+  margin: 0 0;
+}
+.oe-full-side-panel table.standard.custom-filters tbody td, .oe-full-side-panel table.standard.normal-text tbody td {
+  font-size: 0.75rem;
+}
+.oe-full-side-panel table.standard.custom-filters tbody th, .oe-full-side-panel table.standard.normal-text tbody th {
+  font-size: 0.6875rem;
+  font-weight: var(--font-medium);
+}
+
+.oe-full-main {
+  padding: 20px 20px 40px 20px;
+}
+.oe-full-main.no-pad {
+  padding: 0;
+}
+.oe-full-main h2 {
+  font-size: 1.1875rem;
+  font-weight: var(--font-light);
+  color: var(--txt-highlight);
+  margin: 10px 0 15px 0;
+}
+.oe-full-main h2:first-child {
+  margin-top: 0;
 }
 
 #oe-admin-notifcation {
@@ -653,10 +951,6 @@ body.open-eyes {
   align-items: center;
   transition: left 0.5s ease;
 }
-.oe-logo.open .oe-openeyes, .oe-logo.active .oe-openeyes {
-  fill: var(--txt-active);
-  opacity: 0.8;
-}
 .oe-logo.open {
   left: 0;
 }
@@ -666,8 +960,10 @@ svg.oe-openeyes {
   display: inline-block;
   width: 110px;
   height: 20.284px;
-  fill: var(--txt-base);
-  opacity: 0.3;
+  fill: var(--txt-light);
+}
+.active svg.oe-openeyes, .open svg.oe-openeyes {
+  fill: var(--txt-active);
 }
 
 .oe-product-info {
@@ -712,15 +1008,16 @@ svg.oe-openeyes {
 .oe-logo-flag-help {
   z-index: 99;
   position: absolute;
-  top: 20px;
+  top: 24px;
   left: 200px;
+  line-height: 1;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: var(--font-light);
-  padding-left: 20px;
-  background: left center/16px transparent url("../svg/in-css/dark/i/direction-left.svg") no-repeat;
+  padding-left: 18px;
+  background: left center/12px transparent var(--i-direction-left) no-repeat;
   opacity: 0.5;
 }
 .oe-logo-flag-help .oe-i {
@@ -731,4 +1028,282 @@ svg.oe-openeyes {
   grid-area: header;
   background: var(--bg-html);
   position: relative;
+}
+
+.sync-data {
+  position: relative;
+}
+.sync-data .sync-btn {
+  height: 38px;
+  background-color: var(--btn-blue-hint);
+  margin: 0 10px 0 0;
+  padding: 0 8px 0 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+.sync-data .sync-btn * {
+  pointer-events: none;
+}
+.sync-data .sync-btn.active, .sync-data .sync-btn:hover, .sync-data .sync-btn:focus {
+  background-color: var(--btn-blue);
+}
+.sync-data .sync-btn::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 21px;
+  height: 21px;
+  background: url("../svg/in-css/dark/i/sync.svg") center center no-repeat;
+  background-size: 21px;
+  opacity: 0.5;
+}
+.sync-data .sync-btn.on::before {
+  animation: spinner 20s linear infinite;
+  opacity: 1;
+}
+.sync-data .sync-options {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  z-index: 99;
+  background: var(--btn-blue);
+  border-top: 2px solid var(--btn-blue);
+}
+.sync-data .sync-options li > button {
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+}
+.sync-data .sync-options li > button:hover, .sync-data .sync-options li > button:focus, .sync-data .sync-options li > button:active {
+  color: #fff;
+  background-color: var(--btn-blue-active);
+}
+
+button,
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  vertical-align: top;
+  white-space: nowrap;
+  border: 0;
+  outline: 0;
+  border-radius: 0 !important;
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+  background: var(--btn-base);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 8px;
+}
+button.thin,
+.button.thin {
+  padding: 0 3px;
+}
+button:disabled, button.disabled, button.inactive,
+.button:disabled,
+.button.disabled,
+.button.inactive {
+  cursor: default;
+  color: var(--txt-light) !important;
+  background: var(--color-grey) !important;
+  border: 1px solid var(--txt-light);
+  pointer-events: none;
+  opacity: 0.4;
+}
+button .oe-i,
+.button .oe-i {
+  pointer-events: none;
+}
+button:hover, button:focus, button:active, button.active, button.selected,
+.button:hover,
+.button:focus,
+.button:active,
+.button.active,
+.button.selected {
+  color: #fff;
+  background: var(--btn-blue);
+}
+button:hover .oe-i, button:focus .oe-i, button:active .oe-i, button.active .oe-i, button.selected .oe-i,
+.button:hover .oe-i,
+.button:focus .oe-i,
+.button:active .oe-i,
+.button.active .oe-i,
+.button.selected .oe-i {
+  opacity: 1;
+  filter: var(--btn-icon-hover-filter);
+}
+
+button.header-tab,
+.button.header-tab {
+  margin: 0;
+  background: none;
+}
+button.header-tab:hover, button.header-tab:focus, button.header-tab:active,
+.button.header-tab:hover,
+.button.header-tab:focus,
+.button.header-tab:active {
+  color: rgb(255, 255, 255);
+  background: var(--btn-blue);
+}
+button.header-tab.selected,
+.button.header-tab.selected {
+  cursor: default;
+  color: var(--txt-highlight);
+  background-color: pink;
+}
+button.header-tab.disabled, button.header-tab.inactive,
+.button.header-tab.disabled,
+.button.header-tab.inactive {
+  background-color: transparent;
+  border: none !important;
+}
+button.header-tab.icon-bg,
+.button.header-tab.icon-bg {
+  background-repeat: no-repeat;
+}
+button.header-tab.icon-bg.goto,
+.button.header-tab.icon-bg.goto {
+  background-size: 12px;
+  background-image: var(--i-btn-goto);
+  background-position: top 1px right -1px;
+}
+
+button.hint:hover, button.hint:focus, button.hint:active,
+.button.hint:hover,
+.button.hint:focus,
+.button.hint:active {
+  color: #fff;
+}
+button.hint.green,
+.button.hint.green {
+  background: var(--btn-green-hint);
+}
+button.hint.red,
+.button.hint.red {
+  background: var(--btn-red-hint);
+}
+button.hint.blue,
+.button.hint.blue {
+  background: var(--btn-blue-hint);
+}
+button.blue:hover, button.blue:focus, button.blue:active,
+.button.blue:hover,
+.button.blue:focus,
+.button.blue:active {
+  background: var(--btn-blue);
+}
+button.green:hover, button.green:focus, button.green:active,
+.button.green:hover,
+.button.green:focus,
+.button.green:active {
+  background: var(--btn-green);
+}
+button.red:hover, button.red:focus, button.red:active,
+.button.red:hover,
+.button.red:focus,
+.button.red:active {
+  background: var(--btn-red);
+}
+
+button.adder {
+  width: 35px;
+  padding: 0;
+  background: var(--btn-green-hint);
+}
+button.adder.square {
+  width: 25px;
+}
+button.adder:after {
+  content: "";
+  pointer-events: none;
+  height: 19px;
+  width: 19px;
+  margin: auto;
+  position: relative;
+  top: 0.5px;
+  background: transparent url("../svg/in-css/dark/i/plus.svg") center no-repeat;
+  background-size: 19px;
+  opacity: 0.5;
+}
+button.adder:hover, button.adder:focus {
+  color: #fff;
+  background: var(--btn-green);
+}
+button.adder:hover:after, button.adder:focus:after {
+  opacity: 1;
+}
+
+button.i-link,
+.button.i-link {
+  position: relative;
+  padding-right: 25px;
+  color: #fff;
+  background: var(--btn-blue-hint);
+}
+button.i-link:hover, button.i-link:focus, button.i-link:active,
+.button.i-link:hover,
+.button.i-link:focus,
+.button.i-link:active {
+  background: var(--btn-blue);
+}
+button.i-link:after,
+.button.i-link:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 23px;
+  background: center/13px transparent url(svg-white-icon("i/direction-right-circle")) no-repeat;
+}
+
+button.has-keyhint {
+  position: relative;
+  padding-right: 30px;
+}
+button .keyhint {
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  font-size: 0.6875rem;
+  font-weight: var(--font-medium);
+  opacity: 0.4;
+}
+button .keyhint::before {
+  content: "' ";
+}
+button .keyhint::after {
+  content: " '";
+}
+
+button.add-pathstep,
+.button.add-pathstep {
+  height: 25px;
+  width: 25px;
+  border-radius: 50% !important;
+  background: var(--btn-blue-hint);
+  position: relative;
+  padding: 0;
+}
+button.add-pathstep:after,
+.button.add-pathstep:after {
+  content: "";
+  pointer-events: none;
+  margin: auto;
+  height: 17px;
+  width: 17px;
+  background: center/contain transparent url(svg-white-icon("i/plus-bold")) no-repeat;
 }

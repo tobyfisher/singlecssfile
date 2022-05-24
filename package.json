@@ -1,6 +1,6 @@
 {
   "name": "newblue",
-  "version": "3.1.0",
+  "version": "4.0.0",
   "description": "newblue for OpenEyes",
   "private": true,
   "author": {
@@ -15,7 +15,7 @@
   "browserslist": [
     "Chrome > 84",
     "Edge > 84",
-    "Safari > 14.1"
+    "Safari > 15"
   ],
   "scripts": {
     "css": "node node_scripts/sass-to-css.js",
