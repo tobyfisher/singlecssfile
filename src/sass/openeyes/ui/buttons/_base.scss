@@ -66,7 +66,6 @@ button,
 	// Pseudo & JS class hooks
 	&:hover,
 	&:focus,
-	&:active,
 	&.active,
 	&.selected {
 		color: #fff;
@@ -79,6 +78,11 @@ button,
 			// if in light mode the icon will need inverting
 			filter: var(--btn-icon-hover-filter);
 		}
+	}
+
+	&:active {
+		outline: 1px dotted var(--input-focus-outline);
+		outline-offset: 1px;
 	}
 }
 
