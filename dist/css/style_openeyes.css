@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Tue May 24 2022 21:19:54 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Wed May 25 2022 08:53:26 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -424,6 +424,7 @@ html.theme-dark {
   --i-nystagmus-arrow-h-2: url("../svg/in-css/dark/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/dark/ui/nystagmus-arrow-h-3.svg");
   --bg-html: #161e2a;
+  --bg-header: #161e2a;
   --bg-max: #000;
   --bg-popup: #0D161E;
   --bg-title: #2a3441;
@@ -443,7 +444,7 @@ html.theme-dark {
   --gui-line: rgb(0, 60, 70);
   --gui-scroll-track: rgb(10, 10, 15);
   --gui-scroll-thumb: rgb(55, 55, 60);
-  --btn-text: rgb(230, 230, 230);
+  --btn-base: rgb(33, 46, 64);
   --btn-blue: #1D2E50;
   --btn-blue-hint: #074598;
   --btn-blue-active: #00f;
@@ -570,11 +571,12 @@ html.theme-light {
   --i-nystagmus-arrow-h-1: url("../svg/in-css/light/ui/nystagmus-arrow-h-1.svg");
   --i-nystagmus-arrow-h-2: url("../svg/in-css/light/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
-  --bg-html: #d7d6d6;
+  --bg-html: #E1E0E0;
+  --bg-header: #bebdbd;
   --bg-max: #FFF;
   --bg-popup: #f1f0f0;
-  --bg-title: #DDDCDC;
-  --bg-event: #E1E0E0;
+  --bg-title: #d9d9d9;
+  --bg-event: #d7d6d6;
   --bg-data: #F5F5F5;
   --bg-grey: rgb(220, 220, 220);
   --txt-base: rgb(10, 10, 10);
@@ -590,7 +592,7 @@ html.theme-light {
   --gui-line: rgb(162, 160, 160);
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
-  --btn-text: rgb(255, 255, 255);
+  --btn-base: rgb(78, 117, 202);
   --btn-blue: rgb(7, 79, 182);
   --btn-blue-hint: rgb(6, 68, 147);
   --btn-blue-active: #00f;
@@ -1026,8 +1028,51 @@ svg.oe-openeyes {
 
 .oe-header {
   grid-area: header;
-  background: var(--bg-html);
+  background: var(--bg-header);
   position: relative;
+}
+
+.oe-hd-title {
+  position: absolute;
+  top: 0;
+  left: 180px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--txt-light);
+  font-weight: var(--font-light);
+}
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
+  .oe-hd-title {
+    font-size: 1.5rem;
+    font-weight: var(--font-medium);
+  }
+}
+.oe-hd-title ul.dot-list li {
+  margin-bottom: 0;
+}
+
+.oe-hd-actions {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  height: 60px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--txt-light);
+}
+.oe-hd-actions button {
+  margin: 0 8px 0 0;
+}
+.oe-hd-actions button:last-child {
+  margin-right: 0;
+}
+.oe-hd-actions .group {
+  margin: 0 32px 0 0;
 }
 
 .sync-data {
@@ -1179,6 +1224,10 @@ button.header-tab.icon-bg.goto,
   background-position: top 1px right -1px;
 }
 
+button,
+.button {
+  color: #eee;
+}
 button.hint:hover, button.hint:focus, button.hint:active,
 .button.hint:hover,
 .button.hint:focus,
@@ -1217,30 +1266,26 @@ button.red:hover, button.red:focus, button.red:active,
 }
 
 button.adder {
-  width: 35px;
+  width: 34px;
   padding: 0;
   background: var(--btn-green-hint);
 }
 button.adder.square {
-  width: 25px;
+  width: 24px;
 }
-button.adder:after {
+button.adder::after {
   content: "";
   pointer-events: none;
-  height: 19px;
-  width: 19px;
-  margin: auto;
+  height: 100%;
+  width: 100%;
   position: relative;
-  top: 0.5px;
-  background: transparent url("../svg/in-css/dark/i/plus.svg") center no-repeat;
-  background-size: 19px;
-  opacity: 0.5;
+  background: center/20px url("../svg/in-css/dark/i/plus.svg") no-repeat;
+  opacity: 0.8;
 }
 button.adder:hover, button.adder:focus {
-  color: #fff;
   background: var(--btn-green);
 }
-button.adder:hover:after, button.adder:focus:after {
+button.adder:hover::after, button.adder:focus::after {
   opacity: 1;
 }
 

@@ -17,6 +17,7 @@
 // ---- Backgrounds
 $bg: (
 	"html": #161e2a,
+	"header": #161e2a,
 	"max": #000,
 	"popup":#0D161E,
 	"title": #2a3441,
@@ -26,11 +27,12 @@ $bg: (
 );
 
 $bg-light: (
-	"html": #d7d6d6,
+	"html": #E1E0E0,
+	"header": #bebdbd,
 	"max": #FFF,
 	"popup": #f1f0f0,
-	"title": #DDDCDC,
-	"event": #E1E0E0,
+	"title": #d9d9d9,
+	"event": #d7d6d6,
 	"data": #F5F5F5,
 	"grey": rgb(220, 220, 220)
 );
@@ -84,7 +86,7 @@ $gui-light: (
 
 // ---- Buttons
 $btn: (
-	"text": rgb(230, 230, 230),
+	"base":rgb(33,	46,	64	),
 	"blue": #1D2E50,
 	"blue-hint": #074598,
 	"blue-active": #00f,
@@ -99,7 +101,7 @@ $btn: (
 );
 
 $btn-light: (
-	"text": rgb(255, 255, 255),
+	"base": rgb(78, 117, 202),
 	"blue": rgb(7, 79, 182),
 	"blue-hint": rgb(6, 68, 147),
 	"blue-active": #00f,

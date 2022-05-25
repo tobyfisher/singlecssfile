@@ -3,6 +3,7 @@
 
 button,
 .button {
+	color: #eee;
 	// give a hint of the button colour to the user
 	&.hint {
 		&:hover,
