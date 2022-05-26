@@ -16,7 +16,7 @@
 
 // ---- Backgrounds
 $bg: (
-	"html": #1e232f,
+	"html": rgb(20, 30, 43),
 	"header": #111921,
 	"max": #000,
 	"popup":#0D161E,
@@ -72,7 +72,7 @@ $txt-light: (
 // ---- GUI
 $gui: (
 	"spinner": rgb(0, 255, 255),
-	"line": rgb(0, 60, 70),
+	"line": rgb(43, 64, 87),
 	"scroll-track":rgb(10, 10, 15),
 	"scroll-thumb":rgb(55, 55, 60),
 );
@@ -90,9 +90,9 @@ $btn: (
 	"blue": #1D2E50,
 	"blue-hint": #074598,
 	"blue-active": #00f,
-	"green": #0E9019,
-	"green-hint": #0E9019,
-	"green-active": hsl(122, 77%, 17%),
+	"green": #0a8013,
+	"green-hint": #0c5d10,
+	"green-active": hsl(122, 76%, 16%),
 	"red": rgb(153, 14, 14),
 	"red-hint": hsl(360, 83%, 28%),
 	"red-active": hsl(360, 83%, 23%),
@@ -141,8 +141,9 @@ $color-light: (
 $input: (
 	"scheme": "dark",
 	"focus-outline": rgb(9, 108, 154),
-	"base": rgb(0, 0, 0),
-	"text": rgb(255, 255, 255),
+	"base": rgb(30, 42, 60),
+	"hint": #222,
+	"text": #fff,
 	"border": rgb(70, 70, 70),
 	"placeholder": rgb(100, 100, 100),
 	"blue": rgb(0, 120, 255),
@@ -152,8 +153,9 @@ $input: (
 $input-light: (
 	"scheme": "light",
 	"focus-outline": rgb(7, 1, 224),
-	"base": rgb(255, 255, 255),
-	"text": rgb(0, 0, 0),
+	"base": #fff,
+	"hint": #ddd,
+	"text": #000,
 	"border": rgb(210, 210, 210),
 	"placeholder": rgb(181, 181, 181),
 	"blue": rgb(0, 50, 255),
@@ -183,7 +185,7 @@ $rgbIcons: ("circle-blue", "circle-green", "circle-yellow", "circle-orange", "ci
 "flag-green", "flag-orange", "flag-red", "flag-grey", "mpr-green", "mpr-orange", "mpr-red", "warning-none", "warning", "cross-red",);
 
 
-$uiIcons: ("list-dot");
+$uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permissions-white", "patient-grey", "search-white", "search", "shortcut-arrow", "sidebar-audit-trail", "sidebar-switcher-elements", "sidebar-switcher-events", "sidebar", "  type-linebreak", "type-paragraph", "vc-move", "watermark-clinic");
 
 // *********************
 // CSS custom properties

@@ -1,0 +1,109 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
+.login {
+	margin: auto; // flex magic
+	position: relative;
+	top: -10vh; // offset visual vertical balance
+
+	// Multi-tenancy stuff
+	&.multisite {
+		top: -5vh;
+
+		h1 {
+			margin-bottom: 20px;
+		}
+
+		.info {
+			margin-top: 15px;
+		}
+
+
+		.login-steps {
+			border: 3px solid var(--txt-light);
+			border-radius: 10px;
+			padding: 10px 20px;
+
+			overflow-y: auto;
+			min-height: 50px;
+			max-height: calc(100vh - #{ $oe-header-height + 320px }); // was 145px
+
+			ul.step-options {
+				// make like buttons
+				li {
+					margin: 0 0 4px 0;
+					width: 100%;
+					@include flex(center, flex-start);
+					@include font-size(13);
+					font-weight: var(--font-medium);
+					background: var(--btn-base);
+					cursor: pointer;
+					padding: 0 8px;
+					height: 24px;
+
+					&:hover,
+					&:focus,
+					&.selected {
+						color: #fff;
+						background: var(--btn-blue);
+					}
+				}
+			}
+		}
+	}
+
+
+	h1 {
+		margin: 0 0 40px 0;
+		@include font-size(58);
+		text-align: center;
+		font-weight: 100;
+		color: var(--txt-light);
+
+		@include handheld() {
+			@include font-size(120);
+		}
+	}
+
+	.user {
+		width: 250px;
+		margin: 0 auto;
+		@include handheld() {
+			width: 50vw;
+		}
+
+		// email before multi-tenancy options
+		&.pre-id {
+			padding: 20px 0;
+		}
+
+		input, button {
+			display: block;
+			width: 100%;
+			height: 32px;
+			@include font-size(16);
+			margin: 0 0 15px 0;
+			text-align: center;
+
+			@include handheld() {
+				height: 64px;
+				@include font-size(32);
+				margin: 0 0 45px 0;
+			}
+
+		}
+	}
+
+	.info {
+		width: 250px;
+		margin: 30px auto 0 auto;
+		padding: 20px 0 20px 0;
+		border-top: 1px solid var(--gui-line);
+		color: var(--txt-light);
+		@include font-size(12);
+	}
+}
+

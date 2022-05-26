@@ -1,30 +1,32 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
 // <input>
-// important: the default type, if not set is type="text"
-// In the UI, input (text) and textarea, should look the same
-// single "row" and the same height, but this is a bit tricky,
-// because textarea requires a line-height of 1.4
+// note: the default type, if not set is type="text"
+// In the UI, input (text) and textarea, should look identical
+// when on a single "row" i.e the same height.
 input {
-	padding:3px 5px; // matches textarea
+	// match <textarea> padding
+	padding:0 5px;
+
+	// match <input> styles
+	border-radius: 3px;
+	&::placeholder {
+		color: var(--input-placeholder); // Future?
+	}
+	&:disabled {
+		opacity:0.4;
+	}
 
 	// add SEARCH icon to input	
 	&.search {
 		padding-left:30px;
-		background: left 5px center / 19px $oe-user-inputs url( svg-all('ui/search') ) no-repeat;
+		background: left 5px center / 18px var(--i-ui-search) var(--input-base) no-repeat;
 	}
 	// add FILTER icon to input
 	&.filter {
 		padding-left:30px;
-		background: left 5px center / 19px $oe-user-inputs url( svg-all('ui/filter') ) no-repeat;
-	}
-
-	// date should match oe-date: dd Mth YYYY
-	&.date {
-		text-align: center;
-		width: 13ch;
+		background: left 5px center / 18px var(--i-ui-search) var(--input-base) no-repeat;
 	}
 
 	&[type="checkbox"],

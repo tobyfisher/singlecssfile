@@ -25,17 +25,24 @@
 @use "openeyes/core/print-block-browser";
 @use "openeyes/core/minimum-width-warning";
 
+// general UI
+@use "openeyes/ui/flex";
+@use "openeyes/ui/typography";
+@use "openeyes/ui/inputs";
+@use "openeyes/ui/buttons";
+@use "openeyes/ui/alert-box";
+
+
+@use "openeyes/ui/hr_row";
+
 // modules
 @use "openeyes/modules/brand";
 @use "openeyes/modules/header";
+@use "openeyes/modules/login/login";
 
-@use "openeyes/modules/sync-data";
+//@use "openeyes/modules/sync-data";
 
 
-
-// general UI
-@use "openeyes/ui/typography";
-@use "openeyes/ui/buttons";
 
 
 

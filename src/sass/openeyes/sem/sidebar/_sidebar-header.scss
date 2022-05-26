@@ -1,0 +1,42 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
+// (Add New Event button, etc)
+.sidebar-header {
+	grid-area: addevent;
+	height: $oe-event-header-height;
+	width: $oe-event-sidebar-width;
+
+	display:flex;
+	background: var(--bg-grey);
+	
+	// button
+	.manage-elements, 
+	.add-event {
+		flex-grow: 3; // allow buttons to fill remain space
+		margin:0;
+		height:$oe-event-header-height;
+		color: var(--input-text);
+		background: var(--input-base);
+		border-radius:0;
+
+		&.selected {
+			color: #fff;
+			background: var(--btn-green-hint);
+		}
+	}
+	
+	.title {
+		@include font-size(13);
+		font-weight:300;
+		color: var(--txt-light);				// Pro-theme
+		margin:auto;
+		padding:0 8px;
+	}
+}
+
+
+

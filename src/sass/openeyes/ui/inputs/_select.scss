@@ -1,7 +1,6 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
 // <select>
 // default set up for all selects
 select {
@@ -30,12 +29,7 @@ select {
 	text-overflow: ellipsis;
 
 	// UI to indicate it's a dropdown vanishes, looks like an input, add a custom arrow
-	background: right 2px center / 13px url(svg-themed("i/arrow-down-bold")) $oe-user-inputs no-repeat;
-
-	// popups are fixed in a dark theme
-	.oe-popup & {
-		background-image: url(svg-dark-fixed("i/arrow-down-bold"));
-	}
+	background: right 2px center / 13px var(--i-arrow-down-bold) var(--input-base) no-repeat;
 
 	&.inline {
 		width: auto;

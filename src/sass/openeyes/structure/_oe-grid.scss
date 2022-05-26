@@ -13,32 +13,18 @@
 	overflow: hidden;
 
 	// General "basic" page structure: 3 rows
-	grid:   "header" #{$oe-header-height}
-	"pageheader" #{$oe-event-header-height}
-	"main" 1fr / 1fr;
+	grid:
+		"header" #{$oe-header-height}
+		"pageheader" #{$oe-event-header-height}
+		"main" 1fr / 1fr;
 
 	// SEM pages (Overview/Events) require a different structure
 	// 3 rows, 2 columns:
 	&.sem {
-		grid: 	"header header" #{$oe-header-height}
-		"addevent eventheader" #{$oe-event-header-height}
-		"sidebar main" 1fr / #{$oe-event-sidebar-width} 1fr;
-	}
-
-	// SEM sidebar content
-	// (Add New Event button, etc)
-	.sidebar-header {
-		grid-area: addevent;
-		height: $oe-event-header-height;
-		width: $oe-event-sidebar-width;
-
-	}
-
-	// (Summaries, Event list, etc)
-	.sidebar {
-		grid-area: sidebar;
-		width: $oe-event-sidebar-width;
-		overflow-y: auto;
+		grid:
+			"header header" #{$oe-header-height}
+			"addevent eventheader" #{$oe-event-header-height}
+			"sidebar main" 1fr / #{$oe-event-sidebar-width} 1fr;
 	}
 
 	// --------------------------------------- Restrict Widths

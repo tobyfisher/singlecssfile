@@ -11,7 +11,7 @@ button.adder {
 
 	// smaller width, required in tight spaces
 	&.square {
-		width: $input-height;
+		width: $oe-input-height;
 	}
 
 	&::after {
