@@ -3,10 +3,10 @@
 
 
 // horizontal "tab" space
-// many occassions ended up requiring a bigger
-// horizonal space than &nbsp; or &emsp; provided
+// provide a bigger horizontal space than &nbsp; or &emsp;
+// <span>
 .tabspace {
-	display:inline-flex;
+	display:inline-block;
 	width:25px;	
 	&.double {
 		width:50px;

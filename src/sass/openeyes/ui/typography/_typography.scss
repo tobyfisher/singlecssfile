@@ -1,0 +1,25 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/mix" as *;
+
+h3,h4 {
+	@include font-size(16); // default 16px / 1rem
+}
+
+p {
+	@include font-size(14);
+	margin-bottom:10px;
+	&:last-child {
+		margin-bottom:0;
+	}
+}
+
+// set weighting (depends on theme) 
+strong, b {
+	font-weight: var(--font-bold);
+}
+
+
+
+		
