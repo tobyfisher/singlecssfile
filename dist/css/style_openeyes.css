@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Thu May 26 2022 23:01:16 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Fri May 27 2022 11:34:28 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -461,9 +461,9 @@ html.theme-dark {
   --gui-scroll-track: rgb(10, 10, 15);
   --gui-scroll-thumb: rgb(55, 55, 60);
   --btn-base: rgb(27, 53, 82);
-  --btn-blue: #1D2E50;
+  --btn-blue: #00f;
   --btn-blue-hint: #074598;
-  --btn-blue-active: #00f;
+  --btn-blue-active: #1D2E50;
   --btn-green: #0a8013;
   --btn-green-hint: #0c5d10;
   --btn-green-active: hsl(122deg, 76%, 16%);
@@ -609,7 +609,7 @@ html.theme-light {
   --gui-line: rgb(162, 160, 160);
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
-  --btn-base: rgb(102, 120, 162);
+  --btn-base: rgb(103, 121, 147);
   --btn-blue: rgb(7, 79, 182);
   --btn-blue-hint: rgb(6, 68, 147);
   --btn-blue-active: #00f;
@@ -1687,6 +1687,34 @@ button.add-pathstep:after,
   background-color: var(--btn-blue-hint);
 }
 
+ul {
+  list-style: none;
+}
+ul li {
+  padding: 0;
+  margin: 0;
+}
+
+ol {
+  list-style-position: inside;
+}
+
+ul.row-list li {
+  display: block;
+  padding: 5px 0;
+  border-top: 1px solid var(--gui-line);
+}
+.element-fields ul.row-list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 28px;
+  padding: 2px 0 2px 1px;
+}
+ul.row-list li:first-child {
+  border-top: none;
+}
+
 .row {
   margin: 0 0 15px 0;
 }
@@ -1895,44 +1923,15 @@ svg.oe-openeyes {
   margin: 0 32px 0 0;
 }
 
+.oe-login {
+  display: flex;
+  height: 100%;
+}
+
 .login {
   margin: auto;
   position: relative;
-  top: -10vh;
-}
-.login.multisite {
   top: -5vh;
-}
-.login.multisite h1 {
-  margin-bottom: 20px;
-}
-.login.multisite .info {
-  margin-top: 15px;
-}
-.login.multisite .login-steps {
-  border: 3px solid var(--txt-light);
-  border-radius: 10px;
-  padding: 10px 20px;
-  overflow-y: auto;
-  min-height: 50px;
-  max-height: calc(100vh - 380px);
-}
-.login.multisite .login-steps ul.step-options li {
-  margin: 0 0 4px 0;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  font-size: 0.8125rem;
-  font-weight: var(--font-medium);
-  background: var(--btn-base);
-  cursor: pointer;
-  padding: 0 8px;
-  height: 24px;
-}
-.login.multisite .login-steps ul.step-options li:hover, .login.multisite .login-steps ul.step-options li:focus, .login.multisite .login-steps ul.step-options li.selected {
-  color: #fff;
-  background: var(--btn-blue);
 }
 .login h1 {
   margin: 0 0 40px 0;
@@ -1975,9 +1974,72 @@ svg.oe-openeyes {
 }
 .login .info {
   width: 250px;
-  margin: 30px auto 0 auto;
+  margin: 20px auto 0 auto;
   padding: 20px 0 20px 0;
   border-top: 1px solid var(--gui-line);
   color: var(--txt-light);
   font-size: 0.75rem;
+}
+
+.login-details {
+  padding: 0 10px 25px 10px;
+  font-size: 0.875rem;
+  font-weight: var(--font-medium);
+}
+.login-details ul.row-list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+login.multisite {
+  top: -5vh;
+}
+login.multisite h1 {
+  margin-bottom: 20px;
+}
+login.multisite .info {
+  margin-top: 15px;
+}
+
+.login-steps {
+  border: 3px solid var(--txt-light);
+  border-radius: 10px;
+  padding: 10px 20px;
+  overflow-y: auto;
+  min-height: 50px;
+  max-height: calc(100vh - 450px);
+}
+.login-steps ul.step-options li {
+  margin: 0 0 4px 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.8125rem;
+  font-weight: var(--font-medium);
+  color: #ddd;
+  background: var(--btn-base);
+  cursor: pointer;
+  padding: 0 8px;
+  height: 24px;
+}
+.login-steps ul.step-options li:hover, .login-steps ul.step-options li:focus, .login-steps ul.step-options li.selected {
+  color: #fff;
+  background: var(--btn-blue);
+}
+
+.oe-login.timeout {
+  width: 100vw;
+}
+.oe-login.timeout .login {
+  top: 0;
+  padding: 20px;
+  border-radius: 5px;
+  background: var(--bg-popup);
+}
+.oe-login.timeout .login h1,
+.oe-login.timeout .login .info {
+  color: white;
+  text-align: center;
 }

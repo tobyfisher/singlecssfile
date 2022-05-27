@@ -87,9 +87,9 @@ $gui-light: (
 // ---- Buttons
 $btn: (
 	"base":rgb(27, 53, 82),
-	"blue": #1D2E50,
+	"blue": #00f,
 	"blue-hint": #074598,
-	"blue-active": #00f,
+	"blue-active": #1D2E50,
 	"green": #0a8013,
 	"green-hint": #0c5d10,
 	"green-active": hsl(122, 76%, 16%),
@@ -101,7 +101,7 @@ $btn: (
 );
 
 $btn-light: (
-	"base": rgb(102, 120, 162),
+	"base": rgb(103, 121, 147),
 	"blue": rgb(7, 79, 182),
 	"blue-hint": rgb(6, 68, 147),
 	"blue-active": #00f,

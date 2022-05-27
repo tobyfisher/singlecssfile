@@ -31,14 +31,14 @@
 @use "openeyes/ui/inputs";
 @use "openeyes/ui/buttons";
 @use "openeyes/ui/alert-box";
-
+@use "openeyes/ui/lists";
 
 @use "openeyes/ui/hr_row";
 
 // modules
 @use "openeyes/modules/brand";
 @use "openeyes/modules/header";
-@use "openeyes/modules/login/login";
+@use "openeyes/modules/login";
 
 //@use "openeyes/modules/sync-data";
 
