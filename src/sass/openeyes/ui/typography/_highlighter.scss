@@ -40,12 +40,12 @@
 	
 	&.inverted {
 		background: var(--txt-base);
-		color: var(--txt-inverted);
+		color: var(--txt-invert);
 	} 
 	
 	&.subtle-invert {
 		background: var(--txt-light);
-		color: var(--txt-inverted);
+		color: var(--txt-invert);
 	}
 	
 }

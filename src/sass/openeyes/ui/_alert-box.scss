@@ -10,8 +10,10 @@
 
 	// default alert
 	@include font-size(13);
-	color:#000;
-	background: var(--txt-active);
+
+	// default, matches highlighter inverted
+	background: var(--txt-base);
+	color: var(--txt-invert);
 	
 	border-radius:3px;
 	
@@ -45,7 +47,7 @@
 	// used for Risks and Allergies
 	&.patient {
 		color: $-alert-text-color;
-		background:var(--color-burgandy);
+		background:var(--color-burgundy);
 	}
 	
 	a {

@@ -2,39 +2,39 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 @use "sass:list";
+@use "openeyes/var" as *;
 
 // oe icons: <i class="oe-i [name] [size] [...options]"></i>
-//	small: 	13px 
+//	small: 	14px
 // 	medium:	16px
-//	large: 	19px (default size)
+//	large: 	18px (default size)
 
 .oe-i {
 	display: inline-flex;
 	line-height: 1;
 	vertical-align: middle; // fixes a layout issue in tables
 
-	$size-large: 18px;
-	$size-medium: 16px;
-	$size-small: 14px;
+	$-size-large: 18px;
+	$-size-medium: 16px;
+	$-size-small: 14px;
 
-	width: $size-large;
-	height: $size-large;
-
-	// default background error SVG, to handle URL errors
-	background:center / $size-large  no-repeat;
+	// default size
+	width: $-size-large;
+	height: $-size-large;
+	background:center / $-size-large  no-repeat;
 
 
 	&.small {
-		width: $size-small;
-		height: $size-small;
-		background-size: $size-small;
+		width: $-size-small;
+		height: $-size-small;
+		background-size: $-size-small;
 		vertical-align: middle;
 	}
 
 	&.medium {
-		width: $size-medium;
-		height: $size-medium;
-		background-size: $size-medium;
+		width: $-size-medium;
+		height: $-size-medium;
+		background-size: $-size-medium;
 		vertical-align: middle;
 	}
 
@@ -45,13 +45,13 @@
 
 	// large area 19px but small icon within this area
 	&.small-icon {
-		background-size: $size-small;
+		background-size: $-size-small;
 		vertical-align: text-top;
 	}
 
 	// large area 19px but medium icon within this area
 	&.medium-icon {
-		background-size: $size-medium;
+		background-size: $-size-medium;
 		vertical-align: text-top;
 	}
 
@@ -122,8 +122,8 @@
 	// paragraph = +1 line breaks. a double diagonal line
 	&.line-break {
 		opacity: 1;
-		width: $size-small;
-		height: $size-small;
+		width: $-size-small;
+		height: $-size-small;
 		margin:0 0.4em;
 		background-size: 0.8em;
 		background-image: url(svg-all("ui/type-linebreak"));
@@ -131,8 +131,8 @@
 
 	&.paragraph {
 		opacity: 1;
-		width: $size-small;
-		height: $size-small;
+		width: $-size-small;
+		height: $-size-small;
 		margin:0 0.5em;
 		background-size: 1em;
 		background-image: url(svg-all("ui/type-paragraph"));
@@ -338,25 +338,15 @@
 
 				// select SVG set to use
 				@if $set == "themed" {
-					background-image: url(svg-themed($dir + $svg)) // svg in : "in-css/{dark|light}/i/{svg}"
+					background-image: var(--i-#{$svg}); // svg in : "in-css/{dark|light}/i/{svg}"
 				} @else {
-					background-image: url(svg-all($dir + $svg)); // svg in : "in-css/all/i/{svg}"
+					background-image: var(--i-ui-#{$svg}); // svg in : "in-css/all/i/{svg}"
 				}
 
 				// set opacity to 1?
 				@if list.index($no-opacity, $name) {
 					opacity: 1;
 				}
-
-				// if icon is used in these "frame" areas fix to "dark" icon version
-				@if list.index($used-in-frame, $name) {
-					.i-fixed &,
-					.oe-popup &,
-					.oe-patient-popup &,
-					.oe-hotlist-panel & {
-						background-image: url(svg-dark-fixed("i/" + $svg));
-					}
-		 		}
 			}
 		}
 	}
@@ -365,6 +355,6 @@
 	// Map | Icon set to use | sub-directory (optional)
 	@include oe-i($themed_icons, "themed");
 	@include oe-i($universal_icons, "all");
-	@include oe-i($eyedraw_icons, "all", "eyedraw/");
+	//@include oe-i($eyedraw_icons, "all", "eyedraw/");
 
 }

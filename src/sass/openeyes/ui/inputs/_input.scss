@@ -12,7 +12,7 @@ input {
 	// match <input> styles
 	border-radius: 3px;
 	&::placeholder {
-		color: var(--input-placeholder); // Future?
+		color: var(--input-placeholder);
 	}
 	&:disabled {
 		opacity:0.4;
