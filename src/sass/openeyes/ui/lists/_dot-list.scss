@@ -12,8 +12,12 @@ ul.dot-list {
 		@include inline-flex(center, flex-start);
 		margin: 0 0 5px 0; // if dot list wraps onto another line then it needs leading
 		padding: 0 8px 0 12px;
-
 		background: 0 center / 5px var(--i-ui-list-dot) no-repeat;
+
+		// in Whiteboard dot-list in the title needs adjusting
+		.oe-hd-title & {
+			margin-bottom:0;
+		}
 
 		&:first-child {
 			margin-left: 0;

@@ -146,10 +146,7 @@ $input: (
 	"base": rgb(30, 42, 60),
 	"hint": #222,
 	"text": #fff,
-	"border": rgb(70, 70, 70),
 	"placeholder": rgb(100, 100, 100),
-	"blue": rgb(0, 120, 255),
-	"label": rgb(30, 30, 30) // label/input highlight group
 );
 
 $input-light: (
@@ -158,10 +155,7 @@ $input-light: (
 	"base": #fff,
 	"hint": #ddd,
 	"text": #000,
-	"border": rgb(210, 210, 210),
 	"placeholder": rgb(181, 181, 181),
-	"blue": rgb(0, 50, 255),
-	"label": rgba(255, 255, 255, 0.5)
 );
 
 // ---- SVG icons

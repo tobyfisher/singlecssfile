@@ -20,12 +20,4 @@
 		@include font-size(24);
 		font-weight: var(--font-medium);
 	}
-
-	// in Whiteboard using dot-list.
-	// needs a slight tweak
-	ul.dot-list {
-		li {
-			margin-bottom:0;
-		}
-	}
 }

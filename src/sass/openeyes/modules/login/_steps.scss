@@ -15,27 +15,28 @@
 	overflow-y: auto;
 	min-height: 50px; // single option
 	max-height: calc( 100vh - 450px ); // check the layout at various scales
+}
 
-	// all JS, make <li> like button
-	ul.step-options {
-		li {
-			margin: 0 0 4px 0;
-			width: 100%;
-			@include flex(center, flex-start);
-			@include font-size(13);
-			font-weight: var(--font-medium);
-			color: var(--btn-text);
-			background: var(--btn-base);
-			cursor: pointer;
-			padding: 0 8px;
-			height: 24px;
+// <ul>
+// all JS, make <li> like button
+.step-options {
+	li {
+		margin: 0 0 4px 0;
+		width: 100%;
+		@include flex(center, flex-start);
+		@include font-size(13);
+		font-weight: var(--font-medium);
+		color: var(--btn-text);
+		background: var(--btn-base);
+		cursor: pointer;
+		padding: 0 8px;
+		height: 24px;
 
-			&:hover,
-			&:focus,
-			&.selected {
-				color: #fff;
-				background: var(--btn-blue);
-			}
+		&:hover,
+		&:focus,
+		&.selected {
+			color: #fff;
+			background: var(--btn-blue);
 		}
 	}
 }

@@ -3,8 +3,9 @@
 
 @use "openeyes/mix" as *;
 
-// make <li> look like inputs
-
+// make <li> look like buttons, but actually they function
+// more like inputs (radio, checkbox) - JS controlled.
+// Generally, replaced by input-list but may be useful in places.
 ul.btn-list {			
 	li {
 		cursor: pointer; // used as a button
@@ -18,15 +19,21 @@ ul.btn-list {
 		@include font-size(12);
 		font-weight:400;
 
-		color: var(--btn-text);
-		background: var(--btn-base);
+		color: var(--input-text);
+		background: var(--input-base);
 	
-		&:hover, &:focus, &:active, 
-		&.selected {
+		&:hover,
+		&:focus {
 			background:var(--btn-blue); 	// THEME related (as interaction)
 			color:#fff;
 		}
-	
+
+		&.selected {
+			background:var(--btn-blue-hint); 	// THEME related (as interaction)
+			color:#fff;
+		}
+
+
 		.oe-i-e { 
 			margin-right:10px; 	 	// pad it out (always on the left of the text)
 			vertical-align: top;	// change otherwise icon pushes down 

@@ -1,6 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/mix" as *;
 
 // OE Auto alerts
 // System generated flags
@@ -9,17 +10,16 @@
 	margin: 3px 0;
 
 	@include font-size(13);
-	font-weight: $oe-font-medium;
-	color: $oe-text;
+	font-weight: var(--font-medium);
 
-	border: 1.5px solid $oe-line;
+	border: 1.5px solid var(--gui-line);
 	border-radius: 15px;
 
 	&.pad-v {
 		margin: 5px 0;
 	}
 
-	background: 8px 6px / 12px $oe-text-inverted url(svg-all("i/flag-grey")) no-repeat;
+	background: 8px 6px / 12px var(--txt-invert) var(--i-ui-flag-grey) no-repeat;
 
 	&.inline {
 		@include font-size(11);
@@ -36,29 +36,29 @@
 	}
 
 	&.green {
-		background-image: url(svg-all("i/flag-green"));
-		border-color: $oe-status-green;
+		background-image: var(--i-ui-flag-green);
+		border-color: var(--color-green);
 
 		&.risk {
-			background-image: url(svg-all("i/triangle-green"));
+			background-image: var(--i-ui-triangle-green);
 		}
 	}
 
 	&.red {
-		background-image: url(svg-all("i/flag-red"));
-		border-color: $oe-status-red;
+		background-image: var(--i-ui-flag-red);
+		border-color:  var(--color-red);
 
 		&.risk {
-			background-image: url(svg-all("i/triangle-red"));
+			background-image: var(--i-ui-triangle-red);
 		}
 	}
-
+	
 	&.amber {
-		background-image: url(svg-all("i/flag-orange"));
-		border-color: $oe-status-amber;
+		background-image: var(--i-ui-flag-orange);
+		border-color:  var(--color-orange);
 
 		&.risk {
-			background-image: url(svg-all("i/triangle-orange"));
+			background-image: var(--i-ui-triangle-orange);
 		}
 	}
 
@@ -75,16 +75,15 @@
 			top: 5.5px;
 			width: 15px;
 			height: 15px;
-			background: center / contain url(svg-themed("i/remove-circle")) no-repeat;
+			background: center / contain var(--i-remove-circle) no-repeat;
 			opacity: 0.5;
 		}
 
 		&:focus,
 		&:hover,
 		&:active {
-			background-color: $oe-btn-blue-hint;
-			border-color: $oe-text-light;
-
+			background-color: var(--btn-blue-hint);
+			border-color: var(--txt-light);
 			&::after {
 				opacity: 1;
 			}

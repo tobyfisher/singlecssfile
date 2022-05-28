@@ -40,8 +40,8 @@ fieldset.btn-list {
 			font-weight:400; 
 			cursor: pointer;
 
-			color: var(--txt-light);
-			background: var(--btn-blue-hint);
+			color: var(--input-text);
+			background: var(--input-base);
 		}
 		
 		> input[type="radio"],
@@ -56,7 +56,7 @@ fieldset.btn-list {
 				}
 			}
 			&:checked + .li {
-				background:var(--btn-blue);
+				background:var(--btn-blue-hint);
 				color:#fff
 			}
 		}
