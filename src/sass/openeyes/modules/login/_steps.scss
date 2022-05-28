@@ -24,7 +24,7 @@
 			@include flex(center, flex-start);
 			@include font-size(13);
 			font-weight: var(--font-medium);
-			color:#ddd;
+			color: var(--btn-text);
 			background: var(--btn-base);
 			cursor: pointer;
 			padding: 0 8px;

@@ -3,7 +3,7 @@
 
 button,
 .button {
-	color: #ddd;
+	color: var(--btn-text);
 	// give a hint of the button colour to the user
 	&.hint {
 		&:hover,
@@ -27,20 +27,32 @@ button,
 
 	// same as default, need this for hint to work!
 	&.blue {
-		&:hover, &:focus, &:active {
-			background:var(--btn-blue);
+		&:hover,
+		&:focus {
+			background: var(--btn-blue);
+		}
+		&:active {
+			background: var(--btn-blue-active);
 		}
 	}
 
 	&.green {
-		&:hover, &:focus, &:active {
+		&:hover,
+		&:focus {
 			background: var(--btn-green);
+		}
+		&:active {
+			background: var(--btn-green-active);
 		}
 	}
 
 	&.red {
-		&:hover, &:focus, &:active {
+		&:hover,
+		&:focus {
 			background: var(--btn-red);
+		}
+		&:active {
+			background: var(--btn-red-active);
 		}
 	}
 }

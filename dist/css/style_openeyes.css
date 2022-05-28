@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri May 27 2022 11:34:28 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sat May 28 2022 09:18:42 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -440,10 +440,10 @@ html.theme-dark {
   --i-nystagmus-arrow-h-2: url("../svg/in-css/dark/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/dark/ui/nystagmus-arrow-h-3.svg");
   --bg-html: rgb(20, 30, 43);
-  --bg-header: #111921;
+  --bg-header: rgb(15, 25, 38);
   --bg-max: #000;
   --bg-popup: #0D161E;
-  --bg-title: #2a2e34;
+  --bg-title: rgb(25, 35, 50);
   --bg-event: #1E2E42;
   --bg-data: #121A22;
   --bg-grey: rgb(40, 52, 66);
@@ -461,6 +461,7 @@ html.theme-dark {
   --gui-scroll-track: rgb(10, 10, 15);
   --gui-scroll-thumb: rgb(55, 55, 60);
   --btn-base: rgb(27, 53, 82);
+  --btn-text: #ddd;
   --btn-blue: #00f;
   --btn-blue-hint: #074598;
   --btn-blue-active: #1D2E50;
@@ -610,6 +611,7 @@ html.theme-light {
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
   --btn-base: rgb(103, 121, 147);
+  --btn-text: #ddd;
   --btn-blue: rgb(7, 79, 182);
   --btn-blue-hint: rgb(6, 68, 147);
   --btn-blue-active: #00f;
@@ -2091,7 +2093,7 @@ button.header-tab.icon-bg.goto,
 
 button,
 .button {
-  color: #ddd;
+  color: var(--btn-text);
 }
 button.hint:hover, button.hint:focus, button.hint:active,
 .button.hint:hover,
@@ -2111,23 +2113,32 @@ button.hint.blue,
 .button.hint.blue {
   background: var(--btn-blue-hint);
 }
-button.blue:hover, button.blue:focus, button.blue:active,
+button.blue:hover, button.blue:focus,
 .button.blue:hover,
-.button.blue:focus,
-.button.blue:active {
+.button.blue:focus {
   background: var(--btn-blue);
 }
-button.green:hover, button.green:focus, button.green:active,
+button.blue:active,
+.button.blue:active {
+  background: var(--btn-blue-active);
+}
+button.green:hover, button.green:focus,
 .button.green:hover,
-.button.green:focus,
-.button.green:active {
+.button.green:focus {
   background: var(--btn-green);
 }
-button.red:hover, button.red:focus, button.red:active,
+button.green:active,
+.button.green:active {
+  background: var(--btn-green-active);
+}
+button.red:hover, button.red:focus,
 .button.red:hover,
-.button.red:focus,
-.button.red:active {
+.button.red:focus {
   background: var(--btn-red);
+}
+button.red:active,
+.button.red:active {
+  background: var(--btn-red-active);
 }
 
 button.adder {
@@ -2292,6 +2303,88 @@ ol {
   list-style-position: inside;
 }
 
+ul.standard {
+  margin: 3px 0;
+}
+ul.standard li {
+  padding: 0 0 6px 0;
+}
+
+ul.inline-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2px 0 0 0;
+}
+ul.inline-list li {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 5px 0;
+  padding: 0 8px 0 0;
+}
+
+ul.large-text li, ul.large li {
+  font-size: 0.875rem;
+}
+
+ul.dot-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2px 0 0 0;
+}
+ul.dot-list li {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 5px 0;
+  padding: 0 8px 0 12px;
+  background: 0 center/5px var(--i-ui-list-dot) no-repeat;
+}
+ul.dot-list li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+  background-image: none;
+}
+ul.dot-list li.paragraph {
+  background: left center/1em var(--i-ui-type-paragraph) no-repeat;
+  padding-left: 1.5em;
+}
+ul.dot-list.inline {
+  margin: 0;
+}
+ul.dot-list.inline li {
+  margin: 0;
+}
+
+ul.btn-list li {
+  cursor: pointer;
+  height: 19px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 10px;
+  margin: 0 0 2px 0;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--btn-text);
+  background: var(--btn-base);
+}
+ul.btn-list li:hover, ul.btn-list li:focus, ul.btn-list li:active, ul.btn-list li.selected {
+  background: var(--btn-blue);
+  color: #fff;
+}
+ul.btn-list li .oe-i-e {
+  margin-right: 10px;
+  vertical-align: top;
+}
+ul.btn-list.fixed-width li {
+  height: auto;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  width: 180px;
+  padding: 3px 8px;
+}
+
 ul.row-list li {
   display: block;
   padding: 5px 0;
@@ -2306,6 +2399,106 @@ ul.row-list li {
 }
 ul.row-list li:first-child {
   border-top: none;
+}
+
+fieldset.btn-list.fixed-width label {
+  white-space: normal;
+  width: 180px;
+}
+fieldset.btn-list.fixed-width label .li {
+  height: auto;
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+  padding: 3px 8px;
+}
+fieldset.btn-list label {
+  display: flex;
+  margin: 0 0 2px 0;
+}
+fieldset.btn-list label .li {
+  flex: 1;
+  height: 19px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 400;
+  cursor: pointer;
+  color: var(--txt-light);
+  background: var(--btn-blue-hint);
+}
+fieldset.btn-list label > input[type=radio],
+fieldset.btn-list label > input[type=checkbox] {
+  display: none;
+}
+fieldset.btn-list label > input[type=radio] + .li:hover, fieldset.btn-list label > input[type=radio] + .li:focus,
+fieldset.btn-list label > input[type=checkbox] + .li:hover,
+fieldset.btn-list label > input[type=checkbox] + .li:focus {
+  background: var(--btn-blue);
+  color: #fff;
+}
+fieldset.btn-list label > input[type=radio]:checked + .li,
+fieldset.btn-list label > input[type=checkbox]:checked + .li {
+  background: var(--btn-blue);
+  color: #fff;
+}
+
+ul.multi-filter-list {
+  margin: 4px 0;
+}
+ul.multi-filter-list.inline li {
+  display: inline-flex;
+  margin: 2px 2px 0 0;
+}
+ul.multi-filter-list li {
+  position: relative;
+  cursor: pointer;
+  height: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 25px 0 5px;
+  margin: 0 0 2px 0;
+  color: var(--btn-text);
+  background: var(--btn-base);
+}
+ul.multi-filter-list li::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: center/11px url("../svg/in-css/dark/i/remove-circle.svg") no-repeat;
+  opacity: 0.5;
+}
+ul.multi-filter-list li:hover, ul.multi-filter-list li:focus {
+  background-color: var(--btn-blue);
+  color: #fff;
+}
+ul.multi-filter-list li:hover::after, ul.multi-filter-list li:focus::after {
+  opacity: 1;
+}
+
+ul.oe-multi-select {
+  margin: 4px 0;
+  font-size: 0.75rem;
+}
+ul.oe-multi-select.inline li {
+  display: inline-flex;
+  margin: 2px 2px 0 0;
+}
+ul.oe-multi-select li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 4px 2px 6px;
+  margin: 0 0 2px 0;
+  color: var(--btn-text);
+  background: var(--btn-base);
 }
 
 .oe-popup-wrap {
@@ -2661,7 +2854,7 @@ login.multisite .info {
   align-items: center;
   font-size: 0.8125rem;
   font-weight: var(--font-medium);
-  color: #ddd;
+  color: var(--btn-text);
   background: var(--btn-base);
   cursor: pointer;
   padding: 0 8px;
