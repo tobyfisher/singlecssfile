@@ -15,9 +15,12 @@
 
 	display: flex; // Flex - used for centering popups
 	z-index: $oe-z-popup;
-	background: rgba(150,150,150, 0.7);
+
+	// background knockout effect to work across both themes
+	background: rgba(60,60,65, 0.6);
 
 	&.dark {
+		// full content block
 		background: var(--bg-html);
 	}
 

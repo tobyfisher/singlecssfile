@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sat May 28 2022 17:29:50 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun May 29 2022 19:18:36 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -607,7 +607,7 @@ html.theme-light {
   --gui-line: rgb(162, 160, 160);
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
-  --btn-base: rgb(103, 121, 147);
+  --btn-base: rgb(102, 112, 126);
   --btn-text: #ddd;
   --btn-blue: rgb(7, 79, 182);
   --btn-blue-hint: rgb(6, 68, 147);
@@ -618,7 +618,7 @@ html.theme-light {
   --btn-red: rgb(153, 14, 14);
   --btn-red-hint: hsl(0deg, 83%, 28%);
   --btn-red-active: hsl(0deg, 83%, 23%);
-  --btn-disabled: rgb(150, 150, 150);
+  --btn-disabled: rgb(205, 205, 210);
   --btn-icon-hover-filter: invert(100%) grayscale(100%);
   --color-highlighter: rgb(235, 211, 123);
   --color-green: rgb(0, 155, 0);
@@ -635,6 +635,39 @@ html.theme-light {
   --input-placeholder: rgb(181, 181, 181);
 }
 
+::-webkit-scrollbar {
+  width: 6px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--gui-scroll-track);
+}
+
+::-webkit-scrollbar-track-piece {
+  background: var(--gui-scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--gui-scroll-thumb);
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .oe-i {
   display: inline-flex;
   line-height: 1;
@@ -2018,11 +2051,10 @@ button:disabled, button.disabled, button.inactive,
 .button.disabled,
 .button.inactive {
   cursor: default;
-  color: var(--txt-light) !important;
-  background: var(--color-grey) !important;
+  color: var(--txt-light);
+  background: var(--btn-disabled);
   border: 1px solid var(--txt-light);
   pointer-events: none;
-  opacity: 0.4;
 }
 button .oe-i,
 .button .oe-i {
@@ -2578,7 +2610,7 @@ ul.oe-multi-select li {
   bottom: 0;
   display: flex;
   z-index: 150;
-  background: rgba(150, 150, 150, 0.7);
+  background: rgba(60, 60, 65, 0.6);
 }
 .oe-popup-wrap.dark {
   background: var(--bg-html);
@@ -2587,37 +2619,52 @@ ul.oe-multi-select li {
   background: transparent;
 }
 
-.oe-error-message {
-  display: flex;
-  height: 100%;
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
-.oe-error-message .message {
+.spinner {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
   margin: auto;
-  width: 500px;
 }
-.oe-error-message .message h1 {
-  margin: 0 0 40px 0;
-  font-size: 3.625rem;
-  text-align: center;
-  font-weight: 100;
-  color: var(--txt-light);
+.spinner::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid var(--gui-spinner);
+  border-top-color: rgba(0, 0, 0, 0);
+  animation: spinner 1s linear infinite;
 }
-.oe-error-message .message h2, .oe-error-message .message h3 {
-  margin: 15px 0 10px 0;
-  font-size: 1.375rem;
-  font-weight: var(--font-light);
-  color: var(--txt-light);
+.spinner.as-icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin: 0 5px;
+  vertical-align: middle;
 }
-.oe-error-message .message ul {
-  margin: 5px 0 20px 0;
-  list-style: circle inside;
+.spinner.as-icon::before {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
 }
-.oe-error-message .message ul li {
-  margin: 10px 0;
+
+.spinner-message {
+  margin: auto;
 }
-.oe-error-message .message p {
+.spinner-message .message {
+  margin: 30px 0 0 0;
   font-size: 0.875rem;
-  margin: 10px 0;
+  font-weight: var(--font-medium);
+  color: var(--txt-invert);
+  background-color: var(--gui-spinner);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .row {
@@ -2658,6 +2705,35 @@ hr.divider {
 hr.soft {
   margin: 5px 0;
   border-bottom: 1px dotted var(--gui-line);
+}
+
+.oe-date {
+  white-space: nowrap;
+  display: inline-flex;
+  width: 10.5ch;
+}
+.oe-date .day {
+  text-align: right;
+  width: 2ch;
+  margin: 0 0.5ch 0 0;
+}
+.oe-date .mth {
+  text-align: left !important;
+  width: 4ch;
+}
+.oe-date .yr {
+  text-align: right;
+  width: 4ch;
+}
+.situational-awareness .oe-date {
+  font-size: 0.6875rem;
+  opacity: 0.5;
+}
+
+.oe-no-date-msg {
+  width: 10.5ch;
+  text-align: right;
+  font-style: italic;
 }
 
 .openeyes-brand {
@@ -2945,4 +3021,41 @@ login.multisite .info {
 .oe-login.timeout .login .info {
   color: white;
   text-align: center;
+}
+
+.oe-error-message {
+  display: flex;
+  height: 100%;
+}
+.oe-error-message .message {
+  margin: auto;
+  width: 500px;
+}
+.oe-error-message .message h1 {
+  margin: 0 0 40px 0;
+  font-size: 3.625rem;
+  text-align: center;
+  font-weight: 100;
+  color: var(--txt-light);
+}
+.oe-error-message .message h2, .oe-error-message .message h3 {
+  margin: 15px 0 10px 0;
+  font-size: 1.375rem;
+  font-weight: var(--font-light);
+  color: var(--txt-light);
+}
+.oe-error-message .message ul {
+  margin: 5px 0 20px 0;
+  list-style: circle inside;
+}
+.oe-error-message .message ul li {
+  margin: 10px 0;
+}
+.oe-error-message .message p {
+  font-size: 0.875rem;
+  margin: 10px 0;
+}
+
+.highlighted-error {
+  border: 1px solid var(--color-red);
 }

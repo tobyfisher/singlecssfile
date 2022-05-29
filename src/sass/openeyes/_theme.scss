@@ -102,7 +102,7 @@ $btn: (
 );
 
 $btn-light: (
-	"base": rgb(103, 121, 147),
+	"base": rgb(102, 112, 126),
 	"text":#ddd,
 	"blue": rgb(7, 79, 182),
 	"blue-hint": rgb(6, 68, 147),
@@ -113,7 +113,7 @@ $btn-light: (
 	"red": rgb(153, 14, 14),
 	"red-hint": hsl(360, 83%, 28%),
 	"red-active": hsl(360, 83%, 23%),
-	"disabled": rgb(150, 150, 150),
+	"disabled": rgb(205, 205, 210),
 	"icon-hover-filter": invert(100%) grayscale(100%),
 );
 
