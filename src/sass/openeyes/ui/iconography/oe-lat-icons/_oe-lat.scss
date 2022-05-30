@@ -9,27 +9,23 @@
 	display: block;
 	height: 13px;
 	width:30px; // allows a 4px center gap
-	margin: 0 4px; // space makes up to 38px
+	margin: 0 2px; // space makes up to 36px (2 icons)
 
 	&.inline {
 		display: inline-block;
 	}
 
 	@mixin bg( $left, $right ){
-		background-image: url(svg-themed("i/" + $left)), url(svg-themed("i/" + $right));
-
-		// require the generic wrapper to fix icons
-		// oe-i should be updated to match this too
-		.i-fixed & {
-			background-image: url(svg-dark-fixed("i/" + $left)), url(svg-dark-fixed("i/" + $right));
-		}
+		background-image: var(--i-#{$left}),var(--i-#{$right});
 	}
 
-	// default set up for all icons (small)
-	background-size:13px;
+	// default set up for all icons (match small icon size)
+	background-size:14px;
 	background-position: center left, center right;
 	background-repeat: no-repeat;
 
+	// not sure if this is actually needed/used
+	// but available...
 	&.mini {
 		background-size:11px;
 		width:25px; // 2px gap
@@ -93,23 +89,23 @@
 
 	&.beo {
 		background-position:center center;
-		background-image: url(svg-themed("i/beo"));
+		background-image: var(--i-beo);
 	}
 
 	&.sys {
 		background-position:center center;
-		background-image: url(svg-themed("i/person-green"));
+		background-image: var(--person-green);
 	}
 	&.sys-i {
 		background-position:center center;
-		background-image: url(svg-themed("i/person-inactive"));
+		background-image: var(--i-person-inactive);
 	}
 	&.sys-q {
 		background-position:center center;
-		background-image: url(svg-themed("i/person-query"));
+		background-image: var(--i-person-query);
 	}
 	&.sys-n {
 		background-position:center center;
-		background-image: url(svg-themed("i/lat-NA"));
+		background-image: var(--i-lat-NA);
 	}
 }

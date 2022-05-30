@@ -49,7 +49,7 @@ if( iconset == "events" ){
 		iconPath: './src/icons-events/76x76/', 
 		glob: '*.png',
 		png: './dist/img/event-icons-76x76.png', 
-		scss: './src/sass/spritesheet/_icons-events-sprites.scss',
+		scss: './src/sass/openeyes/ui/iconography/oe-i-e/_oe-i-e-spritesheet.scss',
 		sassTemplate( sprite, sheetSize ){
 			const name = sprite[0].slice( config.iconPath.length, -4 );
 			const {x, y} = sprite[1];
@@ -69,7 +69,7 @@ if( iconset == "events" ){
 		iconPath: './src/icons-eyedraw/32x32/', 
 		glob: '**/*.png', // two folders: "new" and "old" folders
 		png: './dist/img/eyedraw-doodle-icons-32x32.png' ,
-		scss: './src/sass/spritesheet/_eyedraw-doodle-sprites.scss',
+		scss: './src/sass/eyedraw-doodles/_eyedraw-doodle-sprites.scss',
 		sassTemplate( sprite, sheetSize ){
 			// Allow for 2 subfolders: "new" and "old", fortunately these are both 3 characters!!
 			const name = sprite[0].slice( config.iconPath.length + 4, -4 );

@@ -1,12 +1,9 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-// OE Event Icons
-// Uses sprite-sheet: 'event-icons-76x76.png')
-// Sprite-sheet and SCSS is generated automatically by SpriteSmith
-
+// note!
 // background-size - when a new sprite-sheet is created the background-size
-// needs updating manually, node will output the updated size and notes.
+// needs updating manually here, node will output the updated size and notes.
 
 // <i class="oe-i-e CiExamination [large]"></i>
 .oe-i-e {
@@ -39,9 +36,5 @@
 	&.pad-left {
 		margin: 0 0 0 8px;
 	}
-
 }
-
-// SCSS file automatically created by SpriteSmith (see: node_scripts/build-iconset.js )
-@import "../../eyedraw-doodles/icons-events-sprites";
 

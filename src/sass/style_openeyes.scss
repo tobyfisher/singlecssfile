@@ -18,12 +18,6 @@
 @use "openeyes/theme";
 @use "openeyes/ui/scrollbars";
 
-// Keyframes
-@use "openeyes/keyframes";
-
-// Iconography
-@use "openeyes/ui/icons";
-
 // structure & core
 @use "openeyes/structure/html";
 @use "openeyes/structure/oe-grid";
@@ -31,6 +25,12 @@
 @use "openeyes/core/admin-notification";
 @use "openeyes/core/print-block-browser";
 @use "openeyes/core/minimum-width-warning";
+
+// Keyframes
+@use "openeyes/keyframes";
+
+// Iconography
+@use "openeyes/ui/iconography";
 
 // general UI
 @use "openeyes/ui/typography";

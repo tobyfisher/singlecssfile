@@ -56,7 +56,7 @@
 
 /* UI classes */
 @import "../../openeyes/ui/oe-date";						// OE date
-@import	"ui/oe-lat-icons/_all";				// OE lat icons for Eye / Systemic
+@import "../../openeyes/ui/iconography/oe-lat-icons/index";				// OE lat icons for Eye / Systemic
 @import "ui/oe-search-patient";				// Search Patient
 @import "ui/oe-filter-options";				// filter-options
 @import "../../openeyes/ui/oe-popup-wrap";					// covers and acts as container for ajax loads
@@ -70,8 +70,8 @@
 @import "ui/freeze-ui";						// freeze UI interactions below a level
 
 /*  iconography */
-@import "openeyes/ui/icons";							// oe icons
-@import "openeyes/ui/icons-events";						// oe icons (Events only)
+@import "../../openeyes/ui/iconography/oe-i/index";							// oe icons
+@import "../../openeyes/ui/iconography/oe-i-e/index";						// oe icons (Events only)
 
 /* Components */
 @import "components/logo";						// OE logo and Version info

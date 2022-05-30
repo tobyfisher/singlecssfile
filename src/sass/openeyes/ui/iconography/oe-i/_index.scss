@@ -2,7 +2,7 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 @use "sass:list";
-@use "openeyes/var" as *;
+@use "../../../var" as *;
 
 // oe icons: <i class="oe-i [name] [size] [...options]"></i>
 //	small: 	14px
@@ -18,17 +18,22 @@
 	$-size-medium: 16px;
 	$-size-small: 14px;
 
-	// default size
+	// default size is large
 	width: $-size-large;
 	height: $-size-large;
 	background:center / $-size-large  no-repeat;
-
 
 	&.small {
 		width: $-size-small;
 		height: $-size-small;
 		background-size: $-size-small;
 		vertical-align: middle;
+	}
+
+	// large icon area but small icon
+	&.small-icon {
+		background-size: $-size-small;
+		vertical-align: text-top;
 	}
 
 	&.medium {
@@ -38,21 +43,16 @@
 		vertical-align: middle;
 	}
 
-	&.large {
-		// default, class isn't need.
-		// set as the default because of the trash icon (in hindsight...)
-	}
-
-	// large area 19px but small icon within this area
-	&.small-icon {
-		background-size: $-size-small;
-		vertical-align: text-top;
-	}
-
-	// large area 19px but medium icon within this area
+	// large icon area but medium icon
 	&.medium-icon {
 		background-size: $-size-medium;
 		vertical-align: text-top;
+	}
+
+	// make icon hit-area match standard input/button
+	&.as-btn {
+		width: $oe-input-height;
+		height: $oe-input-height;
 	}
 
 	// used 'inline' to 'pad' out the icon

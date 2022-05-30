@@ -161,15 +161,19 @@ $input-light: (
 
 // ---- SVG icons
 
-$themedIcons: ("plus", "minus", "plus-bold", "minus-bold", "arrow-down", "arrow-up", "arrow-down-bold", "arrow-up-bold", "arrow-right-bold",
-"arrow-left-bold", "direction-up", "direction-down", "direction-right", "direction-left", "direction-horizontal",
-"direction-right-circle", "direction-left-circle", "direction-up-circle", "direction-down-circle", "remove-circle",
-"plus-circle", "tick-circle", "move", "child-arrow", "parent-arrow", "menu", "trash", "duplicate", "print", "search", "zoom-in",
-"zoom-out", "filter", "tick", "remove", "cog", "download", "info", "exclamation", "asterisk", "pencil", "eye",
-"comments", "comments-added", "comments-who", "start", "stop", "range", "top", "reduce-height", "increase-height", "change", "d-slash",
-"expand", "collapse", "downup", "rewind", "forward", "undo", "reset", "sync", "time", "audit-trail", "male", "female", "triangle",
-"drug-rx", "formulary", "injection", "drop", "drop-done", "flag", "flagline", "star", "starline", "no-permissions",
-"fork", "path-break", "waiting", "eyelat-R", "eyelat-L", "more-h", "status-urgent", "status-query", "doubt", "padlock");
+$themedIcons: ('add-blue','add','arrow-down-bold','arrow-down','arrow-left-bold','arrow-right-bold','arrow-up-bold','arrow-up',
+'asterisk-blue','asterisk','audit-trail','beo','cancel','change','child-arrow','cog','collapse','comments-added','comments-who','comments',
+'copy-forward','crying','direction-down-circle','direction-down','direction-horizontal',
+'direction-left-circle','direction-left','direction-right-circle','direction-right','direction-up-circle','direction-up',
+'double-slash','doubt-active','doubt','download','downup','drop-done','drop','drug-rx','duplicate','edit-blue','edit',
+'exclamation','expand','eye-circle','eye','female','filter','finish','flag','flagline','flux','fork','formulary','happy',
+'increase-height-orange','increase-height','info-blue','info','injection','lat-L-inactive','lat-L-query','lat-L-red','lat-L',
+'lat-NA','lat-R-green','lat-R-inactive','lat-R-query','lat-R','letter-1','letter-2','letter-GP','letter-invitation','line-break',
+'male','menu','minus-bold','minus','more-h','move','mpr','no-permissions','padlock','parent-arrow','path-break','patient','pencil-blue',
+'pencil','person-green','person-inactive','person-query','person-split','person','plus-bold','plus-circle','plus','print','range',
+'reduce-height','remove-circle','remove','reset','rotate-left','rotate-right','save-blue','save','search','star','starline','start',
+'status-query-reply','status-query','status-urgent','stop','sync','tick-chunky','tick-circle','tick-green','tick','time','top','trash-blue',
+'trash','trials','triangle','undo','waiting','whiteboard','zoom-in','zoom-out');
 
 // not available via <i>, only for CSS
 $uiThemedIcons: ("face", "element-divider", "btn-goto", "tab-more-h", "tab-whiteboard", "tab-print", "tab-trash", "watermark-patient",

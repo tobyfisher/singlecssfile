@@ -3,16 +3,17 @@
 
 @use "openeyes/mix" as *;
 
-.oe-full-header.title {
-	@include flex(center, flex-start);
-	@include font-size(24);
-	text-transform: uppercase;
-	font-weight: var(--font-light);
-	color: var(--txt-light);
+.oe-full-header {
+	.title {
+		@include flex(center, flex-start);
+		@include font-size(22);
+		text-transform: uppercase;
+		font-weight: var(--font-light);
+		color: var(--txt-light);
+	}
 }
 
 .title {
-
 	&.wordcaps {
 		text-transform: capitalize;
 	}
