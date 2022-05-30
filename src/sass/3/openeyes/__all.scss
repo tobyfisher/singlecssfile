@@ -37,8 +37,8 @@
 @import "../../openeyes/ui/lists/index";					// ul and ol defaults.
 @import "ui/tables/_all"; 					// standard table class.
 @import "ui/typography/_all"; 				// defaults and general typographics.
-@import "ui/collapsible/_all";	            // collapse data and groups
-@import "ui/load-on-request";				// load on request
+@import "../../openeyes/ui/collapsible/index";	            // collapse data and groups
+@import "../../openeyes/ui/load-on-request";				// load on request
 @import "ui/buttons/_all"; 					// button and .button
 @import "ui/button-stack";					// button stack
 @import "ui/alert-box";						// alerts

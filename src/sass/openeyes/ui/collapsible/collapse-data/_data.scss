@@ -13,15 +13,8 @@
 	// show the collapse-data area, this includes
 	// some typographics tweaks
 	&.show-bg {
-		background-color: rgba($oe-user-inputs, 0.4);
+		background-color: var(--input-hint);
 		padding:5px 8px;
-
-		.collapse-data-header-icon {
-			@include font-size(14); // match large-text size
-			&.collapse {
-				color:$oe-text;
-			}
-		}
 	}
 }
 

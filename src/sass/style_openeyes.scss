@@ -37,9 +37,11 @@
 @use "openeyes/ui/flex";
 @use "openeyes/ui/inputs";
 @use "openeyes/ui/buttons";
+@use "openeyes/ui/lists";
 @use "openeyes/ui/alert-box";
 @use "openeyes/ui/auto-alert";
-@use "openeyes/ui/lists";
+@use "openeyes/ui/collapsible";
+@use "openeyes/ui/load-on-request";
 @use "openeyes/ui/oe-popup-wrap";
 @use "openeyes/ui/spinner";
 @use "openeyes/ui/hr_row";
