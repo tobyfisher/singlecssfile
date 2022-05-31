@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Tue May 31 2022 10:38:29 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Tue May 31 2022 13:43:04 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -1022,6 +1022,16 @@ body.open-eyes {
   }
   body.open-eyes #oe-restrict-print {
     display: block !important;
+  }
+  body.open-eyes .openeyes-brand {
+    display: block !important;
+    position: static;
+  }
+  body.open-eyes .openeyes-brand .oe-openeyes {
+    fill: #000;
+  }
+  body.open-eyes .openeyes-brand .oe-product-info {
+    display: none;
   }
 }
 #oe-minimum-width-warning {

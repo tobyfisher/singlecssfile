@@ -1,0 +1,99 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+// OE tooltip
+// DOM is created and positioned by JS
+
+.oe-tooltip {
+	z-index:$oe-z-tooltip;
+	position:fixed; // positioned by JS
+	width:200px;
+	padding:8px 10px;
+	border-bottom:1px solid $oe-text-highlight;
+	background:$oe-tooltip-bg;
+	color:$oe-text;
+	@include font-size(11);
+	font-weight: $oe-font-medium;
+	
+	@include boxshadow();
+
+	// CSS arrow trick
+	&::after {
+		content:"";
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		height: 0;
+		width: 0;
+		border: 5px solid transparent;
+		border-top-color: var(--txt-highlight);
+		transform: translateX(-5px);
+		pointer-events: none;
+	}
+	
+	// JS adds the following classes
+	// arrow default is center
+	// but could be left or right	
+	// or, rarely, inverted (below icon)
+
+	&.offset-left {
+		&:after {
+			left: auto;
+			right: 15px; // allow for the negative margin
+		}
+	}
+	
+	&.offset-right {
+		&:after {
+			left: 20px;
+			right: auto;
+		}
+	}
+	
+	// this is going to be rare
+	// positioned below...
+	&.inverted {
+		border-bottom:none;
+		border-top:1px solid $oe-text-highlight;
+		&:after {
+			display:none;
+		}
+	}
+
+	// Popup tooltip "preview" (enhancement)
+	&.more {
+		padding-bottom: 21px;
+		&:before {
+			content: "";
+			position:absolute;
+			bottom:0;
+			left:0;
+			right:0;
+			height:15px;
+			background: center/13px $oe-btn-blue url(svg-dark-fixed("i/more-h")) no-repeat;
+		}
+	}
+
+	// esign
+	&.esign {
+		width:210px; // 3:1 ratio area
+		height:70px;
+		// JS will add the background image:
+		background: center / contain no-repeat white;
+	}
+
+	// copy to clipboard!
+	&.copied {
+		background-color: $oe-btn-green;
+		color:#fff;
+		text-align: center;
+	}
+
+	// used for "Copied to clipboard"
+	// JS will have to remove the DOM
+	&.fade-out {
+	  display:block;
+	  animation: 2s ease-in forwards fadeout;
+	}
+}

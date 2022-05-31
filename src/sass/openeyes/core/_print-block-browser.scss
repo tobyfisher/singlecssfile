@@ -37,5 +37,19 @@
 		#oe-restrict-print {
 			display: block !important;
 		}
+
+		// show the logo but not all the info
+		.openeyes-brand  {
+			display: block !important;
+			position: static;
+			
+			.oe-openeyes {
+				fill: #000;
+			}
+			.oe-product-info {
+				display: none;
+			}
+		}
+
 	}
 }
