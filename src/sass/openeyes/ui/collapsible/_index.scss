@@ -7,6 +7,9 @@
 @use "collapse-data/data";
 @use "collapse-data/header-icon";
 
+// Load on Request resolves to collapse-data (or maybe pro-view)
+@use "load-on-request";
+
 // Pro-data-view
 // Toggle views between pro/standard views
 @use "pro-view/pro-data-view";
@@ -14,5 +17,7 @@
 // sidebar groups in Events/Element
 // & admin sidebar nav
 @use "nav-group/nav-grp-hd-i";
+
+
 
 

@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Mon May 30 2022 22:09:34 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Tue May 31 2022 10:38:29 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -3766,6 +3766,49 @@ ul.oe-multi-select li {
   background: var(--btn-blue);
 }
 
+.load-on-request {
+  margin: 5px 0 10px 0;
+  cursor: pointer;
+  padding: 5px 50px 5px 10px;
+  color: var(--txt-hd);
+  user-select: none;
+  outline: 1px solid var(--gui-line);
+  border-radius: 10px;
+  position: relative;
+}
+.tile-data-overflow .load-on-request {
+  outline-offset: -1px;
+}
+.load-on-request::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 10px;
+  width: 15px;
+  background: var(--i-download) right center no-repeat;
+  background-size: 17px;
+  opacity: 0.5;
+}
+.load-on-request * {
+  pointer-events: none;
+}
+.load-on-request:hover, .load-on-request:active, .load-on-request.loading {
+  color: var(--txt-highlight);
+}
+.load-on-request:hover::after, .load-on-request:active::after, .load-on-request.loading::after {
+  opacity: 1;
+}
+.load-on-request.loading {
+  outline-color: var(--btn-blue-hint);
+}
+.load-on-request i.spinner {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-8px);
+  right: 25px;
+}
+
 .pro-data-view {
   display: flex;
   justify-content: space-between;
@@ -3828,49 +3871,6 @@ ul.oe-multi-select li {
 }
 .nav-grp-hd-i:hover::after, .nav-grp-hd-i:active::after {
   opacity: 1;
-}
-
-.load-on-request {
-  margin: 5px 0 10px 0;
-  cursor: pointer;
-  padding: 5px;
-  color: var(--txt-hd);
-  user-select: none;
-  outline: 1px solid var(--gui-line);
-  border-radius: 10px;
-  position: relative;
-}
-.tile-data-overflow .load-on-request {
-  outline-offset: -1px;
-}
-.load-on-request::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 5px;
-  width: 15px;
-  background: var(--i-download) right center no-repeat;
-  background-size: 17px;
-  opacity: 0.5;
-}
-.load-on-request * {
-  pointer-events: none;
-}
-.load-on-request:hover, .load-on-request:active, .load-on-request.loading {
-  color: var(--txt-highlight);
-}
-.load-on-request:hover::after, .load-on-request:active::after, .load-on-request.loading::after {
-  opacity: 1;
-}
-.load-on-request.loading {
-  outline-color: var(--btn-blue-hint);
-}
-.load-on-request i.spinner {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-8px);
-  right: 22px;
 }
 
 .oe-popup-wrap {

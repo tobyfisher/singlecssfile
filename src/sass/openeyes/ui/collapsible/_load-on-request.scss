@@ -9,7 +9,7 @@
 	// it will switch to that expanded DOM
 	margin: 5px 0 10px 0;
 	cursor: pointer;
-	padding: 5px;
+	padding: 5px 50px 5px 10px;
 	color: var(--txt-hd);
 
 	// as User regularly interact with this turn off selection
@@ -35,7 +35,7 @@
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		right: 5px; // visual alignment tweak
+		right: 10px; // visual alignment tweak
 		width: 15px;
 
 		// put the expand collapse icon into the background
@@ -62,11 +62,12 @@
 		outline-color: var(--btn-blue-hint);
 	}
 
+	// loading spinner <i>
 	i.spinner {
 		position: absolute;
 		top:50%;
 		transform: translateY(-8px); // spinner icon is 16px
-		right:22px;
+		right:25px;
 	}
 }
 
