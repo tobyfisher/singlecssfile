@@ -39,13 +39,6 @@
 	@include flex(flex-start, flex-end );
 }
 
-.flex-btns {
-	@include flex( center, space-between );
-	> button {
-		flex: 1;
-	}
-}
-
 // for content items in a flex
 .flex-fill {
 	flex:1 1 0;

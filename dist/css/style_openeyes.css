@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Tue May 31 2022 13:43:04 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Wed Jun 01 2022 16:45:54 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -2850,15 +2850,6 @@ a.selected {
   align-items: flex-start;
 }
 
-.flex-btns {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.flex-btns > button {
-  flex: 1;
-}
-
 .flex-fill {
   flex: 1 1 0;
 }
@@ -3378,6 +3369,26 @@ button.add-pathstep:after,
   height: 17px;
   width: 17px;
   background: center/contain transparent url(svg-white-icon("i/plus-bold")) no-repeat;
+}
+
+.flex-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-btns > button {
+  flex: 1;
+}
+
+.button-stack {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 15px;
+}
+.button-stack.tight {
+  gap: 2px;
 }
 
 ul {
