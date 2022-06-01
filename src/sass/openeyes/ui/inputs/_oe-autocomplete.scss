@@ -1,24 +1,24 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "../../var" as *;
+@use "../../mix" as *;
 
 // OE Autocomplete popup
-// this is a simple version of jQuery UI Autocomplete
-// v2 was using it. This is a V3 version. 
-
+//  a simple version of jQuery UI Autocomplete
 // <ul>
 .oe-autocomplete {
+	// positioned by JS next to input
 	position:fixed;
 	top:0;
 	left:0;
-	padding:5px;
-	border:1px solid $oe-user-inputs;
-	
 	z-index:$oe-z-popup;
 
-	background: $oe-popup-bg;
-	color: $oe-text;
-	
+	display:block;
+	padding:5px;
+	border:1px solid var(--txt-highlight);
+	background: var(--bg-max);
+
 	max-width:350px; // restrict long stuff.
 	max-height: 300px; // needs restricting and scrolling if too many results
 	overflow-y: auto;
@@ -28,9 +28,10 @@
 	li {
 		display: block;
 		@include font-size(12);
+		font-weight: (--font-medium);
 		padding:5px 2px;
 		cursor: pointer;
-		border-bottom:1px dotted $oe-line;
+		border-bottom:1px dotted var(--gui-line);
 		
 		&:last-child {
 			border-bottom: none;
@@ -39,20 +40,20 @@
 		// match an <a> behaviour
 		&:hover, 
 		&:focus {
-			color:$oe-text-active;
+			color:var(--txt-highlight);
 		}
 		
 		// search string match (if used)
+		// wraps the part of the text that matches the search text
 		.autocomplete-match {
-			font-weight:700;
+			font-weight:var(--font-bold);
 		}
 		
-		// originally it used <a> in the autocomplete
-		// but the <a> is optional as the behavour is also 
-		// on the <li> element
+		// originally used <a> in the autocomplete
+		// but the <a> is optional (and semantically incorrect)
+		// the behaviour should all be on the <li> element
 		a {
 			display:block;
-		
 			// used in ED2.5 for searching Doodles
 			&.add-ed-doodle {
 				padding:2px 2px;
