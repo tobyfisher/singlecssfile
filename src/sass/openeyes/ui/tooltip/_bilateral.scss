@@ -5,35 +5,30 @@
 
 // Bilateral
 // Extended width R and L side data
-.oe-tooltip.bilateral {
-	width:400px;
-	padding:0;
-	// contains a "right" and "left" content
-	@include flex(flex-start, space-between);
+.oe-tooltip {
+	&.bilateral {
+		width:400px;
+		padding:0;
+		// contains a "right" and "left" content
+		@include flex(flex-start, space-between);
 
-	.right,
-	.left {
-		padding:8px 4px 8px 25px;
-		min-height: 28px; // to stop the background icon getting cropped when there is no 'tip'
+		.right,
+		.left {
+			padding:8px 4px 8px 25px;
+			min-height: 28px; // to stop the background icon getting cropped when there is no 'tip'
+		}
+
+		.right {
+			width: 199px;
+			background:5px 10px / 11px var(--i-lat-R) no-repeat;
+		}
+
+		.left {
+			width: 201px;
+			border-left:1px dotted var(--gui-line);
+			background:5px 10px / 11px var(--i-lat-L) no-repeat;
+		}
 	}
-
-	.right {
-		width: 199px;
-		background:5px 10px / 11px var(--i-lat-R) no-repeat;
-	}
-
-	.left {
-		width: 201px;
-		border-left:1px dotted rgba($oe-text-light, 0.3);
-		background:5px 10px / 11px var(--i-lat-L) no-repeat;
-	}
-
-	// hide eye icons from sides??
-	//&.no-icons {
-	//	.right,
-	//	.left {
-	//		padding-top:8px;
-	//		background: none;
-	//	}
-	//}
 }
+
+

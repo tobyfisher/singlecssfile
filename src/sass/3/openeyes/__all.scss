@@ -35,7 +35,7 @@
 /* GUI */
 @import "ui/flex";							// flex layout
 @import "../../openeyes/ui/lists/index";					// ul and ol defaults.
-@import "ui/tables/_all"; 					// standard table class.
+@import "../../openeyes/ui/tables/index"; 					// standard table class.
 @import "ui/typography/_all"; 				// defaults and general typographics.
 @import "../../openeyes/ui/collapsible/index";	            // collapse data and groups
 @import "../../openeyes/ui/collapsible/load-on-request";				// load on request

@@ -90,8 +90,7 @@
 		padding-right:30px; // allow for the background icon
 
 		&:focus,
-		&:hover,
-		&:active {
+		&:hover {
 			background-color:var(--btn-blue-hint);
 		}
 	}

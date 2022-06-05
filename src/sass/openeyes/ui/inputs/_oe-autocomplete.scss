@@ -47,6 +47,7 @@
 		// wraps the part of the text that matches the search text
 		.autocomplete-match {
 			font-weight:var(--font-bold);
+			font-style: italic;
 		}
 		
 		// originally used <a> in the autocomplete

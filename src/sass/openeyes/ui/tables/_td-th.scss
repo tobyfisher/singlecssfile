@@ -1,0 +1,45 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/mix" as *;
+
+td, th {
+	@include font-size(12); // match SEM font-size
+	font-weight: var(--font-medium);
+	vertical-align: top;
+	text-align: left;
+
+	// squeeze data, 4px provides a visual column gap
+	// as cells don't have a vertical line to divide them
+	padding: 2px 0 2px 4px;
+
+	&:first-child {
+		// allow 1px for use of clickable-rows/hover-rows
+		// otherwise the data appears cropped.
+		padding-left:1px;
+	}
+
+
+
+	// if there are several columns the common UI
+	// pattern is to have actions or icons in the last
+	// column, .last-left overrides this.
+	&:last-child:not(:first-child) {
+		text-align: right;
+		.last-left & {
+			text-align: left;
+		}
+	}
+
+	// show a vertical line for a column sometimes done
+	// with CSS nth-child for specific layouts
+	&.line-l {
+		border-left:2px solid var(--gui-line);
+		padding-left:8px;
+	}
+
+}
+
+th {
+	color: var(--txt-light);
+}
