@@ -16,4 +16,11 @@ table {
 	// this also optimises the speed at which
 	// the browser can layout the data
 	table-layout: fixed;
+
+	// provide vertical spacing around table by default
+	// unless 'no-pad' is requested
+	&.standard:not(.no-pad) {
+		margin:20px 0 10px 0;
+	}
+
 }

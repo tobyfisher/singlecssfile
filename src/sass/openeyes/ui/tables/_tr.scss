@@ -24,9 +24,20 @@ tbody {
 			}
 		}
 
-		// ALL table rows are clickable.
+		// subtly show  odd/even rows
+		// this can be combined with those below
+		// so it needs to be first
+		.oddeven-rows & {
+			&:nth-child(odd){
+				background:var(--bg-title);
+			}
+		}
+
+		// Either make ALL table rows clickable.
+		// OR make specific row 'clickable'
 		// JS will handle the interaction but make the table rows look like buttons
-		.clickable-rows & {
+		.clickable-rows &,
+		&.clickable {
 			&:hover,
 			&:focus {
 				cursor: pointer;
@@ -36,6 +47,27 @@ tbody {
 				}
 			}
 		}
+
+		// All table rows react to focus/hover to help with using the data
+		.highlight-rows & {
+			&:hover,
+			&:focus,
+			&:focus-within {
+				background: var(--bg-max);
+			}
+
+		}
+
+		// Not sure where this is used. Keeping for support
+		// but should probably be depreciated and replaced
+		&.selected-row {
+			background: var(--btn-blue-hint);
+			td {
+				color: #fff;
+			}
+		}
+
+
 	}
 }
 

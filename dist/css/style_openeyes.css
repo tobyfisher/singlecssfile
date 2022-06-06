@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Jun 05 2022 19:15:20 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Mon Jun 06 2022 08:23:35 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -3437,6 +3437,9 @@ table {
   width: 100%;
   table-layout: fixed;
 }
+table.standard:not(.no-pad) {
+  margin: 20px 0 10px 0;
+}
 
 tbody tr {
   border-top: 1px solid var(--gui-line);
@@ -3450,11 +3453,23 @@ tbody tr.divider {
 tbody tr.divider td {
   padding-top: 4px;
 }
-.clickable-rows tbody tr:hover, .clickable-rows tbody tr:focus {
+.oddeven-rows tbody tr:nth-child(odd) {
+  background: var(--bg-title);
+}
+.clickable-rows tbody tr:hover, .clickable-rows tbody tr:focus, tbody tr.clickable:hover, tbody tr.clickable:focus {
   cursor: pointer;
   background: var(--btn-blue);
 }
-.clickable-rows tbody tr:hover td, .clickable-rows tbody tr:focus td {
+.clickable-rows tbody tr:hover td, .clickable-rows tbody tr:focus td, tbody tr.clickable:hover td, tbody tr.clickable:focus td {
+  color: #fff;
+}
+.highlight-rows tbody tr:hover, .highlight-rows tbody tr:focus, .highlight-rows tbody tr:focus-within {
+  background: var(--bg-max);
+}
+tbody tr.selected-row {
+  background: var(--btn-blue-hint);
+}
+tbody tr.selected-row td {
   color: #fff;
 }
 
@@ -3471,8 +3486,11 @@ td:first-child, th:first-child {
 td:last-child:not(:first-child), th:last-child:not(:first-child) {
   text-align: right;
 }
-.last-left td:last-child:not(:first-child), .last-left th:last-child:not(:first-child) {
+.last-left td:last-child:not(:first-child), .standard td:last-child:not(:first-child), .last-left th:last-child:not(:first-child), .standard th:last-child:not(:first-child) {
   text-align: left;
+}
+.last-right td:last-child:not(:first-child), .last-right th:last-child:not(:first-child) {
+  text-align: right;
 }
 td.line-l, th.line-l {
   border-left: 2px solid var(--gui-line);
@@ -3481,6 +3499,10 @@ td.line-l, th.line-l {
 
 th {
   color: var(--txt-light);
+}
+
+tfoot tr {
+  border-top: 3px solid var(--gui-line);
 }
 
 ul {

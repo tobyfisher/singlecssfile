@@ -19,15 +19,21 @@ td, th {
 		padding-left:1px;
 	}
 
-
-
-	// if there are several columns the common UI
-	// pattern is to have actions or icons in the last
-	// column, .last-left overrides this.
+	// last column alignment
+	// within SEM context (default table layout)
+	// the last <td> is right aligned, to handle the common UI pattern
+	// e.g. icons/action are in this column.
+	// 'standard' was added later, it is used a great deal in Admin
+	// it's alignment default is the reverse
 	&:last-child:not(:first-child) {
 		text-align: right;
-		.last-left & {
+
+		.last-left &,
+		.standard & {
 			text-align: left;
+		}
+		.last-right & {
+			text-align:right;
 		}
 	}
 
