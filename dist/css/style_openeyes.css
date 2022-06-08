@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Mon Jun 06 2022 08:23:35 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Wed Jun 08 2022 10:41:14 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -994,6 +994,9 @@ body.open-eyes {
 #oe-admin-notifcation a {
   color: #fff;
   text-decoration: underline;
+}
+#oe-admin-notifcation .oe-i {
+  filter: var(--btn-icon-hover-filter);
 }
 
 #oe-restrict-print {
@@ -3480,6 +3483,12 @@ td, th {
   text-align: left;
   padding: 2px 0 2px 4px;
 }
+.standard tbody td, .standard tbody th {
+  font-size: 0.875rem;
+}
+.standard td, .standard th {
+  padding: 4px 0 4px 8px;
+}
 td:first-child, th:first-child {
   padding-left: 1px;
 }
@@ -3495,6 +3504,10 @@ td:last-child:not(:first-child), th:last-child:not(:first-child) {
 td.line-l, th.line-l {
   border-left: 2px solid var(--gui-line);
   padding-left: 8px;
+}
+td.required, th.required {
+  background: center right 4px/11px var(--i-asterisk) no-repeat;
+  padding-right: 20px;
 }
 
 th {
