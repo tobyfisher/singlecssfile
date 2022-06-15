@@ -25,6 +25,11 @@ input, textarea, select {
 	color: var(--input-text);
 	background-color: var(--input-base);
 
+	// flag OE prefilled data to Users
+	&.prefilled {
+		outline:2px solid var(--color-orange);
+	}
+
 	// provide subtle keyboard accessibility
 	&:focus-visible {
 		outline: 1px dotted var(--input-focus-outline);

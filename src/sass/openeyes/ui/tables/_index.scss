@@ -5,7 +5,9 @@
 @use "tr";
 @use "td-th";
 @use "tfoot";
-
+@use "pagination";
+@use "table-sort-order";
+@use "column-sort";
 
 //@use "standard";
 //@use "clickable-rows";

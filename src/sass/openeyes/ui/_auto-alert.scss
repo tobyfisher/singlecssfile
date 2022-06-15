@@ -56,6 +56,24 @@
 		}
 	}
 
+	&.prefill {
+		background-image: var(--i-starline);
+		background-size: 14px;
+		border-color: var(--text-active);
+	}
+
+	&.has-actions {
+		position:relative;
+		padding-right:300px; 	// allow space for a long named button
+		min-height: 31px;  		// otherwise button overlaps button background
+
+		.alert-actions {
+			position: absolute;
+			right:15px;
+			top:2px;
+		}
+	}
+
 	// dismissible
 	&.dismissible {
 		cursor: pointer;
