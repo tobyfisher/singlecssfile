@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Wed Jun 15 2022 15:38:25 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Thu Jun 16 2022 06:50:58 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -3225,6 +3225,7 @@ button:disabled, button.disabled, button.inactive,
 button .oe-i,
 .button .oe-i {
   pointer-events: none;
+  filter: var(--btn-icon-hover-filter);
 }
 button:hover, button:focus, button.active, button.selected,
 .button:hover,
@@ -3240,7 +3241,6 @@ button:hover .oe-i, button:focus .oe-i, button.active .oe-i, button.selected .oe
 .button.active .oe-i,
 .button.selected .oe-i {
   opacity: 1;
-  filter: var(--btn-icon-hover-filter);
 }
 button:active,
 .button:active {
@@ -4334,6 +4334,54 @@ hr.soft {
   width: 10.5ch;
   text-align: right;
   font-style: italic;
+}
+
+.oe-user-pin {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+  padding: 0 4px 0 28px;
+  border-radius: 3px;
+  background: left 6px center/14px var(--color-orange) url("../svg/in-css/dark/i/padlock.svg") no-repeat;
+}
+.oe-user-pin.accepted-pin {
+  background-color: var(--color-green);
+}
+.oe-user-pin.accepted-pin .user-pin-entry {
+  outline-color: var(--color-green);
+}
+.oe-user-pin.wrong-pin {
+  background-color: var(--color-red);
+}
+.oe-user-pin.wrong-pin .user-pin-entry {
+  outline-color: var(--color-red);
+}
+.oe-user-pin.pin-right {
+  background-image: url("../svg/in-css/dark/i/lat-R.svg");
+}
+.oe-user-pin.pin-left {
+  background-image: url("../svg/in-css/dark/i/lat-L.svg");
+}
+.oe-user-pin input.user-pin-entry {
+  height: 22px;
+  margin: 0;
+  width: 10ch;
+  text-align: center;
+  font-weight: 700;
+  outline: 2px solid var(--color-orange);
+}
+.oe-user-pin button.try-pin {
+  height: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0 6px;
+  padding: 0 8px;
+  background-color: transparent;
+}
+.oe-user-pin button.try-pin:hover, .oe-user-pin button.try-pin:focus {
+  color: #fff;
+  background: var(--btn-blue);
 }
 
 .openeyes-brand {

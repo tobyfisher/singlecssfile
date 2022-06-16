@@ -60,6 +60,8 @@ button,
 	// handle icons in buttons
 	.oe-i {
 		pointer-events: none;
+		// if in light mode the icon will need inverting
+		filter: var(--btn-icon-hover-filter);
 	}
 
 	// Pseudo & JS class hooks
@@ -74,8 +76,6 @@ button,
 		.oe-i {
 			// if there is icon this make sure it shows the button hover effect
 			opacity: 1;
-			// if in light mode the icon will need inverting
-			filter: var(--btn-icon-hover-filter);
 		}
 	}
 
