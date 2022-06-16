@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Thu Jun 16 2022 06:50:58 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Thu Jun 16 2022 10:58:18 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -4382,6 +4382,115 @@ hr.soft {
 .oe-user-pin button.try-pin:hover, .oe-user-pin button.try-pin:focus {
   color: #fff;
   background: var(--btn-blue);
+}
+
+.oe-step-progress {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+.oe-step-progress.nowrap {
+  flex-wrap: nowrap;
+}
+.oe-step-progress.pad {
+  margin: 0 15px;
+}
+
+.oe-step-progress li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  height: 21px;
+  min-width: 20px;
+  padding: 0 6px;
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--txt-light);
+  border: 2px solid var(--txt-light);
+  border-right: none;
+}
+.oe-step-progress li:first-child {
+  border-radius: 3px 0 0 3px;
+}
+.oe-step-progress li:last-child {
+  border-radius: 0 3px 3px 0;
+  border-right: 2px solid var(--txt-light);
+}
+.oe-step-progress li.interval {
+  font-size: 0.625rem;
+  font-weight: 500;
+  padding: 0 6px;
+}
+.oe-step-progress li.series-gap, .oe-step-progress li.actual {
+  padding: 0 3px;
+  background: var(--txt-light);
+  color: var(--txt-invert);
+}
+.oe-step-progress li.next {
+  color: var(--txt-highlight);
+  font-weight: var(--font-bold);
+  padding: 0 8px;
+}
+.oe-step-progress li.next::before {
+  content: " ";
+  position: absolute;
+  top: calc(100% + 3px);
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--txt-highlight);
+  pointer-events: none;
+}
+.oe-step-progress li.next::after {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  pointer-events: none;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-left: 7px solid var(--txt-light);
+  transform: scale(0.4, 1) translateY(-7px);
+  transform-origin: left;
+}
+.oe-step-progress li.injection {
+  background: left 8px center/13px transparent var(--i-injection) no-repeat;
+  padding-left: 26px;
+  padding-right: 12px;
+}
+.oe-step-progress li.todo {
+  color: var(--txt-light);
+  font-weight: var(--font-bold);
+}
+.oe-step-progress li.completed {
+  z-index: 1;
+  background: var(--txt-light);
+  color: var(--txt-invert);
+  padding: 0 3px;
+}
+.oe-step-progress li.cancelled {
+  color: var(--color-red);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0) calc(50% - 4px), var(--color-red) 50%, rgba(0, 0, 0, 0) calc(50% + 4px));
+}
+.oe-step-progress li.redated {
+  font-size: 0.625rem;
+  font-weight: 700;
+  color: var(--color-orange);
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 40%, var(--color-orange) 65%, var(--txt-light) 95%);
+}
+
+.oe-step-progress div.selected-step {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 12px;
+  background: top 1px center/11px var(--i-arrow-up-bold) no-repeat;
+  pointer-events: none;
 }
 
 .openeyes-brand {
