@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Thu Jun 16 2022 20:48:42 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Fri Jun 17 2022 11:25:56 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -2861,7 +2861,7 @@ a.selected {
   flex: 2 1 0;
 }
 
-.flex-col-gap {
+.flex-gap {
   gap: 10px;
 }
 
@@ -3516,6 +3516,11 @@ td.required, th.required {
 
 th {
   color: var(--txt-light);
+}
+
+.th-title th {
+  color: var(--txt-base);
+  font-weight: var(--font-light);
 }
 
 tfoot tr {
