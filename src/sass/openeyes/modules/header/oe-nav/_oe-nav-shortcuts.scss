@@ -14,9 +14,10 @@
 	background: var(--btn-blue-hint);
 	padding: 10px 0;
 
-	@include handheld() {
-		width: 350px;
-	}
+	// shouldn't be that many shortcut nav links
+	// however if too many are added handle the overflow
+	overflow-y: auto;
+	max-height: calc( 100vh - #{$oe-header-height});
 
 	li > a {
 		display: block;
@@ -42,10 +43,14 @@
 		}
 
 		&:hover,
-		&:focus,
-		&:active {
+		&:focus {
 			color: #fff;
 			background-color: var(--btn-blue-active);
+		}
+
+		&:active {
+			color: #fff;
+			background-color: var(--btn-blue);
 		}
 	}
 }

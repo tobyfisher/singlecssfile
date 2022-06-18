@@ -4704,11 +4704,8 @@ svg.oe-openeyes {
   width: 230px;
   background: var(--btn-blue-hint);
   padding: 10px 0;
-}
-@media only screen and (min-width: 1200px) and (orientation: portrait) {
-  .oe-nav-shortcuts {
-    width: 350px;
-  }
+  overflow-y: auto;
+  max-height: calc( 100vh - 60px);
 }
 .oe-nav-shortcuts li > a {
   display: block;
@@ -4731,9 +4728,13 @@ svg.oe-openeyes {
     background-size: 18px;
   }
 }
-.oe-nav-shortcuts li > a:hover, .oe-nav-shortcuts li > a:focus, .oe-nav-shortcuts li > a:active {
+.oe-nav-shortcuts li > a:hover, .oe-nav-shortcuts li > a:focus {
   color: #fff;
   background-color: var(--btn-blue-active);
+}
+.oe-nav-shortcuts li > a:active {
+  color: #fff;
+  background-color: var(--btn-blue);
 }
 
 .oe-big-icons {
