@@ -1,23 +1,26 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
 // OE Hotlist Panel (RHS)
-// On minimum 1280px displays hidden, on 1800px+ fixed displayed 
-
 .oe-hotlist-panel {
-	display:none; 			// js controlled.
-	z-index:$oe-z-hotlist; 	// overlays content
-			
+	display:none; // js controlled
 	position:fixed;
 	top:$oe-header-height;
 	right:0;
-	height: calc(100vh - #{$oe-header-height}); 	
-	overflow-y:auto;		// otherwise this over-flow doesn't work.
-	
+	bottom:0;
 	width:$oe-hotlist-panel-width;
-	
-	@include fix-hotlist(){		// 1890px
+
+	background: var(--bg-header);
+	border-left:2px solid var(--gui-line);
+
+	overflow-y:auto; // scroll overflow
+	padding:0 0 35px 0;	// allow for Admin banner (if present)
+
+	// On minimum 1280px displays hidden, on 1800px+ fixed displayed
+	@include fix-hotlist(){
 		// as we are going up to 1920px we have an extra 30px... use them
 		width: calc(100vw - #{$oe-js-browser-fix-size - $oe-hotlist-panel-width}); 			
 	}
@@ -26,14 +29,6 @@
 	@include super-wide(){	// 2048px+
 		width: $oe-hotlist-panel-max; 
 	}
-
-	padding:0 0 35px 0;	// allow for Admin tag
-	background:tint( $oe-dark-bg,10 );
-	border-left:2px solid rgba($oe-bg-highlight,0.5);
-	
-	
-	
-	
 }
 
 

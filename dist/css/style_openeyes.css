@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri Jun 17 2022 11:25:56 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sat Jun 18 2022 19:39:09 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -502,12 +502,13 @@ html.theme-dark {
   --font-medium: 400;
   --font-bold: 500;
   --gui-spinner: rgb(0, 255, 255);
+  --gui-vc: rgb(0, 180, 235);
   --gui-line: rgb(43, 64, 87);
   --gui-scroll-track: rgb(10, 10, 15);
   --gui-scroll-thumb: rgb(55, 55, 60);
   --btn-base: rgb(27, 53, 82);
   --btn-text: #ddd;
-  --btn-blue: #00f;
+  --btn-blue: #00e;
   --btn-blue-hint: #074598;
   --btn-blue-active: #1D2E50;
   --btn-green: #0a8013;
@@ -694,14 +695,15 @@ html.theme-light {
   --font-medium: 500;
   --font-bold: 700;
   --gui-spinner: rgb(0, 180, 255);
+  --gui-vc: rgb(0, 180, 235);
   --gui-line: rgb(162, 160, 160);
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
   --btn-base: rgb(102, 112, 126);
   --btn-text: #ddd;
-  --btn-blue: rgb(7, 79, 182);
+  --btn-blue: #00f;
   --btn-blue-hint: rgb(6, 68, 147);
-  --btn-blue-active: #00f;
+  --btn-blue-active: rgb(7, 79, 182);
   --btn-green: rgb(14, 144, 25);
   --btn-green-hint: hsl(125deg, 82%, 26%);
   --btn-green-active: hsl(125deg, 82%, 21%);
@@ -4686,6 +4688,133 @@ svg.oe-openeyes {
   margin: 0 32px 0 0;
 }
 
+.oe-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 60px;
+}
+
+.oe-nav-shortcuts {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  z-index: 99;
+  width: 230px;
+  background: var(--btn-blue-hint);
+  padding: 10px 0;
+}
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
+  .oe-nav-shortcuts {
+    width: 350px;
+  }
+}
+.oe-nav-shortcuts li > a {
+  display: block;
+  color: var(--btn-text);
+  font-size: 0.6875rem;
+  font-weight: 400;
+  padding: 6px 30px 6px 18px;
+  background: right 8px center/10px url("../svg/in-css/all/ui/shortcut-arrow.svg") no-repeat;
+}
+.oe-nav-shortcuts li > a.popup {
+  background-image: url("../svg/in-css/dark/i/duplicate.svg");
+  background-size: 12px;
+}
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
+  .oe-nav-shortcuts li > a {
+    font-size: 1.1875rem;
+    color: #fff;
+    font-weight: 400;
+    padding: 12px 30px 12px 12px;
+    background-size: 18px;
+  }
+}
+.oe-nav-shortcuts li > a:hover, .oe-nav-shortcuts li > a:focus, .oe-nav-shortcuts li > a:active {
+  color: #fff;
+  background-color: var(--btn-blue-active);
+}
+
+.oe-big-icons {
+  display: flex;
+  justify-content: flex-left;
+  align-items: center;
+}
+
+li.oe-nav-btn {
+  display: block;
+  position: relative;
+}
+li.oe-nav-btn .icon-btn,
+li.oe-nav-btn .nav-js-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  padding: 0 3px;
+  transition: padding 0.5s ease-out;
+}
+@media only screen and (min-width: 1440px) {
+  li.oe-nav-btn .icon-btn,
+li.oe-nav-btn .nav-js-btn {
+    padding: 0 7px;
+  }
+}
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
+  li.oe-nav-btn .icon-btn,
+li.oe-nav-btn .nav-js-btn {
+    padding: 0 5px;
+  }
+}
+li.oe-nav-btn .icon-btn:hover, li.oe-nav-btn .icon-btn:focus {
+  background: var(--btn-blue-hint);
+}
+li.oe-nav-btn .icon-btn:hover .icon, li.oe-nav-btn .icon-btn:focus .icon {
+  fill: #fff;
+}
+li.oe-nav-btn .icon-btn:active {
+  background: var(--btn-blue);
+}
+li.oe-nav-btn .icon-btn:active .icon {
+  fill: #fff;
+}
+li.oe-nav-btn .nav-js-btn {
+  cursor: pointer;
+}
+li.oe-nav-btn .nav-js-btn.active {
+  background: var(--btn-blue-hint);
+}
+li.oe-nav-btn .nav-js-btn.active .icon {
+  fill: #fff;
+}
+li.oe-nav-btn .nav-js-btn.open {
+  background: var(--txt-invert);
+}
+li.oe-nav-btn .nav-js-btn.open .icon {
+  fill: var(--txt-active);
+}
+
+.oe-nav-btn svg.icon {
+  display: block;
+  width: 42px;
+  height: 21px;
+  fill: var(--txt-light);
+  pointer-events: none;
+}
+.oe-nav-btn svg.icon.open {
+  fill: var(--txt-highlight);
+}
+.oe-nav-btn svg.icon.hotlist.vc {
+  fill: var(--gui-vc);
+}
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
+  .oe-nav-btn svg.icon {
+    width: 60px;
+    height: 30px;
+  }
+}
+
 .oe-login {
   display: flex;
   height: 100%;
@@ -4843,4 +4972,27 @@ login.multisite .info {
 
 .highlighted-error {
   border: 1px solid var(--color-red);
+}
+
+.oe-hotlist-panel {
+  display: none;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  bottom: 0;
+  width: 450px;
+  background: var(--bg-header);
+  border-left: 2px solid var(--gui-line);
+  overflow-y: auto;
+  padding: 0 0 35px 0;
+}
+@media only screen and (min-width: 1890px) {
+  .oe-hotlist-panel {
+    width: calc(100vw - 1440px);
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .oe-hotlist-panel {
+    width: 31vw;
+  }
 }

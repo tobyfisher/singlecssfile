@@ -73,6 +73,7 @@ $txt-light: (
 // ---- GUI
 $gui: (
 	"spinner": rgb(0, 255, 255),
+	"vc": rgb(0, 180, 235),
 	"line": rgb(43, 64, 87),
 	"scroll-track":rgb(10, 10, 15),
 	"scroll-thumb":rgb(55, 55, 60),
@@ -80,6 +81,7 @@ $gui: (
 
 $gui-light: (
 	"spinner": rgb(0, 180, 255),
+	"vc": rgb(0, 180, 235),
 	"line": rgb(162, 160, 160),
 	"scroll-track":rgb(95, 95, 100),
 	"scroll-thumb":rgb(170, 170, 170),
@@ -89,7 +91,7 @@ $gui-light: (
 $btn: (
 	"base":rgb(27, 53, 82),
 	"text":#ddd,
-	"blue": #00f,
+	"blue": #00e,
 	"blue-hint": #074598,
 	"blue-active": #1D2E50,
 	"green": #0a8013,
@@ -105,9 +107,9 @@ $btn: (
 $btn-light: (
 	"base": rgb(102, 112, 126),
 	"text":#ddd,
-	"blue": rgb(7, 79, 182),
+	"blue": #00f,
 	"blue-hint": rgb(6, 68, 147),
-	"blue-active": #00f,
+	"blue-active": rgb(7, 79, 182),
 	"green": rgb(14, 144, 25),
 	"green-hint": hsl(125, 82%, 26%),
 	"green-active": hsl(125, 82%, 21%),

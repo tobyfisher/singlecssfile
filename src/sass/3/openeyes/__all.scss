@@ -57,7 +57,7 @@
 /* UI classes */
 @import "../../openeyes/ui/oe-date";						// OE date
 @import "../../openeyes/ui/iconography/oe-lat-icons/index";				// OE lat icons for Eye / Systemic
-@import "ui/oe-search-patient";				// Search Patient
+@import "../../openeyes/modules/search-patient/oe-search-patient";				// Search Patient
 @import "ui/oe-filter-options";				// filter-options
 @import "../../openeyes/ui/oe-popup-wrap";					// covers and acts as container for ajax loads
 @import "ui/oe-attachment-thumbnail";		// attachment file thumbnail
@@ -76,7 +76,7 @@
 /* Components */
 @import "components/logo";						// OE logo and Version info
 @import "components/header/_all";				// site wide header bar: Logo, Patient & User Nav
-@import "components/hotlist/_all";				// Hotlist: Open and Closed Patients	
+@import "../../openeyes/modules/hotlist/index";				// Hotlist: Open and Closed Patients
 @import "components/popups/_all";				// Popups: GUI for popups
 @import "components/patient/_all";				// Patient Data: Popups, overview, mini-overview
 @import "components/login";						// Login
