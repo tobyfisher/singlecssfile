@@ -7,6 +7,8 @@
 // OE Hotlist Panel (RHS)
 .oe-hotlist-panel {
 	display:none; // js controlled
+	z-index: $oe-z-hotlist; 	// overlays content
+
 	position:fixed;
 	top:$oe-header-height;
 	right:0;
@@ -15,6 +17,7 @@
 
 	background: var(--bg-header);
 	border-left:2px solid var(--gui-line);
+	border-top:1px solid var(--btn-blue-hint);
 
 	overflow-y:auto; // scroll overflow
 	padding:0 0 35px 0;	// allow for Admin banner (if present)

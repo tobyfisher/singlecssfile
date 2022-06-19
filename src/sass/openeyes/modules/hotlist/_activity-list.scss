@@ -1,116 +1,103 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/mix" as *;
 
-// OE Hotlist
-// Activity List : Open / Closed
+// <table>
+.activity-list {
+	width: 100%;
+	margin: 5px 0 10px 0;
+	background: var(--bg-title);
 
-.oe-hotlist-panel {
-	
-	// <table>
-	.activity-list {
-		width:100%;
-		margin:5px 0 10px 0;
 
-		tbody {
-			td {
-				vertical-align: top;
-				padding:7px 5px;
-				@include font-size(12);
-				font-weight:400;
-				color:$oe-dark-text-light;
+	td {
+		vertical-align: top;
+		padding: 7px 5px;
+		@include font-size(12);
+		font-weight: 400;
+		color: var(--txt-base);
 
-				// DOM v1 (no <colgroup>), v2 should have <colgroup>
-				&:nth-child(2){
-					width:60%;
-				}
+		// DOM v1 (no <colgroup>), v2 should have <colgroup>
+		&:nth-child(2) {
+			width: 60%;
+		}
 
-				&:last-child {
-					text-align: right;
-					white-space: nowrap;
+		&:last-child {
+			text-align: right;
+			white-space: nowrap;
 
-					// icons, with v2 these are using a flex wrap
-					.oe-i {
-						width:28px;
-						height:28px;
-					}
-				}
-
-				// Old style of comment "Comment blah bl..." was cut off
-				// and shown in a popup
-				// CSS added AFTER JS. so hooking into the JS class 
-				// but covered with normal CSS class as well. 
-				.js-hotlist-comment-readonly,
-				.hotlist-comment-readonly {
-					font-style: italic;
-					font-weight: 300;
-					width:105px;
-					overflow: hidden;
-					// truncate text
-					white-space: nowrap;
-					text-overflow: ellipsis;
-					
-					border-left:1px solid rgba(200,200,200,0.1);
-					padding:0 0 0 4px;
-					
-				}
-
-				// Update DOM approach, shown in iDG needs implementing
-				// JS needs to allow the <td> wrapper to pick up point
-				// events to allow <tr> to click through to Patient Overview
-				.patient-fullname {
-					pointer-events: none;
-					color:rgb(190,190,190);	
-				}
-
-				// wraps <textarea> and <div>.user-comment
-				.patient-comments {
-					pointer-events: none;
-					margin:3px 0 0 0;
-
-					textarea {
-						pointer-events: auto;
-					}
-					.user-comment {
-						@include font-size(11);
-					}
-				}	
+			// icons, with v2 these are using a flex wrap
+			.oe-i {
+				width: 28px;
+				height: 28px;
 			}
-			
-			// show <tr> as a clickable row
-			tr {
-				background:tint( $oe-dark-bg,5 );	
-				&:hover, &:active, &:focus {
-					cursor: pointer;
-					background:$oe-btn-blue; // row is a big button
-					td {
-						color:rgb(255,255,255);	
-						
-						.patient-fullname {
-							color:rgb(255,255,255);	
-						}
-						
-						// target this precisely, or it will affect 
-						// the qtag swarm!
-						.user-comment > .qtag {
-							color:rgb(255,255,255);	
-						}
-					}
-				}
-				
-				// but not hotlist-comment 
-				// (textarea on seperate row to create comment)
-				&.hotlist-comment {
-					&:hover, &:active, &:focus {
-						cursor: auto;
-						background:tint( $oe-dark-bg,5 );
-					}
-				}
-			}
-			
-		}	
+		}
 
+		// Old style of comment "Comment blah bl..." was cut off
+		// and shown in a popup
+		// CSS added AFTER JS. so hooking into the JS class
+		// but covered with normal CSS class as well.
+		.js-hotlist-comment-readonly,
+		.hotlist-comment-readonly {
+			font-style: italic;
+			font-weight: 300;
+			width: 105px;
+			overflow: hidden;
+			// truncate text
+			white-space: nowrap;
+			text-overflow: ellipsis;
+
+			border-left: 1px solid rgba(200, 200, 200, 0.1);
+			padding: 0 0 0 4px;
+
+		}
+
+		// Update DOM approach, shown in iDG needs implementing
+		// JS needs to allow the <td> wrapper to pick up point
+		// events to allow <tr> to click through to Patient Overview
+		.patient-fullname {
+			pointer-events: none;
+			font-weight: var(--font-medium);
+		}
+
+		// wraps <textarea> and <div>.user-comment
+		.patient-comments {
+			pointer-events: none;
+			margin: 3px 0 0 0;
+
+			textarea {
+				pointer-events: auto;
+			}
+
+			.user-comment {
+				@include font-size(11);
+			}
+		}
 	}
+
+	// show <tr> as a clickable row
+	tr {
+		border-top-color: var(--bg-header);
+
+		&:hover,
+		&:focus {
+			cursor: pointer;
+			background: var(--txt-invert); // row is a big button
+		}
+
+		// but not hotlist-comment
+		// (textarea on separate row to create comment)
+		&.hotlist-comment {
+			&:hover,
+			&:focus {
+				cursor: auto;
+				background: var(--bg-data);
+			}
+		}
+	}
+
+
 }
+
 
 

@@ -72,7 +72,7 @@ li.oe-nav-btn {
 		}
 
 		&.open {
-			background: var(--txt-invert);
+			background: linear-gradient( var(--txt-invert) 95%, var(--btn-blue-hint) 96%);
 			.icon {
 				fill: var(--txt-active);
 			}
