@@ -1,6 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/mix" as *;
 
 // Home - Messages
 // Table data lists Patient (No, Gender, Age, Name)
@@ -12,6 +13,8 @@
 	
 	// wrapper for <table> .messages
 	.messages-all {
+		grid-area: msgtable;
+		overflow-y: auto;
 		padding:10px 10px 20px 0;
 	}
 	
@@ -23,7 +26,7 @@
 		// set last <td> to the right	
 		th, td {
 			// default (message read)
-			color:$oe-text-light;
+			color:var(--txt-light);
 			@include font-size(12);		// reduce font-size
 			
 			vertical-align: top; 		
@@ -40,18 +43,18 @@
 				// unread messages
 				&.unread {
 					td {
-						color:$oe-text;
+						
 						
 						// at lowest resolution change style
 						// smaller font (to fit longer names) and bold
 						@include font-size(12);
-						font-weight:$oe-font-bold;
+						font-weight:var(--font-bold);
 						
 						// after extended browser 
 						// change back to original design style
 						@include extended(){
 							@include font-size(14);
-							font-weight:$oe-font-medium;
+							font-weight:var(--font-medium);
 						}
 						
 						
@@ -65,7 +68,7 @@
 				// create a vertical divider between 
 				// patient data and message data
 				&.patient {
-					border-right:2px solid $oe-line;
+					border-right:2px solid var(--gui-line);
 					padding-right:12px
 				}
 				
@@ -74,7 +77,7 @@
 					margin:0 3px 0 0;
 				}
 				.reply-message {
-					fill:$oe-text-active;
+					fill: var(--txt-active);
 				}
 				
 			}
@@ -113,19 +116,18 @@
 			&.expand {
 				width:90%;		// allow text to push out <td>
 				height: auto;
-				text-overflow: none;
 				white-space: normal;
-				color: $oe-text;
+				color: var(--txt-base);
 			}
 		}
 		
 		// on the home hub unread messages contain the "sender"
 		.message-sender {
 			margin:5px 0 0 0;
-			color: $oe-text-light;
+			color: var(--txt-light);
 			@include font-size(11);
 			font-style: italic;
-			font-weight: $oe-font-light;
+			font-weight: var(-font-ligth);
 			
 		}
 	}

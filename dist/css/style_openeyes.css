@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Jun 19 2022 09:51:50 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun Jun 19 2022 21:53:36 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -4832,28 +4832,29 @@ li.oe-nav-btn .nav-js-btn.open .icon {
     display: none;
   }
 }
-.oe-user .oe-user-profile-context {
+
+.oe-user-profile-context {
   margin: auto 0;
   width: 255px;
   padding: 0 0 0 8px;
+  color: var(--txt-light);
   transition: width 0.5s ease-out;
 }
 @media only screen and (min-width: 1440px) {
-  .oe-user .oe-user-profile-context {
+  .oe-user-profile-context {
     width: 365px;
     border-left: 3px solid var(--gui-line);
   }
 }
-.oe-user .oe-user-profile-context li {
+.oe-user-profile-context li {
   font-size: 0.625rem;
 }
-.oe-user .oe-user-profile-context li a {
+.oe-user-profile-context li a {
   font-size: 0.5625rem;
-  color: var(--txt-light);
   font-weight: var(--font-bold);
   margin-left: 10px;
 }
-.oe-user .oe-user-profile-context li a:hover, .oe-user .oe-user-profile-context li a:focus, .oe-user .oe-user-profile-context li a:active {
+.oe-user-profile-context li a:hover, .oe-user-profile-context li a:focus, .oe-user-profile-context li a:active {
   color: var(--txt-highlight);
 }
 
@@ -5134,4 +5135,138 @@ login.multisite .info {
 .activity-list tr.hotlist-comment:hover, .activity-list tr.hotlist-comment:focus {
   cursor: auto;
   background: var(--bg-data);
+}
+
+.home-messages.subgrid {
+  display: grid;
+  grid: "msgside msgtable" 1fr/250px 1fr;
+  column-gap: 20px;
+  height: calc(100vh - 98px);
+}
+
+.oe-home .messages-all {
+  grid-area: msgtable;
+  overflow-y: auto;
+  padding: 10px 10px 20px 0;
+}
+.oe-home table.messages {
+  width: 100%;
+}
+.oe-home table.messages th, .oe-home table.messages td {
+  color: var(--txt-light);
+  font-size: 0.75rem;
+  vertical-align: top;
+  padding: 10px 10px 8px 5px;
+}
+.oe-home table.messages th:last-child, .oe-home table.messages td:last-child {
+  text-align: right;
+  padding-right: 0;
+}
+.oe-home table.messages tbody tr.unread td {
+  font-size: 0.75rem;
+  font-weight: var(--font-bold);
+}
+@media only screen and (min-width: 1440px) {
+  .oe-home table.messages tbody tr.unread td {
+    font-size: 0.875rem;
+    font-weight: var(--font-medium);
+  }
+}
+.oe-home table.messages tbody td.patient {
+  border-right: 2px solid var(--gui-line);
+  padding-right: 12px;
+}
+.oe-home table.messages tbody td .urgent-message {
+  fill: rgb(202, 121, 50);
+  margin: 0 3px 0 0;
+}
+.oe-home table.messages tbody td .reply-message {
+  fill: var(--txt-active);
+}
+.oe-home table.messages .message {
+  width: 15vw;
+  height: 1.2rem;
+  color: inherit;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media only screen and (min-width: 1440px) {
+  .oe-home table.messages .message {
+    width: 22vw;
+  }
+}
+@media only screen and (min-width: 1890px) {
+  .oe-home table.messages .message {
+    width: 37vw;
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .oe-home table.messages .message {
+    width: 45vw;
+  }
+}
+.oe-home table.messages .message.expand {
+  width: 90%;
+  height: auto;
+  white-space: normal;
+  color: var(--txt-base);
+}
+.oe-home table.messages .message-sender {
+  margin: 5px 0 0 0;
+  color: var(--txt-light);
+  font-size: 0.6875rem;
+  font-style: italic;
+  font-weight: var(-font-ligth);
+}
+
+.message-actions {
+  grid-area: msgside;
+  overflow-y: auto;
+  height: 100%;
+  padding: 20px;
+  border-right: 1px solid var(--gui-line);
+  font-size: 0.75rem;
+}
+.message-actions .user {
+  font-size: 1rem;
+  font-weight: var(--font-medium);
+  margin: 0 0 15px 0;
+}
+.message-actions h3 {
+  margin: 8px 0px;
+  font-size: 0.9375rem;
+  font-weight: var(--font-light);
+  color: var(--txt-hd);
+}
+.message-actions .filter-messages li {
+  font-size: 0.8125rem;
+  color: var(--txt-light);
+  padding: 0 0 10px 0;
+}
+.message-actions .filter-messages li a {
+  display: block;
+  font-weight: var(--font-medium);
+}
+.message-actions .filter-messages li a .count {
+  font-size: 0.6875rem;
+  font-weight: var(--font-bold);
+  padding: 0 0 0 5px;
+}
+.message-actions .filter-messages li a .unread {
+  padding: 1px 3px;
+  border-radius: 2px;
+  font-size: 0.6875rem;
+  font-weight: var(--font-bold);
+  background: var(--txt-base);
+  color: var(--txt-invert);
+}
+.message-actions .filter-messages li a:hover, .message-actions .filter-messages li a:focus {
+  color: var(--txt-highlight);
+}
+.message-actions .filter-messages li a:hover .unread, .message-actions .filter-messages li a:focus .unread {
+  background-color: var(--txt-base);
+}
+.message-actions .send-message {
+  margin: 0 0 20px 0;
 }

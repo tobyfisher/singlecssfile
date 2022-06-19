@@ -27,44 +27,5 @@
 
 	// animate
 	transition: right 0.5s ease-out;
-
-	// <ul>
-	.oe-user-profile-context {
-		// uses flex to vertically center
-		// the user profile info within container
-		margin: auto 0; // flex magic.
-		width: 255px;
-		padding: 0 0 0 8px;
-
-		// restricted to stop over-lap with icons
-		@include extended() {
-			width: 365px;
-			border-left: 3px solid var(--gui-line);
-		}
-
-		// animate
-		transition: width 0.5s ease-out; // smooth it 
-
-		li {
-			@include font-size(10);
-
-			a {
-				@include font-size(9);
-				color: var(--txt-light);
-				font-weight: var(--font-bold);
-				margin-left: 10px;
-
-				&:hover,
-				&:focus,
-				&:active {
-					color: var(--txt-highlight);
-				}
-
-			}
-
-		}
-
-	}
-
 }
 
