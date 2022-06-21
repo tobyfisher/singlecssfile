@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Jun 19 2022 21:53:36 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Tue Jun 21 2022 21:04:28 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -484,10 +484,10 @@ html.theme-dark {
   --i-nystagmus-arrow-h-2: url("../svg/in-css/dark/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/dark/ui/nystagmus-arrow-h-3.svg");
   --bg-html: rgb(20, 30, 43);
-  --bg-header: rgb(15, 25, 38);
+  --bg-overlay: hsl(210deg, 17%, 19%);
   --bg-max: #000;
   --bg-popup: #0D161E;
-  --bg-title: rgb(25, 35, 50);
+  --bg-title: #0f1926;
   --bg-event: #1E2E42;
   --bg-data: #121A22;
   --bg-grey: rgb(40, 52, 66);
@@ -508,7 +508,7 @@ html.theme-dark {
   --gui-scroll-thumb: rgb(55, 55, 60);
   --btn-base: rgb(27, 53, 82);
   --btn-text: #ddd;
-  --btn-blue: #00e;
+  --btn-blue: #00a;
   --btn-blue-hint: #074598;
   --btn-blue-active: #1D2E50;
   --btn-green: #0a8013;
@@ -528,10 +528,10 @@ html.theme-dark {
   --color-grey: rgb(80, 80, 80);
   --input-scheme: dark;
   --input-focus-outline: rgb(9, 108, 154);
-  --input-base: rgb(30, 42, 60);
+  --input-base: hsl(215deg, 28%, 23%);
   --input-hint: #222;
   --input-text: #fff;
-  --input-placeholder: rgb(100, 100, 100);
+  --input-placeholder: rgb(120, 120, 120);
 }
 
 html.theme-light {
@@ -677,10 +677,10 @@ html.theme-light {
   --i-nystagmus-arrow-h-2: url("../svg/in-css/light/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
   --bg-html: #E1E0E0;
-  --bg-header: #bebdbd;
+  --bg-overlay: #bebdbd;
   --bg-max: #FFF;
   --bg-popup: #f1f0f0;
-  --bg-title: #d9d9d9;
+  --bg-title: hsl(0deg, 1%, 82%);
   --bg-event: #d7d6d6;
   --bg-data: #F5F5F5;
   --bg-grey: rgb(220, 220, 220);
@@ -699,10 +699,10 @@ html.theme-light {
   --gui-line: rgb(162, 160, 160);
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
-  --btn-base: rgb(102, 112, 126);
+  --btn-base: rgb(102, 119, 150);
   --btn-text: #ddd;
-  --btn-blue: #00f;
-  --btn-blue-hint: rgb(6, 68, 147);
+  --btn-blue: #00c;
+  --btn-blue-hint: rgb(96, 138, 223);
   --btn-blue-active: rgb(7, 79, 182);
   --btn-green: rgb(14, 144, 25);
   --btn-green-hint: hsl(125deg, 82%, 26%);
@@ -4644,7 +4644,7 @@ svg.oe-openeyes {
 
 .oe-header {
   grid-area: header;
-  background: var(--bg-header);
+  background: var(--bg-html);
   position: relative;
 }
 
@@ -5025,7 +5025,7 @@ login.multisite .info {
   right: 0;
   bottom: 0;
   width: 450px;
-  background: var(--bg-header);
+  background: var(--bg-overlay);
   border-left: 2px solid var(--gui-line);
   border-top: 1px solid var(--btn-blue-hint);
   overflow-y: auto;
@@ -5126,7 +5126,7 @@ login.multisite .info {
   font-size: 0.6875rem;
 }
 .activity-list tr {
-  border-top-color: var(--bg-header);
+  border-top-color: var(--bg-overlay);
 }
 .activity-list tr:hover, .activity-list tr:focus {
   cursor: pointer;
@@ -5138,15 +5138,15 @@ login.multisite .info {
 }
 
 .home-messages.subgrid {
+  height: calc(100vh - 136px);
   display: grid;
   grid: "msgside msgtable" 1fr/250px 1fr;
   column-gap: 20px;
-  height: calc(100vh - 98px);
 }
 
 .oe-home .messages-all {
   grid-area: msgtable;
-  overflow-y: auto;
+  overflow: hidden auto;
   padding: 10px 10px 20px 0;
 }
 .oe-home table.messages {
@@ -5222,7 +5222,7 @@ login.multisite .info {
 
 .message-actions {
   grid-area: msgside;
-  overflow-y: auto;
+  overflow: hidden auto;
   height: 100%;
   padding: 20px;
   border-right: 1px solid var(--gui-line);
@@ -5269,4 +5269,78 @@ login.multisite .info {
 }
 .message-actions .send-message {
   margin: 0 0 20px 0;
+}
+
+.oe-search-patient {
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--bg-title);
+}
+.oe-search-patient .search-patient {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 560px;
+  padding: 8px 0 16px 0;
+}
+.oe-search-patient .search-patient input {
+  flex: 1 1 0;
+  border-radius: 0;
+  height: 36px;
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+.oe-search-patient .search-patient input:focus-visible {
+  outline-offset: 0;
+}
+.oe-search-patient .search-patient button {
+  font-size: 1rem;
+  height: 36px;
+  width: 160px;
+  padding: 0 10px;
+}
+.oe-search-patient .search-patient .find-by {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: var(--txt-light);
+}
+
+.hotlist-search-patient {
+  height: 38px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.hotlist-search-patient .search-patient {
+  flex: 1;
+  margin: 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hotlist-search-patient .search-patient input {
+  flex: 2;
+  border-radius: 0;
+  height: 28px;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  color: #fff;
+  border-bottom: 1px solid var(--gui-line);
+}
+.hotlist-search-patient .search-patient input:focus {
+  border-bottom-color: var(--txt-base);
+}
+.hotlist-search-patient .search-patient button {
+  flex: 1;
+  height: 28px;
+  font-size: 0.8125rem;
+  margin: 0 0 0 2px;
 }

@@ -14,7 +14,7 @@
 	// wrapper for <table> .messages
 	.messages-all {
 		grid-area: msgtable;
-		overflow-y: auto;
+		overflow: hidden auto;
 		padding:10px 10px 20px 0;
 	}
 	

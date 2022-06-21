@@ -77,7 +77,7 @@
 
 	// show <tr> as a clickable row
 	tr {
-		border-top-color: var(--bg-header);
+		border-top-color: var(--bg-overlay);
 
 		&:hover,
 		&:focus {

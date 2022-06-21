@@ -1,13 +1,10 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// OE Hotlist
-// Patient Search. Added to hotlist to save going back to the homepage
-
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
 .hotlist-search-patient {
-	background: tint($oe-dark-bg, 5);
 	height: $oe-event-header-height;
 	@include flex(center, flex-start);
 
@@ -25,13 +22,11 @@
 			height: 28px;
 			@include font-size(15);
 			font-weight: 400;
-			margin: 0 0;
-			background-color: transparent;
 			color: #fff;
-			border-bottom: 1px solid $oe-dark-grey;
+			border-bottom: 1px solid var(--gui-line);
 
 			&:focus {
-				border-bottom-color: $oe-dark-text-light;
+				border-bottom-color: var(--txt-base);
 			}
 		}
 
@@ -41,14 +36,6 @@
 			height: 28px;
 			@include font-size(13);
 			margin: 0 0 0 2px;
-			color: $oe-dark-user-input-text; 		// Pro-theme
-			background: $oe-dark-user-inputs;
-
-			&:hover,
-			&:focus {
-				color:#fff;
-				background: $oe-btn-blue;
-			}
 		}
 	}
 }

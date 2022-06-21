@@ -6,7 +6,7 @@
 
 .message-actions {
 	grid-area: msgside;
-	overflow-y: auto;
+	overflow: hidden auto;
 	height: 100%;
 
 	padding: 20px;
