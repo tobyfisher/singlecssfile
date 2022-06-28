@@ -4,6 +4,8 @@
 @use "openeyes/var" as *;
 @use "openeyes/mix" as *;
 
+// large patient search banner
+//
 .oe-search-patient {
 	height: $oe-event-header-height * 2;
 	@include flex( center, center );

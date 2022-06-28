@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Tue Jun 21 2022 21:04:28 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Tue Jun 28 2022 07:34:42 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -493,7 +493,7 @@ html.theme-dark {
   --bg-grey: rgb(40, 52, 66);
   --txt-base: rgb(220, 220, 220);
   --txt-light: rgb(140, 140, 140);
-  --txt-hd: rgb(87, 117, 133);
+  --txt-hd: rgb(87, 120, 150);
   --txt-active: rgb(90, 180, 180);
   --txt-highlight: rgb(0, 200, 205);
   --txt-invert: rgb(13, 13, 13);
@@ -686,7 +686,7 @@ html.theme-light {
   --bg-grey: rgb(220, 220, 220);
   --txt-base: rgb(10, 10, 10);
   --txt-light: rgb(90, 90, 100);
-  --txt-hd: rgb(31, 69, 141);
+  --txt-hd: rgb(31, 69, 180);
   --txt-active: rgb(0, 0, 180);
   --txt-highlight: rgb(0, 0, 255);
   --txt-invert: rgb(240, 240, 240);
@@ -819,7 +819,6 @@ body.open-eyes {
   grid-area: 2/2/4/3;
   overflow-y: auto;
 }
-.oe-grid .oe-home,
 .oe-grid .oe-whiteboard {
   grid-area: 2/1/4/3;
   overflow-y: auto;
@@ -5242,30 +5241,36 @@ login.multisite .info {
 .message-actions .filter-messages li {
   font-size: 0.8125rem;
   color: var(--txt-light);
-  padding: 0 0 10px 0;
+  padding: 0 0 2px 0;
 }
 .message-actions .filter-messages li a {
   display: block;
   font-weight: var(--font-medium);
+  padding: 2px;
+  border-bottom: 1px dotted transparent;
 }
-.message-actions .filter-messages li a .count {
-  font-size: 0.6875rem;
-  font-weight: var(--font-bold);
-  padding: 0 0 0 5px;
+.message-actions .filter-messages li a:hover, .message-actions .filter-messages li a:focus, .message-actions .filter-messages li a.selected {
+  color: var(--txt-base);
+  border-bottom-color: var(--gui-line);
+}
+.message-actions .filter-messages li a:hover .unread, .message-actions .filter-messages li a:focus .unread, .message-actions .filter-messages li a.selected .unread {
+  opacity: 1;
+  background-color: var(--btn-blue);
 }
 .message-actions .filter-messages li a .unread {
   padding: 1px 3px;
   border-radius: 2px;
   font-size: 0.6875rem;
   font-weight: var(--font-bold);
-  background: var(--txt-base);
-  color: var(--txt-invert);
+  color: #fff;
+  background: var(--btn-blue-hint);
+  opacity: 0.6;
 }
-.message-actions .filter-messages li a:hover, .message-actions .filter-messages li a:focus {
-  color: var(--txt-highlight);
-}
-.message-actions .filter-messages li a:hover .unread, .message-actions .filter-messages li a:focus .unread {
-  background-color: var(--txt-base);
+.message-actions .filter-messages li a .count {
+  font-size: 0.6875rem;
+  color: var(--txt-light);
+  font-weight: var(--font-bold);
+  padding: 0 0 0 5px;
 }
 .message-actions .send-message {
   margin: 0 0 20px 0;
