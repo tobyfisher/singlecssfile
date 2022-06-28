@@ -82,7 +82,7 @@
 		&:hover,
 		&:focus {
 			cursor: pointer;
-			background: var(--txt-invert); // row is a big button
+			background: var(--btn-blue-hint); // row is a big button
 		}
 
 		// but not hotlist-comment

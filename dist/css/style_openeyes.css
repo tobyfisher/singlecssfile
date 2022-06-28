@@ -5026,7 +5026,7 @@ login.multisite .info {
   width: 450px;
   background: var(--bg-overlay);
   border-left: 2px solid var(--gui-line);
-  border-top: 1px solid var(--btn-blue-hint);
+  border-top: 1px dotted var(--btn-blue-hint);
   overflow-y: auto;
   padding: 0 0 35px 0;
 }
@@ -5129,7 +5129,7 @@ login.multisite .info {
 }
 .activity-list tr:hover, .activity-list tr:focus {
   cursor: pointer;
-  background: var(--txt-invert);
+  background: var(--btn-blue-hint);
 }
 .activity-list tr.hotlist-comment:hover, .activity-list tr.hotlist-comment:focus {
   cursor: auto;

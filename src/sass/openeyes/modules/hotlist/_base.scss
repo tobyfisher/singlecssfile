@@ -17,10 +17,12 @@
 
 	background: var(--bg-overlay);
 	border-left:2px solid var(--gui-line);
-	border-top:1px solid var(--btn-blue-hint);
+
+	// soft visual link to nav button
+	border-top:1px dotted var(--btn-blue-hint);
 
 	overflow-y:auto; // scroll overflow
-	padding:0 0 35px 0;	// allow for Admin banner (if present)
+	padding:0 0 35px 0;	// allow for Admin banner (if it is present)
 
 	// On minimum 1280px displays hidden, on 1800px+ fixed displayed
 	@include fix-hotlist(){
