@@ -3,17 +3,17 @@
 
 // The most common use of <table> is in SEM Elements
 // Therefore, the starting point for styling is with
-// tables as used in SEM Elements
+// tables as used in SEM Elements (default DOM)
 
 table {
 	// all tables must fill there container
 	// width control is via a <div> wrapper
 	width: 100%;
 
-	// all layouts should use <colgroup>
-	// this also optimises the speed at which
-	// the browser can layout the data
-	table-layout: fixed;
+	// Although using 'table-layout:fixed' optimises the speed
+	// at which the browser can layout tabular data it messes up the current
+	// approach to layouts which makes use of the flexibility of not specifying some columns
+	// table-layout: fixed; -- if using all <colgroup> approaches will need reviewing!! (prob. need 24 column grid!)
 
 	// provide vertical spacing around table by default
 	// unless 'no-pad' is requested

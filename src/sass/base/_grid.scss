@@ -81,34 +81,15 @@
 	width: 100%;
 }
 
-// 'col-gap' - for cols- and <td>
-// provides a consistent column gap (gutter) for layouts using
-// either flex or tables:
+// 'col-gap'
+// an old approach to provide a gutter, was also used in <td> (pre-flex days)
+// switching it over to 'gap', to capture old usages but they will probably need
+// some reviewing to update the UI approach:
 .col-gap {
-	> div,
-	tbody > tr > td, // when added to <table> stop it applying to nested tables
-	> td { // added to <tr>
-		padding-right: 25px !important; // need to override <td> css in elements, keeping this here for clarity
-		padding-left: 5px;
-
-		&:first-child {
-			padding-left: 0 !important;
-		}
-
-		&:last-child {
-			padding-right: 0 !important;
-		}
-	}
+	gap: 30px;
 }
-
 // same but smaller
 .col-gap-small {
-	> div[class^="cols-"],
-	> td {
-		padding-right: 3px !important; // 3px matches element gap
-		&:last-child {
-			padding-right: 0 !important;
-		}
-	}
+	gap:3px;
 }
 
