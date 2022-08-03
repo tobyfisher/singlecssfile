@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Tue Jun 28 2022 07:34:42 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Wed Aug 03 2022 08:05:37 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -506,17 +506,18 @@ html.theme-dark {
   --gui-line: rgb(43, 64, 87);
   --gui-scroll-track: rgb(10, 10, 15);
   --gui-scroll-thumb: rgb(55, 55, 60);
-  --btn-base: rgb(27, 53, 82);
-  --btn-text: #ddd;
-  --btn-blue: #00a;
-  --btn-blue-hint: #074598;
-  --btn-blue-active: #1D2E50;
+  --btn-base: #173459;
+  --btn-text: #ccc;
+  --btn-text-selected: #ddd;
+  --btn-blue-hint: #184a8c;
+  --btn-blue: #033298;
+  --btn-blue-active: #009;
+  --btn-green-hint: #18521a;
   --btn-green: #0a8013;
-  --btn-green-hint: #0c5d10;
-  --btn-green-active: hsl(122deg, 76%, 16%);
+  --btn-green-active: #090;
+  --btn-red-hint: hsl(0deg, 59%, 28%);
   --btn-red: rgb(153, 14, 14);
-  --btn-red-hint: hsl(0deg, 83%, 28%);
-  --btn-red-active: hsl(0deg, 83%, 23%);
+  --btn-red-active: #900;
   --btn-disabled: rgb(80, 80, 80);
   --btn-icon-hover-filter: none;
   --color-highlighter: rgb(184, 171, 136);
@@ -699,17 +700,18 @@ html.theme-light {
   --gui-line: rgb(162, 160, 160);
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
-  --btn-base: rgb(102, 119, 150);
-  --btn-text: #ddd;
-  --btn-blue: #00c;
-  --btn-blue-hint: rgb(96, 138, 223);
-  --btn-blue-active: rgb(7, 79, 182);
-  --btn-green: rgb(14, 144, 25);
+  --btn-base: rgb(72, 112, 166);
+  --btn-text: #eee;
+  --btn-text-selected: #fff;
+  --btn-blue-hint: rgb(60, 70, 200);
+  --btn-blue: rgb(20, 40, 145);
+  --btn-blue-active: #00c;
   --btn-green-hint: hsl(125deg, 82%, 26%);
-  --btn-green-active: hsl(125deg, 82%, 21%);
-  --btn-red: rgb(153, 14, 14);
+  --btn-green: rgb(14, 144, 25);
+  --btn-green-active: #0a0;
   --btn-red-hint: hsl(0deg, 83%, 28%);
-  --btn-red-active: hsl(0deg, 83%, 23%);
+  --btn-red: rgb(153, 14, 14);
+  --btn-red-active: #a00;
   --btn-disabled: rgb(205, 205, 210);
   --btn-icon-hover-filter: invert(100%) grayscale(100%);
   --color-highlighter: rgb(235, 211, 123);
@@ -3233,7 +3235,7 @@ button:hover, button:focus, button.active, button.selected,
 .button:focus,
 .button.active,
 .button.selected {
-  color: #fff;
+  color: var(--btn-text-selected);
   background: var(--btn-blue);
 }
 button:hover .oe-i, button:focus .oe-i, button.active .oe-i, button.selected .oe-i,
@@ -3247,6 +3249,7 @@ button:active,
 .button:active {
   outline: 1px dotted var(--input-focus-outline);
   outline-offset: 1px;
+  background: var(--btn-blue-active);
 }
 
 button.header-tab,

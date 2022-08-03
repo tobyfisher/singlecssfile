@@ -21,6 +21,7 @@
     "css": "node node_scripts/sass-to-css.js",
     "css:print": "node node_scripts/sass-to-css.js print",
     "css:eyedraw": "node node_scripts/sass-to-css.js eyedraw",
+    "css:bluesky": "sass -s expanded src/sass/vx:/Users/toby/Sites/work/oe/idg/src/build/css --no-source-map --stop-on-error  --load-path=src/sass/",
     "svg": "node node_scripts/svg-optimise.js",
     "svg:all": "node node_scripts/svg-optimise.js rebuild-all",
     "build:event-icons": "node ./node_scripts/build-iconset.js events",

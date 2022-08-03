@@ -69,7 +69,7 @@ button,
 	&:focus,
 	&.active,
 	&.selected {
-		color: #fff;
+		color: var(--btn-text-selected);
 		background: var(--btn-blue);
 
 		// icons within buttons
@@ -82,6 +82,7 @@ button,
 	&:active {
 		outline: 1px dotted var(--input-focus-outline);
 		outline-offset: 1px;
+		background: var(--btn-blue-active);
 	}
 }
 
