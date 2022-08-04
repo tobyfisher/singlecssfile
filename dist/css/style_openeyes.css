@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Wed Aug 03 2022 10:26:09 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Thu Aug 04 2022 14:25:13 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -429,6 +429,7 @@ html.theme-dark {
   --i-rotate-left: url("../svg/in-css/dark/i/rotate-left.svg");
   --i-rotate-right: url("../svg/in-css/dark/i/rotate-right.svg");
   --i-save-blue: url("../svg/in-css/dark/i/save-blue.svg");
+  --i-save-team: url("../svg/in-css/dark/i/save-team.svg");
   --i-save: url("../svg/in-css/dark/i/save.svg");
   --i-search: url("../svg/in-css/dark/i/search.svg");
   --i-star: url("../svg/in-css/dark/i/star.svg");
@@ -448,6 +449,7 @@ html.theme-dark {
   --i-trash-blue: url("../svg/in-css/dark/i/trash-blue.svg");
   --i-trash: url("../svg/in-css/dark/i/trash.svg");
   --i-trials: url("../svg/in-css/dark/i/trials.svg");
+  --i-team: url("../svg/in-css/dark/i/team.svg");
   --i-triangle: url("../svg/in-css/dark/i/triangle.svg");
   --i-undo: url("../svg/in-css/dark/i/undo.svg");
   --i-waiting: url("../svg/in-css/dark/i/waiting.svg");
@@ -488,18 +490,18 @@ html.theme-dark {
   --gui-line: rgb(43, 64, 87);
   --gui-scroll-track: rgb(10, 10, 15);
   --gui-scroll-thumb: rgb(55, 55, 60);
-  --btn-base: #173459;
+  --btn-base: #1d375b;
   --btn-text: #ccc;
   --btn-text-selected: #ddd;
-  --btn-blue-hint: #184a8c;
-  --btn-blue: #033298;
+  --btn-blue-hint: rgb(24, 54, 150);
+  --btn-blue: rgb(25, 67, 196);
   --btn-blue-active: #009;
   --btn-green-hint: #18521a;
   --btn-green: #0a8013;
   --btn-green-active: #090;
   --btn-red-hint: hsl(0deg, 59%, 28%);
   --btn-red: rgb(153, 14, 14);
-  --btn-red-active: #900;
+  --btn-red-active: #a00;
   --btn-disabled: rgb(80, 80, 80);
   --btn-icon-hover-filter: none;
   --color-highlighter: rgb(184, 171, 136);
@@ -623,6 +625,7 @@ html.theme-light {
   --i-rotate-left: url("../svg/in-css/light/i/rotate-left.svg");
   --i-rotate-right: url("../svg/in-css/light/i/rotate-right.svg");
   --i-save-blue: url("../svg/in-css/light/i/save-blue.svg");
+  --i-save-team: url("../svg/in-css/light/i/save-team.svg");
   --i-save: url("../svg/in-css/light/i/save.svg");
   --i-search: url("../svg/in-css/light/i/search.svg");
   --i-star: url("../svg/in-css/light/i/star.svg");
@@ -642,6 +645,7 @@ html.theme-light {
   --i-trash-blue: url("../svg/in-css/light/i/trash-blue.svg");
   --i-trash: url("../svg/in-css/light/i/trash.svg");
   --i-trials: url("../svg/in-css/light/i/trials.svg");
+  --i-team: url("../svg/in-css/light/i/team.svg");
   --i-triangle: url("../svg/in-css/light/i/triangle.svg");
   --i-undo: url("../svg/in-css/light/i/undo.svg");
   --i-waiting: url("../svg/in-css/light/i/waiting.svg");
@@ -682,11 +686,11 @@ html.theme-light {
   --gui-line: rgb(162, 160, 160);
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
-  --btn-base: rgb(72, 112, 166);
+  --btn-base: rgb(61, 100, 190);
   --btn-text: #eee;
   --btn-text-selected: #fff;
   --btn-blue-hint: rgb(60, 70, 200);
-  --btn-blue: rgb(20, 40, 145);
+  --btn-blue: rgb(60, 108, 240);
   --btn-blue-active: #00c;
   --btn-green-hint: hsl(125deg, 82%, 26%);
   --btn-green: rgb(14, 144, 25);
@@ -1401,6 +1405,7 @@ body.open-eyes {
 }
 .oe-i.status-urgent {
   background-image: var(--i-status-urgent);
+  opacity: 1;
 }
 .oe-i.status-query {
   background-image: var(--i-status-query);
@@ -1515,11 +1520,17 @@ body.open-eyes {
 .oe-i.trials {
   background-image: var(--i-trials);
 }
+.oe-i.team {
+  background-image: var(--i-team);
+}
 .oe-i.save {
   background-image: var(--i-save);
 }
 .oe-i.save-blue {
   background-image: var(--i-save-blue);
+}
+.oe-i.save-team {
+  background-image: var(--i-save-team);
 }
 .oe-i.save-plus {
   background-image: var(--i-add);
@@ -5454,4 +5465,54 @@ login.multisite .info {
   padding: 0 0 0 5px;
   margin: 0 0 0 2px;
   border-left: 2px solid var(--gui-line);
+}
+
+.set-date-range {
+  margin: 0 0 10px 0;
+}
+.oe-worklists-panel .set-date-range {
+  margin: 10px;
+}
+.set-date-range .date-inputs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+  margin: 0 0 5px 0;
+}
+.set-date-range .date-inputs input {
+  flex: 1;
+}
+.set-date-range .selectors {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.set-date-range .selectors label {
+  display: block;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+}
+.set-date-range .selectors label .btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  height: 24px;
+  padding: 0 2px;
+  font-size: 0.6875rem;
+  font-weight: var(--font-medium);
+  color: var(--txt-light);
+}
+.set-date-range .selectors label > input[type=radio] {
+  display: none;
+}
+.set-date-range .selectors label > input[type=radio] + .btn:hover, .set-date-range .selectors label > input[type=radio] + .btn:focus {
+  color: var(--txt-active);
+}
+.set-date-range .selectors label > input[type=radio]:checked + .btn {
+  color: var(--txt-highlight);
 }

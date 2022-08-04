@@ -89,28 +89,28 @@ $gui-light: (
 
 // ---- Buttons
 $btn: (
-	"base":#173459,
+	"base":#1d375b,
 	"text":#ccc,
 	"text-selected":#ddd,
-	"blue-hint": #184a8c,
-	"blue": #033298,
+	"blue-hint": rgb(24, 54, 150),
+	"blue": rgb(25, 67, 196),
 	"blue-active": #009,
 	"green-hint": #18521a,
 	"green": #0a8013,
 	"green-active": #090,
 	"red-hint": hsl(0, 59%, 28%),
 	"red": rgb(153, 14, 14),
-	"red-active": #900,
+	"red-active": #a00,
 	"disabled": rgb(80, 80, 80),
 	"icon-hover-filter": none,
 );
 
 $btn-light: (
-	"base": rgb(72, 112, 166),
+	"base": rgb(61, 100, 190),
 	"text":#eee,
 	"text-selected":#fff,
 	"blue-hint": rgb(60, 70, 200),
-	"blue": rgb(20, 40, 145),
+	"blue": rgb(60, 108, 240),
 	"blue-active": #00c,
 	"green-hint": hsl(125, 82%, 26%),
 	"green": rgb(14, 144, 25),
@@ -165,19 +165,19 @@ $input-light: (
 
 // ---- SVG icons
 
-$themedIcons: ('add-blue','add','arrow-down-bold','arrow-down','arrow-left-bold','arrow-right-bold','arrow-up-bold','arrow-up',
-'asterisk-blue','asterisk','audit-trail','beo','cancel','change','child-arrow','cog','collapse','comments-added','comments-who','comments',
-'copy-forward','crying','direction-down-circle','direction-down','direction-horizontal',
-'direction-left-circle','direction-left','direction-right-circle','direction-right','direction-up-circle','direction-up',
-'double-slash','doubt-active','doubt','download','downup','drop-done','drop','drug-rx','duplicate','edit-blue','edit',
-'exclamation','expand','eye-circle','eye','female','filter','finish','flag','flagline','flux','fork','formulary','happy',
-'increase-height-orange','increase-height','info-blue','info','injection','lat-L-inactive','lat-L-query','lat-L-red','lat-L',
-'lat-NA','lat-R-green','lat-R-inactive','lat-R-query','lat-R','letter-1','letter-2','letter-GP','letter-invitation','line-break',
-'male','menu','minus-bold','minus','more-h','move','mpr','no-permissions','padlock','parent-arrow','path-break','patient','pencil-blue',
-'pencil','person-green','person-inactive','person-query','person-split','person','plus-bold','plus-circle','plus','print','range',
-'reduce-height','remove-circle','remove','reset','rotate-left','rotate-right','save-blue','save','search','star','starline','start',
-'status-query-reply','status-query','status-urgent','stop','sync','tick-chunky','tick-circle','tick-green','tick','time','top','trash-blue',
-'trash','trials','triangle','undo','waiting','whiteboard','zoom-in','zoom-out');
+$themedIcons: ("add-blue", "add", "arrow-down-bold", "arrow-down", "arrow-left-bold", "arrow-right-bold", "arrow-up-bold", "arrow-up",
+"asterisk-blue", "asterisk", "audit-trail", "beo", "cancel", "change", "child-arrow", "cog", "collapse", "comments-added", "comments-who", "comments",
+"copy-forward", "crying", "direction-down-circle", "direction-down", "direction-horizontal",
+"direction-left-circle", "direction-left", "direction-right-circle", "direction-right", "direction-up-circle", "direction-up",
+"double-slash", "doubt-active", "doubt", "download", "downup", "drop-done", "drop", "drug-rx", "duplicate", "edit-blue", "edit",
+"exclamation", "expand", "eye-circle", "eye", "female", "filter", "finish", "flag", "flagline", "flux", "fork", "formulary", "happy",
+"increase-height-orange", "increase-height", "info-blue", "info", "injection", "lat-L-inactive", "lat-L-query", "lat-L-red", "lat-L",
+"lat-NA", "lat-R-green", "lat-R-inactive", "lat-R-query", "lat-R", "letter-1", "letter-2", "letter-GP", "letter-invitation", "line-break",
+"male", "menu", "minus-bold", "minus", "more-h", "move", "mpr", "no-permissions", "padlock", "parent-arrow", "path-break", "patient", "pencil-blue",
+"pencil", "person-green", "person-inactive", "person-query", "person-split", "person", "plus-bold", "plus-circle", "plus", "print", "range",
+"reduce-height", "remove-circle", "remove", "reset", "rotate-left", "rotate-right", "save-blue", "save-team", "save", "search", "star", "starline", "start",
+"status-query-reply", "status-query", "status-urgent", "stop", "sync", "tick-chunky", "tick-circle", "tick-green", "tick", "time", "top", "trash-blue",
+"trash", "trials", "team", "triangle", "undo", "waiting", "whiteboard", "zoom-in", "zoom-out");
 
 // not available via <i>, only for CSS
 $uiThemedIcons: ("face", "element-divider", "btn-goto", "tab-more-h", "tab-whiteboard", "tab-print", "tab-trash", "watermark-patient",
