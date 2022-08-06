@@ -82,6 +82,14 @@
 		}
 	}
 
+	// Home & Whiteboard
+	// Content covers: "pageheader" & "main"
+	.oe-home,
+	.oe-whiteboard {
+		grid-area: 2 / 1 / 4 / 3;
+		overflow-y: auto;
+	}
+
 	// Event Header (View, Edit, Print, Save, etc)
 	.event-header {
 		z-index: 1;
@@ -96,20 +104,13 @@
 		overflow-y: auto;
 	}
 
-	// --------------------------------------- Lightening Viewer
+	// Lightening Viewer
 	// replaces event-header & main-event area
 	.oe-lightning-viewer {
-		// CSS3
 		grid-area: 2 / 2 / 4 / 3; // can't use the areas (areas are setup for SEM layout)
 		overflow-y: auto;
 	}
 
-	// --------------------------------------- Home & Whiteboard
-	.oe-whiteboard {
-		// CSS3
-		grid-area: 2 / 1 / 4 / 3;
-		overflow-y: auto;
-	}
 
 	// --------------------------------------- OE Full width (allows for activity panel to be fixed)
 	// --------------------------------------- + OEscape, Analytics

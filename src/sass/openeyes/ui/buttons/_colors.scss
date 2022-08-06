@@ -3,9 +3,12 @@
 
 button,
 .button {
-	color: var(--btn-text);
+	color: var(--txt-base);
+
 	// give a hint of the button colour to the user
 	&.hint {
+		color: var(--btn-text);
+
 		&:hover,
 		&:focus,
 		&:active {

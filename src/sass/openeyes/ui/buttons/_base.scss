@@ -53,15 +53,13 @@ button,
 		cursor: default;
 		color: var(--txt-light);
 		background: var(--btn-disabled);
-		border: 1px solid var(--txt-light);
+		border: 1px solid var(--btn-blue-hint);
 		pointer-events: none; // disable
 	}
 
 	// handle icons in buttons
 	.oe-i {
 		pointer-events: none;
-		// if in light mode the icon will need inverting
-		filter: var(--btn-icon-hover-filter);
 	}
 
 	// Pseudo & JS class hooks
@@ -75,6 +73,8 @@ button,
 		// icons within buttons
 		.oe-i {
 			// if there is icon this make sure it shows the button hover effect
+			// if in light mode the icon will need inverting
+			filter: var(--btn-icon-hover-filter);
 			opacity: 1;
 		}
 	}

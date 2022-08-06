@@ -16,8 +16,8 @@
 .button-stack {
 	@include flex( flex-start, center );
 	flex-direction: column;
-	gap: 15px;
+	gap: 10px;
 	&.tight {
-		gap: 2px;
+		gap: 4px;
 	}
 }

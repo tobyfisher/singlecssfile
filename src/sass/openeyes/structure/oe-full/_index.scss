@@ -3,8 +3,6 @@
 
 @use "header";
 @use "oe-full-content";
-
-// oe-full-content
-@use "subgrid";
+// oe-full-content - if subgrid:
 @use "oe-full-side-panel";
 @use "oe-full-main";

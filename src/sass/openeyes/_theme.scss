@@ -89,7 +89,7 @@ $gui-light: (
 
 // ---- Buttons
 $btn: (
-	"base":#1d375b,
+	"base":rgb(38, 51, 75),
 	"text":#ccc,
 	"text-selected":#ddd,
 	"blue-hint": rgb(24, 54, 150),
@@ -101,12 +101,12 @@ $btn: (
 	"red-hint": hsl(0, 59%, 28%),
 	"red": rgb(153, 14, 14),
 	"red-active": #a00,
-	"disabled": rgb(80, 80, 80),
+	"disabled": #3d455b,
 	"icon-hover-filter": none,
 );
 
 $btn-light: (
-	"base": rgb(61, 100, 190),
+	"base": rgb(231, 241, 255),
 	"text":#eee,
 	"text-selected":#fff,
 	"blue-hint": rgb(60, 70, 200),
@@ -148,7 +148,7 @@ $color-light: (
 $input: (
 	"scheme": "dark",
 	"focus-outline": rgb(9, 108, 154),
-	"base": hsl(215, 28%, 23%),
+	"base": rgb(33, 46, 64),
 	"hint": #222,
 	"text": #fff,
 	"placeholder": rgb(120, 120, 120),
