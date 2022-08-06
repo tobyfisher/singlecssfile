@@ -487,7 +487,7 @@ html.theme-dark {
   --font-bold: 500;
   --gui-spinner: rgb(0, 255, 255);
   --gui-vc: rgb(0, 180, 235);
-  --gui-line: rgb(43, 64, 87);
+  --gui-line: rgb(40, 48, 60);
   --gui-scroll-track: rgb(10, 10, 15);
   --gui-scroll-thumb: rgb(55, 55, 60);
   --btn-base: rgb(38, 51, 75);
@@ -683,7 +683,7 @@ html.theme-light {
   --font-bold: 700;
   --gui-spinner: rgb(0, 180, 255);
   --gui-vc: rgb(0, 180, 235);
-  --gui-line: rgb(162, 160, 160);
+  --gui-line: rgb(192, 190, 190);
   --gui-scroll-track: rgb(95, 95, 100);
   --gui-scroll-thumb: rgb(170, 170, 170);
   --btn-base: rgb(231, 241, 255);
@@ -4520,6 +4520,48 @@ hr.soft {
 }
 .oe-percentage .percent-bar.red {
   background-color: var(--color-red);
+}
+
+.training-mode .oe-logo {
+  background: #ff0;
+  border-radius: 0 0 15px 15px;
+}
+.training-mode .oe-logo .oe-openeyes {
+  fill: #000;
+  opacity: 1;
+}
+.training-mode .oe-login .login h1 {
+  font-size: 3.125rem;
+  color: #ff0;
+  padding: 15px 30px;
+  background: #333;
+  border-radius: 9px;
+}
+.training-mode #oe-admin-notifcation {
+  bottom: 15px;
+  height: 35px;
+  background: rgb(255, 255, 0);
+  color: #000;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.training-mode #oe-admin-notifcation a {
+  color: rgb(0, 0, 200);
+}
+.training-mode #oe-admin-notifcation #notification-short {
+  opacity: 1;
+}
+.training-mode #oe-admin-notifcation .oe-i.info {
+  background-image: var(--i-asterisk);
+  background-color: var(--txt-invert);
+  height: 24px;
+  width: 24px;
+  border-radius: 3px;
+}
+.training-mode .oe-patient .patient-name {
+  background: #ff0;
+  color: #000;
 }
 
 .openeyes-brand {

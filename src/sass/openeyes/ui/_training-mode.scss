@@ -1,0 +1,65 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/mix" as *;
+
+.training-mode {
+	// OE near-live test instances can be confusing for Users
+	// adding "training-mode" to <body> we flag the near-live state in the UI
+
+	// Make OE logo yellow
+	.oe-logo {
+		background: #ff0;
+		border-radius: 0 0 15px 15px;
+		.oe-openeyes {
+			fill: #000;
+			opacity: 1;
+		}
+	}
+
+	// Login header
+	.oe-login .login h1 {
+		@include font-size(50);
+		color: #ff0;
+		padding: 15px 30px;
+		background: #333;
+		border-radius: 9px
+	}
+
+	// Admin banner visibility
+	#oe-admin-notifcation {
+		bottom: 15px;
+		height: 35px;
+		background: rgb(255, 255, 0);
+		color: #000;
+		@include font-size(15);
+		font-weight: 500;
+
+		@include boxshadow();
+
+		a {
+			color: rgb(0, 0, 200);
+		}
+
+		#notification-short {
+			opacity: 1;
+		}
+
+		// make icon black rather than white
+		.oe-i.info {
+			background-image: var(--i-asterisk);
+			background-color: var(--txt-invert);
+			height: 24px;
+			width: 24px;
+			border-radius: 3px;
+		}
+	}
+
+	// Patient name in SEM
+	.oe-patient .patient-name {
+		background: #ff0;
+		color: #000;
+	}
+
+}
+
