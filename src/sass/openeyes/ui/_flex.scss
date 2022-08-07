@@ -8,12 +8,6 @@
 	&.f-w {
 		flex-wrap: wrap;
 	}
-	&.gap-5 {
-		gap:5px;
-	}
-	&.gap-10 {
-		gap:10px;
-	}
 }
 
 .flex-l {
@@ -48,20 +42,38 @@
 	flex:2 1 0;
 }
 
+// gaps
 .flex-gap {
 	gap: 10px;
 }
 
+// 'col-gap': the old approach to provide a gutter, used padding and was also used in <td>
+// (pre-flex days) switching it over to 'gap', to capture old usages but they will probably need
+// some reviewing to update the UI approach:
+// ... standardising to gap-x
+
+.col-gap-small,
+.gap-3 {
+	gap:3px;
+}
+
+.col-gap,
+.gap-30 {
+	gap:30px;
+}
+
+.gap-10 {
+	gap:10px;
+}
 
 // original flex 'layout' classes, still used all over the place
 // above short-hand classes are now the preferred approach but these
 // must be supported
-
 .flex-layout {
 	display:flex;
 	align-items:center;				// vertical alignment (no stretch)
 	justify-content:space-between; 	// make sure items align to left AND right edge;
-	
+
 	// horizontal alignments
 	&.flex-right {
 		justify-content:flex-end; 		// group items to the right
@@ -85,5 +97,5 @@
 // it could probably be better named and moved in with the Element stuff
 // however, leaving it here in case used somewhere else! 
 .flex-item-bottom {
-	align-self: flex-end;			// item - bottom 
+	align-self: flex-end; // item - bottom
 }

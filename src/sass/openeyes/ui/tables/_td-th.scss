@@ -39,12 +39,8 @@ td, th {
 	&:last-child:not(:first-child) {
 		text-align: right;
 
-		.last-left &,
-		.standard & {
+		.standard:not(.last-right) & {
 			text-align: left;
-		}
-		.last-right & {
-			text-align:right;
 		}
 	}
 

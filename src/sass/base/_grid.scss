@@ -81,15 +81,5 @@
 	width: 100%;
 }
 
-// 'col-gap'
-// an old approach to provide a gutter, was also used in <td> (pre-flex days)
-// switching it over to 'gap', to capture old usages but they will probably need
-// some reviewing to update the UI approach:
-.col-gap {
-	gap: 30px;
-}
-// same but smaller
-.col-gap-small {
-	gap:3px;
-}
+
 

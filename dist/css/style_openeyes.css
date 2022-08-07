@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sat Aug 06 2022 09:20:01 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun Aug 07 2022 09:22:27 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -255,14 +255,6 @@ textarea {
   width: 100%;
 }
 
-.col-gap {
-  gap: 30px;
-}
-
-.col-gap-small {
-  gap: 3px;
-}
-
 .hidden {
   display: none;
 }
@@ -467,56 +459,57 @@ html.theme-dark {
   --i-nystagmus-arrow-h-1: url("../svg/in-css/dark/ui/nystagmus-arrow-h-1.svg");
   --i-nystagmus-arrow-h-2: url("../svg/in-css/dark/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/dark/ui/nystagmus-arrow-h-3.svg");
-  --bg-html: rgb(20, 30, 43);
-  --bg-overlay: hsl(210deg, 17%, 19%);
+  --bg-html: #141e2b;
+  --bg-overlay: #283039;
   --bg-max: #000;
+  --bg-hover-row: #131b23;
   --bg-popup: #0D161E;
   --bg-title: #0f1926;
   --bg-event: #1E2E42;
   --bg-data: #121A22;
-  --bg-grey: rgb(40, 52, 66);
-  --txt-base: rgb(220, 220, 220);
-  --txt-light: rgb(140, 140, 140);
-  --txt-hd: rgb(87, 120, 150);
-  --txt-active: rgb(70, 160, 180);
-  --txt-highlight: rgb(0, 200, 205);
-  --txt-invert: rgb(13, 13, 13);
+  --bg-grey: #283442;
+  --txt-base: #dcdcdc;
+  --txt-light: #8c8c8c;
+  --txt-hd: #577896;
+  --txt-active: #46a0b4;
+  --txt-highlight: #00c8cd;
+  --txt-invert: #0d0d0d;
   --font-thin: 100;
   --font-light: 300;
   --font-medium: 400;
   --font-bold: 500;
-  --gui-spinner: rgb(0, 255, 255);
-  --gui-vc: rgb(0, 180, 235);
-  --gui-line: rgb(40, 48, 60);
-  --gui-scroll-track: rgb(10, 10, 15);
-  --gui-scroll-thumb: rgb(55, 55, 60);
-  --btn-base: rgb(38, 51, 75);
+  --gui-spinner: #00ffff;
+  --gui-vc: #00b4eb;
+  --gui-line: #28303c;
+  --gui-scroll-track: #0a0a0f;
+  --gui-scroll-thumb: #37373c;
+  --btn-base: #212e40;
   --btn-text: #ccc;
   --btn-text-selected: #ddd;
-  --btn-blue-hint: rgb(24, 54, 150);
-  --btn-blue: rgb(25, 67, 196);
+  --btn-blue-hint: #183696;
+  --btn-blue: rgb(29, 68, 147);
   --btn-blue-active: #009;
   --btn-green-hint: #18521a;
   --btn-green: #0a8013;
   --btn-green-active: #090;
-  --btn-red-hint: hsl(0deg, 59%, 28%);
-  --btn-red: rgb(153, 14, 14);
+  --btn-red-hint: #721d1d;
+  --btn-red: #990e0e;
   --btn-red-active: #a00;
   --btn-disabled: #3d455b;
   --btn-icon-hover-filter: none;
-  --color-highlighter: rgb(184, 171, 136);
-  --color-green: rgb(0, 105, 0);
-  --color-red: rgb(155, 0, 0);
-  --color-burgundy: rgb(107, 20, 0);
-  --color-orange: rgb(160, 85, 0);
-  --color-yellow: rgb(200, 180, 50);
-  --color-grey: rgb(80, 80, 80);
+  --color-highlighter: #b8ab88;
+  --color-green: #006900;
+  --color-red: #9b0000;
+  --color-burgundy: #6b1400;
+  --color-orange: #a05500;
+  --color-yellow: #c8b432;
+  --color-grey: #505050;
   --input-scheme: dark;
-  --input-focus-outline: rgb(9, 108, 154);
-  --input-base: rgb(33, 46, 64);
-  --input-hint: #222;
+  --input-focus-outline: #096c9a;
+  --input-base: #212e40;
+  --input-hint: #1a2432;
   --input-text: #fff;
-  --input-placeholder: rgb(120, 120, 120);
+  --input-placeholder: #787878;
 }
 
 html.theme-light {
@@ -665,54 +658,55 @@ html.theme-light {
   --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
   --bg-html: #E1E0E0;
   --bg-overlay: #bebdbd;
-  --bg-max: #FFF;
+  --bg-max: #fff;
+  --bg-hover-row: #ecebeb;
   --bg-popup: #f1f0f0;
-  --bg-title: hsl(0deg, 1%, 82%);
+  --bg-title: #d2d1d1;
   --bg-event: #d7d6d6;
   --bg-data: #F5F5F5;
-  --bg-grey: rgb(220, 220, 220);
-  --txt-base: rgb(10, 10, 10);
-  --txt-light: rgb(90, 90, 100);
-  --txt-hd: rgb(50, 90, 160);
-  --txt-active: rgb(35, 70, 200);
-  --txt-highlight: rgb(0, 0, 255);
-  --txt-invert: rgb(240, 240, 240);
+  --bg-grey: #dcdcdc;
+  --txt-base: #0a0a0a;
+  --txt-light: #5a5a64;
+  --txt-hd: #325aa0;
+  --txt-active: #2346c8;
+  --txt-highlight: #0000ff;
+  --txt-invert: #f0f0f0;
   --font-thin: 300;
   --font-light: 400;
   --font-medium: 500;
   --font-bold: 700;
-  --gui-spinner: rgb(0, 180, 255);
-  --gui-vc: rgb(0, 180, 235);
-  --gui-line: rgb(192, 190, 190);
-  --gui-scroll-track: rgb(95, 95, 100);
-  --gui-scroll-thumb: rgb(170, 170, 170);
-  --btn-base: rgb(231, 241, 255);
+  --gui-spinner: #00b4ff;
+  --gui-vc: #00b4eb;
+  --gui-line: #c0bebe;
+  --gui-scroll-track: #5f5f64;
+  --gui-scroll-thumb: #aaaaaa;
+  --btn-base: #e7f1ff;
   --btn-text: #eee;
   --btn-text-selected: #fff;
-  --btn-blue-hint: rgb(60, 70, 200);
-  --btn-blue: rgb(60, 108, 240);
+  --btn-blue-hint: #3c46c8;
+  --btn-blue: #3c6cf0;
   --btn-blue-active: #00c;
-  --btn-green-hint: hsl(125deg, 82%, 26%);
-  --btn-green: rgb(14, 144, 25);
+  --btn-green-hint: #0c7915;
+  --btn-green: #0e9019;
   --btn-green-active: #0a0;
-  --btn-red-hint: hsl(0deg, 83%, 28%);
-  --btn-red: rgb(153, 14, 14);
+  --btn-red-hint: #830c0c;
+  --btn-red: #990e0e;
   --btn-red-active: #a00;
-  --btn-disabled: rgb(205, 205, 210);
+  --btn-disabled: #cdcdd2;
   --btn-icon-hover-filter: invert(100%) grayscale(100%);
-  --color-highlighter: rgb(235, 211, 123);
-  --color-green: rgb(0, 155, 0);
-  --color-red: rgb(205, 0, 0);
-  --color-burgundy: rgb(117, 30, 0);
-  --color-orange: rgb(220, 115, 5);
-  --color-yellow: rgb(210, 170, 20);
-  --color-grey: rgb(140, 140, 140);
+  --color-highlighter: #ebd37b;
+  --color-green: #009b00;
+  --color-red: #cd0000;
+  --color-burgundy: #751e00;
+  --color-orange: #dc7305;
+  --color-yellow: #d2aa14;
+  --color-grey: #8c8c8c;
   --input-scheme: light;
-  --input-focus-outline: rgb(7, 1, 224);
+  --input-focus-outline: #0701e0;
   --input-base: #fff;
-  --input-hint: #ddd;
+  --input-hint: #e9e9e9;
   --input-text: #000;
-  --input-placeholder: rgb(181, 181, 181);
+  --input-placeholder: #b5b5b5;
 }
 
 ::-webkit-scrollbar {
@@ -742,6 +736,7 @@ body.open-eyes {
   min-width: 1199px;
   padding: 0;
   margin: 0;
+  font-size: 0.875rem;
 }
 
 .oe-grid {
@@ -877,6 +872,7 @@ body.open-eyes {
 .oe-full-content {
   grid-area: main;
   height: calc( 100vh - 98px);
+  overflow-y: auto;
 }
 .oe-full-content.subgrid {
   display: grid;
@@ -2806,12 +2802,6 @@ a.selected {
 .flex.f-w {
   flex-wrap: wrap;
 }
-.flex.gap-5 {
-  gap: 5px;
-}
-.flex.gap-10 {
-  gap: 10px;
-}
 
 .flex-l {
   display: flex;
@@ -2858,6 +2848,20 @@ a.selected {
 }
 
 .flex-gap {
+  gap: 10px;
+}
+
+.col-gap-small,
+.gap-3 {
+  gap: 3px;
+}
+
+.col-gap,
+.gap-30 {
+  gap: 30px;
+}
+
+.gap-10 {
   gap: 10px;
 }
 
@@ -3471,7 +3475,7 @@ tbody tr.divider td {
   color: #fff;
 }
 .highlight-rows tbody tr:hover, .highlight-rows tbody tr:focus, .highlight-rows tbody tr:focus-within {
-  background: var(--bg-max);
+  background: var(--bg-hover-row);
 }
 tbody tr.selected-row {
   background: var(--btn-blue-hint);
@@ -3500,11 +3504,8 @@ td:first-child, th:first-child {
 td:last-child:not(:first-child), th:last-child:not(:first-child) {
   text-align: right;
 }
-.last-left td:last-child:not(:first-child), .standard td:last-child:not(:first-child), .last-left th:last-child:not(:first-child), .standard th:last-child:not(:first-child) {
+.standard:not(.last-right) td:last-child:not(:first-child), .standard:not(.last-right) th:last-child:not(:first-child) {
   text-align: left;
-}
-.last-right td:last-child:not(:first-child), .last-right th:last-child:not(:first-child) {
-  text-align: right;
 }
 td.line-l, th.line-l {
   border-left: 2px solid var(--gui-line);
@@ -3812,7 +3813,6 @@ ul.oe-multi-select li {
   justify-content: space-between;
   padding: 2px 4px 2px 6px;
   margin: 0 0 2px 0;
-  color: var(--btn-text);
   background: var(--btn-base);
 }
 
@@ -4995,7 +4995,6 @@ login.multisite .info {
   align-items: center;
   font-size: 0.8125rem;
   font-weight: var(--font-medium);
-  color: var(--btn-text);
   background: var(--btn-base);
   cursor: pointer;
   padding: 0 8px;
@@ -5562,4 +5561,26 @@ login.multisite .info {
 }
 .set-date-range .selectors label > input[type=radio]:checked + .btn {
   color: var(--txt-highlight);
+}
+
+.oe-new-patient {
+  padding: 0 20px 20px 20px;
+  background-size: 160px;
+}
+.oe-new-patient .patient-inputs-column {
+  width: 45%;
+  margin-right: 5%;
+}
+.oe-new-patient .standard td {
+  font-size: 0.75rem;
+}
+.oe-new-patient .standard td:first-child {
+  padding-right: 8px;
+  white-space: nowrap;
+}
+.oe-new-patient .standard td input {
+  width: 100%;
+}
+.oe-new-patient .standard td input.postcode {
+  width: 50%;
 }

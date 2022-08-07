@@ -15,25 +15,27 @@
 
 // ---- Backgrounds
 $bg: (
-	"html": rgb(20, 30, 43),
-	"overlay": hsl(210, 17%, 19%),
+	"html": #141e2b,
+	"overlay": #283039,
 	"max": #000,
+	"hover-row": #131b23,
 	"popup":#0D161E,
 	"title": #0f1926,
 	"event": #1E2E42,
 	"data": #121A22,
-	"grey": rgb(40, 52, 66)
+	"grey": #283442
 );
 
 $bg-light: (
 	"html": #E1E0E0,
 	"overlay": #bebdbd,
-	"max": #FFF,
+	"max": #fff,
+	"hover-row": #ecebeb,
 	"popup": #f1f0f0,
-	"title": hsl(0, 1%, 82%),
+	"title": #d2d1d1,
 	"event": #d7d6d6,
 	"data": #F5F5F5,
-	"grey": rgb(220, 220, 220)
+	"grey": #dcdcdc
 );
 
 // ---- Font weights (because white on dark bleeds and looks thicker...)
@@ -53,114 +55,114 @@ $font-weight-light: (
 
 // ---- Text
 $txt: (
-	"base": rgb(220, 220, 220),
-	"light": rgb(140, 140, 140),
-	"hd": rgb(87, 120, 150),
-	"active": rgb(70, 160, 180),
-	"highlight": rgb(0, 200, 205),
-	"invert": rgb(13, 13, 13)
+	"base": #dcdcdc,
+	"light": #8c8c8c,
+	"hd": #577896,
+	"active": #46a0b4,
+	"highlight": #00c8cd,
+	"invert": #0d0d0d
 );
 
 $txt-light: (
-	"base": rgb(10, 10, 10),
-	"light": rgb(90, 90, 100),
-	"hd": rgb(50, 90, 160),
-	"active": rgb(35, 70, 200),
-	"highlight": rgb(0, 0, 255),
-	"invert": rgb(240, 240, 240),
+	"base": #0a0a0a,
+	"light": #5a5a64,
+	"hd": #325aa0,
+	"active": #2346c8,
+	"highlight": #0000ff,
+	"invert": #f0f0f0,
 );
 
 // ---- GUI
 $gui: (
-	"spinner": rgb(0, 255, 255),
-	"vc": rgb(0, 180, 235),
-	"line": rgb(40,	48,	60),
-	"scroll-track":rgb(10, 10, 15),
-	"scroll-thumb":rgb(55, 55, 60),
+	"spinner": #00ffff,
+	"vc": #00b4eb,
+	"line": #28303c,
+	"scroll-track":#0a0a0f,
+	"scroll-thumb":#37373c,
 );
 
 $gui-light: (
-	"spinner": rgb(0, 180, 255),
-	"vc": rgb(0, 180, 235),
-	"line": rgb(192, 190, 190),
-	"scroll-track":rgb(95, 95, 100),
-	"scroll-thumb":rgb(170, 170, 170),
+	"spinner": #00b4ff,
+	"vc": #00b4eb,
+	"line": #c0bebe,
+	"scroll-track":#5f5f64,
+	"scroll-thumb":#aaaaaa,
 );
 
 // ---- Buttons
 $btn: (
-	"base":rgb(38, 51, 75),
+	"base":#212e40,
 	"text":#ccc,
 	"text-selected":#ddd,
-	"blue-hint": rgb(24, 54, 150),
-	"blue": rgb(25, 67, 196),
+	"blue-hint": #183696,
+	"blue": rgb(29, 68, 147),
 	"blue-active": #009,
 	"green-hint": #18521a,
 	"green": #0a8013,
 	"green-active": #090,
-	"red-hint": hsl(0, 59%, 28%),
-	"red": rgb(153, 14, 14),
+	"red-hint": #721d1d,
+	"red": #990e0e,
 	"red-active": #a00,
 	"disabled": #3d455b,
 	"icon-hover-filter": none,
 );
 
 $btn-light: (
-	"base": rgb(231, 241, 255),
+	"base": #e7f1ff,
 	"text":#eee,
 	"text-selected":#fff,
-	"blue-hint": rgb(60, 70, 200),
-	"blue": rgb(60, 108, 240),
+	"blue-hint": #3c46c8,
+	"blue": #3c6cf0,
 	"blue-active": #00c,
-	"green-hint": hsl(125, 82%, 26%),
-	"green": rgb(14, 144, 25),
+	"green-hint": #0c7915,
+	"green": #0e9019,
 	"green-active": #0a0,
-	"red-hint": hsl(360, 83%, 28%),
-	"red": rgb(153, 14, 14),
+	"red-hint": #830c0c,
+	"red": #990e0e,
 	"red-active": #a00,
-	"disabled": rgb(205, 205, 210),
+	"disabled": #cdcdd2,
 	"icon-hover-filter": invert(100%) grayscale(100%),
 );
 
 // ---- Colors (alerts, flags, pathsteps, wait, etc)
 $color: (
-	"highlighter": rgb(184, 171, 136),
-	"green": rgb(0, 105, 0),
-	"red": rgb(155, 0, 0),
-	"burgundy": rgb(107, 20, 0),
-	"orange": rgb(160, 85, 0),
-	"yellow": rgb(200, 180, 50),
-	"grey": rgb(80, 80, 80),
+	"highlighter": #b8ab88,
+	"green": #006900,
+	"red": #9b0000,
+	"burgundy": #6b1400,
+	"orange": #a05500,
+	"yellow": #c8b432,
+	"grey": #505050,
 );
 
 $color-light: (
-	"highlighter": rgb(235, 211, 123),
-	"green": rgb(0, 155, 0),
-	"red": rgb(205, 0, 0),
-	"burgundy": rgb(117, 30, 0),
-	"orange": rgb(220, 115, 5),
-	"yellow": rgb(210, 170, 20),
-	"grey": rgb(140, 140, 140),
+	"highlighter": #ebd37b,
+	"green": #009b00,
+	"red": #cd0000,
+	"burgundy": #751e00,
+	"orange": #dc7305,
+	"yellow": #d2aa14,
+	"grey": #8c8c8c,
 );
 
 
 // ---- Inputs
 $input: (
 	"scheme": "dark",
-	"focus-outline": rgb(9, 108, 154),
-	"base": rgb(33, 46, 64),
-	"hint": #222,
+	"focus-outline": #096c9a,
+	"base": #212e40,
+	"hint": #1a2432,
 	"text": #fff,
-	"placeholder": rgb(120, 120, 120),
+	"placeholder": #787878,
 );
 
 $input-light: (
 	"scheme": "light",
-	"focus-outline": rgb(7, 1, 224),
+	"focus-outline": #0701e0,
 	"base": #fff,
-	"hint": #ddd,
+	"hint": #e9e9e9,
 	"text": #000,
-	"placeholder": rgb(181, 181, 181),
+	"placeholder": #b5b5b5,
 );
 
 // ---- SVG icons

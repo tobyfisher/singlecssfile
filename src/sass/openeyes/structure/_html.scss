@@ -1,8 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-// Smallest monitor size is 1280px (1268px with scrollbars)
-// (supporting down to 1200px, because of basic tablet device support)
+@use "openeyes/mix" as *;
 
 html {
 	background: var(--bg-html, #000);
@@ -20,9 +19,16 @@ html {
 }
 
 body.open-eyes {
+	// Smallest monitor size is 1280px (1268px with scrollbars)
+	// (supporting down to 1200px, because of basic tablet device support)
 	min-width: 1199px;
 	padding:0;
 	margin:0;
+
+	// set a sensible global default font-size.
+	// Do not change this (unless you want to work through all the UI!)
+	@include font-size(14);
+
 }
 
 
