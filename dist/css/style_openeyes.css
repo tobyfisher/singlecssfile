@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Aug 14 2022 10:03:05 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun Aug 14 2022 13:17:13 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -5821,6 +5821,58 @@ login.multisite .info {
   width: 100%;
   height: 38px;
   font-size: 1.125rem;
+}
+
+.event-header {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: var(--bg-title) var(--i-face) 49.9% 0 no-repeat;
+  background-size: 126px 49px;
+}
+@media only screen and (min-width: 1440px) {
+  .event-header {
+    background-position-x: 54.8%;
+  }
+}
+.event-header.no-face {
+  background: var(--bg-title);
+}
+
+.event-header .event-header-title {
+  font-size: 1.3125rem;
+  font-weight: var(--font-light);
+  color: var(--txt-hd);
+  padding: 0 0 0 20px;
+}
+
+.event-header .buttons-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.event-header button,
+.event-header .button,
+.event-footer-actions button,
+.event-footer-actions .button {
+  height: 100%;
+  min-width: 40px;
+  padding: 0 14px;
+}
+.event-header button.icon,
+.event-header .button.icon,
+.event-footer-actions button.icon,
+.event-footer-actions .button.icon {
+  padding: 0 0;
+}
+.event-header button.icon .oe-i,
+.event-header .button.icon .oe-i,
+.event-footer-actions button.icon .oe-i,
+.event-footer-actions .button.icon .oe-i {
+  padding: 0 20px;
 }
 
 .main-event {

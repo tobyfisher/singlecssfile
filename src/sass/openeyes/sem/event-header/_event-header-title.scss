@@ -1,17 +1,17 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/mix" as *;
 
 .event-header {
-
+	// title for "Patient overview"
+	// event-header, generally, is for the View, Edit, Create, etc buttons
 	// <h2>
 	.event-header-title {
-		position:absolute;
-		left:50px;
-		top:6px;
 		@include font-size(21);
-		font-weight:$oe-font-light;
-		color:$oe-element-headers;
+		font-weight:var(--font-light);
+		color: var(--txt-hd);
+		padding:0 0 0 20px;
 	}	
 	
 }

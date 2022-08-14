@@ -9,9 +9,9 @@
 	// they also use "header-tab" class which  
 	// is set in the default UI button class...
 	// this needs reviewing at some point!
-	@include buttons {
-		vertical-align: top; // overwrite default 'bottom' to fix alignment issues
-		height:$oe-event-header-height;
+	button,
+	.button {
+		height:100%;
 		min-width:40px; // for icon only buttons
 		padding:0 14px;		
 		
