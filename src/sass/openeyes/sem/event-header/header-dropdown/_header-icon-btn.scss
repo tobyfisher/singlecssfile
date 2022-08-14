@@ -1,0 +1,73 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.event-header {
+	
+	// this class can either be used 
+	// on <div> or <button> 
+	// e.g. print is a <div> because it's a drop down
+	.header-icon-btn {
+		height:$oe-event-header-height;
+		width:$oe-event-header-height;
+		background:transparent none center center no-repeat;
+		background-size: 19px; // match large icon size
+		
+		// make like a button even if it's a <div>
+		cursor:pointer;
+
+		// overwrite the button base
+		margin: 0;
+
+		// currently always a button
+		&.trash {
+			background-image: url(svg-themed( 'ui/tab-trash' ));
+			&:hover,
+			&:focus,
+			&:active {
+				background-image: url(svg-dark-fixed('i/trash'));
+				background-color: $oe-btn-red;
+			}
+		}
+	
+		&.print {
+			background-image: url(svg-themed( 'ui/tab-print' )); 	// default state is themed icon
+			&.active,
+			&:hover, 
+			&:focus, 
+			&:active {
+				background-image: url(svg-dark-fixed('i/print'));		// always use the PRO icon (white)
+				background-color: $oe-btn-blue;
+			}
+		}
+		
+		&.whiteboard {
+			background-size: 17px; // match large icon size
+			background-image: url(svg-themed( 'ui/tab-whiteboard' )); 	// default state is themed icon
+			&.active,
+			&:hover, 
+			&:focus, 
+			&:active {
+				background-image: url(svg-dark-fixed('i/whiteboard'));		// always use the PRO icon (white)
+				background-color: $oe-btn-blue;
+			}
+		}
+		
+		// overflow for "more" buttons
+		&.more {
+			background-image: url(svg-themed( 'ui/tab-more-h' )); 	// default state is themed icon
+			&.active,
+			&:hover, 
+			&:focus, 
+			&:active {
+				background-image: url(svg-dark-fixed('i/more-h'));		// always use the PRO icon (white)
+				background-color: $oe-btn-blue;
+			}
+		}
+
+
+
+	}
+	
+}
+

@@ -33,7 +33,7 @@
 		// js controlled interaction... 
 		&.open, &.active {
 			.icon {
-				fill: $oe-dark-text-highlight;
+				fill: var(--txt-highlight);
 			}
 		}
 		

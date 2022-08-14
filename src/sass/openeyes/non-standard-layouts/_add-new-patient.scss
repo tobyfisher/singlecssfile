@@ -6,8 +6,7 @@
 .oe-new-patient {
 	padding: 0 20px 20px 20px;
 
-	//background:url( svg-themed('ui/watermark-patient')) bottom -20px right 10px no-repeat;
-	background-size: 160px;
+	background: bottom right / 160px var(--i-watermark-patient) no-repeat;
 
 	.patient-inputs-column {
 		width: 45%;
@@ -16,7 +15,6 @@
 
 	// modify <table> '.standard'
 	.standard {
-
 		td {
 			@include font-size(12);
 
@@ -24,14 +22,13 @@
 				padding-right: 8px;
 				white-space: nowrap;
 			}
-
-			input {
-				width: 100%;
-				&.postcode {
-					width: 50%;
-				}
-			}
 		}
+	}
 
+	input:not([type=date]) {
+		width: 100%;
+		&.postcode {
+			width: 50%;
+		}
 	}
 }

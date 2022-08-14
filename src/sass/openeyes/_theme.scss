@@ -95,7 +95,7 @@ $btn: (
 	"text":#ccc,
 	"text-selected":#ddd,
 	"blue-hint": #183696,
-	"blue": rgb(29, 68, 147),
+	"blue": #1d4493,
 	"blue-active": #009,
 	"green-hint": #18521a,
 	"green": #0a8013,
@@ -108,7 +108,7 @@ $btn: (
 );
 
 $btn-light: (
-	"base": #e7f1ff,
+	"base": rgb(204, 227, 255),
 	"text":#eee,
 	"text-selected":#fff,
 	"blue-hint": #3c46c8,
@@ -192,7 +192,7 @@ $rgbIcons: ("circle-blue", "circle-green", "circle-yellow", "circle-orange", "ci
 "flag-green", "flag-orange", "flag-red", "flag-grey", "mpr-green", "mpr-orange", "mpr-red", "warning-none", "warning", "cross-red",);
 
 
-$uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permissions-white", "patient-grey",
+$uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permissions-white",
 "search-white", "search", "shortcut-arrow", "sidebar-audit-trail", "sidebar-switcher-elements", "sidebar-switcher-events",
 "sidebar", "type-linebreak", "type-paragraph", "vc-move", "watermark-clinic");
 

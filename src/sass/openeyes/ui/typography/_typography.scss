@@ -3,8 +3,9 @@
 
 @use "openeyes/mix" as *;
 
-h3,h4 {
+h2, h3, h4 {
 	@include font-size(16); // default 16px / 1rem
+	font-weight: var(--font-medium);
 }
 
 p {

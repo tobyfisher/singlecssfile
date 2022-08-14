@@ -15,4 +15,7 @@
 	// but still showing the logo DOM for interaction
 	width: 280px;
 	background: var(--bg-popup);
+
+	// needs a strong divider from the workspace
+	border-right:1px solid var(--txt-active);
 }
