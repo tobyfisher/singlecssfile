@@ -90,38 +90,42 @@ $gui-light: (
 );
 
 // ---- Buttons
+// "Dark" theme interaction is subtle
 $btn: (
-	"base":#212e40,
+	"base":hsl(220, 25%, 22%),
 	"text":#ccc,
 	"text-selected":#ddd,
-	"blue-hint": #183696,
-	"blue": #1d4493,
-	"blue-active": #009,
-	"green-hint": #18521a,
-	"green": #0a8013,
-	"green-active": #090,
+	"blue-hint": #21306b,
+	"blue": #093286,
+	"blue-active": #1128b0,
+	"green-hint": #1a4f1b,
+	"green": #0a6b11,
+	"green-active": #171,
 	"red-hint": #721d1d,
-	"red": #990e0e,
-	"red-active": #a00,
-	"disabled": #3d455b,
+	"red": #8c0909,
+	"red-active": #911,
+	"disabled": #353b46,
 	"icon-hover-filter": none,
+	"icon-opacity": 0.6,
 );
 
+// "Light" theme interaction is obvious, more contrast
 $btn-light: (
-	"base": rgb(204, 227, 255),
+	"base": hsl(212, 11%, 50%),
 	"text":#eee,
 	"text-selected":#fff,
-	"blue-hint": #3c46c8,
-	"blue": #3c6cf0,
-	"blue-active": #00c,
+	"blue-hint": #2b45a4,
+	"blue": #2556c7,
+	"blue-active": #0b1bc9,
 	"green-hint": #0c7915,
-	"green": #0e9019,
-	"green-active": #0a0,
+	"green": #191,
+	"green-active": #1a1,
 	"red-hint": #830c0c,
-	"red": #990e0e,
-	"red-active": #a00,
+	"red": #a11,
+	"red-active": #c11,
 	"disabled": #cdcdd2,
 	"icon-hover-filter": invert(100%) grayscale(100%),
+	"icon-opacity": 0.7,
 );
 
 // ---- Colors (alerts, flags, pathsteps, wait, etc)

@@ -29,6 +29,7 @@ button,
 
 	@include font-size(12);
 	font-weight: var(--font-medium);
+	color: var(--btn-text);
 	background: var(--btn-base);
 	cursor: pointer;
 
@@ -53,13 +54,16 @@ button,
 		cursor: default;
 		color: var(--txt-light);
 		background: var(--btn-disabled);
-		border: 1px solid var(--btn-blue-hint);
+		border: 1px solid var(--btn-base);
 		pointer-events: none; // disable
 	}
 
 	// handle icons in buttons
 	.oe-i {
+		// if in light mode the icon will need inverting
+		filter: var(--btn-icon-hover-filter);
 		pointer-events: none;
+		opacity: var(--btn-icon-opacity);
 	}
 
 	// Pseudo & JS class hooks
@@ -69,12 +73,7 @@ button,
 	&.selected {
 		color: var(--btn-text-selected);
 		background: var(--btn-blue);
-
-		// icons within buttons
 		.oe-i {
-			// if there is icon this make sure it shows the button hover effect
-			// if in light mode the icon will need inverting
-			filter: var(--btn-icon-hover-filter);
 			opacity: 1;
 		}
 	}
@@ -82,6 +81,7 @@ button,
 	&:active {
 		outline: 1px dotted var(--input-focus-outline);
 		outline-offset: 1px;
+		color: #fff;
 		background: var(--btn-blue-active);
 	}
 }

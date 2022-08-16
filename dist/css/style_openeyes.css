@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Aug 14 2022 13:17:13 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Tue Aug 16 2022 21:49:53 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -482,20 +482,21 @@ html.theme-dark {
   --gui-line: #28303c;
   --gui-scroll-track: #0a0a0f;
   --gui-scroll-thumb: #37373c;
-  --btn-base: #212e40;
+  --btn-base: hsl(220deg, 25%, 22%);
   --btn-text: #ccc;
   --btn-text-selected: #ddd;
-  --btn-blue-hint: #183696;
-  --btn-blue: #1d4493;
-  --btn-blue-active: #009;
-  --btn-green-hint: #18521a;
-  --btn-green: #0a8013;
-  --btn-green-active: #090;
+  --btn-blue-hint: #21306b;
+  --btn-blue: #093286;
+  --btn-blue-active: #1128b0;
+  --btn-green-hint: #1a4f1b;
+  --btn-green: #0a6b11;
+  --btn-green-active: #171;
   --btn-red-hint: #721d1d;
-  --btn-red: #990e0e;
-  --btn-red-active: #a00;
-  --btn-disabled: #3d455b;
+  --btn-red: #8c0909;
+  --btn-red-active: #911;
+  --btn-disabled: #353b46;
   --btn-icon-hover-filter: none;
+  --btn-icon-opacity: 0.6;
   --color-highlighter: #b8ab88;
   --color-green: #006900;
   --color-red: #9b0000;
@@ -679,20 +680,21 @@ html.theme-light {
   --gui-line: #c0bebe;
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
-  --btn-base: rgb(204, 227, 255);
+  --btn-base: hsl(212deg, 11%, 50%);
   --btn-text: #eee;
   --btn-text-selected: #fff;
-  --btn-blue-hint: #3c46c8;
-  --btn-blue: #3c6cf0;
-  --btn-blue-active: #00c;
+  --btn-blue-hint: #2b45a4;
+  --btn-blue: #2556c7;
+  --btn-blue-active: #0b1bc9;
   --btn-green-hint: #0c7915;
-  --btn-green: #0e9019;
-  --btn-green-active: #0a0;
+  --btn-green: #191;
+  --btn-green-active: #1a1;
   --btn-red-hint: #830c0c;
-  --btn-red: #990e0e;
-  --btn-red-active: #a00;
+  --btn-red: #a11;
+  --btn-red-active: #c11;
   --btn-disabled: #cdcdd2;
   --btn-icon-hover-filter: invert(100%) grayscale(100%);
+  --btn-icon-opacity: 0.7;
   --color-highlighter: #ebd37b;
   --color-green: #009b00;
   --color-red: #cd0000;
@@ -2861,6 +2863,10 @@ a.selected {
   gap: 30px;
 }
 
+.gap-5 {
+  gap: 5px;
+}
+
 .gap-10 {
   gap: 10px;
 }
@@ -3203,6 +3209,7 @@ button,
   border-radius: 0 !important;
   font-size: 0.75rem;
   font-weight: var(--font-medium);
+  color: var(--btn-text);
   background: var(--btn-base);
   cursor: pointer;
   line-height: 1;
@@ -3219,12 +3226,14 @@ button:disabled, button.disabled, button.inactive,
   cursor: default;
   color: var(--txt-light);
   background: var(--btn-disabled);
-  border: 1px solid var(--btn-blue-hint);
+  border: 1px solid var(--btn-base);
   pointer-events: none;
 }
 button .oe-i,
 .button .oe-i {
+  filter: var(--btn-icon-hover-filter);
   pointer-events: none;
+  opacity: var(--btn-icon-opacity);
 }
 button:hover, button:focus, button.active, button.selected,
 .button:hover,
@@ -3239,13 +3248,13 @@ button:hover .oe-i, button:focus .oe-i, button.active .oe-i, button.selected .oe
 .button:focus .oe-i,
 .button.active .oe-i,
 .button.selected .oe-i {
-  filter: var(--btn-icon-hover-filter);
   opacity: 1;
 }
 button:active,
 .button:active {
   outline: 1px dotted var(--input-focus-outline);
   outline-offset: 1px;
+  color: #fff;
   background: var(--btn-blue-active);
 }
 
@@ -3284,20 +3293,6 @@ button.header-tab.icon-bg.goto,
   background-position: top 1px right -1px;
 }
 
-button,
-.button {
-  color: var(--txt-base);
-}
-button.hint,
-.button.hint {
-  color: var(--btn-text);
-}
-button.hint:hover, button.hint:focus, button.hint:active,
-.button.hint:hover,
-.button.hint:focus,
-.button.hint:active {
-  color: #fff;
-}
 button.hint.green,
 .button.hint.green {
   background: var(--btn-green-hint);
@@ -5222,6 +5217,7 @@ login.multisite .info {
   align-items: center;
   font-size: 0.8125rem;
   font-weight: var(--font-medium);
+  color: var(--btn-text);
   background: var(--btn-base);
   cursor: pointer;
   padding: 0 8px;
@@ -5229,7 +5225,7 @@ login.multisite .info {
 }
 .step-options li:hover, .step-options li:focus, .step-options li.selected {
   color: #fff;
-  background: var(--btn-blue);
+  background: var(--btn-blue-active);
 }
 
 .oe-login.timeout {
@@ -5243,7 +5239,6 @@ login.multisite .info {
 }
 .oe-login.timeout .login h1,
 .oe-login.timeout .login .info {
-  color: white;
   text-align: center;
 }
 
@@ -5402,6 +5397,16 @@ login.multisite .info {
 .activity-list tr.hotlist-comment:hover, .activity-list tr.hotlist-comment:focus {
   cursor: auto;
   background: var(--bg-data);
+}
+
+.oe-hotlist-panel .patient-activity .divider {
+  border-top: 1px dotted var(--color-grey);
+  margin-top: 10px;
+}
+.oe-hotlist-panel .patient-activity h4 {
+  padding: 5px 15px;
+  font-size: 0.8125rem;
+  font-weight: 400;
 }
 
 .home-messages.subgrid {
@@ -5790,6 +5795,64 @@ login.multisite .info {
   color: var(--txt-highlight);
 }
 
+.oescape-icon-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px;
+  gap: 2px;
+}
+.oe-full-header .oescape-icon-btns {
+  margin: 0 10px;
+}
+.oescape-icon-btns .icon-btn {
+  display: block;
+  flex: 1 1 0;
+}
+.oe-full-header .oescape-icon-btns .icon-btn {
+  margin-bottom: 0;
+}
+.oescape-icon-btns .icon-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 31px;
+  width: 100%;
+  font-size: 0.875rem;
+  font-weight: var(--font-medium);
+  color: var(--btn-text);
+  background: var(--btn-base);
+}
+.oe-full-header .oescape-icon-btns .icon-btn a {
+  height: 38px;
+  width: 38px;
+  font-size: 0.9375rem;
+}
+.oescape-icon-btns .icon-btn a.lightning-viewer-icon svg, .oescape-icon-btns .icon-btn a.patient-overview-icon svg {
+  display: block;
+  fill: rgba(255, 255, 255, 0.6);
+  width: 15px;
+  height: 15px;
+}
+.oescape-icon-btns .icon-btn a.inactive {
+  color: var(--txt-light);
+  background-color: var(--btn-disabled);
+}
+.oescape-icon-btns .icon-btn a:hover, .oescape-icon-btns .icon-btn a:focus {
+  color: #fff;
+  background: var(--btn-blue);
+}
+.oescape-icon-btns .icon-btn a:hover svg, .oescape-icon-btns .icon-btn a:focus svg {
+  fill: #fff;
+}
+.oescape-icon-btns .icon-btn a:active, .oescape-icon-btns .icon-btn a.selected {
+  color: #fff;
+  background: var(--btn-blue-hint);
+}
+.oescape-icon-btns .icon-btn a:active svg, .oescape-icon-btns .icon-btn a.selected svg {
+  fill: #fff;
+}
+
 .oe-sem-no-events {
   grid-area: 2/1/4/3;
   display: flex;
@@ -5904,6 +5967,52 @@ login.multisite .info {
 .sidebar.subgrid .sidebar-eventlist {
   padding: 0 0 80px 0;
   overflow-y: auto;
+}
+
+.sidebar-header {
+  grid-area: addevent;
+  height: 38px;
+  width: 200px;
+  display: flex;
+  background: var(--bg-grey);
+}
+.sidebar-header .manage-elements,
+.sidebar-header .add-event {
+  flex: 1 1 0;
+  height: 100%;
+  color: var(--btn-text);
+  background: var(--btn-base);
+}
+.sidebar-header .manage-elements.selected,
+.sidebar-header .add-event.selected {
+  color: #fff;
+  background: var(--btn-green-hint);
+}
+
+.clinic-pathway-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 38px;
+  margin: 1px 0 0 0;
+  font-size: 0.8125rem;
+  font-weight: var(--font-medium);
+  color: var(--txt-light);
+  background: 32px/left 1px center var(--i-watermark-clinic) var(--btn-base) no-repeat;
+  cursor: pointer;
+}
+.clinic-pathway-btn:hover, .clinic-pathway-btn:focus {
+  color: #fff;
+  background-color: var(--btn-blue);
+}
+.clinic-pathway-btn.active {
+  color: var(--txt-highlight);
+  background-color: var(--btn-blue-active);
+}
+.clinic-pathway-btn .wait-duration {
+  padding: 0 0 0 10px;
+  pointer-events: none;
 }
 
 .oe-new-patient {

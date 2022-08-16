@@ -16,25 +16,15 @@
 	// button
 	.manage-elements, 
 	.add-event {
-		flex-grow: 3; // allow buttons to fill remain space
-		margin:0;
-		height:$oe-event-header-height;
-		color: var(--input-text);
-		background: var(--input-base);
-		border-radius:0;
+		flex: 1 1 0; // allow button to fill all remaining space
+		height:100%;
+		color: var(--btn-text);
+		background: var(--btn-base);
 
 		&.selected {
 			color: #fff;
 			background: var(--btn-green-hint);
 		}
-	}
-	
-	.title {
-		@include font-size(13);
-		font-weight:300;
-		color: var(--txt-light);				// Pro-theme
-		margin:auto;
-		padding:0 8px;
 	}
 }
 
