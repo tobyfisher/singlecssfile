@@ -1,0 +1,91 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
+// OE Sidebar Event types
+// note: also, used in hotlist Draft list
+
+.event-type {
+	display: inline-block;
+	height: 19px; // match
+	width: 48px;
+
+	.oe-i-e {
+		// fix y-offset position issue
+		pointer-events: none; // JS needs this for the lightning previews
+		vertical-align: top;
+	}
+
+	// background SVG icons
+	background-position: right 10px center;
+	background-repeat: no-repeat;
+	background-size: $oe-event-icon-size - 6px;
+
+	// eye for quicklook
+	background-image: url(svg-fixed("sidebar/eye"));
+
+	// warning star
+	&.alert {
+		background-image: url(svg-fixed("sidebar/warning"));
+	}
+
+	&.done,
+	&.ready {
+		background-image: url(svg-fixed("sidebar/tick"));
+	}
+
+	&.confirmed {
+		background-image: url(svg-fixed("sidebar/tick-double"));
+	}
+
+	&.cancelled {
+		background-image: url(svg-fixed("sidebar/cross"));
+	}
+
+	&.pause {
+		background-image: url(svg-fixed("sidebar/pause"));
+	}
+
+	&.flag {
+		background-image: url(svg-fixed("sidebar/flag"));
+	}
+
+	&.draft {
+		background-image: url(svg-fixed("sidebar/draft")); // orange pencil
+	}
+
+	//&.draft-warning {
+	//	background-image: url(svg-fixed("sidebar/draft-warning"));
+	//}
+	//
+	//&.draft-temp {
+	//	background-image: url(svg-fixed("sidebar/draft-temp"));
+	//}
+
+	&.edit {
+		background-image: url(svg-fixed("sidebar/edit")); // grey pencil
+	}
+
+	&.edit-done {
+		background-image: url(svg-fixed("sidebar/edit-done")); // green pencil
+	}
+
+	&.clock,
+	&.scheduled {
+		background-image: url(svg-fixed("sidebar/time"));
+	}
+
+	&.virtual-clinic {
+		background-image: url(svg-fixed("sidebar/vc"));
+	}
+
+	&.urgent {
+		background-image: url(svg-fixed("sidebar/urgent"));
+	}
+}
+
+
+
+

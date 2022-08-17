@@ -10,8 +10,8 @@
 // <ul>
 .oescape-icon-btns {
 	@include flex(center, space-between);
-	margin: 2px; // visually balances the icons
-	gap: 2px;
+	margin: 1px; // visually balances the icons
+	gap: 1px;
 
 	// OEScape and Analytics header
 	.oe-full-header & {
@@ -52,34 +52,37 @@
 				svg {
 					display: block;
 					fill: rgba(255, 255, 255, 0.6);
-					width: 15px;
-					height: 15px;
+					width: 16px;
+					height: 16px;
 				}
 			}
 
 			// inactive means that the patient doesn't
 			// have any active episode under that sub-speciality
-			// "inactive" was a misnomer on my part!
+			// "inactive" was a misnomer on my part, it still links
+			// through to an OEscape/Summary page
 			&.inactive {
-				color: var(--txt-light);
-				background-color: var(--btn-disabled);
+				font-weight: var(--font-light);
 			}
 
 			&:hover,
 			&:focus {
-				color: #fff;
 				background: var(--btn-blue);
 				svg {
 					fill: #fff;
 				}
 			}
+			&:active{
+				background: var(--btn-blue-active);
+			}
 
-			&:active,
+			// needs to be subtle, see Patient Overview
+			// OEscape btn is right next to the Event icon.
 			&.selected {
-				color: #fff;
-				background: var(--btn-blue-hint);
+				background: none;
+				color: var(--txt-base);
 				svg {
-					fill: #fff;
+					fill: var(--txt-light);
 				}
 			}
 		}

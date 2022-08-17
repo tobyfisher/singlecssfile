@@ -8,9 +8,9 @@
 	// event-header, generally, is for the View, Edit, Create, etc buttons
 	// <h2>
 	.event-header-title {
-		@include font-size(21);
-		font-weight:var(--font-light);
-		color: var(--txt-hd);
+		@include font-size(16);
+		font-weight:var(--font-medium);
+		color: var(--txt-highlight);
 		padding:0 0 0 20px;
 	}	
 	

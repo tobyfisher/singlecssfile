@@ -1,8 +1,8 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-@use "../../../var" as *;
-@use "../../../mix" as *;
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
 .clinic-pathway-btn {
 	// button shows state of clinic pathway for patient (shows wait time and status)
@@ -11,14 +11,14 @@
 	height: $oe-event-header-height;
 
 	// align with Event title better
-	margin: 1px 0 0 0;
+	margin: 1px 0;
 
 	@include font-size(13); // a little bigger than button text
 	font-weight: var(--font-medium);
-	color: var(--txt-light);
+	color: var(--btn-text);
 
 	// UI to match buttons but add a clinic watermark
-	background: 32px / left 1px center var(--i-watermark-clinic) var(--btn-base) no-repeat;
+	background: left 8px center / 19px var(--i-ui-watermark-clinic) var(--btn-base) no-repeat;
 	cursor: pointer;
 
 	&:hover,
@@ -28,11 +28,10 @@
 	}
 
 	&.active {
-		color: var(--txt-highlight);
-		background-color: var(--btn-blue-active);
+		background-color: var(--btn-blue-hint);
 	}
 
-	// Show wait duration
+	// Show wait duration from Clinic
 	.wait-duration {
 		padding: 0 0 0 10px;
 		pointer-events: none; // JS!

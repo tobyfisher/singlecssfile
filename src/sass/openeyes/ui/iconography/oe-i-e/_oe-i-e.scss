@@ -3,7 +3,9 @@
 
 // note!
 // background-size - when a new sprite-sheet is created the background-size
-// needs updating manually here, node will output the updated size and notes.
+// needs updating manually here, node will output the updated size and notes in terminal
+
+@use "openeyes/var" as *;
 
 // <i class="oe-i-e CiExamination [large]"></i>
 .oe-i-e {
@@ -13,13 +15,13 @@
 	background-image: url("../img/event-icons-76x76.png");
 	background-repeat: no-repeat;
 	background-size: 228px 209px; // important: must match SpriteSmith output!
-	width: 19px;
-	height: 19px;
+	width: $oe-event-icon-size;
+	height: $oe-event-icon-size;
 
 	&.large {
 		background-size: 456px 418px; // important: must match SpriteSmith output!
-		width: 38px;
-		height: 38px;
+		width: #{$oe-event-icon-size + $oe-event-icon-size};
+		height: #{$oe-event-icon-size + $oe-event-icon-size};
 	}
 
 	// used 'inline' to 'pad' out the icon

@@ -20,7 +20,7 @@ $bg: (
 	"max": #000,
 	"hover-row": #131b23,
 	"popup":#0D161E,
-	"title": #0f1926,
+	"title": #172230,
 	"event": #1E2E42,
 	"data": #121A22,
 	"grey": #283442
@@ -92,7 +92,7 @@ $gui-light: (
 // ---- Buttons
 // "Dark" theme interaction is subtle
 $btn: (
-	"base":hsl(220, 25%, 22%),
+	"base":#1E2E42,
 	"text":#ccc,
 	"text-selected":#ddd,
 	"blue-hint": #21306b,
@@ -104,14 +104,14 @@ $btn: (
 	"red-hint": #721d1d,
 	"red": #8c0909,
 	"red-active": #911,
-	"disabled": #353b46,
+	"disabled": hsl(213, 32%, 15%),
 	"icon-hover-filter": none,
 	"icon-opacity": 0.6,
 );
 
 // "Light" theme interaction is obvious, more contrast
 $btn-light: (
-	"base": hsl(212, 11%, 50%),
+	"base": #717f8e,
 	"text":#eee,
 	"text-selected":#fff,
 	"blue-hint": #2b45a4,

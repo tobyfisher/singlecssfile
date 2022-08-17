@@ -28,7 +28,7 @@ button,
 	border-radius: 0 !important; // weird border-radius bug fix
 
 	@include font-size(12);
-	font-weight: var(--font-medium);
+	font-weight: 500;
 	color: var(--btn-text);
 	background: var(--btn-base);
 	cursor: pointer;
@@ -54,8 +54,11 @@ button,
 		cursor: default;
 		color: var(--txt-light);
 		background: var(--btn-disabled);
-		border: 1px solid var(--btn-base);
 		pointer-events: none; // disable
+
+		.oe-i {
+			opacity: 0.3;
+		}
 	}
 
 	// handle icons in buttons

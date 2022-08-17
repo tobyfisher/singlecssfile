@@ -20,6 +20,7 @@
 		height:100%;
 		color: var(--btn-text);
 		background: var(--btn-base);
+		@include font-size(13);
 
 		&.selected {
 			color: #fff;

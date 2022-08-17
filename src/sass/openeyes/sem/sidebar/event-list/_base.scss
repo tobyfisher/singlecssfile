@@ -1,0 +1,98 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
+.sidebar {
+	background:var(--bg-html);
+
+	.events {
+		background: var(--txt-invert);
+	}
+
+	// <li> 
+	.event {
+		position: relative;
+		display: block;
+		margin: 0 0 1px 0;
+
+		// nav link
+		a {
+			position: relative;
+			@include flex(center, flex-start);
+
+			height: $oe-event-icon-size;
+			line-height: $oe-event-icon-size;
+
+			@include font-size(12);
+			font-weight: 400;
+			color: var(--txt-light);
+			background: var(--bg-event);
+
+			&:hover,
+			&:focus,
+			&:active {
+				color: #fff;
+				background: var(--btn-blue);
+
+				// dull the laterality icons
+				.event-extra {
+					opacity: 0.8;
+				}
+
+				.oe-i.laterality {
+					&.R {
+						background-image: var(--i-lat-R);
+					}
+
+					&.L {
+						background-image: var(--i-lat-L);
+					}
+				}
+
+				.tag {
+					color: #fff;
+					background: transparent;
+				}
+			}
+		}
+
+		&.selected {
+			a {
+				color: var(--txt-active);
+				background: var(--btn-active);
+
+				.event-extra {
+					opacity: 0.5;
+				}
+
+				.oe-i.laterality {
+					&.R {
+						background-image: var(--i-lat-R);
+					}
+
+					&.L {
+						background-image: var(--i-lat-L);
+					}
+				}
+
+				.tag {
+					color: pink;
+					background: transparent;
+				}
+			}
+		}
+
+
+		// v2 subspecialty list.
+		// in v3 this has been replaced with the Icon Grid.
+		&.subspecialty {
+			a {
+				padding: 0 0 0 4px;
+			}
+		}
+	}
+}
+
+
