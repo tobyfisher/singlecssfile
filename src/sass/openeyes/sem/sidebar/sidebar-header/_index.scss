@@ -18,12 +18,9 @@
 	.add-event {
 		flex: 1 1 0; // allow button to fill all remaining space
 		height:100%;
-		color: var(--btn-text);
-		background: var(--btn-base);
 		@include font-size(13);
 
 		&.selected {
-			color: #fff;
 			background: var(--btn-green-hint);
 		}
 	}

@@ -5,10 +5,10 @@
 @use "openeyes/mix" as *;
 
 .sidebar {
-	background:var(--bg-html);
-
+	// ul
 	.events {
-		background: var(--txt-invert);
+		// this provides the dividing line for the Event list
+		background:var(--btn-base);
 	}
 
 	// <li> 
@@ -27,8 +27,8 @@
 
 			@include font-size(12);
 			font-weight: 400;
-			color: var(--txt-light);
-			background: var(--bg-event);
+			color: var(--btn-text);
+			background: var(--btn-base-dark);
 
 			&:hover,
 			&:focus,
@@ -36,18 +36,13 @@
 				color: #fff;
 				background: var(--btn-blue);
 
-				// dull the laterality icons
-				.event-extra {
-					opacity: 0.8;
-				}
-
-				.oe-i.laterality {
+				.laterality {
 					&.R {
-						background-image: var(--i-lat-R);
+						background-image: url( svg-white-icon("i/lat-R"));
 					}
 
 					&.L {
-						background-image: var(--i-lat-L);
+						background-image: url( svg-white-icon("i/lat-R"));
 					}
 				}
 
@@ -78,7 +73,6 @@
 				}
 
 				.tag {
-					color: pink;
 					background: transparent;
 				}
 			}

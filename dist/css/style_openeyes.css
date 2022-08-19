@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Wed Aug 17 2022 09:15:49 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Fri Aug 19 2022 12:02:32 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -458,15 +458,15 @@ html.theme-dark {
   --i-nystagmus-arrow-h-1: url("../svg/in-css/dark/ui/nystagmus-arrow-h-1.svg");
   --i-nystagmus-arrow-h-2: url("../svg/in-css/dark/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/dark/ui/nystagmus-arrow-h-3.svg");
-  --bg-html: #141e2b;
-  --bg-overlay: #283039;
   --bg-max: #000;
-  --bg-hover-row: #131b23;
-  --bg-popup: #0D161E;
-  --bg-title: #172230;
-  --bg-event: #1E2E42;
-  --bg-data: #121A22;
-  --bg-grey: #283442;
+  --bg-hover-row: rgb(19, 27, 35);
+  --bg-data: rgb(22, 26, 32);
+  --bg-event: rgb(14, 16, 22);
+  --bg-popup: rgb(13, 22, 30);
+  --bg-html: rgb(26, 30, 38);
+  --bg-title: rgb(30, 36, 46);
+  --bg-overlay: hsl(214deg, 20%, 10%);
+  --bg-grey: hsl(212deg, 22%, 25%);
   --txt-base: #dcdcdc;
   --txt-light: #8c8c8c;
   --txt-hd: #577896;
@@ -482,8 +482,9 @@ html.theme-dark {
   --gui-line: #28303c;
   --gui-scroll-track: #0a0a0f;
   --gui-scroll-thumb: #37373c;
-  --btn-base: #1E2E42;
-  --btn-text: #ccc;
+  --btn-base: rgb(34, 42, 50);
+  --btn-base-dark: rgb(24, 32, 40);
+  --btn-text: #bbb;
   --btn-text-selected: #ddd;
   --btn-blue-hint: #21306b;
   --btn-blue: #093286;
@@ -494,7 +495,7 @@ html.theme-dark {
   --btn-red-hint: #721d1d;
   --btn-red: #8c0909;
   --btn-red-active: #911;
-  --btn-disabled: hsl(213deg, 32%, 15%);
+  --btn-disabled: hsl(213deg, 30%, 22%);
   --btn-icon-hover-filter: none;
   --btn-icon-opacity: 0.6;
   --color-highlighter: #b8ab88;
@@ -656,20 +657,20 @@ html.theme-light {
   --i-nystagmus-arrow-h-1: url("../svg/in-css/light/ui/nystagmus-arrow-h-1.svg");
   --i-nystagmus-arrow-h-2: url("../svg/in-css/light/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
-  --bg-html: #E1E0E0;
-  --bg-overlay: #bebdbd;
   --bg-max: #fff;
-  --bg-hover-row: #ecebeb;
-  --bg-popup: #f1f0f0;
-  --bg-title: #d2d1d1;
-  --bg-event: #d7d6d6;
-  --bg-data: #F5F5F5;
-  --bg-grey: #dcdcdc;
+  --bg-hover-row: rgb(250, 250, 250);
+  --bg-event: rgb(251, 250, 250);
+  --bg-data: rgb(231, 229, 229);
+  --bg-popup: rgb(242, 240, 240);
+  --bg-html: rgb(217, 215, 215);
+  --bg-title: rgb(202, 200, 200);
+  --bg-overlay: rgb(192, 190, 190);
+  --bg-grey: rgb(182, 180, 180);
   --txt-base: #0a0a0a;
   --txt-light: #5a5a64;
-  --txt-hd: #325aa0;
+  --txt-hd: rgb(40, 70, 200);
   --txt-active: #2346c8;
-  --txt-highlight: #0000ff;
+  --txt-highlight: rgb(40, 70, 250);
   --txt-invert: #f0f0f0;
   --font-thin: 300;
   --font-light: 400;
@@ -680,7 +681,8 @@ html.theme-light {
   --gui-line: #c0bebe;
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
-  --btn-base: #717f8e;
+  --btn-base: rgb(110, 119, 128);
+  --btn-base-dark: rgb(74, 82, 90);
   --btn-text: #eee;
   --btn-text-selected: #fff;
   --btn-blue-hint: #2b45a4;
@@ -692,7 +694,7 @@ html.theme-light {
   --btn-red-hint: #830c0c;
   --btn-red: #a11;
   --btn-red-active: #c11;
-  --btn-disabled: #cdcdd2;
+  --btn-disabled: hsl(211deg, 6%, 52%);
   --btn-icon-hover-filter: invert(100%) grayscale(100%);
   --btn-icon-opacity: 0.7;
   --color-highlighter: #ebd37b;
@@ -3232,7 +3234,7 @@ button:disabled .oe-i, button.disabled .oe-i, button.inactive .oe-i,
 .button:disabled .oe-i,
 .button.disabled .oe-i,
 .button.inactive .oe-i {
-  opacity: 0.3;
+  opacity: 0.2;
 }
 button .oe-i,
 .button .oe-i {
@@ -4916,13 +4918,13 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 
 .oe-patient {
   font-size: 0.6875rem;
+  font-weight: var(--font-medium);
 }
 .oe-patient .patient-name {
   position: absolute;
   top: 12px;
   left: 0;
   font-size: 1.0625rem;
-  font-weight: 400;
   line-height: 1;
 }
 .oe-patient .patient-name a:hover, .oe-patient .patient-name a:focus, .oe-patient .patient-name a:active {
@@ -4998,31 +5000,46 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   right: 155px;
   cursor: pointer;
   font-size: 0.625rem;
+  color: #ddd;
   font-weight: 500;
   display: flex;
+  justify-content: center;
   align-items: center;
   height: 23px;
   padding: 0 23px 0 5px;
-  background: 15px/center right 4px var(--i-triangle) no-repeat;
+  background: var(--color-grey);
 }
-.oe-patient .patient-allergies-risks.unknown {
-  background-color: var(--color-grey);
+.oe-patient .patient-allergies-risks:after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  right: 4px;
+  bottom: 0;
+  width: 15px;
+  background: center/contain url("../svg/in-css/dark/i/triangle.svg") no-repeat;
+  opacity: 0.5;
 }
 .oe-patient .patient-allergies-risks.risk-warning {
-  background-color: var(--color-orange);
+  background: var(--color-burgundy);
 }
 .oe-patient .patient-allergies-risks.no-risk {
-  background-color: var(--color-green);
+  background: var(--color-green);
 }
 .oe-patient .patient-allergies-risks.open, .oe-patient .patient-allergies-risks.active {
-  background-color: var(--txt-highlight);
+  background: var(--btn-blue-hint);
+}
+.oe-patient .patient-allergies-risks.risk-warning, .oe-patient .patient-allergies-risks.no-risk, .oe-patient .patient-allergies-risks.open, .oe-patient .patient-allergies-risks.active {
+  color: #fff;
+}
+.oe-patient .patient-allergies-risks.risk-warning:after, .oe-patient .patient-allergies-risks.no-risk:after, .oe-patient .patient-allergies-risks.open:after, .oe-patient .patient-allergies-risks.active:after {
+  opacity: 1;
 }
 @media only screen and (max-width: 1265px) {
   .oe-patient .patient-allergies-risks {
     text-indent: -9999px;
     padding: 0;
-    width: 25px;
-    background-position: center center;
+    width: 23px;
   }
 }
 
@@ -5054,7 +5071,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 .oe-patient .patient-oescape .icon,
 .oe-patient .patient-extra .icon {
   display: inline-block;
-  fill: #fff;
+  fill: var(--txt-base);
   opacity: 0.8;
 }
 .oe-patient .patient-quicklook.open .icon, .oe-patient .patient-quicklook.active .icon,
@@ -5961,7 +5978,7 @@ login.multisite .info {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: var(--bg-title) var(--i-face) 49.9% 0 no-repeat;
+  background: var(--bg-data) var(--i-face) 49.9% 0 no-repeat;
   background-size: 126px 49px;
 }
 @media only screen and (min-width: 1440px) {
@@ -5970,7 +5987,7 @@ login.multisite .info {
   }
 }
 .event-header.no-face {
-  background: var(--bg-title);
+  background: var(--bg-data);
 }
 
 .event-header .event-header-title {
@@ -6049,13 +6066,10 @@ login.multisite .info {
 .sidebar-header .add-event {
   flex: 1 1 0;
   height: 100%;
-  color: var(--btn-text);
-  background: var(--btn-base);
   font-size: 0.8125rem;
 }
 .sidebar-header .manage-elements.selected,
 .sidebar-header .add-event.selected {
-  color: #fff;
   background: var(--btn-green-hint);
 }
 
@@ -6088,7 +6102,7 @@ login.multisite .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1px 0;
+  margin: 0 0 1px 0;
 }
 .sidebar-list-controls button {
   flex: 1 1 0;
@@ -6097,11 +6111,8 @@ login.multisite .info {
   margin: 0 2px 0 0;
 }
 
-.sidebar {
-  background: var(--bg-html);
-}
 .sidebar .events {
-  background: var(--txt-invert);
+  background: var(--btn-base);
 }
 .sidebar .event {
   position: relative;
@@ -6117,21 +6128,18 @@ login.multisite .info {
   line-height: 19px;
   font-size: 0.75rem;
   font-weight: 400;
-  color: var(--txt-light);
-  background: var(--bg-event);
+  color: var(--btn-text);
+  background: var(--btn-base-dark);
 }
 .sidebar .event a:hover, .sidebar .event a:focus, .sidebar .event a:active {
   color: #fff;
   background: var(--btn-blue);
 }
-.sidebar .event a:hover .event-extra, .sidebar .event a:focus .event-extra, .sidebar .event a:active .event-extra {
-  opacity: 0.8;
+.sidebar .event a:hover .laterality.R, .sidebar .event a:focus .laterality.R, .sidebar .event a:active .laterality.R {
+  background-image: url("../svg/in-css/dark/i/lat-R.svg");
 }
-.sidebar .event a:hover .oe-i.laterality.R, .sidebar .event a:focus .oe-i.laterality.R, .sidebar .event a:active .oe-i.laterality.R {
-  background-image: var(--i-lat-R);
-}
-.sidebar .event a:hover .oe-i.laterality.L, .sidebar .event a:focus .oe-i.laterality.L, .sidebar .event a:active .oe-i.laterality.L {
-  background-image: var(--i-lat-L);
+.sidebar .event a:hover .laterality.L, .sidebar .event a:focus .laterality.L, .sidebar .event a:active .laterality.L {
+  background-image: url("../svg/in-css/dark/i/lat-R.svg");
 }
 .sidebar .event a:hover .tag, .sidebar .event a:focus .tag, .sidebar .event a:active .tag {
   color: #fff;
@@ -6151,7 +6159,6 @@ login.multisite .info {
   background-image: var(--i-lat-L);
 }
 .sidebar .event.selected a .tag {
-  color: pink;
   background: transparent;
 }
 .sidebar .event.subspecialty a {
@@ -6216,6 +6223,15 @@ login.multisite .info {
   position: relative;
   top: 2px;
 }
+.event-extra .oe-i.laterality.R {
+  background-image: url("../svg/in-css/dark/i/lat-R-green.svg");
+}
+.event-extra .oe-i.laterality.L {
+  background-image: url("../svg/in-css/dark/i/lat-L-red.svg");
+}
+.event-extra .oe-i.laterality.NA {
+  background-image: url("../svg/in-css/dark/i/lat-NA.svg");
+}
 
 .event-date {
   display: inline-block;
@@ -6252,8 +6268,8 @@ login.multisite .info {
   align-items: center;
   font-size: 0.625rem;
   font-weight: 400;
-  color: var(--txt-light);
-  background: var(--bg-grey);
+  color: var(--btn-text);
+  background: var(--btn-base);
 }
 
 .sidebar .grouping-picker {
@@ -6333,6 +6349,84 @@ login.multisite .info {
 }
 .sidebar .tooltip.quicklook .event-issue.urgent {
   background-color: var(--color-orange);
+}
+
+.in-audit .element,
+.main-event .element {
+  position: relative;
+  min-height: 60px;
+  background-color: var(--bg-data);
+  padding: 32px 5px 10px 10px;
+  margin: 0 0 3px 0;
+  font-weight: var(--font-medium);
+}
+
+.main-event .element {
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: border-color 0.2s ease-in;
+}
+.main-event .element:hover, .main-event .element:focus-within {
+  border-color: var(--input-focus-outline);
+}
+.main-event .element:hover .element-header .element-title, .main-event .element:focus-within .element-header .element-title {
+  transition: color 0.5s ease-out;
+  color: var(--txt-highlight);
+}
+
+.element-header {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+}
+.element-header .element-title {
+  display: inline-block;
+  line-height: 1.2;
+  font-size: 0.9375rem;
+  color: var(--txt-hd);
+  font-weight: var(--font-light);
+  padding: 0 0 0 10px;
+}
+@media only screen and (min-width: 1440px) {
+  .element-header .element-title {
+    font-size: 0.8125rem;
+    font-weight: var(--font-medium);
+    overflow-wrap: break-word;
+    max-width: 100%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .element-header .element-title .oe-i-e {
+    display: block;
+    margin: 0 0 8px 0;
+  }
+}
+.element-header .element-title.error {
+  border-left: 5px solid var(--color-red);
+  padding: 0 0 0 5px;
+}
+
+.element-actions {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  display: flex;
+}
+.element-actions span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.element-actions .oe-i {
+  width: 25px;
+  height: 25px;
+  margin: 0 2px 2px 2px;
+}
+.element-actions .oe-i.copy-forward {
+  background-size: 17px;
+}
+.element-actions .oe-i.audit-trail {
+  background-size: 13px;
 }
 
 .oe-new-patient {

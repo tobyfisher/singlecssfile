@@ -1,62 +1,81 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-@use 'openeyes/mix' as *;
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
 .oe-patient {
-	
+
 	// Allergies and Risks has 3 states: 
 	// 1 allergy OR risk = 'risk-warning' (red)
 	// NO allergies and NO risks (confirmed) = 'no-risk' (green)
 	// No risk data collected = 'unknown' (text)
-	
+
 	.patient-allergies-risks {
-		position:absolute;
-		bottom:0;
-		right:155px;
-		
-		cursor:pointer;
-		
-		// Allergies, Alerts text
-		// reduce this down to create a little
-		// bit more horizontal space
+		position: absolute;
+		bottom: 0;
+		right: 155px;
+		cursor: pointer;
+
+		// reduce this down to create a little more horizontal space
 		@include font-size(10);
-		font-weight:500;
-	
-		display:flex;
-		align-items:center;
-		height:23px;
-		padding:0 23px 0 5px; // padding matches the data padding to align text
-	
-		background:15px / center right 4px var(--i-triangle)  no-repeat;
-		
-		&.unknown {
-			background-color:var(--color-grey);
-		}
-		
-		&.risk-warning {
-			background-color:var(--color-orange);
-		}
-		
-		&.no-risk {
-			background-color:var(--color-green);
+		color: #ddd;
+		font-weight: 500;
+
+		@include flex(center, center);
+		height: 23px;
+		padding: 0 23px 0 5px; // padding matches the data padding to align text
+
+		&:after {
+			content: "";
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			right: 4px;
+			bottom: 0;
+			width: 15px;
+			background: center / contain url(svg-white-icon("i/triangle")) no-repeat;
+			opacity: 0.5;
 		}
 
-		// js controlled interaction... 
+		// default state is "unknown"
+		background: var(--color-grey);
+
+		&.risk-warning {
+			background: var(--color-burgundy);
+		}
+
+		&.no-risk {
+			background: var(--color-green);
+		}
+
+		// js controlled interaction...
 		&.open,
 		&.active {
-			background-color: var(--txt-highlight);
+			background: var(--btn-blue-hint);
 		}
-		
-		@include squeeze(){
+
+		// txt and icon
+		&.risk-warning,
+		&.no-risk,
+		&.open,
+		&.active {
+			color: #fff;
+
+			&:after {
+				opacity: 1;
+			}
+		}
+
+		// lose the text when its tight
+		@include squeeze() {
 			text-indent: -9999px;
-			padding:0;
-			width:25px;
-			background-position: center center;
+			padding: 0;
+			width: 23px;
 		}
-		
+
 	}
-	
+
 
 }
 

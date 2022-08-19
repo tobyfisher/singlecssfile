@@ -12,30 +12,31 @@
 }
 
 // defaults groups for "dark" theme settings
-
 // ---- Backgrounds
+// colours themes work slightly differently for dark and light
+// note the variation in order
 $bg: (
-	"html": #141e2b,
-	"overlay": #283039,
 	"max": #000,
-	"hover-row": #131b23,
-	"popup":#0D161E,
-	"title": #172230,
-	"event": #1E2E42,
-	"data": #121A22,
-	"grey": #283442
+	"hover-row": rgb(19, 27, 35),
+	"data": rgb(22, 26, 32), //21	28	34
+	"event": rgb(14, 16, 22),
+	"popup":rgb(13, 22, 30),
+	"html": rgb(26, 30, 38),
+	"title": rgb(30, 36, 46),
+	"overlay": hsl(214, 20%, 10%),
+	"grey": hsl(212, 22%, 25%)
 );
 
 $bg-light: (
-	"html": #E1E0E0,
-	"overlay": #bebdbd,
 	"max": #fff,
-	"hover-row": #ecebeb,
-	"popup": #f1f0f0,
-	"title": #d2d1d1,
-	"event": #d7d6d6,
-	"data": #F5F5F5,
-	"grey": #dcdcdc
+	"hover-row": rgb(250, 250, 250),
+	"event": rgb(251, 250, 250),
+	"data": rgb(231, 229, 229),
+	"popup": rgb(242, 240, 240),
+	"html": rgb(217, 215, 215),
+	"title": rgb(202, 200, 200),
+	"overlay": rgb(192, 190, 190),
+	"grey": rgb(182, 180, 180)
 );
 
 // ---- Font weights (because white on dark bleeds and looks thicker...)
@@ -66,9 +67,9 @@ $txt: (
 $txt-light: (
 	"base": #0a0a0a,
 	"light": #5a5a64,
-	"hd": #325aa0,
+	"hd": rgb(40, 70, 200),
 	"active": #2346c8,
-	"highlight": #0000ff,
+	"highlight": rgb(40, 70, 250),
 	"invert": #f0f0f0,
 );
 
@@ -92,8 +93,9 @@ $gui-light: (
 // ---- Buttons
 // "Dark" theme interaction is subtle
 $btn: (
-	"base":#1E2E42,
-	"text":#ccc,
+	"base":rgb(34, 42, 50),
+	"base-dark": rgb(24, 32, 40), // see light notes
+	"text":#bbb,
 	"text-selected":#ddd,
 	"blue-hint": #21306b,
 	"blue": #093286,
@@ -104,14 +106,15 @@ $btn: (
 	"red-hint": #721d1d,
 	"red": #8c0909,
 	"red-active": #911,
-	"disabled": hsl(213, 32%, 15%),
+	"disabled": hsl(213, 30%, 22%),
 	"icon-hover-filter": none,
 	"icon-opacity": 0.6,
 );
 
 // "Light" theme interaction is obvious, more contrast
 $btn-light: (
-	"base": #717f8e,
+	"base": rgb(110, 119, 128),
+	"base-dark": rgb(74, 82, 90), // dark version of base (introduced for the Event list)
 	"text":#eee,
 	"text-selected":#fff,
 	"blue-hint": #2b45a4,
@@ -123,7 +126,7 @@ $btn-light: (
 	"red-hint": #830c0c,
 	"red": #a11,
 	"red-active": #c11,
-	"disabled": #cdcdd2,
+	"disabled": hsl(211, 6%, 52%),
 	"icon-hover-filter": invert(100%) grayscale(100%),
 	"icon-opacity": 0.7,
 );
