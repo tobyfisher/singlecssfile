@@ -66,7 +66,6 @@ button,
 		// if in light mode the icon will need inverting
 		filter: var(--btn-icon-hover-filter);
 		pointer-events: none;
-		opacity: var(--btn-icon-opacity);
 	}
 
 	// Pseudo & JS class hooks

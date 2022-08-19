@@ -6,29 +6,38 @@ button,
 	// Header Tab Buttons, make buttons work like tabs
 	// (e.g. Event Header, Theatre Diaries, etc
 	&.header-tab {
-		margin:0; // overrides an cascade issue
-		background: none; // to match the Header background
+		margin:0;
+		color: var(--txt-base);
+		background: none;
+		.oe-i {
+			filter: none;
+		}
+
 		&:hover,
 		&:focus,
 		&:active {
-			color: rgb(255,255,255);
+			color: #fff;
 			background: var(--btn-blue);
+			.oe-i {
+				filter: var(--btn-icon-hover-filter);
+			}
+
 		}
 		&.selected {
 			cursor:default;
 			color:var(--txt-highlight);
-			background-color: pink; 	// match the Event background
+			font-weight: var(--font-bold);
+			// create the tab effect
+			background-color: var(--bg-event);
 		}
 
-		&.disabled,
-		&.inactive {
-			background-color: transparent;
-			border:none !important;
-		}
+		//&.disabled,
+		//&.inactive {
+		//}
 
 		// icon-bg buttons may help with reducing widths by replacing some text
 		// e.g. "Display" or "Go to" replace with an icon background to represent the action
-		// this adds a small up arrow to the corner
+		// this adds a small up arrow to the corner, e.g. for Whiteboard
 		&.icon-bg {
 			background-repeat: no-repeat;
 			&.goto {

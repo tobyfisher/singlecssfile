@@ -1,6 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
 
 .event-header {
 	
@@ -10,8 +11,8 @@
 	.header-icon-btn {
 		height:$oe-event-header-height;
 		width:$oe-event-header-height;
-		background:transparent none center center no-repeat;
-		background-size: 19px; // match large icon size
+		background:center / 19px no-repeat;
+		opacity: $oe-icon-opacity;
 		
 		// make like a button even if it's a <div>
 		cursor:pointer;
@@ -21,53 +22,40 @@
 
 		// currently always a button
 		&.trash {
-			background-image: url(svg-themed( 'ui/tab-trash' ));
+			background-image: var(--i-trash);
 			&:hover,
 			&:focus,
 			&:active {
-				background-image: url(svg-dark-fixed('i/trash'));
-				background-color: $oe-btn-red;
+				opacity: 1;
+				background-image: url(svg-white-icon("i/trash"));
+				background-color: var(--btn-red);
 			}
 		}
 	
 		&.print {
-			background-image: url(svg-themed( 'ui/tab-print' )); 	// default state is themed icon
+			background-image: var(--i-print);
 			&.active,
 			&:hover, 
 			&:focus, 
 			&:active {
-				background-image: url(svg-dark-fixed('i/print'));		// always use the PRO icon (white)
-				background-color: $oe-btn-blue;
+				opacity: 1;
+				background-image: url(svg-white-icon("i/print"));
+				background-color: var(--btn-blue-hint);
 			}
 		}
 		
-		&.whiteboard {
-			background-size: 17px; // match large icon size
-			background-image: url(svg-themed( 'ui/tab-whiteboard' )); 	// default state is themed icon
-			&.active,
-			&:hover, 
-			&:focus, 
-			&:active {
-				background-image: url(svg-dark-fixed('i/whiteboard'));		// always use the PRO icon (white)
-				background-color: $oe-btn-blue;
-			}
-		}
-		
-		// overflow for "more" buttons
+		// overflow for "more" buttons, not currently used
 		&.more {
-			background-image: url(svg-themed( 'ui/tab-more-h' )); 	// default state is themed icon
+			background-image: var(--i-more-h);
 			&.active,
 			&:hover, 
 			&:focus, 
 			&:active {
-				background-image: url(svg-dark-fixed('i/more-h'));		// always use the PRO icon (white)
-				background-color: $oe-btn-blue;
+				opacity: 1;
+				background-image: url(svg-white-icon("i/more-h"));
+				background-color: var(--btn-blue-hint);
 			}
 		}
-
-
-
 	}
-	
 }
 

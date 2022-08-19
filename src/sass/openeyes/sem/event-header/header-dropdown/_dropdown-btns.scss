@@ -1,6 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
 
 .event-header {
 	
@@ -13,8 +14,8 @@
 			top:$oe-event-header-height; 
 			right:0;
 			z-index:$oe-z-shortcuts;
-			background:$oe-btn-blue; 
-			border-top:2px solid $oe-btn-blue;
+			background:var(--btn-blue-hint);
+			border-top:2px solid var(--btn-blue-hint);
 		
 			// buttons in the dropdown list
 			// use the same DOM as in the header bar
@@ -25,9 +26,11 @@
 				color:#fff;
 				text-align: left;
 				
-				&:hover, &:focus, &:active {
+				&:hover,
+				&:focus,
+				&:active {
 					color:#fff;
-					background-color: $oe-btn-blue-dark;
+					background-color: var(--btn-blue-active);
 				}
 			}
 	

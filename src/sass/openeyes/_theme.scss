@@ -56,9 +56,9 @@ $font-weight-light: (
 
 // ---- Text
 $txt: (
-	"base": #dcdcdc,
+	"base": #ccc,
 	"light": #8c8c8c,
-	"hd": #577896,
+	"hd": rgb(90, 130, 145),
 	"active": #46a0b4,
 	"highlight": #00c8cd,
 	"invert": #0d0d0d
@@ -106,7 +106,7 @@ $btn: (
 	"red-hint": #721d1d,
 	"red": #8c0909,
 	"red-active": #911,
-	"disabled": hsl(213, 30%, 22%),
+	"disabled": hsl(213, 12%, 21%),
 	"icon-hover-filter": none,
 	"icon-opacity": 0.6,
 );

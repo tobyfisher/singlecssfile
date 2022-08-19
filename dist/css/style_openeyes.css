@@ -467,9 +467,9 @@ html.theme-dark {
   --bg-title: rgb(30, 36, 46);
   --bg-overlay: hsl(214deg, 20%, 10%);
   --bg-grey: hsl(212deg, 22%, 25%);
-  --txt-base: #dcdcdc;
+  --txt-base: #ccc;
   --txt-light: #8c8c8c;
-  --txt-hd: #577896;
+  --txt-hd: rgb(90, 130, 145);
   --txt-active: #46a0b4;
   --txt-highlight: #00c8cd;
   --txt-invert: #0d0d0d;
@@ -495,7 +495,7 @@ html.theme-dark {
   --btn-red-hint: #721d1d;
   --btn-red: #8c0909;
   --btn-red-active: #911;
-  --btn-disabled: hsl(213deg, 30%, 22%);
+  --btn-disabled: hsl(213deg, 12%, 21%);
   --btn-icon-hover-filter: none;
   --btn-icon-opacity: 0.6;
   --color-highlighter: #b8ab88;
@@ -3240,7 +3240,6 @@ button .oe-i,
 .button .oe-i {
   filter: var(--btn-icon-hover-filter);
   pointer-events: none;
-  opacity: var(--btn-icon-opacity);
 }
 button:hover, button:focus, button.active, button.selected,
 .button:hover,
@@ -3268,26 +3267,32 @@ button:active,
 button.header-tab,
 .button.header-tab {
   margin: 0;
+  color: var(--txt-base);
   background: none;
+}
+button.header-tab .oe-i,
+.button.header-tab .oe-i {
+  filter: none;
 }
 button.header-tab:hover, button.header-tab:focus, button.header-tab:active,
 .button.header-tab:hover,
 .button.header-tab:focus,
 .button.header-tab:active {
-  color: rgb(255, 255, 255);
+  color: #fff;
   background: var(--btn-blue);
+}
+button.header-tab:hover .oe-i, button.header-tab:focus .oe-i, button.header-tab:active .oe-i,
+.button.header-tab:hover .oe-i,
+.button.header-tab:focus .oe-i,
+.button.header-tab:active .oe-i {
+  filter: var(--btn-icon-hover-filter);
 }
 button.header-tab.selected,
 .button.header-tab.selected {
   cursor: default;
   color: var(--txt-highlight);
-  background-color: pink;
-}
-button.header-tab.disabled, button.header-tab.inactive,
-.button.header-tab.disabled,
-.button.header-tab.inactive {
-  background-color: transparent;
-  border: none !important;
+  font-weight: var(--font-bold);
+  background-color: var(--bg-event);
 }
 button.header-tab.icon-bg,
 .button.header-tab.icon-bg {
@@ -3367,14 +3372,6 @@ button.i-link,
 .button.i-link {
   position: relative;
   padding-right: 25px;
-  color: #fff;
-  background: var(--btn-blue-hint);
-}
-button.i-link:hover, button.i-link:focus, button.i-link:active,
-.button.i-link:hover,
-.button.i-link:focus,
-.button.i-link:active {
-  background: var(--btn-blue);
 }
 button.i-link:after,
 .button.i-link:after {
@@ -3385,7 +3382,8 @@ button.i-link:after,
   right: 0;
   bottom: 0;
   width: 23px;
-  background: center/13px transparent url(svg-white-icon("i/direction-right-circle")) no-repeat;
+  background: center/13px url("../svg/in-css/dark/i/direction-right-circle.svg") no-repeat;
+  opacity: 0.5;
 }
 
 button.has-keyhint {
@@ -6025,6 +6023,64 @@ login.multisite .info {
   padding: 0 20px;
 }
 
+.event-header .header-dropdown {
+  display: inline-block;
+  position: relative;
+}
+
+.event-header .header-icon-btn {
+  height: 38px;
+  width: 38px;
+  background: center/19px no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+  margin: 0;
+}
+.event-header .header-icon-btn.trash {
+  background-image: var(--i-trash);
+}
+.event-header .header-icon-btn.trash:hover, .event-header .header-icon-btn.trash:focus, .event-header .header-icon-btn.trash:active {
+  opacity: 1;
+  background-image: url("../svg/in-css/dark/i/trash.svg");
+  background-color: var(--btn-red);
+}
+.event-header .header-icon-btn.print {
+  background-image: var(--i-print);
+}
+.event-header .header-icon-btn.print.active, .event-header .header-icon-btn.print:hover, .event-header .header-icon-btn.print:focus, .event-header .header-icon-btn.print:active {
+  opacity: 1;
+  background-image: url("../svg/in-css/dark/i/print.svg");
+  background-color: var(--btn-blue-hint);
+}
+.event-header .header-icon-btn.more {
+  background-image: var(--i-more-h);
+}
+.event-header .header-icon-btn.more.active, .event-header .header-icon-btn.more:hover, .event-header .header-icon-btn.more:focus, .event-header .header-icon-btn.more:active {
+  opacity: 1;
+  background-image: url("../svg/in-css/dark/i/more-h.svg");
+  background-color: var(--btn-blue-hint);
+}
+
+.event-header .header-dropdown .dropdown-btns {
+  display: none;
+  position: absolute;
+  top: 38px;
+  right: 0;
+  z-index: 99;
+  background: var(--btn-blue-hint);
+  border-top: 2px solid var(--btn-blue-hint);
+}
+.event-header .header-dropdown .dropdown-btns li > .button {
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+}
+.event-header .header-dropdown .dropdown-btns li > .button:hover, .event-header .header-dropdown .dropdown-btns li > .button:focus, .event-header .header-dropdown .dropdown-btns li > .button:active {
+  color: #fff;
+  background-color: var(--btn-blue-active);
+}
+
 .main-event {
   position: relative;
   padding: 0 0 40px 0;
@@ -6039,6 +6095,17 @@ login.multisite .info {
   .main-event {
     scroll-behavior: auto;
   }
+}
+
+.main-event .patient-overview {
+  flex: 1 1 0;
+  padding: 0 10px;
+}
+.main-event .patient-overview table.standard {
+  margin-top: 10px;
+}
+.main-event .patient-overview table.standard td {
+  font-size: 0.75rem;
 }
 
 .sidebar {
@@ -6132,37 +6199,33 @@ login.multisite .info {
   background: var(--btn-base-dark);
 }
 .sidebar .event a:hover, .sidebar .event a:focus, .sidebar .event a:active {
-  color: #fff;
   background: var(--btn-blue);
 }
-.sidebar .event a:hover .laterality.R, .sidebar .event a:focus .laterality.R, .sidebar .event a:active .laterality.R {
+.sidebar .event a:hover .oe-i.laterality.R, .sidebar .event a:focus .oe-i.laterality.R, .sidebar .event a:active .oe-i.laterality.R {
   background-image: url("../svg/in-css/dark/i/lat-R.svg");
 }
-.sidebar .event a:hover .laterality.L, .sidebar .event a:focus .laterality.L, .sidebar .event a:active .laterality.L {
-  background-image: url("../svg/in-css/dark/i/lat-R.svg");
+.sidebar .event a:hover .oe-i.laterality.L, .sidebar .event a:focus .oe-i.laterality.L, .sidebar .event a:active .oe-i.laterality.L {
+  background-image: url("../svg/in-css/dark/i/lat-L.svg");
 }
 .sidebar .event a:hover .tag, .sidebar .event a:focus .tag, .sidebar .event a:active .tag {
   color: #fff;
   background: transparent;
 }
 .sidebar .event.selected a {
-  color: var(--txt-active);
-  background: var(--btn-active);
+  color: #fff;
+  background: var(--btn-blue-hint);
 }
 .sidebar .event.selected a .event-extra {
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .sidebar .event.selected a .oe-i.laterality.R {
-  background-image: var(--i-lat-R);
+  background-image: url("../svg/in-css/dark/i/lat-R.svg");
 }
 .sidebar .event.selected a .oe-i.laterality.L {
-  background-image: var(--i-lat-L);
+  background-image: url("../svg/in-css/dark/i/lat-L.svg");
 }
 .sidebar .event.selected a .tag {
   background: transparent;
-}
-.sidebar .event.subspecialty a {
-  padding: 0 0 0 4px;
 }
 
 .event-type {

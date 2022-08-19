@@ -5,10 +5,11 @@
 @use "openeyes/mix" as *;
 
 .sidebar {
-	// ul
+
+	// <ul>
 	.events {
 		// this provides the dividing line for the Event list
-		background:var(--btn-base);
+		background: var(--btn-base);
 	}
 
 	// <li> 
@@ -17,7 +18,10 @@
 		display: block;
 		margin: 0 0 1px 0;
 
-		// nav link
+		// Event anchor link
+		// this DOM needs rebuilding so that the <a> is only
+		// wrapping the actual link part, the quicklook should be
+		// should be outside this, currently JS is handling it tho
 		a {
 			position: relative;
 			@include flex(center, flex-start);
@@ -33,16 +37,15 @@
 			&:hover,
 			&:focus,
 			&:active {
-				color: #fff;
 				background: var(--btn-blue);
 
-				.laterality {
+				.oe-i.laterality {
 					&.R {
-						background-image: url( svg-white-icon("i/lat-R"));
+						background-image: url(svg-white-icon("i/lat-R"));
 					}
 
 					&.L {
-						background-image: url( svg-white-icon("i/lat-R"));
+						background-image: url(svg-white-icon("i/lat-L"));
 					}
 				}
 
@@ -53,37 +56,30 @@
 			}
 		}
 
+		// Selected Event (as in, viewing it)
 		&.selected {
 			a {
-				color: var(--txt-active);
-				background: var(--btn-active);
+				color: #fff;
+				background: var(--btn-blue-hint);
 
+				// slightly dull the laterality icons when selected
 				.event-extra {
-					opacity: 0.5;
+					opacity: 0.8;
 				}
 
 				.oe-i.laterality {
 					&.R {
-						background-image: var(--i-lat-R);
+						background-image: url(svg-white-icon("i/lat-R"));
 					}
 
 					&.L {
-						background-image: var(--i-lat-L);
+						background-image: url(svg-white-icon("i/lat-L"));
 					}
 				}
 
 				.tag {
 					background: transparent;
 				}
-			}
-		}
-
-
-		// v2 subspecialty list.
-		// in v3 this has been replaced with the Icon Grid.
-		&.subspecialty {
-			a {
-				padding: 0 0 0 4px;
 			}
 		}
 	}
