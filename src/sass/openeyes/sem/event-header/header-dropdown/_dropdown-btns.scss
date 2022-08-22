@@ -3,42 +3,33 @@
 
 @use "openeyes/var" as *;
 
-.event-header {
-	
-	.header-dropdown {
-		
-		.dropdown-btns {
-		
-			display:none; // js controlled.
-			position:absolute;
-			top:$oe-event-header-height; 
-			right:0;
-			z-index:$oe-z-shortcuts;
-			background:var(--btn-blue-hint);
-			border-top:2px solid var(--btn-blue-hint);
-		
-			// buttons in the dropdown list
-			// use the same DOM as in the header bar
-			// but we need to stretch them out to fill container
-			li > .button { 
-				display: inline-block;
-				width: 100%;
-				color:#fff;
-				text-align: left;
-				
-				&:hover,
-				&:focus,
-				&:active {
-					color:#fff;
-					background-color: var(--btn-blue-active);
-				}
-			}
-	
-		}
-	
-	}
+.dropdown-btns {
+	display: none; // js controlled.
+	position: absolute;
+	top: $oe-event-header-height;
+	right: 0;
+	z-index: $oe-z-shortcuts;
+	background: var(--btn-blue-hint);
+	border-top: 2px solid var(--btn-blue-hint);
 
+	// buttons in the dropdown list
+	// use the same DOM as in the header bar
+	// but we need to stretch them out to fill container
+	li > .button {
+		display: inline-block;
+		width: 100%;
+		color: #fff;
+		text-align: left;
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: #fff;
+			background-color: var(--btn-blue-active);
+		}
+	}
 }
+	
 
 
 

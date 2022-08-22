@@ -17,12 +17,12 @@
 // note the variation in order
 $bg: (
 	"max": #000,
-	"hover-row": rgb(19, 27, 35),
-	"data": rgb(22, 26, 32), //21	28	34
-	"event": rgb(14, 16, 22),
 	"popup":rgb(13, 22, 30),
-	"html": rgb(26, 30, 38),
-	"title": rgb(30, 36, 46),
+	"hover-row": rgb(19, 27, 35),
+	"event": rgb(20, 22, 28),
+	"data": rgb(28, 34, 40), //21	28	34
+	"html": rgb(24, 30, 36),
+	"title": rgb(30, 36, 42),
 	"overlay": hsl(214, 20%, 10%),
 	"grey": hsl(212, 22%, 25%)
 );
@@ -93,7 +93,7 @@ $gui-light: (
 // ---- Buttons
 // "Dark" theme interaction is subtle
 $btn: (
-	"base":rgb(34, 42, 50),
+	"base":rgb(32, 42, 54),
 	"base-dark": rgb(24, 32, 40), // see light notes
 	"text":#bbb,
 	"text-selected":#ddd,
@@ -157,7 +157,7 @@ $color-light: (
 $input: (
 	"scheme": "dark",
 	"focus-outline": #096c9a,
-	"base": #212e40,
+	"base": #243347,
 	"hint": #1a2432,
 	"text": #fff,
 	"placeholder": #787878,

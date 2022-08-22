@@ -8,6 +8,7 @@
       <excludeFolder url="file://$MODULE_DIR$/dist" />
       <excludeFolder url="file://$MODULE_DIR$/favicon_package_OE" />
       <excludeFolder url="file://$MODULE_DIR$/node_scripts" />
+      <excludeFolder url="file://$MODULE_DIR$/src/sass/vX" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

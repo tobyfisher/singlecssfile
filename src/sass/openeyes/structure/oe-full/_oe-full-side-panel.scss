@@ -45,7 +45,7 @@
 	// 'filter-list' is the latest one
 	ul {
 		&:not(.oe-multi-select),
-		&:not(.filter-list) {
+		&:not(.filter-list){
 			margin: 10px 0;
 
 			li {

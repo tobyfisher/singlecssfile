@@ -26,13 +26,13 @@
 @use "openeyes/core/print-block-browser";
 @use "openeyes/core/minimum-width-warning";
 
-// heyframe animations
+// keyframe animations
 @use "openeyes/keyframes";
 
 // Iconography
 @use "openeyes/ui/iconography";
 
-// general UI
+// General UI (maintain order)
 @use "openeyes/ui/typography";
 @use "openeyes/ui/flex";
 @use "openeyes/ui/inputs";
@@ -52,28 +52,24 @@
 @use "openeyes/ui/oe-percentage";
 @use "openeyes/ui/training-mode";
 
-// modules
+// modules (A-Z)
+@use "openeyes/modules/admin";
 @use "openeyes/modules/brand";
-@use "openeyes/modules/header";
-@use "openeyes/modules/login";
-@use "openeyes/modules/error-message";
-@use "openeyes/modules/hotlist";
-@use "openeyes/modules/home";
-@use "openeyes/modules/search-patient";
-@use "openeyes/modules/patient";
-@use "openeyes/modules/fast-date-range";
-@use "openeyes/modules/oescape";
 @use "openeyes/modules/clinic";
-
-
+@use "openeyes/modules/error-message";
+@use "openeyes/modules/fast-date-range";
+@use "openeyes/modules/header";
+@use "openeyes/modules/home";
+@use "openeyes/modules/hotlist";
+@use "openeyes/modules/login";
+@use "openeyes/modules/oescape";
+@use "openeyes/modules/patient";
+@use "openeyes/modules/search-patient";
 //@use "openeyes/modules/sync-data";
 
-
-// sem
+// SEM (in it's own little world)
 @use "openeyes/sem";
-
 @use "openeyes/non-standard-layouts";
-
 
 
 // Waiting for this library to be depreciated.
