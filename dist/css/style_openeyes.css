@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Mon Aug 22 2022 17:10:22 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Mon Sep 05 2022 20:21:33 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -509,7 +509,7 @@ html.theme-dark {
   --input-focus-outline: #096c9a;
   --input-base: #243347;
   --input-hint: #1a2432;
-  --input-text: #fff;
+  --input-text: #ccc;
   --input-placeholder: #787878;
 }
 
@@ -708,7 +708,7 @@ html.theme-light {
   --input-focus-outline: #0701e0;
   --input-base: #fff;
   --input-hint: #e9e9e9;
-  --input-text: #000;
+  --input-text: #222;
   --input-placeholder: #b5b5b5;
 }
 
@@ -3444,6 +3444,16 @@ button.add-pathstep:after,
   gap: 4px;
 }
 
+.area-tabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid var(--btn-blue);
+}
+.area-tabs button {
+  flex: 1 1 0;
+}
+
 table {
   width: 100%;
 }
@@ -4697,6 +4707,89 @@ hr.soft {
   width: 200px;
 }
 
+.analytics-v2 .oe-full-main h3 {
+  margin: 0 0 20px 0;
+  font-size: 1.25rem;
+  font-weight: var(--font-light);
+  color: var(--txt-light);
+}
+.analytics-v2 .oe-full-main h3.subheader {
+  margin: 15px 0 8px 0;
+  font-size: 1.125rem;
+}
+
+.analytics-options-v2 .specialty {
+  font-size: 1.25rem;
+  font-weight: var(--font-light);
+  margin: 10px 0 10px 0;
+}
+.analytics-options-v2 .top-filter {
+  position: relative;
+  margin: 10px 0 20px 0;
+}
+.analytics-options-v2 .charts {
+  margin: 15px 0 0 0;
+}
+.analytics-options-v2 .charts li {
+  font-size: 0.8125rem;
+  color: var(--txt-light);
+  padding: 0 0 8px 0;
+}
+.analytics-options-v2 .charts li:last-child {
+  padding-bottom: 0;
+}
+.analytics-options-v2 .charts li ul {
+  margin: 8px 0 0 4px;
+}
+.analytics-options-v2 table.custom-filters {
+  width: 100%;
+  margin: 10px 0;
+}
+.analytics-options-v2 table.custom-filters tbody tr {
+  border-bottom: 1px solid var(--gui-line);
+}
+.analytics-options-v2 table.custom-filters tbody tr td {
+  padding: 5px 0;
+  font-weight: var(--font-medium);
+}
+.analytics-options-v2 table.custom-filters tbody tr td:first-child {
+  font-size: 0.6875rem;
+  color: var(--txt-light);
+  padding-right: 15px;
+}
+.analytics-options-v2 table.custom-filters tbody tr td:last-child {
+  text-align: right;
+  padding-left: 10px;
+}
+
+.analytics-v2 .analytics-plot-extra {
+  padding: 0 20px;
+  font-size: 0.75rem;
+}
+.analytics-v2 .analytics-plot-extra h3 {
+  margin: 0 0 20px 0;
+  font-size: 1rem;
+  font-weight: var(--font-light);
+}
+
+div.plotly-notifier {
+  border: none;
+  background: var(--bg-popup);
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+}
+div.plotly-notifier .notifier-note {
+  border: none;
+  background: var(--bg-popup);
+  padding: 10px;
+}
+div.plotly-notifier .notifier-note p {
+  font-weight: var(--font-medium);
+  font-size: 0.75rem;
+}
+div.plotly-notifier .notifier-note button {
+  display: none;
+}
+
 .openeyes-brand {
   z-index: 100;
   position: fixed;
@@ -5878,6 +5971,40 @@ login.multisite .info {
 .oe-login.timeout .login h1,
 .oe-login.timeout .login .info {
   text-align: center;
+}
+
+.oeplot.with-toolbar {
+  margin: 0 0 38px 0;
+}
+.oeplot .oeplot-toolbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 38px;
+  z-index: 1;
+  background: var(--bg-title);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6875rem;
+  gap: 30px;
+}
+.oeplot .oeplot-toolbar .plot-tool {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.oeplot .oeplot-toolbar .plot-tool label {
+  color: var(--txt-light);
+}
+
+.oeplot-full {
+  height: calc(100vh - 138px);
+  margin: 10px 0;
+}
+.oeplot-full.has-title {
+  height: calc(100vh - 178px);
 }
 
 .oescape-icon-btns {

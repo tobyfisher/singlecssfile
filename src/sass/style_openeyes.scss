@@ -54,6 +54,7 @@
 
 // modules (A-Z)
 @use "openeyes/modules/admin";
+@use "openeyes/modules/analytics";
 @use "openeyes/modules/brand";
 @use "openeyes/modules/clinic";
 @use "openeyes/modules/error-message";
@@ -62,6 +63,7 @@
 @use "openeyes/modules/home";
 @use "openeyes/modules/hotlist";
 @use "openeyes/modules/login";
+@use "openeyes/modules/oeplot";
 @use "openeyes/modules/oescape";
 @use "openeyes/modules/patient";
 @use "openeyes/modules/search-patient";
