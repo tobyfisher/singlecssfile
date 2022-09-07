@@ -1,0 +1,72 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+
+.clinic-filters {
+	// buttons in the filters than open popups
+	button {
+		@include font-size(13);
+		font-weight: $oe-font-medium;
+		background-color: $oe-btn-default;
+		color:$oe-text-light;
+		
+		&:hover,
+		&:focus {
+			background-color: $oe-btn-blue;
+			color: #fff;
+		}
+		
+		&.table-sort {
+			position: relative;
+			padding-left:28px; // 16px default allow for the icon
+			
+			&:after {
+				content:'';
+				position: absolute;
+				top:12px;
+				left:8px; 
+				height:13px;
+				width:13px;
+				background: url( svg-themed('i/downup')) center center no-repeat;
+				background-size: contain;
+				opacity:0.4;
+			}
+			
+			&:hover,
+			&:focus {
+				&:after {
+					background-image: url( svg-dark-fixed('i/downup'));
+					opacity:1;
+				}
+			}
+		}
+		
+		&.info-help-overlay {
+			position: relative;
+			margin: 0 0 0 18px;
+			background:none;
+			
+			&:after {
+				content:'';
+				position: absolute;
+				top:0;
+				left:0; 
+				right:0;
+				bottom:0;
+				background: url( svg-themed('i/info')) center center no-repeat;
+				background-size: 13px;
+				opacity:0.4;
+			}
+			
+			&:hover,
+			&:focus {
+				&:after {
+					opacity:0.8;
+				}
+			}
+			
+		}
+		
+	}
+
+}

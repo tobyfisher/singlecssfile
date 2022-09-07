@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Mon Sep 05 2022 20:21:33 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Wed Sep 07 2022 20:43:54 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -869,6 +869,60 @@ body.open-eyes {
 }
 .oe-full-header button.icon .oe-i, .oe-full-header .button.icon .oe-i {
   padding: 0 20px;
+}
+
+.sync-data {
+  position: relative;
+}
+.sync-data .sync-btn {
+  height: 38px;
+  background-color: var(--btn-blue-hint);
+  margin: 0 10px 0 0;
+  padding: 0 8px 0 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+.sync-data .sync-btn * {
+  pointer-events: none;
+}
+.sync-data .sync-btn::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  width: 21px;
+  height: 21px;
+  background: center/21px url("../svg/in-css/dark/i/sync.svg") no-repeat;
+  opacity: 0.2;
+}
+.sync-data .sync-btn.on::before {
+  animation: spinner 20s linear infinite;
+  opacity: 0.6;
+}
+.sync-data .sync-options {
+  display: none;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  z-index: 99;
+  background: var(--btn-blue-hint);
+  border-top: 2px solid var(--btn-blue-hint);
+}
+.sync-data .sync-options li > button {
+  display: inline-block;
+  width: 100%;
+  color: #fff;
+  text-align: left;
+}
+.sync-data .sync-options li > button:hover, .sync-data .sync-options li > button:focus, .sync-data .sync-options li > button:active {
+  color: #fff;
+  background-color: var(--btn-blue);
 }
 
 .oe-full-content {
@@ -4972,6 +5026,316 @@ svg.oe-openeyes {
 .wait-duration .units small,
 .wait-duration .mins small {
   color: var(--txt-light);
+}
+
+.oec-adder {
+  position: fixed;
+  top: 98px;
+  bottom: 0;
+  z-index: 79;
+  background: var(--bg-popup);
+  border-left: 1px solid var(--btn-blue);
+  display: none;
+  right: -10px;
+}
+.oec-adder.fadein {
+  display: block;
+  animation: 0.2s ease-out forwards fadein;
+  right: 0;
+}
+@media only screen and (min-width: 1890px) {
+  .oec-adder.fadein {
+    right: calc( 100vw - 1440px);
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .oec-adder.fadein {
+    right: 31vw;
+  }
+}
+
+.oec-adder .close-btn {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -30px;
+  width: 30px;
+  background: center/13px url(svg-white-icon("i/remove-circle")) var(--btn-blue-hint) no-repeat;
+  cursor: pointer;
+}
+
+.oec-adder .insert-steps {
+  width: 240px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0 10px;
+  padding: 30px 0 40px 0;
+}
+.oec-adder .insert-steps input.assign-to {
+  width: 90%;
+  margin: 0 0 3px 0;
+}
+
+.oec-adder {
+  font-size: 0.75rem;
+}
+.oec-adder h4 {
+  font-size: 0.6875rem;
+  color: var(--txt-light);
+  font-weight: var(--font-medium);
+  margin: 0 0 4px 0;
+}
+
+.oec-adder .btn-list li {
+  background: var(--input-hint);
+  padding: 0 2px;
+  height: 23px;
+}
+.oec-adder .btn-list li:hover, .oec-adder .btn-list li:focus {
+  background: var(--btn-blue);
+  color: #fff;
+}
+.oec-adder .btn-list li.red {
+  color: #fff;
+  background: var(--btn-red);
+}
+.oec-adder .btn-list li * {
+  pointer-events: none;
+}
+
+.oec-adder .add-to {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 17px;
+  height: 26px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-popup);
+  font-size: 0.6875rem;
+  color: var(--txt-light);
+  font-weight: var(--font-bold);
+}
+.oec-adder .add-to span.num {
+  padding: 0 4px 0 0;
+  color: var(--txt-highlight);
+}
+@keyframes flickGreen {
+  from {
+    background-color: var(--btn-green);
+  }
+  to {
+    background-color: var(--bg-popup);
+  }
+}
+.oec-adder .add-to.success {
+  animation: 1s ease-out forwards flickGreen;
+}
+
+.oe-worklists-panel {
+  display: none;
+  z-index: 96;
+  position: fixed;
+  top: 60px;
+  right: 0;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  font-size: 0.6875rem;
+  width: 450px;
+  background: grey;
+  padding: 0 0 20px 0;
+  border-left: 2px solid var(--gui-line);
+}
+@media only screen and (min-width: 1890px) {
+  .oe-worklists-panel {
+    width: calc(100vw - 1440px);
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .oe-worklists-panel {
+    width: 31vw;
+  }
+}
+
+.oe-worklists-panel .site-context {
+  width: 100%;
+  margin: 10px 0;
+  font-size: 0.75rem;
+}
+.oe-worklists-panel .site-context tbody tr td {
+  padding: 5px 10px;
+}
+.oe-worklists-panel .site-context tbody tr td:first-child {
+  font-size: 0.6875rem;
+  color: var(--txt-light);
+  font-weight: var(--font-medium);
+}
+
+.oe-worklists-panel .worklist-mode {
+  border-bottom: 2px solid var(--btn-blue);
+}
+
+.oe-worklists-panel .context-lists h3 {
+  font-size: 0.6875rem;
+  color: var(--txt-light);
+  font-weight: var(--font-medium);
+  padding: 5px 10px;
+}
+.oe-worklists-panel .context-lists .combine-lists {
+  padding: 5px 10px;
+}
+.oe-worklists-panel .context-lists .list-mode {
+  border-bottom: 2px solid var(--btn-blue);
+}
+
+.oe-worklists-panel .list-view button {
+  justify-content: flex-start;
+  padding: 5px 10px;
+}
+.oe-worklists-panel .list-view .worklists fieldset {
+  background: var(--btn-base);
+}
+.oe-worklists-panel .list-view .worklists fieldset label {
+  display: block;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--txt-light);
+}
+.oe-worklists-panel .list-view .worklists fieldset label .btn {
+  display: block;
+  width: 100%;
+  font-size: 0.75rem;
+  font-weight: 400;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.oe-worklists-panel .list-view .worklists fieldset label > input[type=checkbox] {
+  display: none;
+}
+.oe-worklists-panel .list-view .worklists fieldset label > input[type=checkbox] + .btn:hover, .oe-worklists-panel .list-view .worklists fieldset label > input[type=checkbox] + .btn:focus {
+  color: #fff;
+  background: var(--btn-blue);
+}
+.oe-worklists-panel .list-view .worklists fieldset label > input[type=checkbox]:checked + .btn {
+  color: #fff;
+  background: var(--btn-blue);
+}
+
+.oe-worklists-panel .search-filters {
+  margin: 10px;
+}
+.oe-worklists-panel .search-filters table.filters {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+.oe-worklists-panel .search-filters table.filters tbody tr {
+  border-top: 1px solid var(--gui-line);
+}
+.oe-worklists-panel .search-filters table.filters tbody tr:first-child {
+  border-top: none;
+}
+.oe-worklists-panel .search-filters table.filters tbody td {
+  padding: 5px;
+  font-size: 0.8125rem;
+}
+.oe-worklists-panel .search-filters table.filters tbody td:last-child {
+  text-align: right;
+}
+.oe-worklists-panel .search-filters table.filters tbody th {
+  font-size: 0.6875rem;
+  font-weight: var(--font-medium);
+  color: var(--txt-light);
+}
+
+.favourites h3 {
+  font-size: 0.6875rem;
+  color: var(--txt-light);
+  font-weight: var(--font-medium);
+  padding: 10px;
+}
+.favourites .fav {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 2px 0;
+}
+.favourites .fav .details {
+  flex: 1;
+  background: var(--btn-base);
+  padding: 5px 10px 10px 30px;
+  font-size: 0.6875rem;
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+.favourites .fav .details:hover, .favourites .fav .details:focus {
+  color: #fff;
+  background: var(--btn-blue) url(svg-all("ui/shortcut-arrow")) bottom 10px left 8px no-repeat;
+  background-size: 15px;
+}
+.favourites .fav .details .name {
+  padding: 5px 0 0 0;
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+}
+.favourites .fav .details .site {
+  padding: 8px 0 0 0;
+  opacity: 0.5;
+}
+.favourites .fav .details .context {
+  padding: 3px 0;
+  font-weight: var(--font-light);
+}
+.favourites .fav .details ul.lists {
+  padding: 5px 0;
+}
+.favourites .fav .details ul.lists li {
+  padding: 3px 0;
+  font-size: 0.8125rem;
+  border-top: 1px dotted pink;
+}
+.favourites .fav .details ul.lists li:last-child {
+  border-bottom: 1px dotted pink;
+}
+.favourites .fav .details .date-range {
+  padding: 2px 0 0 0;
+}
+.favourites .fav .expand-fav,
+.favourites .fav .remove-fav {
+  width: 30px;
+  background: var(--btn-base);
+  margin: 0 0 0 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.favourites .fav .expand-fav .oe-i,
+.favourites .fav .remove-fav .oe-i {
+  height: 100%;
+}
+
+.oe-worklists .worklist-group {
+  padding: 0 20px 0 0;
+}
+.oe-worklists .worklist-summary {
+  padding: 20px 20px 0 0;
+}
+.oe-worklists .worklist-summary h2 {
+  font-size: 1.1875rem;
+  font-weight: var(--font-light);
+  color: var(--txt-highlight);
+}
+.oe-worklists .worklist-summary .summary {
+  font-size: 0.875rem;
+  font-weight: var(--font-medium);
+  color: var(--txt-light);
+}
+.oe-worklists table.standard {
+  margin: 10px 0 40px 0;
 }
 
 .oe-error-message {
