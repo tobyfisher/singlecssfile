@@ -19,7 +19,7 @@
 	// IDG change is to shift <h2> into the "event-details" wrapper below
 	.event-title {
 		@include font-size(15);
-		font-weight:$oe-font-medium;
+		font-weight:var(--font-medium);
 		color:$oe-text-highlight;
 		padding:8px 0 8px 11px;
 	}
@@ -52,7 +52,7 @@
 		
 		.extra-info {
 			@include font-size(15);
-			font-weight:$oe-font-light;
+			font-weight:var(--font-light);
 			color:$oe-text;
 			margin:0 0 0 20px;
 			

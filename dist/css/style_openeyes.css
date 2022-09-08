@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Wed Sep 07 2022 20:43:54 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Thu Sep 08 2022 16:10:25 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -709,7 +709,7 @@ html.theme-light {
   --input-base: #fff;
   --input-hint: #e9e9e9;
   --input-text: #222;
-  --input-placeholder: #b5b5b5;
+  --input-placeholder: #959595;
 }
 
 ::-webkit-scrollbar {
@@ -876,7 +876,7 @@ body.open-eyes {
 }
 .sync-data .sync-btn {
   height: 38px;
-  background-color: var(--btn-blue-hint);
+  background-color: var(--btn-base);
   margin: 0 10px 0 0;
   padding: 0 8px 0 32px;
   display: flex;
@@ -890,6 +890,9 @@ body.open-eyes {
 }
 .sync-data .sync-btn * {
   pointer-events: none;
+}
+.sync-data .sync-btn.active {
+  background: var(--btn-blue-hint);
 }
 .sync-data .sync-btn::before {
   content: "";
@@ -4964,6 +4967,243 @@ svg.oe-openeyes {
   display: none;
 }
 
+.oe-clinic {
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.oe-clinic .oec-help {
+  width: 450px;
+  margin: 60px 20px;
+  font-size: 0.9375rem;
+  font-weight: var(--font-light);
+  color: var(--txt-light);
+}
+.oe-clinic .oec-help .help-note {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+}
+
+.oe-clinic .oec-group {
+  margin: 0 0 20px 0;
+}
+.oe-clinic .oec-group header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  height: 38px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 20px;
+  background: var(--bg-html);
+  box-shadow: 0 6px 12px 0 var(--bg-html);
+}
+.oe-clinic .oec-group header .favourite {
+  padding: 0 8px 4px 0;
+}
+.oe-clinic .oec-group header h3 {
+  font-size: 1.0625rem;
+  font-weight: var(--font-light);
+  color: var(--txt-highlight);
+  transform: translateY(-2px);
+}
+.oe-clinic .oec-group.no-patients header {
+  height: 24px;
+  box-shadow: none;
+}
+.oe-clinic .oec-group.no-patients header h3 {
+  font-size: 0.9375rem;
+}
+.oe-clinic .oec-group.no-patients .result-msg {
+  font-size: 0.75rem;
+  font-weight: var(--font-light);
+  padding: 0 20px;
+  color: var(--txt-light);
+}
+
+.oec-clock {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  font-size: 0.625rem;
+  font-weight: var(--font-bold);
+  color: var(--txt-active);
+  transition: top 0.2s ease-out;
+  padding: 0 0 0 21px;
+  transform: translateY(-12px);
+}
+.oec-clock::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  width: 48px;
+  height: 1px;
+  border-top: 1px solid var(--txt-active);
+  opacity: 0.5;
+}
+
+table.oec-patients {
+  width: 100%;
+  margin: 1px 0 0 0;
+}
+table.oec-patients.in-event td:nth-child(3) {
+  width: 650px;
+}
+table.oec-patients.in-event td:nth-child(4), table.oec-patients.in-event td:nth-child(5), table.oec-patients.in-event td:nth-child(6) {
+  text-align: right;
+  width: 50px;
+}
+table.oec-patients.in-event td:nth-child(7) {
+  width: 115px;
+  padding-left: 20px;
+}
+table.oec-patients.in-event td:nth-child(8) {
+  text-align: right;
+  padding-right: 50px;
+  padding-left: 10px;
+}
+table.oec-patients.in-element tbody td:first-child {
+  width: 650px;
+}
+table.oec-patients.in-element tbody td:nth-child(2), table.oec-patients.in-element tbody td:nth-child(2), table.oec-patients.in-element tbody td:nth-child(3) {
+  vertical-align: middle;
+  text-align: right;
+  width: 50px;
+}
+table.oec-patients tbody tr {
+  border-bottom: 1px solid rgba(100, 100, 100, 0.3);
+}
+table.oec-patients tbody tr:last-child {
+  border-bottom: none;
+}
+table.oec-patients tbody tr:hover {
+  background-color: var(--bg-hover-row);
+}
+table.oec-patients tbody tr.done td {
+  font-size: 0.75rem;
+  color: var(--txt-light);
+}
+table.oec-patients tbody tr.done td:first-child {
+  font-weight: var(--font-light);
+}
+table.oec-patients th:first-child, table.oec-patients td:first-child {
+  padding-left: 20px;
+}
+table.oec-patients th {
+  height: 30px;
+  font-size: 0.75rem;
+  text-align: left;
+  font-weight: var(--font-light);
+  color: var(--txt-light);
+}
+table.oec-patients th:nth-child(8) {
+  padding-left: 9px;
+}
+table.oec-patients th:nth-child(9) {
+  padding-left: 22px;
+}
+table.oec-patients td {
+  font-size: 0.875rem;
+  vertical-align: middle;
+  padding: 5px 0;
+}
+table.oec-patients td:first-child {
+  font-size: 0.75rem;
+  font-weight: var(--font-bold);
+  width: 70px;
+}
+table.oec-patients td:nth-child(2) {
+  width: 120px;
+  padding-right: 5px;
+  color: var(--txt-light);
+}
+table.oec-patients td:nth-child(2) .list-name {
+  font-weight: var(--font-medium);
+  line-height: 1;
+  font-size: 0.5625rem;
+}
+table.oec-patients td:nth-child(2) .code {
+  margin: 2px 0 0 0;
+  font-size: 0.625rem;
+  font-weight: var(--font-medium);
+}
+table.oec-patients td:nth-child(3) {
+  width: 290px;
+}
+table.oec-patients td:nth-child(4) {
+  width: 50px;
+}
+table.oec-patients td:nth-child(4) .oe-i {
+  width: 40px;
+  height: 40px;
+}
+table.oec-patients td:nth-child(6) {
+  width: 45px;
+}
+table.oec-patients td:nth-child(6) .oe-i {
+  width: 40px;
+  height: 40px;
+}
+table.oec-patients td:nth-child(7) {
+  width: 45px;
+}
+table.oec-patients td:nth-child(8) {
+  width: 40px;
+}
+table.oec-patients td:nth-child(8) .oe-i {
+  width: 30px;
+  height: 27px;
+}
+table.oec-patients td:nth-child(9) {
+  width: 80px;
+}
+table.oec-patients td:nth-child(10) {
+  width: 100px;
+}
+table.oec-patients td:nth-child(11) {
+  text-align: center;
+  width: 60px;
+}
+
+.oec-patients label.patient-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background: rgba(0, 0, 0, 0);
+}
+.oec-patients label.patient-checkbox > input[type=checkbox] {
+  display: none;
+}
+.oec-patients label.patient-checkbox > input[type=checkbox]:checked + .checkbox-btn {
+  background-color: var(--btn-blue);
+  opacity: 1;
+}
+.oec-patients label.patient-checkbox .checkbox-btn {
+  height: 22px;
+  width: 22px;
+  cursor: pointer;
+  background: center/16px url("../svg/in-css/dark/i/plus-bold.svg") var(--gui-line) no-repeat;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+.oec-patients label.patient-checkbox.in-element {
+  height: 24px;
+  width: 30px;
+}
+.oec-patients label.patient-checkbox.in-element .checkbox-btn {
+  background-color: var(--btn-blue);
+  opacity: 1;
+}
+
 .wait-duration {
   position: relative;
   display: flex;
@@ -5026,6 +5266,141 @@ svg.oe-openeyes {
 .wait-duration .units small,
 .wait-duration .mins small {
   color: var(--txt-light);
+}
+
+table.oec-patients .pathway {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0 10px 0 0;
+  min-height: 38px;
+}
+
+.clinic-filters {
+  position: absolute;
+  top: 0;
+  left: 145px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.clinic-filters .search {
+  width: 140px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  border-radius: 0;
+  background-color: var(--bg-title);
+}
+.clinic-filters .search:hover, .clinic-filters .search:focus {
+  background-color: var(--input-base);
+}
+
+.clinic-filters .filter-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 38px;
+  min-width: 45px;
+  background: var(--bg-title);
+  cursor: pointer;
+  color: var(--txt-light);
+  padding: 0 10px 0 15px;
+}
+.clinic-filters .filter-btn .name {
+  font-size: 0.8125rem;
+}
+.clinic-filters .filter-btn .count {
+  padding: 0 0 0 5px;
+  font-size: 0.6875rem;
+  font-weight: var(--font-bold);
+  color: var(--txt-highlight);
+  transform: translateY(-6px);
+}
+.clinic-filters .filter-btn:hover, .clinic-filters .filter-btn:focus, .clinic-filters .filter-btn.selected {
+  background: var(--btn-blue);
+  color: #fff;
+}
+.clinic-filters .filter-btn:hover .oe-i, .clinic-filters .filter-btn:focus .oe-i, .clinic-filters .filter-btn.selected .oe-i {
+  opacity: 1;
+}
+.clinic-filters .filter-btn:hover .count, .clinic-filters .filter-btn:focus .count, .clinic-filters .filter-btn.selected .count {
+  color: #fff;
+}
+.clinic-filters .filter-btn * {
+  pointer-events: none;
+}
+
+ul.quick-filters {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.clinic-filters button {
+  font-size: 0.8125rem;
+  font-weight: var(--font-medium);
+  background-color: var(--bg-title);
+  color: var(--txt-light);
+}
+.clinic-filters button:hover, .clinic-filters button:focus {
+  background-color: var(--btn-blue);
+  color: #fff;
+}
+.clinic-filters button.table-sort {
+  position: relative;
+  padding-left: 28px;
+}
+.clinic-filters button.table-sort:after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 8px;
+  height: 13px;
+  width: 13px;
+  background: center/contain var(--i-downup) no-repeat;
+  opacity: 0.4;
+}
+.clinic-filters button.table-sort:hover:after, .clinic-filters button.table-sort:focus:after {
+  background-image: url("../svg/in-css/dark/i/downup.svg");
+  opacity: 1;
+}
+.clinic-filters button.info-help-overlay {
+  position: relative;
+  margin: 0 0 0 18px;
+  background: none;
+}
+.clinic-filters button.info-help-overlay:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: center/13px var(--i-info) no-repeat;
+  opacity: 0.4;
+}
+.clinic-filters button.info-help-overlay:hover:after, .clinic-filters button.info-help-overlay:focus:after {
+  opacity: 0.8;
+}
+
+.clinic-filters .changeable-filter {
+  position: relative;
+}
+.clinic-filters .changeable-filter nav.options {
+  position: absolute;
+  top: 38px;
+  z-index: 10;
+}
+.clinic-filters .changeable-filter nav.options .filter-btn {
+  width: 160px;
+  justify-content: flex-end;
 }
 
 .oec-adder {
@@ -5880,6 +6255,60 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 }
 .oe-patient .patient-local-edit .icon:hover, .oe-patient .patient-local-edit .icon:focus, .oe-patient .patient-local-edit .icon:active {
   opacity: 1;
+}
+
+.clinic-context {
+  position: absolute;
+  top: 0;
+  left: 178px;
+  height: 60px;
+  width: 545px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: var(--txt-light);
+  font-weight: var(--font-medium);
+}
+.clinic-context .favourite-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 30px;
+  padding: 0;
+  margin: 0 10px 0 0;
+  border-right: 1px solid var(--gui-line);
+  cursor: pointer;
+}
+.clinic-context .favourite-btn:after {
+  content: "";
+  height: 16px;
+  width: 16px;
+  margin: 0 auto;
+  background: url("../svg/in-css/dark/i/starline.svg") center center no-repeat;
+  background-size: contain;
+  opacity: 0.5;
+}
+.clinic-context .favourite-btn:hover, .clinic-context .favourite-btn:focus {
+  background-color: var(--btn-blue);
+}
+.clinic-context .favourite-btn:hover:after, .clinic-context .favourite-btn:focus:after {
+  opacity: 1;
+}
+.clinic-context .context {
+  font-size: 1rem;
+}
+.clinic-context .context .lists {
+  padding: 0 0 0 5px;
+  font-size: 0.6875rem;
+}
+.clinic-context .context .lists b {
+  color: var(--txt-highlight);
+}
+.clinic-context .date-range {
+  font-size: 0.875rem;
+  margin: 3px 0 0 0;
+  font-weight: var(--font-bold);
 }
 
 .home-messages.subgrid {

@@ -17,7 +17,7 @@
 		
 		@include font-size(10);
 		font-weight:400;
-		color: $oe-text-light;
+		color: var(--txt-light);
 	}
 }
 

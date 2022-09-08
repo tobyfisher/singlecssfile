@@ -1,6 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/mix" as *;
 
 .oec-clock {
 	position: fixed;
@@ -9,8 +10,8 @@
 	top: 0; // JS positions by top
 	
 	@include font-size(10);
-	font-weight:$oe-font-bold;
-	color:$oe-text-active;
+	font-weight:var(--font-bold);
+	color:var(--txt-active);
 	
 	transition:top 0.2s ease-out; 
 	
@@ -28,7 +29,7 @@
 		top: 12px;
 		width: 48px;
 		height:1px;
-		border-top: 1px solid $oe-text-active;
+		border-top: 1px solid var(--txt-active);
 		opacity:0.5;
 	}
 	

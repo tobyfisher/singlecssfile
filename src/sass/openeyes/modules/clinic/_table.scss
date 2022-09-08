@@ -1,6 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/mix" as *;
 
 table.oec-patients {	
 	width:100%;
@@ -58,14 +59,14 @@ table.oec-patients {
 	tbody {
 		// add line to help with reading data
 		tr {
-			background:$oe-blue-dark2;
+			//background:pink;
 			border-bottom:1px solid rgba(100,100,100,0.3);
 			&:last-child { 
 				border-bottom: none;
 			}
 			
 			&:hover {
-				background-color: $oe-tr-highlight;
+				background-color: var(--bg-hover-row);
 			}
 			
 			// patient states are added by JS to the <tr>
@@ -73,9 +74,9 @@ table.oec-patients {
 			&.done {
 				td {
 					@include font-size(12);
-					color: $oe-text-light;
+					color: var(--txt-light);
 					&:first-child {
-						font-weight: $oe-font-light;
+						font-weight: var(--font-light);
 					}
 				}
 			}
@@ -95,8 +96,8 @@ table.oec-patients {
 		height:30px;
 		@include font-size(12);
 		text-align: left;  // overide default 'middle'
-		font-weight: $oe-font-light;
-		color: $oe-text-light;
+		font-weight: var(--font-light);
+		color: var(--txt-light);
 		
 		&:nth-child( 8 ){
 			padding-left:9px;
@@ -111,14 +112,13 @@ table.oec-patients {
 	// <td>
 	td {
 		@include font-size(14);
-		color: $oe-text;
 		vertical-align: middle;	
 		padding: 5px 0;
 		
 		// time
 		&:first-child{
 			@include font-size(12);
-			font-weight: $oe-font-bold;
+			font-weight: var(--font-bold);
 			width: 70px;
 		}
 		
@@ -127,10 +127,10 @@ table.oec-patients {
 			 
 			width:120px;
 			padding-right: 5px;
-			color: $oe-text-light;
+			color: var(--txt-light);
 			
 			.list-name {
-				font-weight: $oe-font-medium;
+				font-weight: var(--font-medium);
 				line-height: 1;
 				@include font-size(9);
 			}
@@ -138,7 +138,7 @@ table.oec-patients {
 			.code {
 				margin:2px 0 0 0;
 				@include font-size(10); 
-				font-weight: $oe-font-medium;
+				font-weight: var(--font-medium);
 			}
 		}
 	

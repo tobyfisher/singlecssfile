@@ -1,18 +1,20 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
 .clinic-filters {
 	// buttons in the filters than open popups
 	button {
 		@include font-size(13);
-		font-weight: $oe-font-medium;
-		background-color: $oe-btn-default;
-		color:$oe-text-light;
+		font-weight: var(--font-medium);
+		background-color: var(--bg-title);
+		color:var(--txt-light);
 		
 		&:hover,
 		&:focus {
-			background-color: $oe-btn-blue;
+			background-color: var(--btn-blue);
 			color: #fff;
 		}
 		
@@ -27,15 +29,14 @@
 				left:8px; 
 				height:13px;
 				width:13px;
-				background: url( svg-themed('i/downup')) center center no-repeat;
-				background-size: contain;
+				background: center / contain var(--i-downup) no-repeat;
 				opacity:0.4;
 			}
 			
 			&:hover,
 			&:focus {
 				&:after {
-					background-image: url( svg-dark-fixed('i/downup'));
+					background-image: url( svg-white-icon('i/downup'));
 					opacity:1;
 				}
 			}
@@ -53,8 +54,7 @@
 				left:0; 
 				right:0;
 				bottom:0;
-				background: url( svg-themed('i/info')) center center no-repeat;
-				background-size: 13px;
+				background: center / 13px var(--i-info) no-repeat;
 				opacity:0.4;
 			}
 			

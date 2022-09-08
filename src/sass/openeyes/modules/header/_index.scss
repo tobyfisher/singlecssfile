@@ -10,11 +10,9 @@
 @use "oe-nav";
 @use "oe-user";
 @use "oe-patient";
-//
 
-//
-//// Worklists v2!
-//@use "clinic-context";
+// clinic (aka worklists)
+@use "clinic-context";
 //
 //// a basic header layout. created for Cataract Audit
 //// but made generic...

@@ -9,7 +9,7 @@
 
 	.sync-btn {
 		height: $oe-event-header-height; // 38px
-		background-color: var(--btn-blue-hint);
+		background-color: var(--btn-base);
 		margin: 0 10px 0 0;
 		padding: 0 8px 0 32px; // allow for icon animation
 
@@ -24,6 +24,11 @@
 
 		* {
 			pointer-events: none;
+		}
+
+		// JS interaction
+		&.active {
+			background: var(--btn-blue-hint);
 		}
 
 		&::before {

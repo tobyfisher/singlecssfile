@@ -1,6 +1,8 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
 .oe-clinic {
 	// Groups
@@ -27,13 +29,13 @@
 			
 			h3 {
 				@include font-size(17);
-				font-weight:$oe-font-light; 
-				color:$oe-text-highlight;
+				font-weight:var(--font-light);
+				color:var(--txt-highlight);
 				transform: translateY(-2px); // visual tweak to vertically center the baseline
 			}
 			
-			background:$oe-blue-dark;
-			box-shadow: 0 6px 12px 0 $oe-blue-dark;
+			background:var(--bg-html);
+			box-shadow: 0 6px 12px 0 var(--bg-html);
 		}
 
 		&.no-patients {
@@ -48,9 +50,9 @@
 
 			.result-msg {
 				@include font-size(12);
-				font-weight:$oe-font-light;
+				font-weight:var(--font-light);
 				padding:0 20px;
-				color:$oe-text-light;
+				color:var(--txt-light);
 			}
 		}
 	}
