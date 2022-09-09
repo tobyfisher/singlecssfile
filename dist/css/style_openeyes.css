@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Thu Sep 08 2022 16:10:25 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Fri Sep 09 2022 09:40:50 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -272,30 +272,6 @@ textarea {
 }
 
 :root {
-  --i-ui-circle-blue: url("../svg/in-css/all/i/circle-blue.svg");
-  --i-ui-circle-green: url("../svg/in-css/all/i/circle-green.svg");
-  --i-ui-circle-yellow: url("../svg/in-css/all/i/circle-yellow.svg");
-  --i-ui-circle-orange: url("../svg/in-css/all/i/circle-orange.svg");
-  --i-ui-circle-red: url("../svg/in-css/all/i/circle-red.svg");
-  --i-ui-circle-grey: url("../svg/in-css/all/i/circle-grey.svg");
-  --i-ui-triangle-blue: url("../svg/in-css/all/i/triangle-blue.svg");
-  --i-ui-triangle-green: url("../svg/in-css/all/i/triangle-green.svg");
-  --i-ui-triangle-orange: url("../svg/in-css/all/i/triangle-orange.svg");
-  --i-ui-triangle-red: url("../svg/in-css/all/i/triangle-red.svg");
-  --i-ui-triangle-grey: url("../svg/in-css/all/i/triangle-grey.svg");
-  --i-ui-exclamation-green: url("../svg/in-css/all/i/exclamation-green.svg");
-  --i-ui-exclamation-orange: url("../svg/in-css/all/i/exclamation-orange.svg");
-  --i-ui-exclamation-red: url("../svg/in-css/all/i/exclamation-red.svg");
-  --i-ui-flag-green: url("../svg/in-css/all/i/flag-green.svg");
-  --i-ui-flag-orange: url("../svg/in-css/all/i/flag-orange.svg");
-  --i-ui-flag-red: url("../svg/in-css/all/i/flag-red.svg");
-  --i-ui-flag-grey: url("../svg/in-css/all/i/flag-grey.svg");
-  --i-ui-mpr-green: url("../svg/in-css/all/i/mpr-green.svg");
-  --i-ui-mpr-orange: url("../svg/in-css/all/i/mpr-orange.svg");
-  --i-ui-mpr-red: url("../svg/in-css/all/i/mpr-red.svg");
-  --i-ui-warning-none: url("../svg/in-css/all/i/warning-none.svg");
-  --i-ui-warning: url("../svg/in-css/all/i/warning.svg");
-  --i-ui-cross-red: url("../svg/in-css/all/i/cross-red.svg");
   --i-ui-asterisk-white: url("../svg/in-css/all/ui/asterisk-white.svg");
   --i-ui-filter: url("../svg/in-css/all/ui/filter.svg");
   --i-ui-list-dot: url("../svg/in-css/all/ui/list-dot.svg");
@@ -447,6 +423,30 @@ html.theme-dark {
   --i-whiteboard: url("../svg/in-css/dark/i/whiteboard.svg");
   --i-zoom-in: url("../svg/in-css/dark/i/zoom-in.svg");
   --i-zoom-out: url("../svg/in-css/dark/i/zoom-out.svg");
+  --i-circle-blue: url("../svg/in-css/dark/i/circle-blue.svg");
+  --i-circle-green: url("../svg/in-css/dark/i/circle-green.svg");
+  --i-circle-yellow: url("../svg/in-css/dark/i/circle-yellow.svg");
+  --i-circle-orange: url("../svg/in-css/dark/i/circle-orange.svg");
+  --i-circle-red: url("../svg/in-css/dark/i/circle-red.svg");
+  --i-circle-grey: url("../svg/in-css/dark/i/circle-grey.svg");
+  --i-triangle-blue: url("../svg/in-css/dark/i/triangle-blue.svg");
+  --i-triangle-green: url("../svg/in-css/dark/i/triangle-green.svg");
+  --i-triangle-orange: url("../svg/in-css/dark/i/triangle-orange.svg");
+  --i-triangle-red: url("../svg/in-css/dark/i/triangle-red.svg");
+  --i-triangle-grey: url("../svg/in-css/dark/i/triangle-grey.svg");
+  --i-exclamation-green: url("../svg/in-css/dark/i/exclamation-green.svg");
+  --i-exclamation-orange: url("../svg/in-css/dark/i/exclamation-orange.svg");
+  --i-exclamation-red: url("../svg/in-css/dark/i/exclamation-red.svg");
+  --i-flag-green: url("../svg/in-css/dark/i/flag-green.svg");
+  --i-flag-orange: url("../svg/in-css/dark/i/flag-orange.svg");
+  --i-flag-red: url("../svg/in-css/dark/i/flag-red.svg");
+  --i-flag-grey: url("../svg/in-css/dark/i/flag-grey.svg");
+  --i-mpr-green: url("../svg/in-css/dark/i/mpr-green.svg");
+  --i-mpr-orange: url("../svg/in-css/dark/i/mpr-orange.svg");
+  --i-mpr-red: url("../svg/in-css/dark/i/mpr-red.svg");
+  --i-warning-none: url("../svg/in-css/dark/i/warning-none.svg");
+  --i-warning: url("../svg/in-css/dark/i/warning.svg");
+  --i-cross-red: url("../svg/in-css/dark/i/cross-red.svg");
   --i-face: url("../svg/in-css/dark/ui/face.svg");
   --i-element-divider: url("../svg/in-css/dark/ui/element-divider.svg");
   --i-btn-goto: url("../svg/in-css/dark/ui/btn-goto.svg");
@@ -646,6 +646,30 @@ html.theme-light {
   --i-whiteboard: url("../svg/in-css/light/i/whiteboard.svg");
   --i-zoom-in: url("../svg/in-css/light/i/zoom-in.svg");
   --i-zoom-out: url("../svg/in-css/light/i/zoom-out.svg");
+  --i-circle-blue: url("../svg/in-css/light/i/circle-blue.svg");
+  --i-circle-green: url("../svg/in-css/light/i/circle-green.svg");
+  --i-circle-yellow: url("../svg/in-css/light/i/circle-yellow.svg");
+  --i-circle-orange: url("../svg/in-css/light/i/circle-orange.svg");
+  --i-circle-red: url("../svg/in-css/light/i/circle-red.svg");
+  --i-circle-grey: url("../svg/in-css/light/i/circle-grey.svg");
+  --i-triangle-blue: url("../svg/in-css/light/i/triangle-blue.svg");
+  --i-triangle-green: url("../svg/in-css/light/i/triangle-green.svg");
+  --i-triangle-orange: url("../svg/in-css/light/i/triangle-orange.svg");
+  --i-triangle-red: url("../svg/in-css/light/i/triangle-red.svg");
+  --i-triangle-grey: url("../svg/in-css/light/i/triangle-grey.svg");
+  --i-exclamation-green: url("../svg/in-css/light/i/exclamation-green.svg");
+  --i-exclamation-orange: url("../svg/in-css/light/i/exclamation-orange.svg");
+  --i-exclamation-red: url("../svg/in-css/light/i/exclamation-red.svg");
+  --i-flag-green: url("../svg/in-css/light/i/flag-green.svg");
+  --i-flag-orange: url("../svg/in-css/light/i/flag-orange.svg");
+  --i-flag-red: url("../svg/in-css/light/i/flag-red.svg");
+  --i-flag-grey: url("../svg/in-css/light/i/flag-grey.svg");
+  --i-mpr-green: url("../svg/in-css/light/i/mpr-green.svg");
+  --i-mpr-orange: url("../svg/in-css/light/i/mpr-orange.svg");
+  --i-mpr-red: url("../svg/in-css/light/i/mpr-red.svg");
+  --i-warning-none: url("../svg/in-css/light/i/warning-none.svg");
+  --i-warning: url("../svg/in-css/light/i/warning.svg");
+  --i-cross-red: url("../svg/in-css/light/i/cross-red.svg");
   --i-face: url("../svg/in-css/light/ui/face.svg");
   --i-element-divider: url("../svg/in-css/light/ui/element-divider.svg");
   --i-btn-goto: url("../svg/in-css/light/ui/btn-goto.svg");
@@ -1617,107 +1641,107 @@ body.open-eyes {
   opacity: 1;
 }
 .oe-i.circle-green {
-  background-image: var(--i-ui-circle-green);
+  background-image: var(--i-circle-green);
   opacity: 1;
 }
 .oe-i.circle-yellow {
-  background-image: var(--i-ui-circle-yellow);
+  background-image: var(--i-circle-yellow);
   opacity: 1;
 }
 .oe-i.circle-amber {
-  background-image: var(--i-ui-circle-orange);
+  background-image: var(--i-circle-orange);
   opacity: 1;
 }
 .oe-i.circle-orange {
-  background-image: var(--i-ui-circle-orange);
+  background-image: var(--i-circle-orange);
   opacity: 1;
 }
 .oe-i.circle-red {
-  background-image: var(--i-ui-circle-red);
+  background-image: var(--i-circle-red);
   opacity: 1;
 }
 .oe-i.circle-grey {
-  background-image: var(--i-ui-circle-grey);
+  background-image: var(--i-circle-grey);
   opacity: 1;
 }
 .oe-i.flag-green {
-  background-image: var(--i-ui-flag-green);
+  background-image: var(--i-flag-green);
   opacity: 1;
 }
 .oe-i.flag-amber {
-  background-image: var(--i-ui-flag-orange);
+  background-image: var(--i-flag-orange);
   opacity: 1;
 }
 .oe-i.flag-orange {
-  background-image: var(--i-ui-flag-orange);
+  background-image: var(--i-flag-orange);
   opacity: 1;
 }
 .oe-i.flag-red {
-  background-image: var(--i-ui-flag-red);
+  background-image: var(--i-flag-red);
   opacity: 1;
 }
 .oe-i.flag-grey {
-  background-image: var(--i-ui-flag-grey);
+  background-image: var(--i-flag-grey);
   opacity: 1;
 }
 .oe-i.triangle-green {
-  background-image: var(--i-ui-triangle-green);
+  background-image: var(--i-triangle-green);
   opacity: 1;
 }
 .oe-i.triangle-amber {
-  background-image: var(--i-ui-triangle-orange);
+  background-image: var(--i-triangle-orange);
   opacity: 1;
 }
 .oe-i.triangle-orange {
-  background-image: var(--i-ui-triangle-orange);
+  background-image: var(--i-triangle-orange);
   opacity: 1;
 }
 .oe-i.triangle-red {
-  background-image: var(--i-ui-triangle-red);
+  background-image: var(--i-triangle-red);
   opacity: 1;
 }
 .oe-i.triangle-grey {
-  background-image: var(--i-ui-triangle-grey);
+  background-image: var(--i-triangle-grey);
   opacity: 1;
 }
 .oe-i.mpr-red {
-  background-image: var(--i-ui-mpr-red);
+  background-image: var(--i-mpr-red);
   opacity: 1;
 }
 .oe-i.mpr-amber {
-  background-image: var(--i-ui-mpr-amber);
+  background-image: var(--i-mpr-amber);
   opacity: 1;
 }
 .oe-i.mpr-green {
-  background-image: var(--i-ui-mpr-green);
+  background-image: var(--i-mpr-green);
   opacity: 1;
 }
 .oe-i.exclamation-green {
-  background-image: var(--i-ui-exclamation-green);
+  background-image: var(--i-exclamation-green);
   opacity: 1;
 }
 .oe-i.exclamation-amber {
-  background-image: var(--i-ui-exclamation-orange);
+  background-image: var(--i-exclamation-orange);
   opacity: 1;
 }
 .oe-i.exclamation-orange {
-  background-image: var(--i-ui-exclamation-orange);
+  background-image: var(--i-exclamation-orange);
   opacity: 1;
 }
 .oe-i.exclamation-red {
-  background-image: var(--i-ui-exclamation-red);
+  background-image: var(--i-exclamation-red);
   opacity: 1;
 }
 .oe-i.warning {
-  background-image: var(--i-ui-warning);
+  background-image: var(--i-warning);
   opacity: 1;
 }
 .oe-i.warning-none {
-  background-image: var(--i-ui-warning-none);
+  background-image: var(--i-warning-none);
   opacity: 1;
 }
 .oe-i.cross-red {
-  background-image: var(--i-ui-cross-red);
+  background-image: var(--i-cross-red);
   opacity: 1;
 }
 

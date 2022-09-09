@@ -280,7 +280,8 @@
 		"tick-green": "tick-green",
 	);
 
-	$universal_icons: (
+	// red orange green icons
+	$ROG_icons: (
 		"circle-green": "circle-green",
 		"circle-yellow": "circle-yellow",
 		"circle-amber": "circle-orange", // amber = orange
@@ -356,7 +357,7 @@
 	// Build icon classes using @mixin oe-i
 	// Map | Icon set to use | sub-directory (optional)
 	@include oe-i($themed_icons, "themed");
-	@include oe-i($universal_icons, "all");
+	@include oe-i($ROG_icons, "themed");
 	//@include oe-i($eyedraw_icons, "all", "eyedraw/");
 
 }

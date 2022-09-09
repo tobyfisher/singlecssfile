@@ -207,10 +207,6 @@ $uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permi
 // CSS custom properties
 :root {
 
-	// currently both groups use "--i-ui-" prefix but this might need changing (ok, for now)
-	@each $icon in $rgbIcons {
-		--i-ui-#{$icon}: url("../svg/in-css/all/i/#{$icon}.svg");
-	}
 	@each $icon in $uiIcons {
 		--i-ui-#{$icon}: url("../svg/in-css/all/ui/#{$icon}.svg");
 	}
@@ -221,6 +217,10 @@ $uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permi
 html.theme-dark {
 
 	@each $icon in $themedIcons {
+		--i-#{$icon}: url("../svg/in-css/dark/i/#{$icon}.svg");
+	}
+
+	@each $icon in $rgbIcons {
 		--i-#{$icon}: url("../svg/in-css/dark/i/#{$icon}.svg");
 	}
 
@@ -243,6 +243,10 @@ html.theme-dark {
 html.theme-light {
 
 	@each $icon in $themedIcons {
+		--i-#{$icon}: url("../svg/in-css/light/i/#{$icon}.svg");
+	}
+
+	@each $icon in $rgbIcons {
 		--i-#{$icon}: url("../svg/in-css/light/i/#{$icon}.svg");
 	}
 
