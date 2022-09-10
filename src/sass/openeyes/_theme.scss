@@ -23,7 +23,6 @@ $bg: (
 	"data": rgb(28, 34, 40), //21	28	34
 	"html": rgb(24, 30, 36),
 	"title": rgb(30, 36, 42),
-	"overlay": hsl(214, 20%, 10%),
 	"grey": hsl(212, 22%, 25%)
 );
 
@@ -32,10 +31,9 @@ $bg-light: (
 	"hover-row": rgb(250, 250, 250),
 	"event": rgb(251, 250, 250),
 	"data": rgb(231, 229, 229),
-	"popup": rgb(242, 240, 240),
+	"popup": rgb(238, 236, 236),
 	"html": rgb(217, 215, 215),
 	"title": rgb(202, 200, 200),
-	"overlay": rgb(192, 190, 190),
 	"grey": rgb(182, 180, 180)
 );
 
@@ -113,20 +111,20 @@ $btn: (
 
 // "Light" theme interaction is obvious, more contrast
 $btn-light: (
-	"base": rgb(110, 119, 128),
-	"base-dark": rgb(74, 82, 90), // dark version of base (introduced for the Event list)
-	"text":#eee,
+	"base": hsl(206, 18%, 65%),
+	"base-dark": hsl(210, 15%, 40%), // dark version of base (introduced for the Event list)
+	"text":#fff,
 	"text-selected":#fff,
-	"blue-hint": #2b45a4,
-	"blue": #2556c7,
-	"blue-active": #0b1bc9,
+	"blue-hint": #4285e0,
+	"blue": #2381e7,
+	"blue-active": #0c62bd,
 	"green-hint": #0c7915,
 	"green": #191,
 	"green-active": #1a1,
 	"red-hint": #830c0c,
 	"red": #a11,
 	"red-active": #c11,
-	"disabled": hsl(211, 6%, 52%),
+	"disabled": hsl(210, 11%, 72%),
 	"icon-hover-filter": invert(100%) grayscale(100%),
 	"icon-opacity": 0.7,
 );
@@ -149,7 +147,7 @@ $color-light: (
 	"burgundy": #751e00,
 	"orange": #dc7305,
 	"yellow": #d2aa14,
-	"grey": #8c8c8c,
+	"grey": rgb(152, 150, 150),
 );
 
 

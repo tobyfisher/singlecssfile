@@ -39,7 +39,7 @@
 		}
 
 		// default state is "unknown"
-		background: var(--color-grey);
+		background: var(--btn-base);
 
 		&.risk-warning {
 			background: var(--color-burgundy);

@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri Sep 09 2022 09:40:50 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sat Sep 10 2022 09:30:23 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -465,7 +465,6 @@ html.theme-dark {
   --bg-data: rgb(28, 34, 40);
   --bg-html: rgb(24, 30, 36);
   --bg-title: rgb(30, 36, 42);
-  --bg-overlay: hsl(214deg, 20%, 10%);
   --bg-grey: hsl(212deg, 22%, 25%);
   --txt-base: #ccc;
   --txt-light: #8c8c8c;
@@ -685,10 +684,9 @@ html.theme-light {
   --bg-hover-row: rgb(250, 250, 250);
   --bg-event: rgb(251, 250, 250);
   --bg-data: rgb(231, 229, 229);
-  --bg-popup: rgb(242, 240, 240);
+  --bg-popup: rgb(238, 236, 236);
   --bg-html: rgb(217, 215, 215);
   --bg-title: rgb(202, 200, 200);
-  --bg-overlay: rgb(192, 190, 190);
   --bg-grey: rgb(182, 180, 180);
   --txt-base: #0a0a0a;
   --txt-light: #5a5a64;
@@ -705,20 +703,20 @@ html.theme-light {
   --gui-line: #c0bebe;
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
-  --btn-base: rgb(110, 119, 128);
-  --btn-base-dark: rgb(74, 82, 90);
-  --btn-text: #eee;
+  --btn-base: hsl(206deg, 18%, 65%);
+  --btn-base-dark: hsl(210deg, 15%, 40%);
+  --btn-text: #fff;
   --btn-text-selected: #fff;
-  --btn-blue-hint: #2b45a4;
-  --btn-blue: #2556c7;
-  --btn-blue-active: #0b1bc9;
+  --btn-blue-hint: #4285e0;
+  --btn-blue: #2381e7;
+  --btn-blue-active: #0c62bd;
   --btn-green-hint: #0c7915;
   --btn-green: #191;
   --btn-green-active: #1a1;
   --btn-red-hint: #830c0c;
   --btn-red: #a11;
   --btn-red-active: #c11;
-  --btn-disabled: hsl(211deg, 6%, 52%);
+  --btn-disabled: hsl(210deg, 11%, 72%);
   --btn-icon-hover-filter: invert(100%) grayscale(100%);
   --btn-icon-opacity: 0.7;
   --color-highlighter: #ebd37b;
@@ -727,7 +725,7 @@ html.theme-light {
   --color-burgundy: #751e00;
   --color-orange: #dc7305;
   --color-yellow: #d2aa14;
-  --color-grey: #8c8c8c;
+  --color-grey: rgb(152, 150, 150);
   --input-scheme: light;
   --input-focus-outline: #0701e0;
   --input-base: #fff;
@@ -3912,7 +3910,7 @@ ul.oe-multi-select li {
   font-size: 0.8125rem;
   background: var(--txt-base);
   color: var(--txt-invert);
-  border-radius: 3px;
+  border-radius: 5px;
 }
 .alert-box.info {
   color: rgba(250, 250, 250, 0.9);
@@ -5544,7 +5542,8 @@ ul.quick-filters {
   overflow-y: auto;
   font-size: 0.6875rem;
   width: 450px;
-  background: grey;
+  border-top: 1px solid var(--btn-blue-hint);
+  background: var(--bg-popup);
   padding: 0 0 20px 0;
   border-left: 2px solid var(--gui-line);
 }
@@ -6145,7 +6144,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   align-items: center;
   height: 23px;
   padding: 0 23px 0 5px;
-  background: var(--color-grey);
+  background: var(--btn-base);
 }
 .oe-patient .patient-allergies-risks:after {
   content: "";
@@ -6526,7 +6525,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 }
 .home-messages .message-actions .filter-messages li a:hover, .home-messages .message-actions .filter-messages li a:focus, .home-messages .message-actions .filter-messages li a.selected {
   color: var(--txt-base);
-  border-bottom-color: var(--color-grey);
+  border-bottom-color: var(--txt-light);
 }
 .home-messages .message-actions .filter-messages li a:hover .unread, .home-messages .message-actions .filter-messages li a:focus .unread, .home-messages .message-actions .filter-messages li a.selected .unread {
   color: var(--txt-invert);
@@ -6547,9 +6546,9 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   right: 0;
   bottom: 0;
   width: 450px;
-  background: var(--bg-overlay);
+  background: var(--bg-popup);
   border-left: 2px solid var(--gui-line);
-  border-top: 1px dotted var(--btn-blue-hint);
+  border-top: 1px solid var(--btn-blue-hint);
   overflow-y: auto;
   padding: 0 0 35px 0;
 }
@@ -6648,7 +6647,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   font-size: 0.6875rem;
 }
 .activity-list tr {
-  border-top-color: var(--bg-overlay);
+  border-top-color: var(--bg-popup);
 }
 .activity-list tr:hover, .activity-list tr:focus {
   cursor: pointer;
@@ -6660,7 +6659,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 }
 
 .oe-hotlist-panel .patient-activity .divider {
-  border-top: 1px dotted var(--color-grey);
+  border-top: 1px dotted var(--txt-light);
   margin-top: 10px;
 }
 .oe-hotlist-panel .patient-activity h4 {

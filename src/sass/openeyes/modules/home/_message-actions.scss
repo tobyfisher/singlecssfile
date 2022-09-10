@@ -117,7 +117,7 @@
 					&:focus,
 					&.selected {
 						color: var(--txt-base);
-						border-bottom-color:var(--color-grey);
+						border-bottom-color:var(--txt-light);
 
 						.unread {
 							color:var(--txt-invert);

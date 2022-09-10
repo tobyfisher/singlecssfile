@@ -29,8 +29,11 @@
 	@include super-wide(){	// 2048px+
 		width: $oe-hotlist-panel-max; 
 	}
-	
-	background: grey;
+
+	// soft visual link to nav button
+	border-top:1px solid var(--btn-blue-hint);
+
+	background: var(--bg-popup);
 	padding:0 0 20px 0;	
 	border-left:2px solid var(--gui-line);
 	
