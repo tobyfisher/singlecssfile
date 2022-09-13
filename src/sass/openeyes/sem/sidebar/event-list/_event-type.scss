@@ -8,9 +8,10 @@
 // note: also, used in hotlist Draft list
 
 .event-type {
-	display: inline-block;
+	position: relative;
+	display: inline-block   ;
 	height: 19px; // match
-	width: 48px;
+	width: 45px;
 
 	.oe-i-e {
 		// fix y-offset position issue
@@ -18,22 +19,30 @@
 		vertical-align: top;
 	}
 
-	// background SVG icons
-	background-position: right 10px center;
-	background-repeat: no-repeat;
-	background-size: $oe-event-icon-size - 6px;
-
-	// eye for quicklook
-	background-image: url(svg-fixed("sidebar/eye"));
+	&::after {
+		content: "";
+		position:absolute;
+		top: 0;
+		bottom:0;
+		right:4px;
+		width: 19px;
+		// default eye icon for quicklook
+		background: center / #{$oe-event-icon-size - 6px} var(--i-eye) no-repeat;
+		opacity: $oe-icon-opacity;
+	}
 
 	// warning star
 	&.alert {
-		background-image: url(svg-fixed("sidebar/warning"));
+		&::after {
+			background-image: var(--i-warning);
+		}
 	}
 
 	&.done,
 	&.ready {
-		background-image: url(svg-fixed("sidebar/tick"));
+		&::after {
+			background-image: var(--i-tick);
+		}
 	}
 
 	&.confirmed {
@@ -49,7 +58,9 @@
 	}
 
 	&.flag {
-		background-image: url(svg-fixed("sidebar/flag"));
+		&::after {
+			background-image: var(--i-flag);
+		}
 	}
 
 	&.draft {

@@ -9,6 +9,7 @@
 .event-extra {
 	display: inline-block;
 	width: 30px; // allow 2 medium icons to be dropped in
+	padding:0 0 0 3px;
 	
 	// override theme laterality icons!
 	// originally these where NOT themed
@@ -19,8 +20,8 @@
 		// the vertical-align middle isn't quite middle. 
 		position:relative;
 		top:2px;
-		&.R { 	background-image: url( svg-white-icon('i/lat-R-green') ); }
-		&.L { 	background-image: url( svg-white-icon('i/lat-L-red') ); }
-		&.NA {	background-image: url( svg-white-icon('i/lat-NA') ); }
+		&.R { 	background-image: var(--i-lat-R-green); }
+		&.L { 	background-image: var(--i-lat-L-red); }
+		&.NA {	background-image: var(--i-lat-NA); }
 	}
 }

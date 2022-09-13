@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sat Sep 10 2022 09:30:23 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Tue Sep 13 2022 10:35:44 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -481,11 +481,11 @@ html.theme-dark {
   --gui-line: #28303c;
   --gui-scroll-track: #0a0a0f;
   --gui-scroll-thumb: #37373c;
-  --btn-base: rgb(32, 42, 54);
-  --btn-base-dark: rgb(24, 32, 40);
+  --btn-base: hsl(213deg, 16%, 18%);
+  --btn-base-heavy: rgb(24, 32, 40);
   --btn-text: #bbb;
   --btn-text-selected: #ddd;
-  --btn-blue-hint: #21306b;
+  --btn-blue-hint: #0e4886;
   --btn-blue: #093286;
   --btn-blue-active: #1128b0;
   --btn-green-hint: #1a4f1b;
@@ -506,8 +506,8 @@ html.theme-dark {
   --color-grey: #505050;
   --input-scheme: dark;
   --input-focus-outline: #096c9a;
-  --input-base: #243347;
-  --input-hint: #1a2432;
+  --input-base: rgb(36, 49, 61);
+  --input-hint: rgb(33, 42, 53);
   --input-text: #ccc;
   --input-placeholder: #787878;
 }
@@ -703,8 +703,8 @@ html.theme-light {
   --gui-line: #c0bebe;
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
-  --btn-base: hsl(206deg, 18%, 65%);
-  --btn-base-dark: hsl(210deg, 15%, 40%);
+  --btn-base: hsl(211deg, 23%, 62%);
+  --btn-base-heavy: hsl(211deg, 15%, 45%);
   --btn-text: #fff;
   --btn-text-selected: #fff;
   --btn-blue-hint: #4285e0;
@@ -3383,6 +3383,10 @@ button.header-tab.icon-bg.goto,
   background-position: top 1px right -1px;
 }
 
+button.hint,
+.button.hint {
+  background: var(--btn-base-heavy);
+}
 button.hint.green,
 .button.hint.green {
   background: var(--btn-green-hint);
@@ -7255,7 +7259,7 @@ login.multisite .info {
 }
 
 .sidebar .events {
-  background: var(--btn-base);
+  background: var(--gui-line);
 }
 .sidebar .event {
   position: relative;
@@ -7271,11 +7275,18 @@ login.multisite .info {
   line-height: 19px;
   font-size: 0.75rem;
   font-weight: 400;
-  color: var(--btn-text);
-  background: var(--btn-base-dark);
+  color: var(--txt-light);
+  background: var(--bg-data);
 }
 .sidebar .event a:hover, .sidebar .event a:focus, .sidebar .event a:active {
+  color: var(--btn-text-selected);
   background: var(--btn-blue);
+}
+.sidebar .event a:hover .event-type, .sidebar .event a:focus .event-type, .sidebar .event a:active .event-type {
+  background-color: var(--bg-max);
+}
+.sidebar .event a:hover .event-type::after, .sidebar .event a:focus .event-type::after, .sidebar .event a:active .event-type::after {
+  opacity: 1;
 }
 .sidebar .event a:hover .oe-i.laterality.R, .sidebar .event a:focus .oe-i.laterality.R, .sidebar .event a:active .oe-i.laterality.R {
   background-image: url("../svg/in-css/dark/i/lat-R.svg");
@@ -7288,8 +7299,14 @@ login.multisite .info {
   background: transparent;
 }
 .sidebar .event.selected a {
-  color: #fff;
+  color: var(--btn-text-selected);
   background: var(--btn-blue-hint);
+}
+.sidebar .event.selected a .event-type {
+  background-color: var(--bg-max);
+}
+.sidebar .event.selected a .event-type::after {
+  opacity: 1;
 }
 .sidebar .event.selected a .event-extra {
   opacity: 0.8;
@@ -7305,23 +7322,30 @@ login.multisite .info {
 }
 
 .event-type {
+  position: relative;
   display: inline-block;
   height: 19px;
-  width: 48px;
-  background-position: right 10px center;
-  background-repeat: no-repeat;
-  background-size: 13px;
-  background-image: url("../svg/in-css/all/sidebar/eye.svg");
+  width: 45px;
 }
 .event-type .oe-i-e {
   pointer-events: none;
   vertical-align: top;
 }
-.event-type.alert {
-  background-image: url("../svg/in-css/all/sidebar/warning.svg");
+.event-type::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 4px;
+  width: 19px;
+  background: center/13px var(--i-eye) no-repeat;
+  opacity: 0.5;
 }
-.event-type.done, .event-type.ready {
-  background-image: url("../svg/in-css/all/sidebar/tick.svg");
+.event-type.alert::after {
+  background-image: var(--i-warning);
+}
+.event-type.done::after, .event-type.ready::after {
+  background-image: var(--i-tick);
 }
 .event-type.confirmed {
   background-image: url("../svg/in-css/all/sidebar/tick-double.svg");
@@ -7332,8 +7356,8 @@ login.multisite .info {
 .event-type.pause {
   background-image: url("../svg/in-css/all/sidebar/pause.svg");
 }
-.event-type.flag {
-  background-image: url("../svg/in-css/all/sidebar/flag.svg");
+.event-type.flag::after {
+  background-image: var(--i-flag);
 }
 .event-type.draft {
   background-image: url("../svg/in-css/all/sidebar/draft.svg");
@@ -7357,19 +7381,20 @@ login.multisite .info {
 .event-extra {
   display: inline-block;
   width: 30px;
+  padding: 0 0 0 3px;
 }
 .event-extra .oe-i.laterality {
   position: relative;
   top: 2px;
 }
 .event-extra .oe-i.laterality.R {
-  background-image: url("../svg/in-css/dark/i/lat-R-green.svg");
+  background-image: var(--i-lat-R-green);
 }
 .event-extra .oe-i.laterality.L {
-  background-image: url("../svg/in-css/dark/i/lat-L-red.svg");
+  background-image: var(--i-lat-L-red);
 }
 .event-extra .oe-i.laterality.NA {
-  background-image: url("../svg/in-css/dark/i/lat-NA.svg");
+  background-image: var(--i-lat-NA);
 }
 
 .event-date {
@@ -7407,8 +7432,8 @@ login.multisite .info {
   align-items: center;
   font-size: 0.625rem;
   font-weight: 400;
-  color: var(--btn-text);
-  background: var(--btn-base);
+  color: var(--txt-light);
+  background: var(--bg-max);
 }
 
 .sidebar .grouping-picker {

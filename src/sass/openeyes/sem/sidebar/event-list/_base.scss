@@ -9,7 +9,7 @@
 	// <ul>
 	.events {
 		// this provides the dividing line for the Event list
-		background: var(--btn-base);
+		background: var(--gui-line);
 	}
 
 	// <li> 
@@ -31,13 +31,22 @@
 
 			@include font-size(12);
 			font-weight: 400;
-			color: var(--btn-text);
-			background: var(--btn-base-dark);
+			color: var(--txt-light);
+			background: var(--bg-data);
 
 			&:hover,
 			&:focus,
 			&:active {
+				color: var(--btn-text-selected);
 				background: var(--btn-blue);
+
+				.event-type {
+					background-color: var(--bg-max);
+					&::after {
+						opacity: 1;
+					}
+				}
+
 
 				.oe-i.laterality {
 					&.R {
@@ -59,8 +68,15 @@
 		// Selected Event (as in, viewing it)
 		&.selected {
 			a {
-				color: #fff;
+				color: var(--btn-text-selected);
 				background: var(--btn-blue-hint);
+
+				.event-type {
+					background-color: var(--bg-max);
+					&::after {
+						opacity: 1;
+					}
+				}
 
 				// slightly dull the laterality icons when selected
 				.event-extra {

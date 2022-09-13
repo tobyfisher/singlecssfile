@@ -91,11 +91,11 @@ $gui-light: (
 // ---- Buttons
 // "Dark" theme interaction is subtle
 $btn: (
-	"base":rgb(32, 42, 54),
-	"base-dark": rgb(24, 32, 40), // see light notes
+	"base": hsl(213, 16%, 18%), // rgb(37, 51, 65),
+	"base-heavy": rgb(24, 32, 40), // see light notes
 	"text":#bbb,
 	"text-selected":#ddd,
-	"blue-hint": #21306b,
+	"blue-hint": #0e4886,
 	"blue": #093286,
 	"blue-active": #1128b0,
 	"green-hint": #1a4f1b,
@@ -111,8 +111,8 @@ $btn: (
 
 // "Light" theme interaction is obvious, more contrast
 $btn-light: (
-	"base": hsl(206, 18%, 65%),
-	"base-dark": hsl(210, 15%, 40%), // dark version of base (introduced for the Event list)
+	"base": hsl(211, 23%, 62%),
+	"base-heavy": hsl(211, 15%, 45%), // "hint", dark version of base (introduced for the Event list)
 	"text":#fff,
 	"text-selected":#fff,
 	"blue-hint": #4285e0,
@@ -155,8 +155,8 @@ $color-light: (
 $input: (
 	"scheme": "dark",
 	"focus-outline": #096c9a,
-	"base": #243347,
-	"hint": #1a2432,
+	"base": rgb(36, 49, 61),
+	"hint": rgb(33, 42, 53),
 	"text": #ccc,
 	"placeholder": #787878,
 );
