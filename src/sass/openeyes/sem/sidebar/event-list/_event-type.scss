@@ -33,7 +33,6 @@
 		opacity: 0.3;
 	}
 
-	// warning star
 	&.alert {
 		&::after {
 			opacity: $_state-opacity;
@@ -44,20 +43,23 @@
 	&.done,
 	&.ready {
 		&::after {
+			opacity: $_state-opacity;
 			background-image: var(--i-tick);
 		}
 	}
 
-	&.confirmed {
-		background-image: url(svg-fixed("sidebar/tick-double"));
-	}
-
 	&.cancelled {
-		background-image: url(svg-fixed("sidebar/cross"));
+		&::after {
+			opacity: $_state-opacity;
+			background-image: var(--i-remove);
+		}
 	}
 
 	&.pause {
-		background-image: url(svg-fixed("sidebar/pause"));
+		&::after {
+			opacity: $_state-opacity;
+			background-image: var(--i-pause);
+		}
 	}
 
 	&.flag {
@@ -90,17 +92,34 @@
 
 	&.clock,
 	&.scheduled {
-		background-image: url(svg-fixed("sidebar/time"));
-	}
-
-	&.virtual-clinic {
-		background-image: url(svg-fixed("sidebar/vc"));
+		&::after {
+			opacity: $_state-opacity;
+			background-image: var(--i-time);
+		}
 	}
 
 	&.urgent {
 		&::after {
 			opacity: $_state-opacity;
 			background-image: var(--i-urgent);
+		}
+	}
+
+	&.virtual-clinic {
+		&::after {
+			opacity: 1;
+			background-image: var(--i-vc);
+		}
+	}
+
+
+
+
+	// currently unused, but might be useful in the future
+	&.confirmed {
+		&::after {
+			opacity: $_state-opacity;
+			background-image: var(--i-tick-double);
 		}
 	}
 }

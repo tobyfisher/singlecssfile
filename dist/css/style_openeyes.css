@@ -380,6 +380,7 @@ html.theme-dark {
   --i-parent-arrow: url("../svg/in-css/dark/i/parent-arrow.svg");
   --i-path-break: url("../svg/in-css/dark/i/path-break.svg");
   --i-patient: url("../svg/in-css/dark/i/patient.svg");
+  --i-pause: url("../svg/in-css/dark/i/pause.svg");
   --i-pencil-blue: url("../svg/in-css/dark/i/pencil-blue.svg");
   --i-pencil: url("../svg/in-css/dark/i/pencil.svg");
   --i-person-green: url("../svg/in-css/dark/i/person-green.svg");
@@ -413,6 +414,7 @@ html.theme-dark {
   --i-tick-chunky: url("../svg/in-css/dark/i/tick-chunky.svg");
   --i-tick-circle: url("../svg/in-css/dark/i/tick-circle.svg");
   --i-tick-green: url("../svg/in-css/dark/i/tick-green.svg");
+  --i-tick-double: url("../svg/in-css/dark/i/tick-double.svg");
   --i-tick: url("../svg/in-css/dark/i/tick.svg");
   --i-time: url("../svg/in-css/dark/i/time.svg");
   --i-top: url("../svg/in-css/dark/i/top.svg");
@@ -423,6 +425,7 @@ html.theme-dark {
   --i-triangle: url("../svg/in-css/dark/i/triangle.svg");
   --i-undo: url("../svg/in-css/dark/i/undo.svg");
   --i-urgent: url("../svg/in-css/dark/i/urgent.svg");
+  --i-vc: url("../svg/in-css/dark/i/vc.svg");
   --i-waiting: url("../svg/in-css/dark/i/waiting.svg");
   --i-warning: url("../svg/in-css/dark/i/warning.svg");
   --i-warning-standard: url("../svg/in-css/dark/i/warning-standard.svg");
@@ -609,6 +612,7 @@ html.theme-light {
   --i-parent-arrow: url("../svg/in-css/light/i/parent-arrow.svg");
   --i-path-break: url("../svg/in-css/light/i/path-break.svg");
   --i-patient: url("../svg/in-css/light/i/patient.svg");
+  --i-pause: url("../svg/in-css/light/i/pause.svg");
   --i-pencil-blue: url("../svg/in-css/light/i/pencil-blue.svg");
   --i-pencil: url("../svg/in-css/light/i/pencil.svg");
   --i-person-green: url("../svg/in-css/light/i/person-green.svg");
@@ -642,6 +646,7 @@ html.theme-light {
   --i-tick-chunky: url("../svg/in-css/light/i/tick-chunky.svg");
   --i-tick-circle: url("../svg/in-css/light/i/tick-circle.svg");
   --i-tick-green: url("../svg/in-css/light/i/tick-green.svg");
+  --i-tick-double: url("../svg/in-css/light/i/tick-double.svg");
   --i-tick: url("../svg/in-css/light/i/tick.svg");
   --i-time: url("../svg/in-css/light/i/time.svg");
   --i-top: url("../svg/in-css/light/i/top.svg");
@@ -652,6 +657,7 @@ html.theme-light {
   --i-triangle: url("../svg/in-css/light/i/triangle.svg");
   --i-undo: url("../svg/in-css/light/i/undo.svg");
   --i-urgent: url("../svg/in-css/light/i/urgent.svg");
+  --i-vc: url("../svg/in-css/light/i/vc.svg");
   --i-waiting: url("../svg/in-css/light/i/waiting.svg");
   --i-warning: url("../svg/in-css/light/i/warning.svg");
   --i-warning-standard: url("../svg/in-css/light/i/warning-standard.svg");
@@ -1436,6 +1442,9 @@ body.open-eyes {
 }
 .oe-i.pencil-blue {
   background-image: var(--i-pencil-blue);
+}
+.oe-i.draft {
+  background-image: var(--i-draft);
 }
 .oe-i.exclamation {
   background-image: var(--i-exclamation);
@@ -7364,16 +7373,16 @@ login.multisite .info {
   background-image: var(--i-warning-standard);
 }
 .event-type.done::after, .event-type.ready::after {
+  opacity: 0.5;
   background-image: var(--i-tick);
 }
-.event-type.confirmed {
-  background-image: url("../svg/in-css/all/sidebar/tick-double.svg");
+.event-type.cancelled::after {
+  opacity: 0.5;
+  background-image: var(--i-remove);
 }
-.event-type.cancelled {
-  background-image: url("../svg/in-css/all/sidebar/cross.svg");
-}
-.event-type.pause {
-  background-image: url("../svg/in-css/all/sidebar/pause.svg");
+.event-type.pause::after {
+  opacity: 0.5;
+  background-image: var(--i-pause);
 }
 .event-type.flag::after {
   opacity: 0.5;
@@ -7391,15 +7400,21 @@ login.multisite .info {
   opacity: 1;
   background-image: var(--i-draft-green);
 }
-.event-type.clock, .event-type.scheduled {
-  background-image: url("../svg/in-css/all/sidebar/time.svg");
-}
-.event-type.virtual-clinic {
-  background-image: url("../svg/in-css/all/sidebar/vc.svg");
+.event-type.clock::after, .event-type.scheduled::after {
+  opacity: 0.5;
+  background-image: var(--i-time);
 }
 .event-type.urgent::after {
   opacity: 0.5;
   background-image: var(--i-urgent);
+}
+.event-type.virtual-clinic::after {
+  opacity: 1;
+  background-image: var(--i-vc);
+}
+.event-type.confirmed::after {
+  opacity: 0.5;
+  background-image: var(--i-tick-double);
 }
 
 .event-extra {

@@ -170,6 +170,8 @@ $input-light: (
 	"placeholder": #959595,
 );
 
+$test: rgb(0, 101, 232);
+
 // ---- SVG icons
 
 $themedIcons: ("add-blue", "add", "arrow-down-bold", "arrow-down", "arrow-left-bold", "arrow-right-bold", "arrow-up-bold", "arrow-up",
@@ -180,11 +182,11 @@ $themedIcons: ("add-blue", "add", "arrow-down-bold", "arrow-down", "arrow-left-b
 "exclamation", "expand", "eye-circle", "eye", "female", "filter", "finish", "flag", "flagline", "flux", "fork", "formulary", "happy",
 "increase-height-orange", "increase-height", "info-blue", "info", "injection", "lat-L-inactive", "lat-L-query", "lat-L-red", "lat-L",
 "lat-NA", "lat-R-green", "lat-R-inactive", "lat-R-query", "lat-R", "letter-1", "letter-2", "letter-GP", "letter-invitation", "line-break",
-"male", "menu", "minus-bold", "minus", "more-h", "move", "mpr", "no-permissions", "padlock", "parent-arrow", "path-break", "patient", "pencil-blue",
+"male", "menu", "minus-bold", "minus", "more-h", "move", "mpr", "no-permissions", "padlock", "parent-arrow", "path-break", "patient", "pause", "pencil-blue",
 "pencil", "person-green", "person-inactive", "person-query", "person-split", "person", "plus-bold", "plus-circle", "plus", "print", "range",
 "reduce-height", "remove-circle", "remove", "reset", "rotate-left", "rotate-right", "save-blue", "save-team", "save", "search", "star", "starline", "start",
-"status-query-reply", "status-query", "status-urgent", "stop", "sync", "tick-chunky", "tick-circle", "tick-green", "tick", "time", "top", "trash-blue",
-"trash", "trials", "team", "triangle", "undo", "urgent", "waiting", "warning", "warning-standard", "warning-none", "whiteboard", "zoom-in", "zoom-out");
+"status-query-reply", "status-query", "status-urgent", "stop", "sync", "tick-chunky", "tick-circle", "tick-green", "tick-double", "tick", "time", "top", "trash-blue",
+"trash", "trials", "team", "triangle", "undo", "urgent", "vc", "waiting", "warning", "warning-standard", "warning-none", "whiteboard", "zoom-in", "zoom-out");
 
 // not available via <i>, only for CSS
 $uiThemedIcons: ("face", "element-divider", "btn-goto", "tab-more-h", "tab-whiteboard", "tab-print", "tab-trash", "watermark-patient",
