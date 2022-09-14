@@ -80,6 +80,11 @@ button,
 		}
 	}
 
+	// override "selected".
+	&.selected {
+		background: var(--btn-blue-active);
+	}
+
 	&:active {
 		outline: 1px dotted var(--input-focus-outline);
 		outline-offset: 1px;

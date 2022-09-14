@@ -111,7 +111,7 @@ $btn: (
 
 // "Light" theme interaction is obvious, more contrast
 $btn-light: (
-	"base": hsl(211, 23%, 62%),
+	"base": hsl(211, 16%, 59%), // hsl(211, 23%, 62%),
 	"base-heavy": hsl(211, 15%, 45%), // "hint", dark version of base (introduced for the Event list)
 	"text":#fff,
 	"text-selected":#fff,
@@ -124,7 +124,7 @@ $btn-light: (
 	"red-hint": #830c0c,
 	"red": #a11,
 	"red-active": #c11,
-	"disabled": hsl(210, 11%, 72%),
+	"disabled": hsl(211, 13%, 65%),
 	"icon-hover-filter": invert(100%) grayscale(100%),
 	"icon-opacity": 0.7,
 );
@@ -176,7 +176,7 @@ $themedIcons: ("add-blue", "add", "arrow-down-bold", "arrow-down", "arrow-left-b
 "asterisk-blue", "asterisk", "audit-trail", "beo", "cancel", "change", "child-arrow", "cog", "collapse", "comments-added", "comments-who", "comments",
 "copy-forward", "crying", "direction-down-circle", "direction-down", "direction-horizontal",
 "direction-left-circle", "direction-left", "direction-right-circle", "direction-right", "direction-up-circle", "direction-up",
-"double-slash", "doubt-active", "doubt", "download", "downup", "drop-done", "drop", "drug-rx", "duplicate", "edit-blue", "edit",
+"double-slash", "doubt-active", "doubt", "download", "downup", "draft", "draft-orange", "draft-green", "drop-done", "drop", "drug-rx", "duplicate", "edit-blue", "edit",
 "exclamation", "expand", "eye-circle", "eye", "female", "filter", "finish", "flag", "flagline", "flux", "fork", "formulary", "happy",
 "increase-height-orange", "increase-height", "info-blue", "info", "injection", "lat-L-inactive", "lat-L-query", "lat-L-red", "lat-L",
 "lat-NA", "lat-R-green", "lat-R-inactive", "lat-R-query", "lat-R", "letter-1", "letter-2", "letter-GP", "letter-invitation", "line-break",
@@ -184,7 +184,7 @@ $themedIcons: ("add-blue", "add", "arrow-down-bold", "arrow-down", "arrow-left-b
 "pencil", "person-green", "person-inactive", "person-query", "person-split", "person", "plus-bold", "plus-circle", "plus", "print", "range",
 "reduce-height", "remove-circle", "remove", "reset", "rotate-left", "rotate-right", "save-blue", "save-team", "save", "search", "star", "starline", "start",
 "status-query-reply", "status-query", "status-urgent", "stop", "sync", "tick-chunky", "tick-circle", "tick-green", "tick", "time", "top", "trash-blue",
-"trash", "trials", "team", "triangle", "undo", "waiting", "whiteboard", "zoom-in", "zoom-out");
+"trash", "trials", "team", "triangle", "undo", "urgent", "waiting", "warning", "warning-standard", "warning-none", "whiteboard", "zoom-in", "zoom-out");
 
 // not available via <i>, only for CSS
 $uiThemedIcons: ("face", "element-divider", "btn-goto", "tab-more-h", "tab-whiteboard", "tab-print", "tab-trash", "watermark-patient",

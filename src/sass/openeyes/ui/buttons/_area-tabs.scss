@@ -10,7 +10,7 @@
 
 .area-tabs {
 	@include flex(center, space-between);
-	border-bottom:2px solid var(--btn-blue);
+	border-bottom:2px solid var(--btn-blue-active);
 
 	button {
 		flex:1 1 0;

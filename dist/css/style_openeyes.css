@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Tue Sep 13 2022 10:35:44 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Wed Sep 14 2022 10:19:50 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -327,6 +327,9 @@ html.theme-dark {
   --i-doubt: url("../svg/in-css/dark/i/doubt.svg");
   --i-download: url("../svg/in-css/dark/i/download.svg");
   --i-downup: url("../svg/in-css/dark/i/downup.svg");
+  --i-draft: url("../svg/in-css/dark/i/draft.svg");
+  --i-draft-orange: url("../svg/in-css/dark/i/draft-orange.svg");
+  --i-draft-green: url("../svg/in-css/dark/i/draft-green.svg");
   --i-drop-done: url("../svg/in-css/dark/i/drop-done.svg");
   --i-drop: url("../svg/in-css/dark/i/drop.svg");
   --i-drug-rx: url("../svg/in-css/dark/i/drug-rx.svg");
@@ -419,7 +422,11 @@ html.theme-dark {
   --i-team: url("../svg/in-css/dark/i/team.svg");
   --i-triangle: url("../svg/in-css/dark/i/triangle.svg");
   --i-undo: url("../svg/in-css/dark/i/undo.svg");
+  --i-urgent: url("../svg/in-css/dark/i/urgent.svg");
   --i-waiting: url("../svg/in-css/dark/i/waiting.svg");
+  --i-warning: url("../svg/in-css/dark/i/warning.svg");
+  --i-warning-standard: url("../svg/in-css/dark/i/warning-standard.svg");
+  --i-warning-none: url("../svg/in-css/dark/i/warning-none.svg");
   --i-whiteboard: url("../svg/in-css/dark/i/whiteboard.svg");
   --i-zoom-in: url("../svg/in-css/dark/i/zoom-in.svg");
   --i-zoom-out: url("../svg/in-css/dark/i/zoom-out.svg");
@@ -549,6 +556,9 @@ html.theme-light {
   --i-doubt: url("../svg/in-css/light/i/doubt.svg");
   --i-download: url("../svg/in-css/light/i/download.svg");
   --i-downup: url("../svg/in-css/light/i/downup.svg");
+  --i-draft: url("../svg/in-css/light/i/draft.svg");
+  --i-draft-orange: url("../svg/in-css/light/i/draft-orange.svg");
+  --i-draft-green: url("../svg/in-css/light/i/draft-green.svg");
   --i-drop-done: url("../svg/in-css/light/i/drop-done.svg");
   --i-drop: url("../svg/in-css/light/i/drop.svg");
   --i-drug-rx: url("../svg/in-css/light/i/drug-rx.svg");
@@ -641,7 +651,11 @@ html.theme-light {
   --i-team: url("../svg/in-css/light/i/team.svg");
   --i-triangle: url("../svg/in-css/light/i/triangle.svg");
   --i-undo: url("../svg/in-css/light/i/undo.svg");
+  --i-urgent: url("../svg/in-css/light/i/urgent.svg");
   --i-waiting: url("../svg/in-css/light/i/waiting.svg");
+  --i-warning: url("../svg/in-css/light/i/warning.svg");
+  --i-warning-standard: url("../svg/in-css/light/i/warning-standard.svg");
+  --i-warning-none: url("../svg/in-css/light/i/warning-none.svg");
   --i-whiteboard: url("../svg/in-css/light/i/whiteboard.svg");
   --i-zoom-in: url("../svg/in-css/light/i/zoom-in.svg");
   --i-zoom-out: url("../svg/in-css/light/i/zoom-out.svg");
@@ -703,7 +717,7 @@ html.theme-light {
   --gui-line: #c0bebe;
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
-  --btn-base: hsl(211deg, 23%, 62%);
+  --btn-base: hsl(211deg, 16%, 59%);
   --btn-base-heavy: hsl(211deg, 15%, 45%);
   --btn-text: #fff;
   --btn-text-selected: #fff;
@@ -716,7 +730,7 @@ html.theme-light {
   --btn-red-hint: #830c0c;
   --btn-red: #a11;
   --btn-red-active: #c11;
-  --btn-disabled: hsl(210deg, 11%, 72%);
+  --btn-disabled: hsl(211deg, 13%, 65%);
   --btn-icon-hover-filter: invert(100%) grayscale(100%);
   --btn-icon-opacity: 0.7;
   --color-highlighter: #ebd37b;
@@ -3334,6 +3348,10 @@ button:hover .oe-i, button:focus .oe-i, button.active .oe-i, button.selected .oe
 .button.selected .oe-i {
   opacity: 1;
 }
+button.selected,
+.button.selected {
+  background: var(--btn-blue-active);
+}
 button:active,
 .button:active {
   outline: 1px dotted var(--input-focus-outline);
@@ -3531,7 +3549,7 @@ button.add-pathstep:after,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid var(--btn-blue);
+  border-bottom: 2px solid var(--btn-blue-active);
 }
 .area-tabs button {
   flex: 1 1 0;
@@ -7339,10 +7357,11 @@ login.multisite .info {
   right: 4px;
   width: 19px;
   background: center/13px var(--i-eye) no-repeat;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 .event-type.alert::after {
-  background-image: var(--i-warning);
+  opacity: 0.5;
+  background-image: var(--i-warning-standard);
 }
 .event-type.done::after, .event-type.ready::after {
   background-image: var(--i-tick);
@@ -7357,16 +7376,20 @@ login.multisite .info {
   background-image: url("../svg/in-css/all/sidebar/pause.svg");
 }
 .event-type.flag::after {
+  opacity: 0.5;
   background-image: var(--i-flag);
 }
-.event-type.draft {
-  background-image: url("../svg/in-css/all/sidebar/draft.svg");
+.event-type.draft::after {
+  opacity: 1;
+  background-image: var(--i-draft-orange);
 }
-.event-type.edit {
-  background-image: url("../svg/in-css/all/sidebar/edit.svg");
+.event-type.edit::after {
+  opacity: 0.5;
+  background-image: var(--i-draft);
 }
-.event-type.edit-done {
-  background-image: url("../svg/in-css/all/sidebar/edit-done.svg");
+.event-type.edit-done::after {
+  opacity: 1;
+  background-image: var(--i-draft-green);
 }
 .event-type.clock, .event-type.scheduled {
   background-image: url("../svg/in-css/all/sidebar/time.svg");
@@ -7374,8 +7397,9 @@ login.multisite .info {
 .event-type.virtual-clinic {
   background-image: url("../svg/in-css/all/sidebar/vc.svg");
 }
-.event-type.urgent {
-  background-image: url("../svg/in-css/all/sidebar/urgent.svg");
+.event-type.urgent::after {
+  opacity: 0.5;
+  background-image: var(--i-urgent);
 }
 
 .event-extra {
@@ -7433,7 +7457,7 @@ login.multisite .info {
   font-size: 0.625rem;
   font-weight: 400;
   color: var(--txt-light);
-  background: var(--bg-max);
+  background: var(--bg-html);
 }
 
 .sidebar .grouping-picker {

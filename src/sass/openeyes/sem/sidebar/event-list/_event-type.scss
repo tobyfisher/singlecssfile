@@ -8,6 +8,8 @@
 // note: also, used in hotlist Draft list
 
 .event-type {
+	$_state-opacity: 0.5;
+
 	position: relative;
 	display: inline-block   ;
 	height: 19px; // match
@@ -28,13 +30,14 @@
 		width: 19px;
 		// default eye icon for quicklook
 		background: center / #{$oe-event-icon-size - 6px} var(--i-eye) no-repeat;
-		opacity: $oe-icon-opacity;
+		opacity: 0.3;
 	}
 
 	// warning star
 	&.alert {
 		&::after {
-			background-image: var(--i-warning);
+			opacity: $_state-opacity;
+			background-image: var(--i-warning-standard);
 		}
 	}
 
@@ -59,28 +62,30 @@
 
 	&.flag {
 		&::after {
+			opacity: $_state-opacity;
 			background-image: var(--i-flag);
 		}
 	}
 
 	&.draft {
-		background-image: url(svg-fixed("sidebar/draft")); // orange pencil
+		&::after {
+			opacity: 1;
+			background-image: var(--i-draft-orange);
+		}
 	}
 
-	//&.draft-warning {
-	//	background-image: url(svg-fixed("sidebar/draft-warning"));
-	//}
-	//
-	//&.draft-temp {
-	//	background-image: url(svg-fixed("sidebar/draft-temp"));
-	//}
-
 	&.edit {
-		background-image: url(svg-fixed("sidebar/edit")); // grey pencil
+		&::after {
+			opacity: $_state-opacity;
+			background-image: var(--i-draft);
+		}
 	}
 
 	&.edit-done {
-		background-image: url(svg-fixed("sidebar/edit-done")); // green pencil
+		&::after {
+			opacity: 1;
+			background-image: var(--i-draft-green);
+		}
 	}
 
 	&.clock,
@@ -93,7 +98,10 @@
 	}
 
 	&.urgent {
-		background-image: url(svg-fixed("sidebar/urgent"));
+		&::after {
+			opacity: $_state-opacity;
+			background-image: var(--i-urgent);
+		}
 	}
 }
 
