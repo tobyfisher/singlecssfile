@@ -13,11 +13,11 @@
 @use "adder";
 //@use "pathway-in-patient/_all";
 
-// Worklist button behaves as currently, but
-// when you are on the actual page it now has
-// all the options in a popup panel
+// Main Worklist nav  button behaves as a link, but
+// when you land on the actual page it toggles to
+// to a panel to control the worklists:
 @use "worklists-panel/index";
 
-// Worklists V1 (pretty simple standard layout)
-// Clinic Manager is basically v2 of this:
+// Work-lists v1 (standard, simple layout)
+// "Clinic Manager" (a.k.a Worklists) is the update of original worklist
 @use "v1/worklists";

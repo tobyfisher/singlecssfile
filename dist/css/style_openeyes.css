@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Wed Sep 14 2022 10:19:50 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Thu Sep 15 2022 11:26:57 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -489,6 +489,7 @@ html.theme-dark {
   --gui-spinner: #00ffff;
   --gui-vc: #00b4eb;
   --gui-line: #28303c;
+  --gui-line-soft: hsl(216deg, 18%, 18%);
   --gui-scroll-track: #0a0a0f;
   --gui-scroll-thumb: #37373c;
   --btn-base: hsl(213deg, 16%, 18%);
@@ -514,12 +515,14 @@ html.theme-dark {
   --color-orange: #a05500;
   --color-yellow: #c8b432;
   --color-grey: #505050;
-  --input-scheme: dark;
-  --input-focus-outline: #096c9a;
-  --input-base: rgb(36, 49, 61);
-  --input-hint: rgb(33, 42, 53);
-  --input-text: #ccc;
-  --input-placeholder: #787878;
+  --step-blue: rgb(20, 100, 200);
+  --step-green: rgb(50, 53, 50);
+  --step-orange: rgb(160, 50, 0);
+  --step-yellow: rgb(162, 140, 10);
+  --step-red: rgb(160, 40, 10);
+  --step-grey: rgb(30, 30, 32);
+  --step-text: rgb(240, 240, 240);
+  --step-outline: rgba(170, 170, 170, 0.4);
 }
 
 html.theme-light {
@@ -721,6 +724,7 @@ html.theme-light {
   --gui-spinner: #00b4ff;
   --gui-vc: #00b4eb;
   --gui-line: #c0bebe;
+  --gui-line-soft: hsl(0deg, 3%, 80%);
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
   --btn-base: hsl(211deg, 16%, 59%);
@@ -752,6 +756,14 @@ html.theme-light {
   --input-hint: #e9e9e9;
   --input-text: #222;
   --input-placeholder: #959595;
+  --step-blue: rgb(20, 100, 200);
+  --step-green: rgb(140, 147, 140);
+  --step-orange: rgb(180, 80, 0);
+  --step-yellow: rgb(182, 160, 17);
+  --step-red: rgb(200, 40, 10);
+  --step-grey: rgb(235, 235, 235);
+  --step-text: rgb(245, 245, 245);
+  --step-outline: rgba(120, 120, 130, 0.4);
 }
 
 ::-webkit-scrollbar {
@@ -5488,7 +5500,7 @@ ul.quick-filters {
   bottom: 0;
   left: -30px;
   width: 30px;
-  background: center/13px url(svg-white-icon("i/remove-circle")) var(--btn-blue-hint) no-repeat;
+  background: center/13px url("../svg/in-css/dark/i/remove-circle.svg") var(--btn-blue-hint) no-repeat;
   cursor: pointer;
 }
 
@@ -6969,6 +6981,407 @@ login.multisite .info {
   padding: 0 0 0 5px;
   margin: 0 0 0 2px;
   border-left: 2px solid var(--gui-line);
+}
+
+.oe-pathstep-btn {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 34px;
+  padding: 0 10px;
+  margin: 2px 2px 2px 0;
+  line-height: 1;
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: var(--font-medium);
+  cursor: pointer;
+}
+.oe-pathstep-btn:last-child {
+  margin-right: 0;
+}
+.oe-pathstep-btn .step {
+  transform: translateY(-1px);
+}
+.oe-pathstep-btn * {
+  pointer-events: none;
+}
+
+.oe-pathstep-btn {
+  color: var(--txt-base);
+  background: pink;
+  border: 2px solid transparent;
+}
+.oe-pathstep-btn.config {
+  border-color: var(--step-outline);
+  background: left 4px top 5px/11px var(--step-grey) var(--i-cog) no-repeat;
+  padding-left: 20px;
+}
+.oe-pathstep-btn.todo {
+  background-color: var(--step-grey);
+  border-color: var(--step-outline);
+}
+.oe-pathstep-btn.todo-next {
+  background: var(--step-grey);
+  border-color: var(--step-orange);
+}
+.oe-pathstep-btn.config:hover, .oe-pathstep-btn.config:focus, .oe-pathstep-btn.todo-later:hover, .oe-pathstep-btn.todo-later:focus, .oe-pathstep-btn.todo:hover, .oe-pathstep-btn.todo:focus {
+  border-color: var(--txt-base) -light;
+}
+.oe-pathstep-btn.active, .oe-pathstep-btn.done {
+  color: var(--step-text);
+}
+.oe-pathstep-btn.active:hover, .oe-pathstep-btn.active:focus, .oe-pathstep-btn.done:hover, .oe-pathstep-btn.done:focus {
+  border-color: rgba(200, 200, 200, 0.3);
+}
+.oe-pathstep-btn.active.person .step, .oe-pathstep-btn.done.person .step {
+  background-image: url(svg-white-icon("i/person"));
+}
+.oe-pathstep-btn.active {
+  background-color: var(--step-blue);
+}
+.oe-pathstep-btn.done {
+  background-color: var(--step-green);
+}
+.oe-pathstep-btn.person .step {
+  padding-left: 13px;
+  background: center left/11px var(--i-/person) no-repeat;
+}
+.oe-pathstep-btn.hold {
+  border-radius: 50%;
+  width: 34px;
+  background: none;
+  border: 2px solid var(--step-blue);
+}
+.oe-pathstep-btn.hold.active {
+  border-width: 0.5px;
+}
+.oe-pathstep-btn.hold.done {
+  border-color: var(--step-outline);
+}
+.oe-pathstep-btn.hold.done .step {
+  color: var(--txt-base);
+}
+.oe-pathstep-btn.hold .step {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--step-blue);
+}
+.oe-pathstep-btn.hold svg.progress-ring {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+.oe-pathstep-btn.hold svg.progress-ring circle {
+  stroke: var(--step-blue);
+  stroke-width: 4;
+}
+.oe-pathstep-btn.locked {
+  background-color: transparent;
+  border-style: dotted;
+  border-color: var(--step-outline);
+}
+.oe-pathstep-btn.locked .step {
+  opacity: 0.5;
+}
+
+.oe-pathstep-btn .info {
+  margin: 1px 0 0 0;
+  font-size: 0.59375rem;
+  font-weight: var(--font-medium);
+  opacity: 0.7;
+}
+
+.oe-pathstep-btn.buff {
+  padding: 0 8px;
+  border-radius: 9px;
+  color: var(--txt-base);
+  background: none;
+  border: 2px solid var(--step-outline);
+}
+.oe-pathstep-btn.buff:hover, .oe-pathstep-btn.buff:focus {
+  border-color: var(--txt-base) -light;
+}
+.oe-pathstep-btn[class*=comments] {
+  margin-left: 10px;
+  background-color: rgba(var(--txt-base), 0.1);
+  border-color: transparent;
+}
+.oe-pathstep-btn.comments-added .step.i-comments {
+  background-image: var(--i-comments-added);
+  opacity: 0.7;
+}
+.oe-pathstep-btn.break {
+  border-color: var(--step-blue);
+}
+.oe-pathstep-btn.wait {
+  color: var(--txt-base);
+  border-color: var(--step-orange);
+}
+.oe-pathstep-btn.delayed-wait {
+  background-color: var(--step-orange);
+  border-color: transparent;
+}
+.oe-pathstep-btn.delayed-wait .info {
+  color: #fff;
+}
+
+.oe-pathstep-btn span[class^="step i-"] {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background: center center no-repeat;
+  background-size: contain;
+}
+.oe-pathstep-btn .step.i-break {
+  background-image: var(--i-path-break);
+}
+.oe-pathstep-btn .step.i-fork {
+  background-image: var(--i-fork);
+}
+.oe-pathstep-btn .step.i-redflag {
+  background-image: var(--i-flag-red);
+}
+.oe-pathstep-btn .step.i-arr {
+  background-image: var(--i-direction-right);
+}
+.oe-pathstep-btn .step.i-wait {
+  background-image: var(--i-waiting);
+}
+.oe-pathstep-btn .step.i-drug-admin {
+  background-image: var(--i-drop);
+}
+.oe-pathstep-btn .step.i-comments {
+  background-image: var(--i-comments);
+  opacity: 0.5;
+}
+.oe-pathstep-btn .step.i-fin {
+  background-image: var(--i-tick);
+}
+.oe-pathstep-btn .step.i-discharge {
+  background-image: var(--i-stop);
+}
+.oe-pathstep-btn .step.i-delayed {
+  background-image: url("../svg/in-css/dark/i/waiting.svg");
+}
+.oe-pathstep-btn.active .step.i-arr {
+  background-image: url("../svg/in-css/dark/i/direction-right.svg");
+}
+.oe-pathstep-btn.active .step.i-discharge {
+  background-image: url("../svg/in-css/dark/i/stop.svg");
+}
+.oe-pathstep-btn.active .step.i-drug-admin {
+  background-image: url("../svg/in-css/dark/i/drop.svg");
+}
+.oe-pathstep-btn.done .step.i-arr {
+  background-image: url("../svg/in-css/dark/i/direction-right.svg");
+}
+.oe-pathstep-btn.done .step.i-discharge {
+  background-image: url("../svg/in-css/dark/i/stop.svg");
+}
+.oe-pathstep-btn.done .step.i-drug-admin {
+  background-image: url("../svg/in-css/dark/i/drop-done.svg");
+}
+
+.oe-pathstep-popup {
+  position: fixed;
+  z-index: 80;
+  width: 380px;
+  padding: 10px;
+  background: var(--bg-max);
+  border: 1px solid var(--txt-highlight);
+  border-radius: 3px;
+  font-size: 0.75rem;
+  color: var(--txt-base);
+  height: 40px;
+  min-height: 40px;
+  transition: height 0.1s ease-out;
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+.oe-pathstep-popup .slide-open {
+  height: 100%;
+  overflow: hidden;
+  pointer-events: all;
+}
+.oe-pathstep-popup .close-icon-btn {
+  position: absolute;
+  top: 9px;
+  right: 8px;
+  pointer-events: all;
+}
+
+.oe-pathstep-popup.arrow-t::after {
+  content: "";
+  top: -10px;
+  right: 1px;
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-bottom-color: var(--txt-highlight);
+}
+.oe-pathstep-popup.arrow-b::after {
+  content: "";
+  bottom: -10px;
+  right: 1px;
+  height: 0;
+  width: 0;
+  position: absolute;
+  border: 5px solid rgba(0, 0, 0, 0);
+  border-top-color: var(--txt-highlight);
+}
+
+.oe-pathstep-popup .patient {
+  font-size: 0.625rem;
+  font-weight: var(--font-bold);
+  color: var(--txt-light);
+  padding: 0 0 5px 0;
+}
+.oe-pathstep-popup .comment {
+  font-size: 0.75rem;
+  font-style: italic;
+}
+.oe-pathstep-popup h3.title {
+  font-size: 0.875rem;
+  color: var(--txt-light);
+  font-weight: var(--font-medium);
+}
+.oe-pathstep-popup h4 {
+  font-size: 0.75rem;
+  color: var(--txt-base);
+  padding: 0 0 6px 0;
+}
+.oe-pathstep-popup p {
+  font-size: 0.6875rem;
+  color: var(--txt-light);
+}
+
+.oe-pathstep-popup .step-actions {
+  pointer-events: all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0 0 0;
+}
+.oe-pathstep-popup .step-actions button {
+  flex: 1 0 0;
+  margin: 0 0 0 1px;
+}
+.oe-pathstep-popup .step-actions button:first-child {
+  margin-left: 0;
+}
+.oe-pathstep-popup .step-actions button.i-btn {
+  position: relative;
+  flex: none;
+  width: 60px;
+  height: 24px;
+}
+.oe-pathstep-popup .step-actions button.i-btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent center center no-repeat;
+  background-size: 15px;
+  opacity: 0.8;
+}
+.oe-pathstep-popup .step-actions button.i-btn.trash::after {
+  background-image: url(svg-white-icon("i/trash"));
+  background-size: 19px;
+}
+.oe-pathstep-popup .step-actions button.i-btn.right::after {
+  background-image: url(svg-white-icon("i/direction-right-circle"));
+}
+.oe-pathstep-popup .step-actions button.i-btn.left::after {
+  background-image: url(svg-white-icon("i/direction-left-circle"));
+}
+
+.oe-pathstep-popup .step-content {
+  pointer-events: all;
+  min-height: 40px;
+  max-height: 30vh;
+  overflow-y: auto;
+  padding: 8px 5px 5px 0;
+}
+
+.oe-pathstep-popup .step-comments {
+  margin: 5px 0;
+}
+.oe-pathstep-popup .step-comments em.comment {
+  display: block;
+  margin: 5px 0 8px 0;
+}
+.oe-pathstep-popup .step-comments input {
+  border: 1px solid var(--gui-line);
+}
+.oe-pathstep-popup .step-comments .character-counter {
+  width: 100%;
+  height: 3px;
+}
+.oe-pathstep-popup .step-comments .character-counter span.percent-bar {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, transparent, var(--txt-light));
+}
+
+.oe-pathstep-popup .step-status {
+  margin: 5px 0 0 0;
+  padding: 5px 9px 5px 9px;
+  font-size: 0.6875rem;
+  font-weight: var(--font-bold);
+  text-align: center;
+  color: var(--txt-light);
+  border-top: 5px solid var(--step-outline);
+}
+.oe-pathstep-popup .step-status.active {
+  border-top-color: var(--step-blue);
+}
+.oe-pathstep-popup .step-status.complete, .oe-pathstep-popup .step-status.done {
+  border-top-color: var(--step-green);
+}
+.oe-pathstep-popup .step-status.flag {
+  border-top-color: var(--step-red);
+}
+
+.oe-pathstep-popup .step-content table {
+  width: 100%;
+}
+.oe-pathstep-popup .step-content table tbody tr {
+  border-top: 1px dotted var(--gui-line-soft);
+}
+.oe-pathstep-popup .step-content table tbody tr.no-line, .oe-pathstep-popup .step-content table tbody tr:first-child {
+  border-top: none;
+}
+.oe-pathstep-popup .step-content table tbody tr.divider {
+  border-top: 2px solid var(--gui-line-soft);
+}
+.oe-pathstep-popup .step-content table tbody tr.divider th, .oe-pathstep-popup .step-content table tbody tr.divider td {
+  padding-top: 6px;
+}
+.oe-pathstep-popup .step-content table th,
+.oe-pathstep-popup .step-content table td {
+  vertical-align: top;
+  text-align: left;
+  font-size: 0.6875rem;
+  color: var(--txt-base);
+  font-weight: var(--font-medium);
+  padding: 4px 2px;
+}
+.oe-pathstep-popup .step-content table th label.highlight,
+.oe-pathstep-popup .step-content table td label.highlight {
+  margin: 0 2px 0 0;
+  height: auto;
+  padding: 2px 4px;
+}
+.oe-pathstep-popup .step-content table th {
+  color: var(--txt-light);
 }
 
 .oe-search-patient {

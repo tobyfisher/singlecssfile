@@ -76,6 +76,7 @@ $gui: (
 	"spinner": #00ffff,
 	"vc": #00b4eb,
 	"line": #28303c,
+	"line-soft": hsl(216, 18%, 18%),
 	"scroll-track":#0a0a0f,
 	"scroll-thumb":#37373c,
 );
@@ -84,6 +85,7 @@ $gui-light: (
 	"spinner": #00b4ff,
 	"vc": #00b4eb,
 	"line": #c0bebe,
+	"line-soft": hsl(0, 3%, 80%),
 	"scroll-track":#5f5f64,
 	"scroll-thumb":#aaaaaa,
 );
@@ -148,6 +150,29 @@ $color-light: (
 	"orange": #dc7305,
 	"yellow": #d2aa14,
 	"grey": rgb(152, 150, 150),
+);
+
+// ---- Path Steps
+$step: (
+	"blue": rgb(20, 100, 200),
+	"green": rgb(50, 53, 50), // was green": rgb(45,70,45
+	"orange": rgb(160, 50, 0),
+	"yellow": rgb(162, 140, 10),
+	"red": rgb(160, 40, 10),
+	"grey": rgb(30, 30, 32),
+	"text": rgb(240, 240, 240),
+	"outline": rgba(170, 170, 170, 0.4),
+);
+
+$step-light: (
+	"blue": rgb(20, 100, 200),
+	"green": rgb(140, 147, 140),
+	"orange": rgb(180, 80, 0),
+	"yellow": rgb(182, 160, 17),
+	"red": rgb(200, 40, 10),
+	"grey": rgb(235, 235, 235),
+	"text": rgb(245, 245, 245),
+	"outline": rgba(120, 120, 130, 0.4),
 );
 
 
@@ -234,7 +259,7 @@ html.theme-dark {
 	@include cssVars("gui", $gui);
 	@include cssVars("btn", $btn);
 	@include cssVars("color", $color);
-	@include cssVars("input", $input);
+	@include cssVars("step", $step);
 }
 
 
@@ -261,6 +286,7 @@ html.theme-light {
 	@include cssVars("btn", $btn-light);
 	@include cssVars("color", $color-light);
 	@include cssVars("input", $input-light);
+	@include cssVars("step", $step-light);
 
 }
 
