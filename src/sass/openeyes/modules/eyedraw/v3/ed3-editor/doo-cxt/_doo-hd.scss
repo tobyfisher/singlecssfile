@@ -1,6 +1,8 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
 .doo-hd {
 	@include flex(stretch, space-between);
@@ -13,7 +15,7 @@
 
 		&:hover,
 		&:focus {
-			background-color: $oe-ed3-btn;
+			background-color: var(--ed3-btn);
 			color: #fff;
 		}
 	}
@@ -27,14 +29,14 @@
 
 		&:hover,
 		&:focus {
-			background-color: $oe-ed3-icon-area;
+			background-color: var(--ed3-icon-area);
 		}
 	}
 
 	// edit state (user selected)
 	.doo-cxt.edit & {
 		.doo-name {
-			background: 4px 10px / 7px #f8f8f8 url(svg-all("eyedraw/active-dot")) no-repeat;
+			background: 4px 10px / 7px #f8f8f8 url(svg-fixed("eyedraw/active-dot")) no-repeat;
 			padding-left: 15px;
 			color: #000;
 			@include font-size(12);

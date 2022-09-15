@@ -11,7 +11,7 @@
 	position: absolute;
 	top:0;
 	right:-225px; 
-	z-index: $oe-z-ed-v2 + 4;
+	z-index: #{$oe-z-ed-v2 + 4};
 	
 	&.sideview,
 	&.left { 

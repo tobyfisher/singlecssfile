@@ -126,7 +126,7 @@
 		height: $-size-small;
 		margin:0 0.4em;
 		background-size: 0.8em;
-		background-image: url(svg-all("ui/type-linebreak"));
+		background-image: url(svg-fixed("ui/type-linebreak"));
 	}
 
 	&.paragraph {
@@ -135,7 +135,7 @@
 		height: $-size-small;
 		margin:0 0.5em;
 		background-size: 1em;
-		background-image: url(svg-all("ui/type-paragraph"));
+		background-image: url(svg-fixed("ui/type-paragraph"));
 	}
 
 

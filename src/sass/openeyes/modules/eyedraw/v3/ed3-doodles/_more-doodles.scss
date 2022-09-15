@@ -1,6 +1,9 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
 // popup within ".more"
 .more-doodles {
 	display:none;
@@ -9,8 +12,8 @@
 	width: 220px; // arbitrary
 	z-index: 2; // needs to be over the controls
 
-	background: $oe-ed3-icon-area;
-	border: 2px solid $oe-ed3-icon-area;
+	background: var(--ed3-icon-area);
+	border: 2px solid var(--ed3-icon-area);
 	border-top: none;
 
 	@include boxshadow();
@@ -40,7 +43,7 @@
 		.oe-i.remove-circle {
 			width: 38px;
 			height: 32px; // match input height
-			background-image: url(svg-light-fixed("i/remove-circle"));
+			background-image: url(svg-black-icon("i/remove-circle"));
 			background-size: 15px;
 		}
 	}
@@ -55,16 +58,16 @@
 			@include flex(center, space-between);
 			@include font-size(11);
 			font-weight:500;
-			color: $oe-ed3-text;
-			background: $oe-ed3-doo-bg;
+			color: var(--ed3-text);
+			background: var(--ed3-doo-bg);
 			padding:0 5px;
 			border-top: 1px #eee dotted;
-			min-height: $ed3-i-width; // match ed-i height
+			min-height: $ed3-icon-size; // match ed-i height
 			cursor: pointer;
 
 			&:hover,
 			&.focus {
-				background: $oe-ed3-btn;
+				background: var(--ed3-btn);
 				color:#fff;
 			}
 		}

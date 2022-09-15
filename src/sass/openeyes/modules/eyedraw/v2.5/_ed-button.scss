@@ -1,8 +1,11 @@
-// * OpenEyes
-// *
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
 // Toolbar button.
-// <a> (this shouldn't be an anchor)
+// <a> (but this shouldn't be an anchor, that is a mistake)
 .ed-button {
 	position:relative;
 	display: block;

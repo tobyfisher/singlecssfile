@@ -11,7 +11,7 @@
 		// Canvas element in edit mode
 		&.ed-canvas-edit {
 			background: var(--ed3-blue);
-			border:1px solid $oe-ed3-panels;
+			border:1px solid var(--ed3-panels);
 			cursor: pointer;
 			position: relative;
 			z-index: $oe-z-ed-v2;

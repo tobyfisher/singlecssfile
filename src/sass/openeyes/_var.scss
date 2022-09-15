@@ -52,6 +52,9 @@ $oe-icon-opacity: 0.5;
 // Event icon is raster
 $oe-event-icon-size: 19px;
 
+// Eyedraw icon (old) raster (x1)
+$ed3-icon-size: 32px;
+
 // z
 $oe-z-top: 160; // VC ScratchPad
 $oe-z-popup: 150; // was 100, switched to above logo because of attachments
@@ -77,4 +80,8 @@ $oe-z-ed-v2: 20; // ED v2 DOM. ED v2 still in first V3 implementation
 
 @function svg-white-icon($svg) {
 	@return build-svg-path("dark", $svg);
+}
+
+@function svg-black-icon($svg) {
+	@return build-svg-path("light", $svg);
 }

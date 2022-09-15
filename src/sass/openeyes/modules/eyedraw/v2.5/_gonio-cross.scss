@@ -1,6 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/mix" as *;
 
 // gonioscopy 
 // this is a quick fix for the layout of this data.
@@ -12,7 +13,7 @@
 		height:120px;
 		width:auto;
 		// add a gonio cross to the background
-		background:transparent url( svg-all( 'eyedraw/gonio' ) ) center center no-repeat;
+		background:transparent url( svg-fixed( 'eyedraw/gonio' ) ) center center no-repeat;
 		background-size:80px;
 		
 		margin:10px 0;

@@ -5,7 +5,7 @@
 	@return "../svg/in-css/" + $theme + "/" + $svg + ".svg";
 }
 
-@function svg-all($svg){
+@function svg-fixed($svg){
 	@return build-svg-path("all", $svg);
 }
 

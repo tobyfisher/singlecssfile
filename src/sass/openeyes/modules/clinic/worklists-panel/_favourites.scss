@@ -32,7 +32,7 @@
 			&:hover,
 			&:focus {
 				color: #fff;
-				background: var(--btn-blue) url(svg-all("ui/shortcut-arrow")) bottom 10px left 8px no-repeat;
+				background: var(--btn-blue) url(svg-fixed("ui/shortcut-arrow")) bottom 10px left 8px no-repeat;
 				background-size: 15px;
 			}
 

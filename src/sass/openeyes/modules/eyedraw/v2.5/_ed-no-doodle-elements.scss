@@ -1,13 +1,10 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
-// * OpenEyes
-// *
+@use "openeyes/mix" as *;
 
 .ed2-no-doodle-elements {
 	margin:1px 0 1px 0;
-	
 	
 	// ul
 	.no-doodles {
@@ -19,15 +16,17 @@
 			height:23px;
 			padding:0 3px 0 5px; 
 			margin:2px 2px 0 0;
-			color:$oe-user-input-text; 
-			background: rgba($oe-user-inputs,0.6);
+			color: var(--input-text);
+			background: var(--input-base);
 			
 			&.has-options {
 				cursor: pointer;
-				&:hover, &:focus, &:active, 
+				&:hover,
+				&:focus,
+				&:active,
 				&.selected {
-					background:$oe-btn-blue; 	// THEME related (as interaction)
-					color:#fff;
+					background:var(--btn-blue);
+					color:var(--btn-text);
 				}
 			}
 		}
