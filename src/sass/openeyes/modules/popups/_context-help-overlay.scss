@@ -1,0 +1,57 @@
+// ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
+// ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
+
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
+.context-help-overlay {
+	width: 100%;
+	height: 100%; 
+	cursor: pointer;
+	
+	.help-note {
+		position: fixed;
+		color: #fff;
+		// generic effect to work across both themes
+		background: rgba(60,60,65, 0.6);
+
+		padding:10px;
+		border-radius:5px;
+		@include font-size(12);
+		@include boxshadow();
+
+		// arrow
+		&:after {
+			content:"";
+			position: absolute;
+			height: 0;
+			width: 0;
+			pointer-events: none;
+			border: 7px solid rgba(0, 0, 0, 0);
+		}
+		
+		&.top {
+			border-top: 1px solid var(--txt-highlight);
+			&:after {
+				top: 0;
+				left: 50%;
+				border-bottom-color: var(--txt-highlight);
+				transform: translate(-7px, -14px);
+			}
+		}
+		
+		&.bottom {
+			border-bottom: 1px solid var(--txt-highlight);
+			&:after {
+				bottom: 0;
+				left: 50%;
+				border-top-color: var(--txt-highlight);
+				transform: translate(-7px, 14px);
+			}
+		}
+		
+		
+		
+	}
+	
+}

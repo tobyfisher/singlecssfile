@@ -1,9 +1,9 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-
 // CSS Vars (Custom selectors) for theme colours.
-// set <HTML> to theme colours e.g. "theme-light"
+// set <HTML> class to theme colours
+// e.g. class="theme-light" or "theme-dark"
 
 @mixin cssVars( $group, $map ) {
 	@each $type, $prop in $map {
@@ -12,6 +12,7 @@
 }
 
 // defaults groups for "dark" theme settings
+
 // ---- Backgrounds
 // colours themes work slightly differently for dark and light
 // note the variation in order
@@ -20,7 +21,7 @@ $bg: (
 	"popup":rgb(13, 22, 30),
 	"hover-row": rgb(19, 27, 35),
 	"event": rgb(20, 22, 28),
-	"data": rgb(28, 34, 40), //21	28	34
+	"data": rgb(28, 34, 40),
 	"html": rgb(24, 30, 36),
 	"title": rgb(30, 36, 42),
 	"grey": hsl(212, 22%, 25%)
