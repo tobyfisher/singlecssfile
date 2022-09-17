@@ -30,7 +30,7 @@
 		// duplicate icon behaviour
 		width:29px;
 		height:29px;
-		background:center / 19px url( svg-white-icon("i/remove-circle") )  no-repeat;
+		background:center / 19px var(--i-remove-circle)  no-repeat;
 		opacity: $oe-icon-opacity;
 		&:hover,
 		&:focus {

@@ -24,12 +24,11 @@
 @use "context-help-overlay";
 
 // Specific content: 
-//@use "content-specific/previous-elements";  // Previous Elements (popup for coping data from previous elements)
-//@use "content-specific/build-psd"; // Popup Add to PSD
-//@use "content-specific/popup-search-query"; // Popup Search Query (save and load)
-//@use "content-specific/meds-mx";
-//@use "content-specific/signature-pad";
-//@use "content-specific/tabular-data";
+@use "content-specific/previous-elements";  // Previous Elements (popup for coping data from previous elements)
+@use "content-specific/build-psd"; // Popup Add to PSD
+@use "content-specific/popup-search-query"; // Popup Search Query (save and load)
+@use "content-specific/meds-mx";
+@use "content-specific/signature-pad";
 
 // event audit trail popup v3
 @use "oe-audit-trail-popup";	// User audit trail popup
@@ -38,7 +37,7 @@
 //@use "events-user-trail/_all";
 
 // standardised version of Add new event widget
-//@use "add-new-event/v1";
+@use "add-new-event/v1";
 @use "add-new-event/v2";
 
 // attachments

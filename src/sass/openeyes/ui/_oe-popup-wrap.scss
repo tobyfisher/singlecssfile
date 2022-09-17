@@ -19,7 +19,7 @@
 	// generic effect to work across both themes
 	background: rgba(60,60,65, 0.6);
 
-	&.dark {
+	&.block-out {
 		// full content block-out
 		background: var(--bg-html);
 	}
@@ -28,5 +28,4 @@
 		// invisible
 		background: transparent;
 	}
-
 }

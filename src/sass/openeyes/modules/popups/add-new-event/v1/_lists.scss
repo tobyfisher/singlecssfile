@@ -27,8 +27,8 @@
 
 		@include font-size(12);
 		font-weight: var(--font-medium);
-		color: var(--txt-light);
-		background: var(--btn-base);
+		color: var(--txt-base);
+		background: var(--btn-base-soft);
 
 		cursor: pointer;
 
@@ -39,7 +39,7 @@
 			color: var(--btn-text);
 
 			.tag {
-				background: pink;
+				background: transparent;
 				color: var(--txt-highlight);
 			}
 		}

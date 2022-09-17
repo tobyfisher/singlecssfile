@@ -28,7 +28,7 @@
 		
 		@include font-size(12);
 		font-style: italic;
-		color:$oe-dark-text; 
+		color:var(--txt-base);
 		background:$oe-dark-popup-bg;
 		
 		// UX helper.

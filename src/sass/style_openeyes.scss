@@ -32,7 +32,7 @@
 // Iconography
 @use "openeyes/ui/iconography";
 
-// General UI (maintain order)
+// General UI (maintain order, changing it may affect the cascade)
 @use "openeyes/ui/typography";
 @use "openeyes/ui/flex";
 @use "openeyes/ui/inputs";
@@ -58,6 +58,7 @@
 @use "openeyes/modules/brand";
 @use "openeyes/modules/clinic";
 @use "openeyes/modules/error-message";
+@use "openeyes/modules/esign";
 @use "openeyes/modules/eyedraw";
 @use "openeyes/modules/fast-date-range";
 @use "openeyes/modules/header";
@@ -70,8 +71,8 @@
 @use "openeyes/modules/pathstep";
 @use "openeyes/modules/partial-booking";
 @use "openeyes/modules/popups";
+@use "openeyes/modules/reports";
 @use "openeyes/modules/search-patient";
-//@use "openeyes/modules/sync-data";
 
 // SEM (in it's own little world)
 @use "openeyes/sem";

@@ -5,7 +5,6 @@
 @use "openeyes/mix" as *;
 
 .oe-create-event-step-through {
-
 	// <td>
 	.step-subspecialties {
 		// <ul> list of all available subspecialites
@@ -18,28 +17,6 @@
 			max-height: 500px !important; // on a massive monitor it's way to tall!
 			overflow-y: auto;
 			padding:0 0 10px 0;
-		}
-	}
-
-	// Extends the basic <li> styling
-	// coupling is required to create a greater
-	// specificity or CSS won't style
-	.oe-specialty-service {
-		position: relative;
-		flex-direction: column;
-		align-items: flex-start;
-		@include font-size(13);
-		padding: 10px;
-
-		// <span> wrap 'service'
-		.service {
-			display: block; // to push to new line
-			@include font-size(11);
-		}
-
-		// select dropdown (sometimes needed)
-		select {
-			margin: 5px 0 0 0;
 		}
 	}
 }

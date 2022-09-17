@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri Sep 16 2022 09:23:12 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sat Sep 17 2022 14:35:09 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -459,6 +459,7 @@ html.theme-dark {
   --i-cross-red: url("../svg/in-css/dark/i/cross-red.svg");
   --i-face: url("../svg/in-css/dark/ui/face.svg");
   --i-element-divider: url("../svg/in-css/dark/ui/element-divider.svg");
+  --i-event-elements: url("../svg/in-css/dark/ui/event-elements.svg");
   --i-btn-goto: url("../svg/in-css/dark/ui/btn-goto.svg");
   --i-tab-more-h: url("../svg/in-css/dark/ui/tab-more-h.svg");
   --i-tab-whiteboard: url("../svg/in-css/dark/ui/tab-whiteboard.svg");
@@ -494,6 +495,7 @@ html.theme-dark {
   --gui-scroll-thumb: #37373c;
   --btn-base: hsl(213deg, 16%, 18%);
   --btn-base-heavy: rgb(24, 32, 40);
+  --btn-base-soft: hsl(213deg, 13%, 15%);
   --btn-text: #bbb;
   --btn-text-selected: #ddd;
   --btn-blue-hint: #0e4886;
@@ -700,6 +702,7 @@ html.theme-light {
   --i-cross-red: url("../svg/in-css/light/i/cross-red.svg");
   --i-face: url("../svg/in-css/light/ui/face.svg");
   --i-element-divider: url("../svg/in-css/light/ui/element-divider.svg");
+  --i-event-elements: url("../svg/in-css/light/ui/event-elements.svg");
   --i-btn-goto: url("../svg/in-css/light/ui/btn-goto.svg");
   --i-tab-more-h: url("../svg/in-css/light/ui/tab-more-h.svg");
   --i-tab-whiteboard: url("../svg/in-css/light/ui/tab-whiteboard.svg");
@@ -711,8 +714,8 @@ html.theme-light {
   --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
   --bg-max: #fff;
   --bg-event: rgb(251, 250, 250);
-  --bg-popup: rgb(238, 236, 236);
-  --bg-data: rgb(231, 229, 229);
+  --bg-data: rgb(235, 233, 233);
+  --bg-popup: rgb(230, 228, 228);
   --bg-html: rgb(217, 215, 215);
   --bg-hover-row: rgb(206, 205, 205);
   --bg-title: rgb(202, 200, 200);
@@ -735,6 +738,7 @@ html.theme-light {
   --gui-scroll-thumb: #aaaaaa;
   --btn-base: hsl(211deg, 16%, 59%);
   --btn-base-heavy: hsl(211deg, 15%, 45%);
+  --btn-base-soft: hsl(211deg, 8%, 83%);
   --btn-text: #fff;
   --btn-text-selected: #fff;
   --btn-blue-hint: #4285e0;
@@ -4264,7 +4268,7 @@ ul.oe-multi-select li {
   z-index: 150;
   background: rgba(60, 60, 65, 0.6);
 }
-.oe-popup-wrap.dark {
+.oe-popup-wrap.block-out {
   background: var(--bg-html);
 }
 .oe-popup-wrap.clear {
@@ -4432,12 +4436,6 @@ hr.soft {
   right: 0;
   height: 15px;
   background: center/13px var(--btn-blue-hint) url("../svg/in-css/dark/i/more-h.svg") no-repeat;
-}
-
-.oe-tooltip.esign {
-  width: 210px;
-  height: 70px;
-  background: center/contain no-repeat white;
 }
 
 .oe-tooltip.copied {
@@ -5821,6 +5819,29 @@ ul.quick-filters {
 
 .highlighted-error {
   border: 1px solid var(--color-red);
+}
+
+.esign-check {
+  display: inline-block;
+  height: 24px;
+  width: 72px;
+  background: center/contain no-repeat white;
+  border: 2px solid white;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.esign-check:focus, .esign-check:hover {
+  border-color: rgba(10, 100, 10, 0.7);
+}
+
+.esigned-at {
+  padding: 0 0 0 20px;
+}
+
+.oe-tooltip.esign {
+  width: 210px;
+  height: 70px;
+  background: center/contain no-repeat white;
 }
 
 .ed2-widget.edit {
@@ -8247,7 +8268,7 @@ table.partial-booking tbody td .highlighter {
   right: 15px;
   width: 29px;
   height: 29px;
-  background: center/19px url("../svg/in-css/dark/i/remove-circle.svg") no-repeat;
+  background: center/19px var(--i-remove-circle) no-repeat;
   opacity: 0.5;
   cursor: pointer;
 }
@@ -8458,6 +8479,141 @@ table.partial-booking tbody td .highlighter {
   transform: translate(-7px, 14px);
 }
 
+.oe-popup-content.previous-elements table {
+  width: 100%;
+}
+.oe-popup-content.previous-elements table tr {
+  border-bottom: 1px solid var(--gui-line);
+}
+.oe-popup-content.previous-elements table tr:last-child {
+  border-bottom: none;
+}
+.oe-popup-content.previous-elements table td {
+  vertical-align: top;
+  padding: 10px 10px 10px 0;
+  font-size: 0.75rem;
+}
+.oe-popup-content.previous-elements table td:first-child {
+  font-size: 0.8125rem;
+}
+.oe-popup-content.previous-elements table td .metadata {
+  color: var(--txt-light);
+}
+.oe-popup-content.previous-elements table td .metadata .info {
+  margin: 0 0 5px 0;
+}
+.oe-popup-content.previous-elements table td .metadata .user {
+  color: var(--txt-base);
+}
+.oe-popup-content.previous-elements .element-eyes {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.oe-popup-content.previous-elements .element-eyes .right-eye {
+  width: 490px;
+  margin: 0 10px 0 0;
+}
+.oe-popup-content.previous-elements .element-eyes .left-eye {
+  width: 490px;
+}
+
+.oe-popup-content.build-psd {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 1040px;
+}
+.oe-popup-content.build-psd h3 {
+  font-size: 0.8125rem;
+}
+.oe-popup-content.build-psd .psd-selected-patients {
+  flex: 1;
+}
+.oe-popup-content.build-psd .psd-selected-patients ul li {
+  font-size: 0.6875rem;
+  padding: 3px 0;
+}
+.oe-popup-content.build-psd .psd-options {
+  flex: 2;
+  padding: 0 10px;
+  margin: 0 10px;
+  border-left: 1px solid var(--gui-line);
+  border-right: 1px solid var(--gui-line);
+}
+.oe-popup-content.build-psd .psd-laterality {
+  flex: 1;
+  padding: 0 10px 0 0;
+  margin: 0 10px 0 0;
+  border-right: 1px solid var(--gui-line);
+}
+.oe-popup-content.build-psd .psd-build {
+  flex: 2;
+}
+.oe-popup-content.build-psd .psd-build table {
+  margin: 0 0 10px 0;
+}
+.oe-popup-content.build-psd .psd-build table td .drug {
+  font-size: 0.75rem;
+}
+.oe-popup-content.build-psd .psd-build table td:last-child {
+  text-align: right;
+}
+
+.oe-popup-content.popup-search-query .all-searches {
+  width: 420px;
+  margin: 0 30px 0 0;
+}
+.oe-popup-content.popup-search-query .search-queries {
+  width: 360px;
+  margin: 0 30px 0 0;
+}
+.oe-popup-content.popup-search-query .show-query {
+  width: 360px;
+}
+
+.oe-popup-content.meds-mx .meds-side-dates {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.oe-popup-content.meds-mx .meds-side-dates .oe-systemic-icons,
+.oe-popup-content.meds-mx .meds-side-dates .oe-eye-lat-icons {
+  margin-right: 3px;
+}
+.oe-popup-content.meds-mx .meds-stop-reason {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0 0 18px;
+  position: relative;
+}
+.oe-popup-content.meds-mx .meds-stop-reason:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 15px;
+  background: url("../svg/in-css/dark/i/stop.svg") left center no-repeat;
+  background-size: 13px;
+  opacity: 0.5;
+}
+
+.oe-popup-content .signature-pad {
+  margin: 20px 0;
+}
+.oe-popup-content .signature-pad .signature-e-sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.oe-popup-content .signature-pad .signature-e-sign canvas {
+  width: 600px;
+  height: 200px;
+}
+
 .oe-popup-event-audit-trail {
   z-index: 79;
   position: absolute;
@@ -8493,6 +8649,147 @@ table.partial-booking tbody td .highlighter {
 }
 .oe-popup-event-audit-trail table td:first-child {
   text-align: left;
+}
+
+.oe-create-event-step-through {
+  margin: 0 !important;
+}
+.oe-create-event-step-through td {
+  padding: 0 8px !important;
+  border-left: 1px solid var(--gui-line) !important;
+}
+.oe-create-event-step-through td.step-subspecialties {
+  width: 25%;
+}
+.oe-create-event-step-through td.step-context {
+  width: 25%;
+}
+.oe-create-event-step-through td.step-event-types {
+  width: 50%;
+}
+
+.oe-create-event-step-through li,
+.oe-create-event-step-through .new-added-subspecialty-service {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 2px 0;
+  padding-left: 10px;
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+  color: var(--txt-base);
+  background: var(--btn-base-soft);
+  cursor: pointer;
+}
+.oe-create-event-step-through li.oe-specialty-service,
+.oe-create-event-step-through .new-added-subspecialty-service.oe-specialty-service {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.oe-create-event-step-through li.context-list, .oe-create-event-step-through li.event-type-list,
+.oe-create-event-step-through .new-added-subspecialty-service.context-list,
+.oe-create-event-step-through .new-added-subspecialty-service.event-type-list {
+  height: 19px;
+  break-inside: avoid;
+}
+.oe-create-event-step-through li:hover, .oe-create-event-step-through li:focus, .oe-create-event-step-through li.selected,
+.oe-create-event-step-through .new-added-subspecialty-service:hover,
+.oe-create-event-step-through .new-added-subspecialty-service:focus,
+.oe-create-event-step-through .new-added-subspecialty-service.selected {
+  background-color: var(--btn-blue);
+  color: var(--btn-text);
+}
+.oe-create-event-step-through li:hover .tag, .oe-create-event-step-through li:focus .tag, .oe-create-event-step-through li.selected .tag,
+.oe-create-event-step-through .new-added-subspecialty-service:hover .tag,
+.oe-create-event-step-through .new-added-subspecialty-service:focus .tag,
+.oe-create-event-step-through .new-added-subspecialty-service.selected .tag {
+  background: transparent;
+  color: var(--txt-highlight);
+}
+
+.oe-create-event-step-through .step-subspecialties .subspecialties-list {
+  height: calc(100vh - 350px);
+  max-height: 500px !important;
+  overflow-y: auto;
+  padding: 0 0 10px 0;
+}
+
+.step-subspecialties .change-subspecialty {
+  position: relative;
+  border: 1px solid var(--btn-green);
+  padding: 10px 5px;
+}
+.step-subspecialties .change-subspecialty h6 {
+  font-size: 0.75rem;
+  color: var(--txt-light);
+  padding: 0 0 0 2px;
+  margin: 0 0 5px 0;
+}
+.step-subspecialties .change-subspecialty .fixed-service {
+  margin: 10px 0 0 8px;
+  font-size: 0.75rem;
+}
+.step-subspecialties .change-subspecialty .select-service {
+  margin: 10px 0 0 0;
+}
+.step-subspecialties .change-subspecialty .add-subspecialty-btn {
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+}
+
+.step-event-types .event-type-list {
+  column-count: 2;
+  column-gap: 10px;
+}
+.step-event-types .oe-event-type {
+  padding-left: 0;
+  break-inside: avoid;
+}
+.step-event-types .oe-event-type .oe-i-e {
+  margin-right: 10px;
+}
+.step-event-types .oe-event-type.add_event_disabled {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
+.oe-specialty-service {
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.8125rem;
+  padding: 10px;
+}
+.oe-specialty-service .service {
+  display: block;
+  font-size: 0.6875rem;
+}
+.oe-specialty-service select {
+  margin: 5px 0 0 0;
+}
+.new-added-subspecialty-service .oe-specialty-service {
+  margin: 10px 0 0 0;
+  border: 2px solid var(--btn-green);
+}
+.new-added-subspecialty-service .oe-specialty-service .change-new-specialty {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+}
+.oe-specialty-service .tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 21px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.6875rem;
+  font-weight: var(--font-medium);
+  color: var(--txt-light);
+  background: var(--bg-popup);
 }
 
 .oe-add-new-event {
@@ -8584,6 +8881,63 @@ table.partial-booking tbody td .highlighter {
 .event-type-list .oe-event-type.add_event_disabled {
   opacity: 0.4;
   pointer-events: none;
+}
+
+.reports-main {
+  padding-right: 10px;
+}
+
+.reports-panels {
+  padding: 5px 10px 20px 10px;
+  border-right: 1px solid pink;
+}
+
+ul.reports-nav {
+  margin: 5px 0 20px 0;
+}
+ul.reports-nav li {
+  display: block;
+  font-size: 0.6875rem;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid var(--gui-line);
+}
+ul.reports-nav li:last-child {
+  border-bottom: none;
+}
+ul.reports-nav li a {
+  display: block;
+  padding: 3px 0 3px 3px;
+}
+ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus, ul.reports-nav li a.selected {
+  color: var(--btn-text);
+  background: var(--btn-blue);
+}
+
+.oe-reports form table {
+  font-size: 0.75rem;
+}
+.oe-reports form h3 {
+  font-size: 0.8125rem;
+  margin: 0 0 8px 0;
+}
+
+.report-summary {
+  padding: 0 0 40px 0;
+}
+.report-summary table.standard th, .report-summary table.standard td {
+  font-size: 0.75rem;
+}
+.report-summary table.standard tbody td {
+  padding: 8px 10px 8px 0;
+  vertical-align: top;
+}
+.report-summary table.standard tbody td:first-child {
+  padding-left: 3px;
+}
+.report-summary table.standard tfoot td {
+  padding: 20px 0 0 0;
+  margin: 20px 0 0 0;
 }
 
 .oe-search-patient {
@@ -8819,6 +9173,53 @@ table.partial-booking tbody td .highlighter {
   }
 }
 
+.main-event .event-title {
+  font-size: 0.9375rem;
+  font-weight: var(--font-medium);
+  color: var(--txt-highlight);
+  padding: 8px 0 8px 11px;
+}
+.main-event .event-details {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 38px;
+}
+.main-event .event-details .event-title {
+  padding: 0 11px;
+}
+.main-event .event-details .oe-i {
+  width: 38px;
+  height: 38px;
+}
+.main-event .event-title-extra-info {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.main-event .event-title-extra-info .extra-info {
+  font-size: 0.9375rem;
+  font-weight: var(--font-light);
+  margin: 0 0 0 20px;
+}
+.main-event .event-title-extra-info .extra-info input.date {
+  font-size: 0.8125rem;
+  padding: 2px 5px;
+  width: 90px;
+  background: pink;
+}
+
+.event-footer-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 3px 0 15px 0;
+  background: var(--color-grey);
+}
+
 .main-event .patient-overview {
   flex: 1 1 0;
   padding: 0 10px;
@@ -8830,10 +9231,30 @@ table.partial-booking tbody td .highlighter {
   font-size: 0.75rem;
 }
 
+.removed-record-watermark {
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  font-size: 6vh;
+  font-weight: 700;
+  color: #f00;
+  padding: 1vh 1vw;
+  border: 15px solid #f00;
+  opacity: 0.5;
+  transform: translateX(-50%);
+}
+@media only screen and (min-width: 1890px) {
+  .removed-record-watermark {
+    left: 33%;
+  }
+}
+
 .sidebar {
   grid-area: sidebar;
   width: 200px;
   overflow-y: auto;
+  background: var(--bg-grey);
 }
 .sidebar.subgrid {
   display: grid;
@@ -8849,17 +9270,45 @@ table.partial-booking tbody td .highlighter {
   height: 38px;
   width: 200px;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1px;
   background: var(--bg-grey);
 }
 .sidebar-header .manage-elements,
 .sidebar-header .add-event {
-  flex: 1 1 0;
+  flex: 3 1 0;
   height: 100%;
   font-size: 0.8125rem;
 }
 .sidebar-header .manage-elements.selected,
 .sidebar-header .add-event.selected {
   background: var(--btn-green-hint);
+}
+
+.sidebar-header .icon-button {
+  width: 48px;
+  height: 38px;
+  padding: 0;
+  cursor: pointer;
+  flex: 1 1 0;
+  color: var(--txt-base);
+  background: center/21px var(--btn-base) no-repeat;
+}
+.sidebar-header .icon-button.element-structure {
+  background-image: var(--i-event-elements);
+}
+.sidebar-header .icon-button.uah {
+  background-size: 13px;
+  background-image: url("../svg/in-css/all/ui/sidebar-audit-trail.svg");
+}
+.sidebar-header .icon-button.active, .sidebar-header .icon-button.selected {
+  color: rgb(255, 255, 255);
+  background-color: var(--btn-blue);
+}
+.sidebar-header .icon-button:hover, .sidebar-header .icon-button:focus, .sidebar-header .icon-button:active {
+  color: rgb(255, 255, 255);
+  background-color: var(--btn-blue-active);
 }
 
 .clinic-pathway-btn {
@@ -9167,6 +9616,76 @@ table.partial-booking tbody td .highlighter {
 }
 .sidebar .tooltip.quicklook .event-issue.urgent {
   background-color: var(--color-orange);
+}
+
+.oe-event-quickview {
+  display: none;
+  z-index: 92;
+  position: fixed;
+  top: 60px;
+  left: 200px;
+  bottom: 0;
+  width: 900px;
+  height: calc(100vh - 60px);
+  overflow: hidden;
+  background: var(--bg-popup);
+}
+.oe-event-quickview.fade-in {
+  display: block;
+}
+.oe-event-quickview.fade-out {
+  display: block;
+  animation: 0.2s ease-in forwards fadeout;
+}
+
+.oe-event-quickview .title {
+  position: absolute;
+  top: 0;
+  left: 75px;
+  padding: 9px 0 0 0;
+  font-size: 1.125rem;
+  font-weight: var(--font-medium);
+}
+.oe-event-quickview .title::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 100%;
+  width: 30px;
+  height: 38px;
+  background: url(svg-all("sidebar/lightning")) center center no-repeat;
+  background-size: 15px;
+}
+
+.oe-event-quickview .i-btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  background: center/19px url("../svg/in-css/dark/i/remove-circle.svg") no-repeat;
+}
+
+.oe-event-quickview .quick-view-content {
+  position: relative;
+  height: calc( 100vh - 98px);
+  overflow-y: auto;
+}
+
+.oe-event-quickview .quick-view-content.img {
+  padding: 10px;
+}
+.oe-event-quickview .quick-view-content.img img {
+  width: 100%;
+  height: auto;
+}
+
+.oe-event-quickview .quick-view-content .not-available {
+  margin: 38px;
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 300;
 }
 
 .in-audit .element,

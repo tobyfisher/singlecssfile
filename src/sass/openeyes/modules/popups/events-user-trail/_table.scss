@@ -27,7 +27,7 @@
 		thead {
 			th {
 				font-weight: var(--font-medium)
-				color: $oe-dark-text;
+				color: var(--txt-base);
 				@include font-size(15);
 				border-top: none;
 				padding: 0 0 8px 6px;

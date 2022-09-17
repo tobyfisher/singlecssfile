@@ -7,6 +7,7 @@
 	grid-area: sidebar;
 	width: $oe-event-sidebar-width;
 	overflow-y: auto;
+	background:var(--bg-grey);
 	
 	&.subgrid {
 		display: grid;

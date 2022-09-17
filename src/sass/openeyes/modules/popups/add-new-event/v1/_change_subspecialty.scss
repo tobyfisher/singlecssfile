@@ -40,25 +40,6 @@
 			right:0;
 		}
 	}
-
-	// User selects a new subspeciality, this replaces the select option
-	// and flags that it's new with a border
-	// <div> outside of the <ul>
-	.new-added-subspecialty-service {
-
-		// <div> needs all the <li> stuff...
-		@extend .oe-specialty-service;
-
-		margin: 10px 0 0 0;
-		border:2px solid var(--btn-green);
-
-		// remove "x" button (JS will remove this element and show options again)
-		.change-new-specialty {
-			position: absolute;
-			bottom: 4px;
-			right: 4px;
-		}
-	}
 }
  
 

@@ -1,9 +1,9 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
-// OE Popups
-// notes: see openeyes/components/popups
 
 // SEM Edit mode: copy data from "Previous Element"
 // 'download' icon next to close.
@@ -41,7 +41,7 @@
 					}
 					
 					.user {
-						color:$oe-dark-text;
+						color:var(--txt-base);
 					}
 				}
 				
