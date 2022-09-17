@@ -21,6 +21,7 @@
 	overflow:hidden;
  
 	background: var(--bg-popup); // colour to match sidebar quicklook
+	border-right: 1px solid var(--txt-active);
 	
 	// CSS animation, previously jQuery
 	// however, JS needs to remove the fadeout class...

@@ -13,7 +13,7 @@
 		width: $oe-event-header-height;	
 		cursor: pointer;
 		// large icon size (make sure it's obvious that it's been locked open)
-		background: center / 19px url(svg-white-icon('i/remove-circle')) no-repeat;
+		background: center / 19px var(--i-remove-circle) no-repeat;
 	}
 }
 

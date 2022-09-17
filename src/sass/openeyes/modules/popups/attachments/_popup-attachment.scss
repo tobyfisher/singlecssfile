@@ -70,7 +70,7 @@
 		left:0;
 		right:0;
 		height:200px;
-		background-color: $oe-sem-element-bg;
+		background-color: var(--bg-data);
 		
 		@include font-size(12);
 		color:$oe-text;

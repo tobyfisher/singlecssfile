@@ -28,18 +28,18 @@
 
 			.date {
 				@include font-size(14);
-				font-weight: $oe-font-medium;
+				font-weight: var(--font-medium);
 				margin: 0 0 5px 0;
 			}
 
 			.time {
 				margin: 0 0 5px 0;
-				color: $oe-text-light;
+				color: var(--txt-light);
 			}
 
 			.who {
 				@include font-size(14);
-				font-weight: $oe-font-medium;
+				font-weight: var(--font-medium);
 			}
 
 			// <button>
