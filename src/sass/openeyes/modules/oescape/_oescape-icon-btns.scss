@@ -10,8 +10,7 @@
 // <ul>
 .oescape-icon-btns {
 	@include flex(center, space-between);
-	margin: 1px; // visually balances the icons
-	gap: 1px;
+	margin: 1px 0; // visually balances the icons
 
 	// OEScape and Analytics header
 	.oe-full-header & {
