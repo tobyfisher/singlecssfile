@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Sep 18 2022 13:12:11 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Mon Sep 19 2022 19:13:23 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -495,7 +495,7 @@ html.theme-dark {
   --gui-scroll-thumb: #37373c;
   --btn-base: hsl(209deg, 26%, 17%);
   --btn-base-heavy: rgb(24, 32, 40);
-  --btn-base-soft: hsl(213deg, 13%, 15%);
+  --btn-base-light: hsl(213deg, 13%, 15%);
   --btn-text: #bbb;
   --btn-text-selected: #ddd;
   --btn-blue-hint: #0e4886;
@@ -517,6 +517,9 @@ html.theme-dark {
   --color-orange: #a05500;
   --color-yellow: #c8b432;
   --color-grey: #505050;
+  --color-hint-green: hsl(136deg, 17%, 22%);
+  --color-hint-red: hsl(0deg, 90%, 12%);
+  --color-hint-orange: hsl(36deg, 100%, 22%);
   --input-scheme: dark;
   --input-focus-outline: #096c9a;
   --input-base: #24313d;
@@ -744,7 +747,7 @@ html.theme-light {
   --gui-scroll-thumb: #aaaaaa;
   --btn-base: #7F92A6;
   --btn-base-heavy: hsl(211deg, 15%, 45%);
-  --btn-base-soft: hsl(211deg, 8%, 83%);
+  --btn-base-light: hsl(211deg, 8%, 83%);
   --btn-text: #fff;
   --btn-text-selected: #fff;
   --btn-blue-hint: #4285e0;
@@ -766,6 +769,9 @@ html.theme-light {
   --color-orange: #dc7305;
   --color-yellow: #d2aa14;
   --color-grey: rgb(152, 150, 150);
+  --color-hint-green: hsl(120deg, 26%, 75%);
+  --color-hint-red: hsl(0deg, 82%, 74%);
+  --color-hint-orange: hsl(24deg, 64%, 74%);
   --input-scheme: light;
   --input-focus-outline: #0701e0;
   --input-base: #fff;
@@ -8683,7 +8689,7 @@ table.partial-booking tbody td .highlighter {
   font-size: 0.75rem;
   font-weight: var(--font-medium);
   color: var(--txt-base);
-  background: var(--btn-base-soft);
+  background: var(--btn-base-light);
   cursor: pointer;
 }
 .oe-create-event-step-through li.oe-specialty-service,
@@ -9017,6 +9023,153 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   height: 28px;
   font-size: 0.8125rem;
   margin: 0 0 0 2px;
+}
+
+.theatre-diary-list h2 {
+  font-size: 1.125rem;
+  font-weight: var(--font-medium);
+  margin: 20px 0 15px 0;
+  color: var(--txt-light);
+}
+
+.schedule-group {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: var(--bg-data);
+  margin: 0 0 30px 0;
+}
+.schedule-group .highlighter {
+  padding: 0 4px;
+}
+
+.schedule-group .edit-group-btn {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+}
+
+.schedule-group .theatre-overview {
+  font-size: 0.75rem;
+  width: 20%;
+  border-right: 4px solid var(--bg-html);
+  align-self: stretch;
+}
+.schedule-group .theatre-overview.available {
+  background-color: var(--color-hint-green);
+}
+.schedule-group .theatre-overview.near-full {
+  background-color: var(--color-hint-orange);
+}
+.schedule-group .theatre-overview.full, .schedule-group .theatre-overview.session-unavailable {
+  background-color: var(--color-hint-red);
+}
+
+.schedule-group .theatre-overview .theatre-details {
+  background: var(--bg-data);
+  padding: 10px;
+}
+.schedule-group .theatre-overview .theatre-details .date,
+.schedule-group .theatre-overview .theatre-details .time {
+  font-size: 0.9375rem;
+  font-weight: var(--font-bold);
+}
+.schedule-group .theatre-overview .theatre-details .context,
+.schedule-group .theatre-overview .theatre-details .theatre {
+  margin: 5px 0 0 0;
+}
+.schedule-group .theatre-overview .theatre-details .session-unavailable {
+  margin: 10px 0 0 0;
+  padding: 3px;
+  border: 1px solid var(--color-red);
+  background: var(--color-grey);
+}
+
+.theatre-overview .theatre-state {
+  padding: 10px;
+}
+.theatre-overview .theatre-state .session-time-left {
+  font-size: 0.875rem;
+  margin: 0 0 10px 0;
+}
+.theatre-overview .theatre-state .session-time-left .max-patients,
+.theatre-overview .theatre-state .session-time-left .minutes {
+  font-weight: var(--font-bold);
+}
+.theatre-overview .theatre-state .session-time-left .procedure-count,
+.theatre-overview .theatre-state .session-time-left .overbooked,
+.theatre-overview .theatre-state .session-time-left .session-unavailable,
+.theatre-overview .theatre-state .session-time-left .max-patients {
+  margin: 3px 0 0 0;
+}
+.theatre-overview .theatre-state .session-time-left .session-max {
+  margin: 4px 0;
+  padding: 4px 0;
+  font-size: 0.75rem;
+  border-bottom: 1px dotted var(--txt-light);
+}
+.theatre-overview .theatre-state .session-time-left .session-max .max-limit {
+  font-weight: var(--font-bold);
+}
+.theatre-overview .theatre-state .session-time-left .session-max .overbooked {
+  text-align: right;
+  font-size: 0.75rem;
+}
+
+.schedule-group table.theatre-bookings {
+  width: 80%;
+  color: var(--txt-base);
+  margin: 0 0 10px 0;
+  font-size: 0.8125rem;
+}
+.schedule-group table.theatre-bookings tbody tr {
+  border-top-width: 4px;
+  border-top-color: var(--bg-html);
+}
+.schedule-group table.theatre-bookings tbody tr:last-child {
+  border-bottom: none;
+}
+.schedule-group table.theatre-bookings tbody td {
+  font-size: 0.8125rem;
+  font-weight: var(--font-medium);
+  padding: 10px 5px 10px 0;
+  vertical-align: top;
+}
+.schedule-group table.theatre-bookings tbody td input[type=text] {
+  width: 90%;
+}
+.schedule-group table.theatre-bookings tbody td:first-child {
+  text-align: center;
+}
+.schedule-group table.theatre-bookings tbody td:first-child label {
+  font-size: 0.6875rem;
+}
+.schedule-group table.theatre-bookings tbody td:first-child .op-time {
+  font-size: 1.125rem;
+  font-weight: var(--font-bold);
+  margin: 0 0 5px 0;
+}
+.schedule-group table.theatre-bookings tbody td:first-child .op-duration {
+  font-size: 0.75rem;
+  font-weight: var(--font-bold);
+  margin: 5px 0 0 0;
+}
+.schedule-group table.theatre-bookings tbody td.edit-order-icon {
+  vertical-align: middle;
+}
+.schedule-group table.theatre-bookings tbody td .theatre-patient-icons {
+  margin: 10px 0 0 0;
+}
+.schedule-group table.theatre-bookings tbody td .operation {
+  font-size: 0.875rem;
+  margin: 0 0 5px 0;
+}
+.schedule-group table.theatre-bookings tbody td .operation-actions > i {
+  margin: 2.5px 2px;
+}
+.schedule-group table.theatre-bookings tfoot .session-comments {
+  padding: 15px 10px 10px 10px;
 }
 
 .oe-sem-no-events {

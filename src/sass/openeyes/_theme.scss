@@ -96,7 +96,7 @@ $gui-light: (
 $btn: (
 	"base": hsl(209, 26%, 17%),
 	"base-heavy": rgb(24, 32, 40), // a 'heavy' version of base (see Event list & .hint without colour)
-	"base-soft": hsl(213, 13%, 15%), // a 'soft' (subtle) version (see Add Event popup and btn lists)
+	"base-light": hsl(213, 13%, 15%), // a 'soft' (subtle) version (see Add Event popup and btn lists)
 	"text":#bbb,
 	"text-selected":#ddd,
 	"blue-hint": #0e4886,
@@ -117,7 +117,7 @@ $btn: (
 $btn-light: (
 	"base": #7F92A6,// hsl(211, 16%, 59%),
 	"base-heavy": hsl(211, 15%, 45%),
-	"base-soft": hsl(211, 8%, 83%),
+	"base-light": hsl(211, 8%, 83%),
 	"text":#fff,
 	"text-selected":#fff,
 	"blue-hint": #4285e0,
@@ -163,6 +163,9 @@ $color: (
 	"orange": #a05500,
 	"yellow": #c8b432,
 	"grey": #505050,
+	"hint-green": hsl(136, 17%, 22%), // hint colours work with standard theme text
+	"hint-red": hsl(0, 90%, 12%),
+	"hint-orange": hsl(36, 100%, 22%),
 );
 
 $color-light: (
@@ -173,6 +176,9 @@ $color-light: (
 	"orange": #dc7305,
 	"yellow": #d2aa14,
 	"grey": rgb(152, 150, 150),
+	"hint-green": hsl(120, 26%, 75%),
+	"hint-red": hsl(0, 82%, 74%),
+	"hint-orange": hsl(24, 64%, 74%),
 );
 
 // ---- Path Steps
