@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Mon Sep 19 2022 19:13:23 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Tue Sep 20 2022 21:53:49 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -745,7 +745,7 @@ html.theme-light {
   --gui-line-soft: hsl(0deg, 3%, 80%);
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
-  --btn-base: #7F92A6;
+  --btn-base: rgb(217, 229, 254);
   --btn-base-heavy: hsl(211deg, 15%, 45%);
   --btn-base-light: hsl(211deg, 8%, 83%);
   --btn-text: #fff;
@@ -3346,7 +3346,6 @@ button,
   border-radius: 0 !important;
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--btn-text);
   background: var(--btn-base);
   cursor: pointer;
   line-height: 1;
@@ -3373,7 +3372,6 @@ button:disabled .oe-i, button.disabled .oe-i, button.inactive .oe-i,
 }
 button .oe-i,
 .button .oe-i {
-  filter: var(--btn-icon-hover-filter);
   pointer-events: none;
 }
 button:hover, button:focus, button.active, button.selected,
@@ -3389,6 +3387,7 @@ button:hover .oe-i, button:focus .oe-i, button.active .oe-i, button.selected .oe
 .button:focus .oe-i,
 .button.active .oe-i,
 .button.selected .oe-i {
+  filter: var(--btn-icon-hover-filter);
   opacity: 1;
 }
 button.selected,
@@ -3399,7 +3398,7 @@ button:active,
 .button:active {
   outline: 1px dotted var(--input-focus-outline);
   outline-offset: 1px;
-  color: #fff;
+  color: var(--btn-text);
   background: var(--btn-blue-active);
 }
 
@@ -3446,6 +3445,7 @@ button.header-tab.icon-bg.goto,
 
 button.hint,
 .button.hint {
+  color: var(--btn-text);
   background: var(--btn-base-heavy);
 }
 button.hint.green,
