@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Tue Sep 20 2022 21:53:49 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Wed Sep 21 2022 22:48:45 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -745,7 +745,7 @@ html.theme-light {
   --gui-line-soft: hsl(0deg, 3%, 80%);
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
-  --btn-base: rgb(217, 229, 254);
+  --btn-base: #d9e5fc;
   --btn-base-heavy: hsl(211deg, 15%, 45%);
   --btn-base-light: hsl(211deg, 8%, 83%);
   --btn-text: #fff;
@@ -3346,6 +3346,7 @@ button,
   border-radius: 0 !important;
   font-size: 0.75rem;
   font-weight: 500;
+  color: var(--txt-base);
   background: var(--btn-base);
   cursor: pointer;
   line-height: 1;
@@ -7746,8 +7747,8 @@ login.multisite .info {
   width: 100%;
   font-size: 0.875rem;
   font-weight: var(--font-medium);
-  color: var(--btn-text);
-  background: var(--btn-base);
+  color: var(--txt-light);
+  background: var(--bg-event);
 }
 .oe-full-header .oescape-icon-btns .icon-btn a {
   height: 38px;
@@ -7756,28 +7757,23 @@ login.multisite .info {
 }
 .oescape-icon-btns .icon-btn a.lightning-viewer-icon svg, .oescape-icon-btns .icon-btn a.patient-overview-icon svg {
   display: block;
-  fill: rgba(255, 255, 255, 0.6);
+  fill: var(--txt-light);
   width: 16px;
   height: 16px;
 }
 .oescape-icon-btns .icon-btn a.inactive {
   font-weight: var(--font-light);
 }
-.oescape-icon-btns .icon-btn a:hover, .oescape-icon-btns .icon-btn a:focus {
+.oescape-icon-btns .icon-btn a:hover, .oescape-icon-btns .icon-btn a:focus, .oescape-icon-btns .icon-btn a.selected {
+  color: var(--btn-text-selected);
   background: var(--btn-blue);
 }
-.oescape-icon-btns .icon-btn a:hover svg, .oescape-icon-btns .icon-btn a:focus svg {
-  fill: #fff;
+.oescape-icon-btns .icon-btn a:hover svg, .oescape-icon-btns .icon-btn a:focus svg, .oescape-icon-btns .icon-btn a.selected svg {
+  fill: var(--btn-text-selected);
 }
 .oescape-icon-btns .icon-btn a:active {
+  color: var(--btn-text-selected);
   background: var(--btn-blue-active);
-}
-.oescape-icon-btns .icon-btn a.selected {
-  background: none;
-  color: var(--txt-base);
-}
-.oescape-icon-btns .icon-btn a.selected svg {
-  fill: var(--txt-light);
 }
 
 .oe-patient-quick-overview .oe-patient-meta {
@@ -9412,7 +9408,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   grid-area: sidebar;
   width: 200px;
   overflow-y: auto;
-  background: var(--bg-grey);
+  background: var(--bg-html);
 }
 .sidebar.subgrid {
   display: grid;
@@ -9478,8 +9474,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   margin: 1px 0;
   font-size: 0.8125rem;
   font-weight: var(--font-medium);
-  color: var(--btn-text);
-  background: left 8px center/19px var(--i-ui-watermark-clinic) var(--btn-base) no-repeat;
+  background: var(--bg-event);
   cursor: pointer;
 }
 .clinic-pathway-btn:hover, .clinic-pathway-btn:focus {
@@ -9502,6 +9497,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 }
 .sidebar-list-controls button {
   flex: 1 1 0;
+  background-color: var(--bg-event);
 }
 .sidebar-list-controls input {
   margin: 0 2px 0 0;
@@ -9698,11 +9694,11 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 }
 
 .sidebar .grouping-picker {
-  color: var(--btn-text);
+  color: var(--txt-light);
   height: 28px;
   padding: 0 5px 0 25px;
   margin: 0 0 1px 0;
-  background-color: var(--btn-base);
+  background-color: var(--bg-event);
   background-position: left 5px center;
 }
 .sidebar .groupings {

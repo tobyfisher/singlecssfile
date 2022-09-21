@@ -15,10 +15,8 @@
 
 	@include font-size(13); // a little bigger than button text
 	font-weight: var(--font-medium);
-	color: var(--btn-text);
 
-	// UI to match buttons but add a clinic watermark
-	background: left 8px center / 19px var(--i-ui-watermark-clinic) var(--btn-base) no-repeat;
+	background: var(--bg-event);
 	cursor: pointer;
 
 	&:hover,

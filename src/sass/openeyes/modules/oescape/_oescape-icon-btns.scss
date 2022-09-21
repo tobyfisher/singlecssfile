@@ -41,8 +41,8 @@
 
 			@include font-size(14);
 			font-weight: var(--font-medium);
-			color:var(--btn-text);
-			background: var(--btn-base);
+			color: var(--txt-light);
+			background: var(--bg-event);
 
 			// lightning viewer icon added to oescape group
 			// Patient Overview icons added too.
@@ -50,7 +50,7 @@
 			&.patient-overview-icon {
 				svg {
 					display: block;
-					fill: rgba(255, 255, 255, 0.6);
+					fill: var(--txt-light);
 					width: 16px;
 					height: 16px;
 				}
@@ -65,24 +65,19 @@
 			}
 
 			&:hover,
-			&:focus {
+			&:focus,
+			&.selected {
+				color: var(--btn-text-selected);
 				background: var(--btn-blue);
+
 				svg {
-					fill: #fff;
+					fill: var(--btn-text-selected);
 				}
-			}
-			&:active{
-				background: var(--btn-blue-active);
 			}
 
-			// needs to be subtle, see Patient Overview
-			// OEscape btn is right next to the Event icon.
-			&.selected {
-				background: none;
-				color: var(--txt-base);
-				svg {
-					fill: var(--txt-light);
-				}
+			&:active {
+				color: var(--btn-text-selected);
+				background: var(--btn-blue-active);
 			}
 		}
 	}

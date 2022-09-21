@@ -25,10 +25,11 @@ button,
 	// resets
 	border: 0;
 	outline: 0; // accessibility not required in OE App.
-	border-radius: 0 !important; // weird border-radius bug fix
+	border-radius: 0 !important; // weird border-radius bug fix in Safari
 
 	@include font-size(12);
 	font-weight: 500;
+	color: var(--txt-base);
 	background: var(--btn-base);
 	cursor: pointer;
 

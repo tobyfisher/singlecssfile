@@ -8,11 +8,11 @@
 	// <select> - modify the default
 	// e.g. move the background arrow and slightly resize
 	.grouping-picker {
-		color: var(--btn-text);
+		color: var(--txt-light);
 		height: 28px;
 		padding: 0 5px 0 25px;
 		margin:0 0 1px 0;
-		background-color: var(--btn-base);
+		background-color: var(--bg-event);
 		background-position: left 5px center;
 	}
 
