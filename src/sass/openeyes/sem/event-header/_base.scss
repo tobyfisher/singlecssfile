@@ -8,7 +8,7 @@
 	position: relative;
 	@include flex(center, flex-start);
 	// add in the R L face
-	background:var(--bg-data) var(--i-face) 49.9% 0 no-repeat;
+	background:var(--bg-title) var(--i-face) 49.9% 0 no-repeat;
 	background-size: 126px 49px;
 	
 	// face needs offsetting because headers have dropped left

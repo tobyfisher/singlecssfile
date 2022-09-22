@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Wed Sep 21 2022 22:48:45 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Thu Sep 22 2022 09:30:14 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -472,8 +472,8 @@ html.theme-dark {
   --bg-max: #000;
   --bg-popup: rgb(13, 22, 30);
   --bg-hover-row: rgb(19, 27, 35);
-  --bg-event: rgb(22, 24, 30);
-  --bg-data: rgb(28, 34, 40);
+  --bg-event: hsl(210deg, 15%, 20%);
+  --bg-data: hsl(210deg, 18%, 11%);
   --bg-html: rgb(24, 30, 36);
   --bg-title: rgb(30, 36, 42);
   --bg-grey: hsl(212deg, 22%, 25%);
@@ -9206,7 +9206,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: var(--bg-data) var(--i-face) 49.9% 0 no-repeat;
+  background: var(--bg-title) var(--i-face) 49.9% 0 no-repeat;
   background-size: 126px 49px;
 }
 @media only screen and (min-width: 1440px) {
@@ -9433,7 +9433,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 .sidebar-header .add-event {
   flex: 3 1 0;
   height: 100%;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
 }
 .sidebar-header .manage-elements.selected,
 .sidebar-header .add-event.selected {
@@ -9472,7 +9472,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   width: 100%;
   height: 38px;
   margin: 1px 0;
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   font-weight: var(--font-medium);
   background: var(--bg-event);
   cursor: pointer;
@@ -9696,10 +9696,11 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 .sidebar .grouping-picker {
   color: var(--txt-light);
   height: 28px;
-  padding: 0 5px 0 25px;
+  padding: 0;
   margin: 0 0 1px 0;
-  background-color: var(--bg-event);
-  background-position: left 5px center;
+  font-size: 0.6875rem;
+  text-align: center;
+  background: var(--bg-event);
 }
 .sidebar .groupings {
   padding-bottom: 30px;

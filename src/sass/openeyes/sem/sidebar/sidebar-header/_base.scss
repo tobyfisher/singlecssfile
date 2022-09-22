@@ -19,7 +19,7 @@
 	.add-event {
 		flex: 3 1 0; // allow button to fill all remaining space
 		height:100%;
-		@include font-size(13);
+		@include font-size(12);
 
 		&.selected {
 			background: var(--btn-green-hint);
