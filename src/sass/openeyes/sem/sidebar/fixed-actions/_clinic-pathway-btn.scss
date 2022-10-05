@@ -7,11 +7,12 @@
 .clinic-pathway-btn {
 	// button shows state of clinic pathway for patient (shows wait time and status)
 	@include flex(center, center);
-	width: 100%;
+	width: $oe-event-sidebar-width - 4px;
 	height: $oe-event-header-height;
 
 	// align with Event title better
-	margin: 1px 0;
+	margin: 2px 2px;
+	border-radius: 3px;
 
 	@include font-size(12);
 	font-weight: var(--font-medium);

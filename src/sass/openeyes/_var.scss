@@ -70,6 +70,13 @@ $oe-z-add-insert: 70;
 $oe-z-element-search: 65;
 $oe-z-ed-v2: 20; // ED v2 DOM. ED v2 still in first V3 implementation
 
+// whiteboard font sizes
+$wb3-font-header: 1.9vw; // small too
+$wb3-font-small-header: 1.2vw;
+$wb3-font-base: 2vw;
+$wb3-font-medium: 3.1vw;
+$wb3-font-large: 4vw;
+
 @function build-svg-path($theme, $svg) {
 	@return "../svg/in-css/" + $theme + "/" + $svg + ".svg";
 }
