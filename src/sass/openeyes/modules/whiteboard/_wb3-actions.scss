@@ -14,18 +14,18 @@
 	height: 70px;
 	width: 100%;
 	@include flex(center, center);
-	background: var(--bg-base);
-	border-top: 3px solid var(--bg-base);
+	background: var(--bg-title);
+	border-top: 3px solid var(--bg-title);
 	transition: bottom 0.2s ease-in-out;
 	// slide up & down:
 	&.down {
 		bottom: -70px;
-		border-top-color: var(--bg-base);
+		border-top-color: var(--bg-title);
 	}
 
 	&.up {
 		bottom: 0;
-		border-top-color: var(--btn-blue-base);
+		border-top-color: var(--btn-blue);
 	}
 
 	// assign actions to an overflow row in the grid

@@ -14,13 +14,10 @@
 			&.data-single,
 			&.data-single-extra,
 			&.data-double-extra {
-				@include flex(center,center);
-				// as header is absolutely positioned
-				// need to offset the center position
-				padding-top:30px;
 
 				.wb-data {
 					text-align: center;
+					margin: auto;
 					small {
 						display:inline-block;
 						font-size: $wb3-font-header; // qualify data postfix (e.g. mm / D)
@@ -51,14 +48,7 @@
 									
 					}
 				}
-				// using flex, but don't want the h3
-				// affected by the flex:
-				h3 {
-					position: absolute;
-					top:0;
-					left:0;
-					width:100%;
-				}
+
 			}
 			
 			&.data-single,
@@ -73,7 +63,6 @@
 			}
 			
 			&.data-double-extra {
-				padding-top:40px;
 				.wb-data {
 					font-size: $wb3-font-medium;
 					

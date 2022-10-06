@@ -1,33 +1,24 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
 
 // OE Whiteboard
-.wb3 {
+.oe-wb-widget,
+.oe-wb-special {
+	@include flex( stretch, flex-start);
+	flex-direction: column;
 
-	.oe-wb-widget {
+	background: var(--bg-data);
+	line-height:1.2;
 
-		// color flags for complexity
-		&.green {
-			border-bottom: 8px solid var(--color-green);
-		}
+	// long medical terms will break layout
+	word-break: break-all;
 
-		&.orange {
-			border-bottom: 8px solid var(--color-orange);
-		}
-
-		&.red {
-			border-bottom: 8px solid var(--color-red);
-		}
-
-		// N/A (none)
-		.none {
-			color: var(--txt-light);
-			font-weight: 300
-		}
-	}
+	// overflows will break the widgets
+	overflow: hidden;
 }
-
 
 
 
