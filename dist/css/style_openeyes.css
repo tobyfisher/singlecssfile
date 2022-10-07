@@ -9430,7 +9430,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 }
 @media only screen and (min-width: 1200px) and (orientation: portrait) {
   .wb3 {
-    height: calc(90vh - 60px);
+    height: calc(85vh - 60px);
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
   }
@@ -9766,7 +9766,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 }
 @media only screen and (min-width: 1200px) and (orientation: portrait) {
   .oe-whiteboard .multipage-stack {
-    height: calc(90vh - 240px);
+    height: calc(85vh - 60px);
   }
 }
 .oe-whiteboard .multipage-stack img {

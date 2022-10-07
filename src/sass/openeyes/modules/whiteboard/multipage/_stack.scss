@@ -9,10 +9,10 @@
 	.multipage-stack {
 		width:70vw;
 		// set the height of page wrap
-		height:calc(100vh - #{$oe-header-height});
+		height:calc(100vh - $oe-header-height);
 		
 		@include handheld(){
-			height:calc(90vh - #{$oe-header-height * 4});
+			height:calc(85vh - $oe-header-height);
 		}
 		
 		overflow-y:auto;
