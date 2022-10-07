@@ -33,7 +33,7 @@
 
 		// override the defaults
 		.alert-box {
-			font-size: $wb3-font-base - 0.4vw;
+			font-size: #{$wb3-font-base - 0.5vw};
 			padding: 2px 5px;
 			margin: 1px;
 		}

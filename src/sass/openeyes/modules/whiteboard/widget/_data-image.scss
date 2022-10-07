@@ -2,17 +2,14 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-.oe-wb-widget.data-image {
-	.wb-data.image-fill {
+.wb-data{
+	&.image-fill {
 		background: transparent no-repeat center center;
 		background-size: contain;
-		// 45px is a bit of guess
-		// need to allow for the header
-		// but it's height is unknown
-		height: calc(100% - 45px);
-
+		height: 100%;
 	}
 }
+
 
 
 

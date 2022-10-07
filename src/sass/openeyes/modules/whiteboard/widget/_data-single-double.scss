@@ -4,75 +4,48 @@
 @use "openeyes/var" as *;
 @use "openeyes/mix" as *;
 
-.oe-whiteboard {
-	
-	.wb3 {
-		
-		.oe-wb-widget {
-		
-			// large data + extra
-			&.data-single,
-			&.data-single-extra,
-			&.data-double-extra {
+.data-single,
+.data-single-extra,
+.data-double-extra {
 
-				.wb-data {
-					text-align: center;
-					margin: auto;
-					small {
-						display:inline-block;
-						font-size: $wb3-font-header; // qualify data postfix (e.g. mm / D)
-						padding:0 0 0 5px;
-					}
-					
-					.extra-data {
-						text-align: center;
-						font-size: $wb3-font-base;
-						line-height:1;
-						
-						@include handheld(){
-							font-size: $wb3-font-base + 0.8vw;
-						}
-					}
-					
-					.extra-small-data {
-						font-size: $wb3-font-header;
-						line-height:1;
-						margin-bottom:5px;
-						&:last-child {
-							margin-bottom: 0;
-						}	
-						
-						@include handheld(){
-							font-size: $wb3-font-header + 0.8vw;
-						}
-									
-					}
-				}
+	.wb-data {
+		text-align: center;
+		margin: auto;
+		line-height: 1.1;
 
-			}
-			
-			&.data-single,
-			&.data-single-extra {
-				.wb-data {
-					font-size: $wb3-font-large;
-					
-					@include handheld(){
-						font-size: $wb3-font-large + 2vw;
-					}
-				}
-			}
-			
-			&.data-double-extra {
-				.wb-data {
-					font-size: $wb3-font-medium;
-					
-					@include handheld(){
-						font-size: $wb3-font-medium + 1.8vw;
-					}
-					
-				}
-			}	
+		small {
+			display: inline-block;
+			font-size: $wb3-font-header; // qualify data postfix (e.g. mm / D)
+			padding: 0 0 0 0.2em;
 		}
+
+		.extra-data {
+			text-align: center;
+			font-size: $wb3-font-base;
+		}
+
+		.extra-small-data {
+			font-size: $wb3-font-header;
+			line-height: 1;
+			margin-bottom: 0.3em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.data-single,
+.data-single-extra {
+	.wb-data {
+		font-size: $wb3-font-large;
+	}
+}
+
+.data-double-extra {
+	.wb-data {
+		font-size: $wb3-font-medium;
 	}
 }
 

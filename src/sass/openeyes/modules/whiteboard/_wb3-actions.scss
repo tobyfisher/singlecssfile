@@ -14,7 +14,7 @@
 	height: 70px;
 	width: 100%;
 	@include flex(center, center);
-	background: var(--bg-title);
+	background: var(--bg-grey);
 	border-top: 3px solid var(--bg-title);
 	transition: bottom 0.2s ease-in-out;
 	// slide up & down:
@@ -26,16 +26,6 @@
 	&.up {
 		bottom: 0;
 		border-top-color: var(--btn-blue);
-	}
-
-	// assign actions to an overflow row in the grid
-	@include handheld() {
-		position: static;
-		grid-area: 6 / 1 / 7 / 3;
-		height: #{$oe-header-height * 2};
-
-		//
-		overflow-x: auto;
 	}
 
 	.openclose-icon-btn {
@@ -55,10 +45,6 @@
 			background-image: url(svg-white-icon("i/remove-circle"));
 		}
 
-		@include handheld() {
-			display: none;
-		}
-
 	}
 
 	button {
@@ -71,12 +57,27 @@
 		&:last-child {
 			margin-right: 0;
 		}
+	}
 
-		@include handheld() {
+	// Tablet portrait handheld
+	@include handheld() {
+		position: static;
+		margin:5px 0 0 0;
+		height:5vh;
+
+		// in portrait buttons may overflow!
+		overflow-x: auto;
+
+		.openclose-icon-btn {
+			display: none;
+		}
+
+		button {
 			height: #{$oe-header-height * 2};
 			@include font-size(24);
 			margin: 0 10px 0 0;
 		}
+
 	}
 }
 	

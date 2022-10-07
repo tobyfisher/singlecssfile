@@ -13,7 +13,8 @@
 	height: calc(100vh - #{$oe-header-height});
 	display: grid;
 	// Widgets fill in the grid as they are added into the DOM
-	grid: repeat(3, 1fr) / repeat(3, 1fr);
+	// 3 x 3 widget grid:
+	grid: auto-flow 1fr / 1fr 1fr 1fr;
 	grid-auto-flow: row;
 
 	// create a gutter around widgets
@@ -24,9 +25,9 @@
 	grid-auto-columns: 1fr;
 
 	@include handheld() {
-		height: calc(90vh - #{$oe-header-height * 4});
-		// change the layout and flow:
-		grid: repeat(5, 1fr) / repeat(2, 1fr);
+		height: calc(90vh - $oe-header-height);
+		// switch to 5 x 2 widget layout
+		grid-template-columns: 1fr 1fr ;
 		grid-auto-flow: column;
 	}
 }

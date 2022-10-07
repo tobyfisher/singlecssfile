@@ -11,15 +11,15 @@
 		right:10px;
 		top:25vh;
 		width:25vw;
-		
+		user-select: none;
+		color:#fff;
+
 		h3 {
 			font-size: $wb3-font-header;
-			color: var(--txt-base);
 		}
 		
 		h4 {
 			font-size: $wb3-font-small-header;
-			color: var(--txt-base);
 			margin:10px 0;			
 		}
 		
@@ -33,7 +33,7 @@
 			}
 			
 			.page-num-btn {
-				background:var(--btn-blue-base);
+				background:var(--btn-blue);
 				display:inline-flex;
 				align-items: center;
 				justify-content: center;
@@ -64,30 +64,6 @@
 				}	
 			}
 		}	
-	}
-	
-	.multipage-stack {
-		width:70vw;
-		// set the height of page wrap
-		height:calc(100vh - #{$oe-header-height});
-		
-		@include handheld(){
-			height:calc(90vh - #{$oe-header-height * 4});
-		}
-		
-		overflow-y:auto;
-		background:pink;
-		// assumes <img> stack
-		img {
-			display:block; 
-			margin:20px auto;
-			width:90%;
-		}
-		
-		scroll-behavior: smooth;
-		@media only screen and (prefers-reduced-motion: reduce) {
-			scroll-behavior: auto;
-		} 
 	}
 }
 

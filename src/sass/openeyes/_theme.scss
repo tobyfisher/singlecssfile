@@ -223,21 +223,6 @@ $ed3-light: (
 	"doo-bg": #ccc,
 );
 
-// ---- whiteboard
-$wb: (
-	"bg": rgb(140, 130, 130),
-	"widget-bg": rgb(75, 71, 71),
-	"data-text": rgb(60, 50, 50),
-	"headers": rgb(60, 60, 140),
-);
-
-$wb-light: (
-	"bg": rgb(140, 130, 130),
-	"widget-bg": rgb(205, 195, 195),
-	"data-text": rgb(60, 50, 50),
-	"headers": rgb(60, 60, 140),
-);
-
 
 // ---- SVG icons
 
@@ -304,7 +289,6 @@ html.theme-dark {
 	@include cssVars("input", $input);
 	@include cssVars("step", $step);
 	@include cssVars("ed3", $ed3);
-	@include cssVars("wb", $wb);
 }
 
 
@@ -333,7 +317,6 @@ html.theme-light {
 	@include cssVars("input", $input-light);
 	@include cssVars("step", $step-light);
 	@include cssVars("ed3", $ed3);
-	@include cssVars("wb", $wb);
 
 
 }

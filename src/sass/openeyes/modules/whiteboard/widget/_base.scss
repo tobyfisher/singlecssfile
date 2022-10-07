@@ -7,6 +7,8 @@
 // OE Whiteboard
 .oe-wb-widget,
 .oe-wb-special {
+	position: relative; // see: colours, data-issue, overflow-icon-btn
+
 	@include flex( stretch, flex-start);
 	flex-direction: column;
 
@@ -14,7 +16,7 @@
 	line-height:1.2;
 
 	// long medical terms will break layout
-	word-break: break-all;
+	overflow-wrap: break-word;
 
 	// overflows will break the widgets
 	overflow: hidden;
