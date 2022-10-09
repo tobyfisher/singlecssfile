@@ -25,7 +25,7 @@
 			margin:0 0 1px 0;
 			
 			@include font-size(12);
-			background: var(--bg-grey); // not inverted in classic
+			background: var(--color-grey);
 
 			.drag-handle {
 				padding:0 3px;

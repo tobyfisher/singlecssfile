@@ -373,6 +373,7 @@ html.theme-dark {
   --i-minus-bold: url("../svg/in-css/dark/i/minus-bold.svg");
   --i-minus: url("../svg/in-css/dark/i/minus.svg");
   --i-more-h: url("../svg/in-css/dark/i/more-h.svg");
+  --i-more-h-orange: url("../svg/in-css/dark/i/more-h-orange.svg");
   --i-move: url("../svg/in-css/dark/i/move.svg");
   --i-mpr: url("../svg/in-css/dark/i/mpr.svg");
   --i-no-permissions: url("../svg/in-css/dark/i/no-permissions.svg");
@@ -475,8 +476,7 @@ html.theme-dark {
   --bg-event: hsl(210deg, 15%, 20%);
   --bg-data: hsl(210deg, 18%, 11%);
   --bg-html: rgb(24, 30, 36);
-  --bg-title: rgb(30, 36, 42);
-  --bg-grey: hsl(212deg, 22%, 25%);
+  --bg-title: hsl(210deg, 11%, 8%);
   --txt-base: #ccc;
   --txt-light: #8c8c8c;
   --txt-hd: rgb(90, 130, 145);
@@ -516,7 +516,7 @@ html.theme-dark {
   --color-burgundy: #6b1400;
   --color-orange: #a05500;
   --color-yellow: #c8b432;
-  --color-grey: #505050;
+  --color-grey: rgb(90, 80, 80);
   --color-hint-green: hsl(136deg, 17%, 22%);
   --color-hint-red: hsl(0deg, 90%, 12%);
   --color-hint-orange: hsl(36deg, 100%, 22%);
@@ -625,6 +625,7 @@ html.theme-light {
   --i-minus-bold: url("../svg/in-css/light/i/minus-bold.svg");
   --i-minus: url("../svg/in-css/light/i/minus.svg");
   --i-more-h: url("../svg/in-css/light/i/more-h.svg");
+  --i-more-h-orange: url("../svg/in-css/light/i/more-h-orange.svg");
   --i-move: url("../svg/in-css/light/i/move.svg");
   --i-mpr: url("../svg/in-css/light/i/mpr.svg");
   --i-no-permissions: url("../svg/in-css/light/i/no-permissions.svg");
@@ -725,10 +726,9 @@ html.theme-light {
   --bg-event: rgb(251, 250, 250);
   --bg-data: rgb(235, 233, 233);
   --bg-popup: rgb(230, 228, 228);
-  --bg-html: rgb(217, 215, 215);
+  --bg-html: rgb(210, 208, 208);
   --bg-hover-row: rgb(206, 205, 205);
   --bg-title: rgb(202, 200, 200);
-  --bg-grey: rgb(182, 180, 180);
   --txt-base: #0a0a0a;
   --txt-light: #5a5a64;
   --txt-hd: rgb(40, 70, 200);
@@ -768,7 +768,7 @@ html.theme-light {
   --color-burgundy: #751e00;
   --color-orange: #dc7305;
   --color-yellow: #d2aa14;
-  --color-grey: rgb(152, 150, 150);
+  --color-grey: rgb(135, 130, 130);
   --color-hint-green: hsl(120deg, 26%, 75%);
   --color-hint-red: hsl(0deg, 82%, 74%);
   --color-hint-orange: hsl(24deg, 64%, 74%);
@@ -8232,7 +8232,7 @@ table.risks td textarea {
   padding: 8px 65px 8px 5px;
   margin: 0 0 1px 0;
   font-size: 0.75rem;
-  background: var(--bg-grey);
+  background: var(--color-grey);
 }
 .problems-plans .problems-plans-sortable li .drag-handle {
   padding: 0 3px;
@@ -9640,7 +9640,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--bg-grey);
+  background: var(--color-grey);
   border-top: 3px solid var(--bg-title);
   transition: bottom 0.2s ease-in-out;
 }
@@ -10007,6 +10007,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   width: 100%;
   height: 38px;
   font-size: 1.125rem;
+  border: 1px solid var(--gui-line);
 }
 
 .event-header {
@@ -10238,7 +10239,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   justify-content: space-between;
   align-items: center;
   gap: 1px;
-  background: var(--bg-grey);
+  background: var(--color-grey);
 }
 .sidebar-header .manage-elements,
 .sidebar-header .add-event {

@@ -40,6 +40,8 @@
 			width: 100%;
 			height: $oe-event-header-height;
 			@include font-size(18);
+			// needs an outline in light theme or it's a bit lost
+			border: 1px solid var(--gui-line);
 		}
 	}
 }
