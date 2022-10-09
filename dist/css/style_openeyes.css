@@ -473,10 +473,11 @@ html.theme-dark {
   --bg-max: #000;
   --bg-popup: rgb(13, 22, 30);
   --bg-hover-row: rgb(19, 27, 35);
-  --bg-event: hsl(210deg, 15%, 20%);
   --bg-data: hsl(210deg, 18%, 11%);
   --bg-html: rgb(24, 30, 36);
   --bg-title: hsl(210deg, 11%, 8%);
+  --bg-event: hsl(210deg, 6%, 6%);
+  --bg-event-hd: hsl(210deg, 8%, 10%);
   --txt-base: #ccc;
   --txt-light: #8c8c8c;
   --txt-hd: rgb(90, 130, 145);
@@ -723,12 +724,13 @@ html.theme-light {
   --i-nystagmus-arrow-h-2: url("../svg/in-css/light/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
   --bg-max: #fff;
-  --bg-event: rgb(251, 250, 250);
   --bg-data: rgb(235, 233, 233);
   --bg-popup: rgb(230, 228, 228);
   --bg-html: rgb(210, 208, 208);
   --bg-hover-row: rgb(206, 205, 205);
   --bg-title: rgb(202, 200, 200);
+  --bg-event: rgb(251, 250, 250);
+  --bg-event-hd: rgb(202, 200, 200);
   --txt-base: #0a0a0a;
   --txt-light: #5a5a64;
   --txt-hd: rgb(40, 70, 200);
@@ -10015,16 +10017,15 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: var(--bg-title) var(--i-face) 49.9% 0 no-repeat;
-  background-size: 126px 49px;
+  background: 49.9% 0/126px 49px var(--i-face) var(--bg-event-hd) no-repeat;
+}
+.event-header.no-face {
+  background: var(--bg-event-hd);
 }
 @media only screen and (min-width: 1440px) {
   .event-header {
     background-position-x: 54.8%;
   }
-}
-.event-header.no-face {
-  background: var(--bg-data);
 }
 
 .event-header .event-header-title {
