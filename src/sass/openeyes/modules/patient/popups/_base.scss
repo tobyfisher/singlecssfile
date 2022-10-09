@@ -15,10 +15,11 @@
 
 	@include font-size(12);
 
-	background: var(--bg-popup);
-	border:1px solid var(--txt-highlight);
-	border-bottom-width:2px;
+	background: linear-gradient( var(--bg-max) 0, var(--bg-html) 3%);
+	border:1px solid var(--gui-line);
+	border-top:none;
 	padding:15px 15px 20px 15px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 	
 	// lock width beyond this
 	@include extended(){

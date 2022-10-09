@@ -12,7 +12,7 @@
 		height:calc(100vh - $oe-header-height);
 		
 		@include handheld(){
-			height:calc(85vh - $oe-header-height);
+			height:calc(80vh - $oe-header-height);
 		}
 		
 		overflow-y:auto;

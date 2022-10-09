@@ -12,7 +12,12 @@
 	// it's wrapped inside 'flex-t'
 	.patient-overview {
 		flex:1 1 0;
+		align-self: stretch;
+		margin:3px 0;
+
+
 		padding:0 10px;
+		background: var(--bg-title);
 
 		table.standard {
 			// modify the 'standard' padding

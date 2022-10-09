@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri Oct 07 2022 08:36:02 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun Oct 09 2022 08:20:55 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -3312,7 +3312,7 @@ input.error::placeholder, textarea.error::placeholder {
   max-width: 350px;
   max-height: 300px;
   overflow-y: auto;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
 }
 .oe-autocomplete li {
   display: block;
@@ -3707,11 +3707,14 @@ table .pagination {
   font-weight: var(--font-bold);
 }
 .pagination .pagination-pages a {
-  margin: 0 4px;
-}
-.pagination .pagination-pages a.selected {
   display: inline-block;
   padding: 1px 4px;
+}
+.pagination .pagination-pages a:hover, .pagination .pagination-pages a:focus {
+  outline: 1px dotted var(--input-focus-outline);
+}
+.pagination .pagination-pages a.selected {
+  margin: 0 4px;
   border-radius: 3px;
   background-color: var(--txt-light);
   color: var(--txt-invert);
@@ -3983,28 +3986,20 @@ ul.oe-multi-select li {
   padding: 4px 10px;
   margin: 3px 0;
   font-size: 0.8125rem;
-  background: var(--txt-base);
-  color: var(--txt-invert);
-  border-radius: 5px;
-}
-.alert-box.info {
   color: rgba(250, 250, 250, 0.9);
   background: var(--color-grey);
+  border-radius: 5px;
 }
 .alert-box.success {
-  color: rgba(250, 250, 250, 0.9);
   background: var(--color-green);
 }
 .alert-box.alert, .alert-box.issue {
-  color: rgba(250, 250, 250, 0.9);
   background: var(--color-orange);
 }
 .alert-box.warning, .alert-box.error, .alert-box.injection-warning {
-  color: rgba(250, 250, 250, 0.9);
   background: var(--color-red);
 }
 .alert-box.patient {
-  color: rgba(250, 250, 250, 0.9);
   background: var(--color-burgundy);
 }
 .alert-box a {
@@ -4395,7 +4390,7 @@ hr.soft {
   color: var(--txt-base);
   font-size: 0.6875rem;
   font-weight: var(--font-medium);
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
 }
 .oe-tooltip::after {
   content: "";
@@ -4681,28 +4676,28 @@ hr.soft {
 }
 
 .training-mode .oe-logo {
-  background: #ff0;
-  border-radius: 0 0 15px 15px;
+  background: rgba(80, 80, 80, 0.5);
+  border-radius: 0 0 5px 5px;
 }
 .training-mode .oe-logo .oe-openeyes {
-  fill: #000;
+  fill: rgb(255, 224, 0);
   opacity: 1;
 }
 .training-mode .oe-login .login h1 {
   font-size: 3.125rem;
-  color: #ff0;
+  color: rgb(255, 224, 0);
   padding: 15px 30px;
-  background: #333;
+  background: rgba(80, 80, 80, 0.5);
   border-radius: 9px;
 }
 .training-mode #oe-admin-notifcation {
   bottom: 15px;
   height: 35px;
-  background: rgb(255, 255, 0);
+  background: rgb(255, 224, 0);
   color: #000;
   font-size: 0.9375rem;
   font-weight: 500;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 4px rgba(80, 80, 80, 0.5);
 }
 .training-mode #oe-admin-notifcation a {
   color: rgb(0, 0, 200);
@@ -4718,8 +4713,9 @@ hr.soft {
   border-radius: 3px;
 }
 .training-mode .oe-patient .patient-name {
-  background: #ff0;
-  color: #000;
+  background: rgba(80, 80, 80, 0.5);
+  outline: 4px solid rgba(80, 80, 80, 0.5);
+  color: rgb(255, 224, 0);
 }
 
 .admin-panels {
@@ -6178,7 +6174,7 @@ span.squiggle {
   color: var(--txt-base);
   background: var(--bg-max);
   padding: 4px 6px;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
 }
 .ed-button:hover .label {
   display: block;
@@ -6293,7 +6289,7 @@ span.squiggle {
   background: var(--ed3-icon-area);
   border: 2px solid var(--ed3-icon-area);
   border-top: none;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
 }
 .eye-l .more-doodles {
   right: 0;
@@ -6366,7 +6362,7 @@ span.squiggle {
   color: var(--txt-base);
   background: var(--bg-max);
   padding: 4px 6px;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
 }
 .doo-btn.disabled {
   pointer-events: none;
@@ -7577,6 +7573,147 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   font-weight: 400;
 }
 
+.oe-lightning-meta {
+  position: relative;
+  width: 180px;
+  margin: 5px 0 0 10px;
+  padding: 5px 3px 5px 8px;
+  font-size: 0.75rem;
+  background: var(--bg-max);
+}
+.oe-lightning-meta .date {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.oe-lightning-meta .sender {
+  font-style: italic;
+}
+.oe-lightning-meta .help {
+  margin: 10px 0 0 0;
+  font-size: 0.625rem;
+  color: var(--txt-light);
+  font-style: italic;
+}
+.oe-lightning-meta::after {
+  content: "";
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border: 6px solid transparent;
+  border-left-color: var(--bg-max);
+  transform: translateY(-6px);
+}
+
+.lightning-timeline {
+  position: relative;
+  background: var(--bg-title);
+  padding: 5px 4px 5px 10px;
+}
+.lightning-timeline .timeline {
+  padding: 0 0 0 50px;
+}
+.lightning-timeline .timeline table td {
+  padding: 6px 6px 3px 4px;
+  border-left: 1px solid var(--gui-line);
+  vertical-align: top;
+  color: var(--txt-light);
+  font-size: 0.6875rem;
+}
+.lightning-timeline .timeline table td.date-divider {
+  white-space: nowrap;
+  font-size: 0.9375rem;
+  font-weight: 300;
+  min-width: 70px;
+}
+.lightning-timeline .timeline table td.date-divider .oe-i {
+  position: relative;
+  top: -2px;
+  margin: 0 0 0 5px;
+  opacity: 0.25;
+}
+.lightning-timeline .timeline table td.date-divider .oe-i:hover, .lightning-timeline .timeline table td.date-divider .oe-i:focus, .lightning-timeline .timeline table td.date-divider .oe-i:active {
+  opacity: 1;
+}
+.lightning-timeline .timeline table td .icon-group {
+  min-width: 90px;
+}
+
+.lightning-timeline {
+  z-index: 92;
+}
+.lightning-timeline .timeline-options {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  height: 100%;
+  width: 50px;
+}
+.lightning-timeline .timeline-options .lightning-btn {
+  width: 40px;
+  height: 100%;
+  background: var(--btn-base);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.lightning-timeline .timeline-options .lightning-btn.active {
+  background: var(--btn-blue);
+}
+.lightning-timeline .timeline-options .lightning-btn.active .oe-i {
+  opacity: 1;
+}
+.lightning-timeline .timeline-options .lightning-btn .lightning-icon {
+  width: 20px;
+  height: 20px;
+  fill: var(--txt-highlight);
+  position: relative;
+  top: -5px;
+}
+.lightning-timeline .timeline-options .lightning-btn .oe-i {
+  pointer-events: none;
+  position: absolute;
+  bottom: 0;
+  left: 11px;
+}
+
+.timeline-options .change-timeline {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 300px;
+  background: var(--btn-blue);
+  padding: 12px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgb(205, 205, 205);
+}
+.timeline-options .change-timeline li {
+  display: block;
+  margin: 0 0 2px 0;
+  height: 19px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+.timeline-options .change-timeline li:hover, .timeline-options .change-timeline li:active, .timeline-options .change-timeline li:focus, .timeline-options .change-timeline li.selected {
+  background-color: var(--btn-blue-active);
+  color: #fff;
+}
+.timeline-options .change-timeline li:last-child {
+  margin: 0 0 0 0;
+}
+.timeline-options .change-timeline li i {
+  margin: 0 10px 0 0;
+}
+
 .oe-login {
   display: flex;
   height: 100%;
@@ -7673,7 +7810,6 @@ login.multisite .info {
   align-items: center;
   font-size: 0.8125rem;
   font-weight: var(--font-medium);
-  color: var(--btn-text);
   background: var(--btn-base);
   cursor: pointer;
   padding: 0 8px;
@@ -7851,10 +7987,11 @@ login.multisite .info {
   left: 200px;
   right: 0;
   font-size: 0.75rem;
-  background: var(--bg-popup);
-  border: 1px solid var(--txt-highlight);
-  border-bottom-width: 2px;
+  background: linear-gradient(var(--bg-max) 0, var(--bg-html) 3%);
+  border: 1px solid var(--gui-line);
+  border-top: none;
   padding: 15px 15px 20px 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 @media only screen and (min-width: 1440px) {
   .oe-patient-popup {
@@ -8080,6 +8217,65 @@ table.risks td textarea {
   }
 }
 
+.problems-plans {
+  padding: 0;
+  margin: 0;
+}
+.problems-plans .problems-plans-sortable {
+  padding: 0;
+  margin: 0;
+}
+.problems-plans .problems-plans-sortable li {
+  display: block;
+  position: relative;
+  width: 100%;
+  padding: 8px 65px 8px 5px;
+  margin: 0 0 1px 0;
+  font-size: 0.75rem;
+  background: var(--bg-grey);
+}
+.problems-plans .problems-plans-sortable li .drag-handle {
+  padding: 0 3px;
+  margin: 0 5px 0 0;
+}
+.problems-plans .problems-plans-sortable li .metadata {
+  position: absolute;
+  right: 35px;
+  top: 8px;
+}
+.problems-plans .problems-plans-sortable li .remove {
+  position: absolute;
+  right: 4px;
+  top: 8px;
+}
+.problems-plans .create-new-problem-plan {
+  background: var(--color-grey);
+  padding: 3px;
+  margin: 3px 0 0 0;
+}
+.problems-plans .create-new-problem-plan input {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 3px;
+  width: calc(100% - 38px);
+}
+
+table.past-problems-plans {
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+table.past-problems-plans tbody tr {
+  border-top: 1px dotted var(--gui-line);
+}
+table.past-problems-plans tbody tr:first-child {
+  border-top: none;
+}
+table.past-problems-plans tbody td {
+  padding: 6px 3px;
+  font-size: 0.6875rem;
+}
+
 .oe-pathstep-btn {
   position: relative;
   display: inline-flex;
@@ -8296,7 +8492,7 @@ table.risks td textarea {
   height: 40px;
   min-height: 40px;
   transition: height 0.1s ease-out;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
   pointer-events: none;
 }
 .oe-pathstep-popup .slide-open {
@@ -8703,7 +8899,7 @@ table.partial-booking tbody td .highlighter {
   padding: 10px;
   border-radius: 5px;
   font-size: 0.75rem;
-  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
 }
 .context-help-overlay .help-note:after {
   content: "";
@@ -9430,7 +9626,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 }
 @media only screen and (min-width: 1200px) and (orientation: portrait) {
   .wb3 {
-    height: calc(85vh - 60px);
+    height: calc(80vh - 60px);
     grid-template-columns: 1fr 1fr;
     grid-auto-flow: column;
   }
@@ -9766,7 +9962,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 }
 @media only screen and (min-width: 1200px) and (orientation: portrait) {
   .oe-whiteboard .multipage-stack {
-    height: calc(85vh - 60px);
+    height: calc(80vh - 60px);
   }
 }
 .oe-whiteboard .multipage-stack img {
@@ -9988,7 +10184,10 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 
 .main-event .patient-overview {
   flex: 1 1 0;
+  align-self: stretch;
+  margin: 3px 0;
   padding: 0 10px;
+  background: var(--bg-title);
 }
 .main-event .patient-overview table.standard {
   margin-top: 10px;

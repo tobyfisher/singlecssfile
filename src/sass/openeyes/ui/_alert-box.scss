@@ -11,42 +11,32 @@
 	// default alert
 	@include font-size(13);
 
-	// default, matches highlighter inverted
-	background: var(--txt-base);
-	color: var(--txt-invert);
+	// default, to "info"
+	color:rgba(250,250,250,0.9); // tints to colour of alert
+	background: var(--color-grey);
 	
 	border-radius:5px;
-	
-	// types of alerts
-	// added opacity to allow colour bg tinting
-	$-alert-text-color: rgba(250,250,250,0.9);
-	
-	&.info {
-		color: $-alert-text-color;
-		background: var(--color-grey);
-	}
+
+	// default
+	// &.info {}
 	
 	&.success {
-		color: $-alert-text-color;
 		background:var(--color-green);
 	}
 	
 	&.alert,
 	&.issue {
-		color: $-alert-text-color;
 		background:var(--color-orange);
 	}
 	
 	&.warning,
 	&.error, 
 	&.injection-warning  {
-		color: $-alert-text-color;
 		background:var(--color-red);
 	}
 	
 	// used for Risks and Allergies
 	&.patient {
-		color: $-alert-text-color;
 		background:var(--color-burgundy);
 	}
 	
@@ -66,8 +56,7 @@
 		}
 	}
 	
-	// actions, buttons and clost icons
-	
+	// actions, buttons and close icons
 	&.has-actions {
 		position:relative;
 		padding-right:200px; 	// allow space for a long named button 
