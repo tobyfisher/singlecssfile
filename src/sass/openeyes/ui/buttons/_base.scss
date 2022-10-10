@@ -29,7 +29,7 @@ button,
 
 	@include font-size(12);
 	font-weight: 500;
-	color: var(--txt-base);
+	color: var(--btn-text);
 	background: var(--btn-base);
 	cursor: pointer;
 
@@ -63,25 +63,24 @@ button,
 
 	// handle icons in buttons
 	.oe-i {
+		// if in light mode the icon will need inverting
+		filter: var(--btn-icon-hover-filter);
 		pointer-events: none;
 	}
 
 	// Pseudo & JS class hooks
 	&:hover,
 	&:focus,
-	&.active,
-	&.selected {
-		color: var(--btn-text-selected);
+	&.active {
 		background: var(--btn-blue);
 		.oe-i {
-			// if in light mode the icon will need inverting
-			filter: var(--btn-icon-hover-filter);
 			opacity: 1;
 		}
 	}
 
 	// override "selected".
 	&.selected {
+		color: var(--btn-text-selected);
 		background: var(--btn-blue-active);
 	}
 

@@ -6,12 +6,6 @@
 
 .sidebar {
 
-	// <ul>
-	.events {
-		// this provides the dividing line for the Event list
-		background: var(--gui-line);
-	}
-
 	// <li> 
 	.event {
 		position: relative;
@@ -32,7 +26,7 @@
 			@include font-size(12);
 			font-weight: 400;
 			color: var(--txt-light);
-			background: var(--bg-data);
+			background: var(--bg-event);
 
 			&:hover,
 			&:focus,

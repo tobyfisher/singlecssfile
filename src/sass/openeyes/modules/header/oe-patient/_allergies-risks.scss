@@ -14,7 +14,7 @@
 	.patient-allergies-risks {
 		position: absolute;
 		bottom: 0;
-		right: 155px;
+		right: 143px;
 		cursor: pointer;
 
 		// reduce this down to create a little more horizontal space
@@ -23,7 +23,7 @@
 		font-weight: 500;
 
 		@include flex(center, center);
-		height: 23px;
+		height: 28px;
 		padding: 0 23px 0 5px; // padding matches the data padding to align text
 
 		&:after {

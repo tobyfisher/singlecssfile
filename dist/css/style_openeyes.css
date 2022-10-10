@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Oct 09 2022 08:20:55 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Mon Oct 10 2022 18:55:00 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -470,15 +470,15 @@ html.theme-dark {
   --i-nystagmus-arrow-h-1: url("../svg/in-css/dark/ui/nystagmus-arrow-h-1.svg");
   --i-nystagmus-arrow-h-2: url("../svg/in-css/dark/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/dark/ui/nystagmus-arrow-h-3.svg");
+  --bg-html: hsl(215deg, 20%, 12%);
+  --bg-page: hsl(215deg, 20%, 12%);
   --bg-max: #000;
-  --bg-popup: rgb(13, 22, 30);
-  --bg-hover-row: rgb(19, 27, 35);
-  --bg-data: hsl(210deg, 18%, 11%);
-  --bg-html: rgb(24, 30, 36);
-  --bg-title: hsl(210deg, 11%, 8%);
-  --bg-event: hsl(210deg, 6%, 6%);
-  --bg-event-hd: hsl(210deg, 8%, 10%);
-  --txt-base: #ccc;
+  --bg-popup: hsl(212deg, 18%, 10%);
+  --bg-hover-row: hsl(210deg, 30%, 11%);
+  --bg-data: hsl(215deg, 20%, 10%);
+  --bg-title: hsl(214deg, 12%, 10%);
+  --bg-event: hsl(214deg, 12%, 8%);
+  --txt-base: rgb(204, 204, 204);
   --txt-light: #8c8c8c;
   --txt-hd: rgb(90, 130, 145);
   --txt-active: #46a0b4;
@@ -490,17 +490,17 @@ html.theme-dark {
   --font-bold: 500;
   --gui-spinner: #00ffff;
   --gui-vc: #00b4eb;
-  --gui-line: #28303c;
+  --gui-line: #232530;
   --gui-line-soft: hsl(216deg, 18%, 18%);
   --gui-scroll-track: #0a0a0f;
   --gui-scroll-thumb: #37373c;
-  --btn-base: hsl(209deg, 26%, 17%);
+  --btn-base: hsl(210deg, 26%, 16%);
   --btn-base-heavy: rgb(24, 32, 40);
   --btn-base-light: hsl(213deg, 13%, 15%);
   --btn-text: #bbb;
   --btn-text-selected: #ddd;
   --btn-blue-hint: #0e4886;
-  --btn-blue: #093286;
+  --btn-blue: hsl(220deg, 87%, 28%);
   --btn-blue-active: #1128b0;
   --btn-green-hint: #1a4f1b;
   --btn-green: #0a6b11;
@@ -523,8 +523,8 @@ html.theme-dark {
   --color-hint-orange: hsl(36deg, 100%, 22%);
   --input-scheme: dark;
   --input-focus-outline: #096c9a;
-  --input-base: #24313d;
-  --input-hint: rgb(33, 42, 53);
+  --input-base: hsl(210deg, 25%, 19%);
+  --input-hint: rgba(36, 49, 61, 0.3);
   --input-text: #ccc;
   --input-placeholder: #787878;
   --step-blue: rgb(20, 100, 200);
@@ -723,14 +723,14 @@ html.theme-light {
   --i-nystagmus-arrow-h-1: url("../svg/in-css/light/ui/nystagmus-arrow-h-1.svg");
   --i-nystagmus-arrow-h-2: url("../svg/in-css/light/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
-  --bg-max: #fff;
-  --bg-data: rgb(235, 233, 233);
-  --bg-popup: rgb(230, 228, 228);
   --bg-html: rgb(210, 208, 208);
+  --bg-page: rgb(226, 225, 225);
+  --bg-max: #fff;
+  --bg-popup: rgb(240, 238, 238);
   --bg-hover-row: rgb(206, 205, 205);
-  --bg-title: rgb(202, 200, 200);
+  --bg-data: rgb(235, 233, 233);
+  --bg-title: hsl(0deg, 2%, 77%);
   --bg-event: rgb(251, 250, 250);
-  --bg-event-hd: rgb(202, 200, 200);
   --txt-base: #0a0a0a;
   --txt-light: #5a5a64;
   --txt-hd: rgb(40, 70, 200);
@@ -747,13 +747,13 @@ html.theme-light {
   --gui-line-soft: hsl(0deg, 3%, 80%);
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
-  --btn-base: #d9e5fc;
+  --btn-base: hsl(211deg, 14%, 55%);
   --btn-base-heavy: hsl(211deg, 15%, 45%);
   --btn-base-light: hsl(211deg, 8%, 83%);
   --btn-text: #fff;
   --btn-text-selected: #fff;
   --btn-blue-hint: #4285e0;
-  --btn-blue: #2381e7;
+  --btn-blue: hsl(211deg, 80%, 52%);
   --btn-blue-active: #0c62bd;
   --btn-green-hint: #0c7915;
   --btn-green: #191;
@@ -777,7 +777,7 @@ html.theme-light {
   --input-scheme: light;
   --input-focus-outline: #0701e0;
   --input-base: #fff;
-  --input-hint: #e9e9e9;
+  --input-hint: rgba(255, 255, 255, 0.5);
   --input-text: #222;
   --input-placeholder: #959595;
   --step-blue: rgb(20, 100, 200);
@@ -3357,7 +3357,7 @@ button,
   border-radius: 0 !important;
   font-size: 0.75rem;
   font-weight: 500;
-  color: var(--txt-base);
+  color: var(--btn-text);
   background: var(--btn-base);
   cursor: pointer;
   line-height: 1;
@@ -3384,26 +3384,24 @@ button:disabled .oe-i, button.disabled .oe-i, button.inactive .oe-i,
 }
 button .oe-i,
 .button .oe-i {
+  filter: var(--btn-icon-hover-filter);
   pointer-events: none;
 }
-button:hover, button:focus, button.active, button.selected,
+button:hover, button:focus, button.active,
 .button:hover,
 .button:focus,
-.button.active,
-.button.selected {
-  color: var(--btn-text-selected);
+.button.active {
   background: var(--btn-blue);
 }
-button:hover .oe-i, button:focus .oe-i, button.active .oe-i, button.selected .oe-i,
+button:hover .oe-i, button:focus .oe-i, button.active .oe-i,
 .button:hover .oe-i,
 .button:focus .oe-i,
-.button.active .oe-i,
-.button.selected .oe-i {
-  filter: var(--btn-icon-hover-filter);
+.button.active .oe-i {
   opacity: 1;
 }
 button.selected,
 .button.selected {
+  color: var(--btn-text-selected);
   background: var(--btn-blue-active);
 }
 button:active,
@@ -3417,7 +3415,7 @@ button:active,
 button.header-tab,
 .button.header-tab {
   margin: 0;
-  color: var(--txt-base);
+  color: var(--txt-light);
   background: none;
 }
 button.header-tab .oe-i,
@@ -6952,7 +6950,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   left: 200px;
   height: 60px;
   width: 605px;
-  background: 90px/top -4px right 18px var(--i-watermark-patient) no-repeat;
+  background: top -4px right 18px/90px var(--i-watermark-patient) no-repeat;
 }
 @media only screen and (max-width: 1265px) {
   .oe-patient {
@@ -6979,48 +6977,32 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   bottom: 0;
   left: 0;
   padding: 0 20px 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
-.oe-patient .patient-demo-icon {
-  position: absolute;
-  bottom: 4px;
-  right: 0;
-}
-.oe-patient .hospital-number,
-.oe-patient .nhs-number,
-.oe-patient .patient-gender,
-.oe-patient .patient-age,
-.oe-patient .patient-died {
-  display: inline-block;
-  padding: 0 3px 5px 5px;
+.oe-patient .patient-details div {
+  padding: 0 5px 4px 5px;
   border-left: 1px solid var(--gui-line);
 }
-.oe-patient .hospital-number span:first-of-type,
-.oe-patient .nhs-number span:first-of-type,
-.oe-patient .patient-gender span:first-of-type,
-.oe-patient .patient-age span:first-of-type,
-.oe-patient .patient-died span:first-of-type {
+.oe-patient .patient-details div:first-child {
+  padding-left: 0;
+  border-left: none;
+  font-size: 0.8125rem;
+}
+.oe-patient .patient-details div span:first-of-type {
   opacity: 0.5;
 }
-.oe-patient .hospital-number em,
-.oe-patient .nhs-number em,
-.oe-patient .patient-gender em,
-.oe-patient .patient-age em,
-.oe-patient .patient-died em {
+.oe-patient .patient-details div em {
   opacity: 0.5;
   font-size: 0.625rem;
 }
-.oe-patient .hospital-number .oe-i.small,
-.oe-patient .nhs-number .oe-i.small {
+.oe-patient .patient-details .oe-i.small {
   width: 11px;
   height: 11px;
   background-size: 11px;
   position: relative;
   top: -1px;
-}
-.oe-patient .hospital-number {
-  padding-left: 0;
-  border-left: none;
-  font-size: 0.8125rem;
 }
 .oe-patient.deceased .patient-name {
   color: rgb(255, 0, 0);
@@ -7041,7 +7023,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 .oe-patient .patient-allergies-risks {
   position: absolute;
   bottom: 0;
-  right: 155px;
+  right: 143px;
   cursor: pointer;
   font-size: 0.625rem;
   color: #ddd;
@@ -7049,7 +7031,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 23px;
+  height: 28px;
   padding: 0 23px 0 5px;
   background: var(--btn-base);
 }
@@ -7090,62 +7072,54 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 .oe-patient .patient-quicklook,
 .oe-patient .patient-demographics,
 .oe-patient .patient-management,
-.oe-patient .patient-oescape,
 .oe-patient .patient-local-edit,
-.oe-patient .patient-oescape,
 .oe-patient .patient-extra {
   position: absolute;
-  padding: 6px 8px 4px 8px;
+  padding: 6px 8px;
   cursor: pointer;
-}
-.oe-patient .patient-quicklook svg,
-.oe-patient .patient-demographics svg,
-.oe-patient .patient-management svg,
-.oe-patient .patient-oescape svg,
-.oe-patient .patient-local-edit svg,
-.oe-patient .patient-oescape svg,
-.oe-patient .patient-extra svg {
-  pointer-events: none;
 }
 .oe-patient .patient-quicklook .icon,
 .oe-patient .patient-demographics .icon,
 .oe-patient .patient-management .icon,
-.oe-patient .patient-oescape .icon,
 .oe-patient .patient-local-edit .icon,
-.oe-patient .patient-oescape .icon,
 .oe-patient .patient-extra .icon {
   display: inline-block;
   fill: var(--txt-base);
   opacity: 0.8;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+}
+.oe-patient .patient-quicklook.open, .oe-patient .patient-quicklook.active,
+.oe-patient .patient-demographics.open,
+.oe-patient .patient-demographics.active,
+.oe-patient .patient-management.open,
+.oe-patient .patient-management.active,
+.oe-patient .patient-local-edit.open,
+.oe-patient .patient-local-edit.active,
+.oe-patient .patient-extra.open,
+.oe-patient .patient-extra.active {
+  background: var(--btn-blue-hint);
 }
 .oe-patient .patient-quicklook.open .icon, .oe-patient .patient-quicklook.active .icon,
 .oe-patient .patient-demographics.open .icon,
 .oe-patient .patient-demographics.active .icon,
 .oe-patient .patient-management.open .icon,
 .oe-patient .patient-management.active .icon,
-.oe-patient .patient-oescape.open .icon,
-.oe-patient .patient-oescape.active .icon,
 .oe-patient .patient-local-edit.open .icon,
 .oe-patient .patient-local-edit.active .icon,
-.oe-patient .patient-oescape.open .icon,
-.oe-patient .patient-oescape.active .icon,
 .oe-patient .patient-extra.open .icon,
 .oe-patient .patient-extra.active .icon {
-  fill: var(--txt-highlight);
+  fill: #fff;
 }
 .oe-patient .patient-demographics {
   bottom: 0;
-  right: 119px;
-  padding-left: 14px;
-}
-.oe-patient .patient-demographics .icon {
-  width: 16px;
-  height: 16px;
+  right: 109px;
 }
 .oe-patient .patient-management {
   bottom: 0;
-  right: 86px;
-  padding-bottom: 3px;
+  right: 77px;
+  padding: 5px 7px;
 }
 .oe-patient .patient-management .icon {
   width: 18px;
@@ -7153,35 +7127,15 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 }
 .oe-patient .patient-quicklook {
   bottom: 0;
-  right: 56px;
-}
-.oe-patient .patient-quicklook .icon {
-  width: 16px;
-  height: 16px;
-}
-.oe-patient .patient-oescape {
-  bottom: 0;
-  right: 24px;
-}
-.oe-patient .patient-oescape .icon {
-  width: 16px;
-  height: 16px;
+  right: 45px;
 }
 .oe-patient .patient-extra {
   bottom: 0;
   right: -8px;
 }
-.oe-patient .patient-extra .icon {
-  width: 16px;
-  height: 16px;
-}
 .oe-patient .patient-local-edit {
   top: 5px;
   right: -7px;
-}
-.oe-patient .patient-local-edit .icon {
-  width: 15px;
-  height: 15px;
 }
 .oe-patient .patient-local-edit .icon:hover, .oe-patient .patient-local-edit .icon:focus, .oe-patient .patient-local-edit .icon:active {
   opacity: 1;
@@ -7241,6 +7195,9 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   font-weight: var(--font-bold);
 }
 
+.home-messages {
+  background: var(--bg-page);
+}
 .home-messages.subgrid {
   display: grid;
   grid: 1fr/260px 1fr;
@@ -7453,9 +7410,9 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   right: 0;
   bottom: 0;
   width: 450px;
-  background: var(--bg-popup);
+  background: var(--bg-html);
+  border-top: 1px solid var(--btn-blue);
   border-left: 2px solid var(--gui-line);
-  border-top: 1px solid var(--btn-blue-hint);
   overflow-y: auto;
   padding: 0 0 35px 0;
 }
@@ -7895,7 +7852,7 @@ login.multisite .info {
   font-size: 0.875rem;
   font-weight: var(--font-medium);
   color: var(--txt-light);
-  background: var(--bg-event);
+  background: var(--bg-popup);
 }
 .oe-full-header .oescape-icon-btns .icon-btn a {
   height: 38px;
@@ -7989,7 +7946,7 @@ login.multisite .info {
   left: 200px;
   right: 0;
   font-size: 0.75rem;
-  background: linear-gradient(var(--bg-max) 0, var(--bg-html) 3%);
+  background: var(--bg-html);
   border: 1px solid var(--gui-line);
   border-top: none;
   padding: 15px 15px 20px 15px;
@@ -10017,10 +9974,10 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background: 49.9% 0/126px 49px var(--i-face) var(--bg-event-hd) no-repeat;
+  background: 49.9% 0/126px 49px var(--i-face) var(--bg-title) no-repeat;
 }
 .event-header.no-face {
-  background: var(--bg-event-hd);
+  background: var(--bg-title);
 }
 @media only screen and (min-width: 1440px) {
   .event-header {
@@ -10187,8 +10144,8 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 .main-event .patient-overview {
   flex: 1 1 0;
   align-self: stretch;
-  margin: 3px 0;
-  padding: 0 10px;
+  margin: 0 0 3px 0;
+  padding: 0 20px;
   background: var(--bg-title);
 }
 .main-event .patient-overview table.standard {
@@ -10288,7 +10245,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   border-radius: 3px;
   font-size: 0.75rem;
   font-weight: var(--font-medium);
-  background: var(--bg-event);
+  background: var(--bg-popup);
   cursor: pointer;
 }
 .clinic-pathway-btn:hover, .clinic-pathway-btn:focus {
@@ -10311,15 +10268,12 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 }
 .sidebar-list-controls button {
   flex: 1 1 0;
-  background-color: var(--bg-event);
+  background-color: var(--bg-popup);
 }
 .sidebar-list-controls input {
   margin: 0 2px 0 0;
 }
 
-.sidebar .events {
-  background: var(--gui-line);
-}
 .sidebar .event {
   position: relative;
   display: block;
@@ -10335,7 +10289,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   font-size: 0.75rem;
   font-weight: 400;
   color: var(--txt-light);
-  background: var(--bg-data);
+  background: var(--bg-event);
 }
 .sidebar .event a:hover, .sidebar .event a:focus, .sidebar .event a:active {
   color: var(--btn-text-selected);
@@ -10470,7 +10424,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 
 .event-date {
   display: inline-block;
-  padding: 0;
+  padding: 0 12px 0 4px;
 }
 .event-date .day, .event-date .mth, .event-date .yr {
   display: inline-block;
@@ -10485,11 +10439,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   padding-left: 4px;
 }
 .event-date.backdated {
-  padding-right: 16px;
-  background-position: right center;
-  background-repeat: no-repeat;
-  background-size: 13px;
-  background-image: url("../svg/in-css/all/sidebar/rotate-left.svg");
+  background: right center/10px var(--i-rotate-left) no-repeat;
 }
 
 .sidebar .event .tag {
@@ -10514,7 +10464,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   margin: 0 0 1px 0;
   font-size: 0.6875rem;
   text-align: center;
-  background: var(--bg-event);
+  background: var(--bg-popup);
 }
 .sidebar .groupings {
   padding-bottom: 30px;

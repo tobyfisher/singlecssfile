@@ -15,11 +15,9 @@
 	bottom:0;
 	width:$oe-hotlist-panel-width;
 
-	background: var(--bg-popup);
+	background: var(--bg-html);
+	border-top:1px solid var(--btn-blue);
 	border-left:2px solid var(--gui-line);
-
-	// soft visual link to nav button
-	border-top:1px solid var(--btn-blue-hint);
 
 	overflow-y:auto; // scroll overflow
 	padding:0 0 35px 0;	// allow for Admin banner (if it is present)

@@ -15,7 +15,7 @@
 
 	@include font-size(12);
 
-	background: linear-gradient( var(--bg-max) 0, var(--bg-html) 3%);
+	background: var(--bg-html);
 	border:1px solid var(--gui-line);
 	border-top:none;
 	padding:15px 15px 20px 15px;

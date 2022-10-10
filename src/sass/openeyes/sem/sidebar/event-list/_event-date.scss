@@ -7,7 +7,7 @@
 // event date layout
 .event-date {
 	display: inline-block;
-	padding:0;
+	padding:0 12px 0 4px; // allow for backdated icon
 		  
 	.day, .mth, .yr {
 	  display: inline-block;
@@ -31,10 +31,6 @@
 	// highlights where retrospective entries were make to the notes.
 	// It's a governance requirement:
 	&.backdated {
-		padding-right:16px; 
-		background-position:right center;
-		background-repeat: no-repeat;
-		background-size:$oe-event-icon-size - 6px;
-		background-image: url( svg-fixed('sidebar/rotate-left') );
+		background: right center / 10px var(--i-rotate-left) no-repeat;
 	}
 }

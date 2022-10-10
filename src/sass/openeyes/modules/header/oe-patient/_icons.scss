@@ -10,85 +10,55 @@
 	.patient-quicklook, 
 	.patient-demographics, 
 	.patient-management,
-	.patient-oescape,
 	.patient-local-edit,
-	.patient-oescape,
 	.patient-extra {
 		position:absolute;
-		padding:6px 8px 4px 8px; // increase icon hitarea
+		padding:6px 8px; // increase icon hit-area
 		cursor:pointer;
-	
-		
-		svg {
-			pointer-events: none; // allow JS delegation
-		}
 		
 		// svg icon btn
 		.icon {
 			display:inline-block;
 			fill: var(--txt-base);
-			opacity: 0.8;				
+			opacity: 0.8;
+			width:16px;
+			height:16px;
+			pointer-events: none; // allow JS delegation
 		}	
 		
 		// js controlled interaction... 
-		&.open, &.active {
+		&.open,
+		&.active {
+			background: var(--btn-blue-hint);
 			.icon {
-				fill: var(--txt-highlight);
+				fill: #fff;
 			}
 		}
 		
 	}
 	
-	// this will space out the icons on handhelds
-	$space-out-icons:20px;
-	
 	// info 
 	.patient-demographics {
 		bottom:0;
-		right:119px;
-	
-		.icon {
-			width:16px;  
-			height:16px;			
-		} 
-		
-		// avoid a gap between 
-		// allergies and info icon hitarea
-		padding-left:14px; 
+		right:109px;
 	}
 	
 	// dude
 	.patient-management {
 		bottom:0;
-		right:86px;
-		padding-bottom:3px;
-		
+		right:77px;
+		padding:5px 7px; // increase icon hit-area
+
 		.icon {
-			width:18px;  
-			height:18px;		
+			width:18px;
+			height:18px;
 		}
 	}
 
 	// Eye
 	.patient-quicklook {
 		bottom:0;
-		right:56px;	
-		
-		.icon {
-			width:16px;  
-			height:16px;
-		}
-	}
-	
-	// OEscape 
-	.patient-oescape {
-		bottom:0;
-		right:24px;	
-		
-		.icon {
-			width:16px;  
-			height:16px;
-		}
+		right:45px;
 	}
 	
 	// Extra space for 4th Patient icon
@@ -96,12 +66,7 @@
 	// but left as generic container for future use
 	.patient-extra {
 		bottom:0;
-		right:-8px; // allows for the padding	
-		
-		.icon {
-			width:16px;  
-			height:16px;
-		}
+		right:-8px; // allows for the padding
 	}
 	
 	// Edit Patient when (local)
@@ -111,9 +76,6 @@
 		right:-7px;
 		
 		.icon {
-			width:15px;  
-			height:15px;
-			
 			&:hover, 
 			&:focus, 
 			&:active {
