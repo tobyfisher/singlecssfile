@@ -6,6 +6,7 @@
 // <span>
 // event date layout
 .event-date {
+	position: relative;
 	display: inline-block;
 	padding:0 12px 0 4px; // allow for backdated icon
 		  
@@ -31,6 +32,15 @@
 	// highlights where retrospective entries were make to the notes.
 	// It's a governance requirement:
 	&.backdated {
-		background: right center / 10px var(--i-rotate-left) no-repeat;
+		&::after {
+			content: "";
+			position: absolute;
+			top:0;
+			right:0;
+			bottom: 0;
+			width:12px;
+			background: right center / 10px var(--i-rotate-left) no-repeat;
+			opacity: 0.5;
+		}
 	}
 }
