@@ -20,7 +20,7 @@ $bg: (
 	"page": hsl(215, 19%, 14%), // same as "html" in dark
 	"max": #000,
 	"popup":hsl(212, 15%, 14%),
-	"hover-row": hsl(210, 30%, 11%),
+	"hover-row": hsl(215, 18%, 10%),
 	"data": hsl(213, 10%, 10%),
 	"title": hsl(214, 18%, 16%),
 	"event": hsl(213, 6%, 16%),
@@ -32,7 +32,7 @@ $bg-light: (
 	"page": rgb(226, 225, 225),
 	"max": #fff,
 	"popup": rgb(231, 230, 230),
-	"hover-row": rgb(206, 205, 205),
+	"hover-row": rgb(240, 240, 240),
 	"data": rgb(240, 239, 239),
 	"title": rgb(201, 200, 200),
 	"event": rgb(251, 250, 250),
@@ -101,7 +101,7 @@ $btn: (
 	"text-selected":#ddd,
 	"blue-hint": #0e4886,
 	"blue": hsl(220, 87%, 28%),
-	"blue-active": #1128b0,
+	"blue-active": hsl(225, 82%, 38%),
 	"green-hint": #1a4f1b,
 	"green": #0a6b11,
 	"green-active": #171,
@@ -158,18 +158,18 @@ $color: (
 	"green": hsl(120, 90%, 20%),
 	"red": hsl(0, 90%, 24%),
 	"burgundy": hsl(11, 88%, 20%),
-	"orange": hsl(32, 95%, 28%),
+	"orange": hsl(32, 95%, 30%),
 	"yellow": #c8b432,
-	"grey": rgb(80, 65, 65),
-	"hint-green": hsl(136, 17%, 22%), // hint colours work with standard theme text
-	"hint-red": hsl(0, 90%, 12%),
-	"hint-orange": hsl(36, 100%, 22%),
+	"grey": rgb(75, 65, 65),
+	"hint-green": hsl(136, 14%, 22%), // hint colours work with standard theme text
+	"hint-red": hsl(0, 70%, 20%),
+	"hint-orange": hsl(34, 80%, 21%),
 );
 
 $color-light: (
 	"highlighter": #ebd37b,
 	"green": #009b00,
-	"red": hsl(0, 95%, 40%),
+	"red": hsl(0, 96%, 45%),
 	"burgundy": rgb(130, 30, 0),
 	"orange": hsl(31, 92%, 42%),
 	"yellow": #d2aa14,
