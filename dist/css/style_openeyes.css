@@ -512,12 +512,12 @@ html.theme-dark {
   --btn-icon-hover-filter: none;
   --btn-icon-opacity: 0.6;
   --color-highlighter: #b8ab88;
-  --color-green: #006900;
-  --color-red: #9b0000;
-  --color-burgundy: #6b1400;
-  --color-orange: #a05500;
+  --color-green: hsl(120deg, 90%, 20%);
+  --color-red: hsl(0deg, 90%, 24%);
+  --color-burgundy: hsl(11deg, 88%, 20%);
+  --color-orange: hsl(32deg, 95%, 28%);
   --color-yellow: #c8b432;
-  --color-grey: rgb(90, 80, 80);
+  --color-grey: rgb(80, 65, 65);
   --color-hint-green: hsl(136deg, 17%, 22%);
   --color-hint-red: hsl(0deg, 90%, 12%);
   --color-hint-orange: hsl(36deg, 100%, 22%);
@@ -723,12 +723,12 @@ html.theme-light {
   --i-nystagmus-arrow-h-1: url("../svg/in-css/light/ui/nystagmus-arrow-h-1.svg");
   --i-nystagmus-arrow-h-2: url("../svg/in-css/light/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
-  --bg-html: rgb(210, 208, 208);
+  --bg-html: rgb(218, 216, 216);
   --bg-page: rgb(226, 225, 225);
   --bg-max: #fff;
   --bg-popup: rgb(231, 230, 230);
   --bg-hover-row: rgb(206, 205, 205);
-  --bg-data: rgb(235, 233, 233);
+  --bg-data: rgb(240, 239, 239);
   --bg-title: rgb(201, 200, 200);
   --bg-event: rgb(251, 250, 250);
   --bg-event-list: rgb(240, 240, 240);
@@ -745,7 +745,7 @@ html.theme-light {
   --gui-spinner: #00b4ff;
   --gui-vc: #00b4eb;
   --gui-line: #c0bebe;
-  --gui-line-soft: hsl(0deg, 3%, 80%);
+  --gui-line-soft: rgb(166, 172, 172);
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
   --btn-base: hsl(211deg, 14%, 55%);
@@ -766,11 +766,11 @@ html.theme-light {
   --btn-icon-opacity: 0.7;
   --color-highlighter: #ebd37b;
   --color-green: #009b00;
-  --color-red: #cd0000;
-  --color-burgundy: #751e00;
-  --color-orange: #dc7305;
+  --color-red: hsl(0deg, 95%, 40%);
+  --color-burgundy: rgb(130, 30, 0);
+  --color-orange: hsl(31deg, 92%, 42%);
   --color-yellow: #d2aa14;
-  --color-grey: rgb(135, 130, 130);
+  --color-grey: rgb(145, 130, 130);
   --color-hint-green: hsl(120deg, 26%, 75%);
   --color-hint-red: hsl(0deg, 82%, 74%);
   --color-hint-orange: hsl(24deg, 64%, 74%);
@@ -2854,11 +2854,11 @@ a {
   color: inherit;
   text-decoration: none;
 }
-a.hint {
+a.hint:not(.button) {
   text-decoration: underline;
 }
-a.hint.button {
-  text-decoration: none;
+a.button {
+  color: var(--btn-text) !important;
 }
 a:hover, a:focus, a:active {
   color: var(--txt-active);
@@ -5597,6 +5597,34 @@ ul.quick-filters {
   animation: 1s ease-out forwards flickGreen;
 }
 
+.pathway-in-event {
+  z-index: 65;
+  position: fixed;
+  top: 98px;
+  left: 200px;
+  width: calc( 100vw - 200px);
+  border-bottom: 1px solid var(--btn-blue);
+  border-top: 1px solid var(--btn-blue);
+  background: var(--bg-popup);
+  padding: 10px 0;
+  min-height: 80px;
+}
+@media only screen and (min-width: 1890px) {
+  .pathway-in-event {
+    width: 1240px;
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .pathway-in-event {
+    width: 59vw;
+  }
+}
+.pathway-in-event .close-icon-btn {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
 .oe-worklists-panel {
   display: none;
   z-index: 96;
@@ -8190,7 +8218,7 @@ table.risks td textarea {
   padding: 8px 65px 8px 5px;
   margin: 0 0 1px 0;
   font-size: 0.75rem;
-  background: var(--btn-base-light);
+  background: var(--bg-event);
 }
 .problems-plans .problems-plans-sortable li .drag-handle {
   padding: 0 3px;
@@ -8207,7 +8235,7 @@ table.risks td textarea {
   top: 8px;
 }
 .problems-plans .create-new-problem-plan {
-  background: var(--color-grey);
+  background: var(--bg-event);
   padding: 3px;
   margin: 3px 0 0 0;
 }
@@ -11282,7 +11310,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   margin: 10px 0;
   padding: 5px;
   border-radius: 5px;
-  background-color: var(--input-base);
+  background-color: var(--bg-event);
 }
 .inj-mgmt-inj .details {
   flex: 1 1 0;

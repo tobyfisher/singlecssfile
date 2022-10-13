@@ -11,7 +11,7 @@
 @use "pathway";
 @use "filters";
 @use "adder";
-//@use "pathway-in-patient/_all";
+@use "pathway-in-patient";
 
 // Main Worklist nav  button behaves as a link, but
 // when you land on the actual page it toggles to

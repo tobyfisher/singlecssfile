@@ -28,12 +28,12 @@ $bg: (
 );
 
 $bg-light: (
-	"html": rgb(210, 208, 208),
+	"html": rgb(218, 216, 216),
 	"page": rgb(226, 225, 225),
 	"max": #fff,
 	"popup": rgb(231, 230, 230),
 	"hover-row": rgb(206, 205, 205),
-	"data": rgb(235, 233, 233),
+	"data": rgb(240, 239, 239),
 	"title": rgb(201, 200, 200),
 	"event": rgb(251, 250, 250),
 	"event-list": rgb(240, 240, 240),
@@ -87,7 +87,7 @@ $gui-light: (
 	"spinner": #00b4ff,
 	"vc": #00b4eb,
 	"line": #c0bebe,
-	"line-soft": hsl(0, 3%, 80%),
+	"line-soft": rgb(166, 172, 172),
 	"scroll-track":#5f5f64,
 	"scroll-thumb":#aaaaaa,
 );
@@ -155,12 +155,12 @@ $input-light: (
 // ---- Colors (alerts, flags, pathsteps, wait, etc)
 $color: (
 	"highlighter": #b8ab88,
-	"green": #006900,
-	"red": #9b0000,
-	"burgundy": #6b1400,
-	"orange": #a05500,
+	"green": hsl(120, 90%, 20%),
+	"red": hsl(0, 90%, 24%),
+	"burgundy": hsl(11, 88%, 20%),
+	"orange": hsl(32, 95%, 28%),
 	"yellow": #c8b432,
-	"grey": rgb(90, 80, 80),
+	"grey": rgb(80, 65, 65),
 	"hint-green": hsl(136, 17%, 22%), // hint colours work with standard theme text
 	"hint-red": hsl(0, 90%, 12%),
 	"hint-orange": hsl(36, 100%, 22%),
@@ -169,11 +169,11 @@ $color: (
 $color-light: (
 	"highlighter": #ebd37b,
 	"green": #009b00,
-	"red": #cd0000,
-	"burgundy": #751e00,
-	"orange": #dc7305,
+	"red": hsl(0, 95%, 40%),
+	"burgundy": rgb(130, 30, 0),
+	"orange": hsl(31, 92%, 42%),
 	"yellow": #d2aa14,
-	"grey": rgb(135, 130, 130),
+	"grey": rgb(145, 130, 130),
 	"hint-green": hsl(120, 26%, 75%),
 	"hint-red": hsl(0, 82%, 74%),
 	"hint-orange": hsl(24, 64%, 74%),
