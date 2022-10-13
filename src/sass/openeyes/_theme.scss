@@ -19,10 +19,10 @@ $bg: (
 	"html": hsl(214, 19%, 12%),
 	"page": hsl(215, 19%, 14%), // same as "html" in dark
 	"max": #000,
-	"popup":hsl(212, 18%, 10%),
+	"popup":hsl(212, 15%, 14%),
 	"hover-row": hsl(210, 30%, 11%),
 	"data": hsl(213, 10%, 10%),
-	"title":  hsl(214, 18%, 16%),
+	"title": hsl(214, 18%, 16%),
 	"event": hsl(213, 6%, 16%),
 	"event-list":hsl(210, 26%, 16%)
 );
@@ -96,8 +96,7 @@ $gui-light: (
 // "Dark" - interaction is subtle
 $btn: (
 	"base": hsl(210, 26%, 16%),
-	"base-heavy": rgb(24, 32, 40), // a 'heavy' version of base (see Event list & .hint without colour)
-	"base-light": hsl(213, 13%, 15%), // a 'soft' (subtle) version (see Add Event popup and btn lists)
+	"base-light": hsl(210, 18%, 16%), // a 'light' (or subtle) version (can be used with default text colour)
 	"text":#bbb,
 	"text-selected":#ddd,
 	"blue-hint": #0e4886,
@@ -109,7 +108,7 @@ $btn: (
 	"red-hint": #721d1d,
 	"red": #8c0909,
 	"red-active": #911,
-	"disabled": hsl(213, 12%, 21%),
+	"disabled": #222,
 	"icon-hover-filter": none,
 	"icon-opacity": 0.6,
 );
@@ -117,8 +116,7 @@ $btn: (
 // "Light" - interaction is more obvious, with more contrast
 $btn-light: (
 	"base":hsl(211, 14%, 55%),
-	"base-heavy": hsl(211, 15%, 45%),
-	"base-light": hsl(211, 8%, 83%),
+	"base-light": rgb(206, 218, 240), // v5 button color (can be used with default text colour)
 	"text":#fff,
 	"text-selected":#fff,
 	"blue-hint": #4285e0,
@@ -130,7 +128,7 @@ $btn-light: (
 	"red-hint": #830c0c,
 	"red": #a11,
 	"red-active": #c11,
-	"disabled": hsl(211, 13%, 65%),
+	"disabled": hsl(211, 9%, 70%),
 	"icon-hover-filter": invert(100%) grayscale(100%),
 	"icon-opacity": 0.7,
 );
@@ -149,7 +147,7 @@ $input-light: (
 	"scheme": "light",
 	"focus-outline": #0701e0,
 	"base": #fff,
-	"hint": rgba(255,255,255,0.5),
+	"hint": rgba(255, 255, 255, 0.5),
 	"text": #222,
 	"placeholder": #959595,
 );

@@ -25,7 +25,7 @@
 			margin:0 0 1px 0;
 			
 			@include font-size(12);
-			background: var(--color-grey);
+			background: var(--btn-base-light);
 
 			.drag-handle {
 				padding:0 3px;

@@ -6,7 +6,6 @@ button,
 	// give a hint of the button colour to the user
 	&.hint {
 		color: var(--btn-text);
-		background: var(--btn-base-heavy);
 
 		&.green {
 			background: var(--btn-green-hint);

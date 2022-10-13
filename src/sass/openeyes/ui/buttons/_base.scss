@@ -54,8 +54,7 @@ button,
 		cursor: default;
 		color: var(--txt-light);
 		background: var(--btn-disabled);
-		pointer-events: none; // disable
-
+		pointer-events: none; // disabled!
 		.oe-i {
 			opacity: 0.2;
 		}
