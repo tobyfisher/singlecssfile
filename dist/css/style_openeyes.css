@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Thu Oct 13 2022 19:01:58 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Fri Oct 14 2022 09:33:03 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -3763,6 +3763,13 @@ a.column-sort.descend {
 }
 a.column-sort:hover, a.column-sort:focus, a.column-sort.active {
   opacity: 1;
+}
+
+.tbl-hd {
+  font-size: 0.8125rem;
+  font-weight: var(--font-light);
+  padding-right: 16px;
+  padding-bottom: 8px;
 }
 
 ul {
@@ -7976,6 +7983,7 @@ login.multisite .info {
   background: var(--bg-html);
   border: 1px solid var(--gui-line);
   border-top: none;
+  border-bottom-color: var(--btn-blue-hint);
   padding: 15px 15px 20px 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
