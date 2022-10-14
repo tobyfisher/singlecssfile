@@ -96,7 +96,7 @@ $gui-light: (
 // "Dark" - interaction is subtle
 $btn: (
 	"base": hsl(210, 26%, 16%),
-	"base-light": hsl(210, 18%, 16%), // a 'light' (or subtle) version (can be used with default text colour)
+	"base-light": hsl(211, 71%, 19%), // a 'light' (or subtle) version (can be used with default text colour)
 	"text":#bbb,
 	"text-selected":#ddd,
 	"blue-hint": #0e4886,
@@ -116,7 +116,7 @@ $btn: (
 // "Light" - interaction is more obvious, with more contrast
 $btn-light: (
 	"base":hsl(211, 14%, 55%),
-	"base-light": rgb(206, 218, 240), // v5 button color (can be used with default text colour)
+	"base-light": hsl(221, 90%, 94%), // v5 button color (can be used with default text colour)
 	"text":#fff,
 	"text-selected":#fff,
 	"blue-hint": #4285e0,

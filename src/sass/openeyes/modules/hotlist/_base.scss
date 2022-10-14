@@ -16,8 +16,8 @@
 	width:$oe-hotlist-panel-width;
 
 	background: var(--bg-html);
-	border-top:1px solid var(--btn-blue);
 	border-left:2px solid var(--gui-line);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 
 	overflow-y:auto; // scroll overflow
 	padding:0 0 35px 0;	// allow for Admin banner (if it is present)

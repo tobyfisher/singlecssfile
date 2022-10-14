@@ -11,7 +11,7 @@
 	.search-patient {
 		flex: 1;
 		// line up with Headers in hotlist
-		margin: 0 5px;
+		margin: 0 1px;
 
 		@include flex(center, space-between);
 
@@ -19,11 +19,10 @@
 		input {
 			flex: 2;
 			border-radius: 0;
-			height: 28px;
+			height: #{$oe-event-header-height - 2px};
 			@include font-size(15);
 			font-weight: 400;
 			color: #fff;
-			border-bottom: 1px solid var(--gui-line);
 
 			&:focus {
 				border-bottom-color: var(--txt-base);
@@ -33,7 +32,7 @@
 		// increase defaults.
 		button {
 			flex: 1;
-			height: 28px;
+			height: #{$oe-event-header-height - 2px};
 			@include font-size(13);
 			margin: 0 0 0 2px;
 		}
