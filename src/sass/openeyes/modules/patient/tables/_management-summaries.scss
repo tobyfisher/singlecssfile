@@ -12,7 +12,7 @@
 table.management-summaries {
 	// themed
 	tbody {
-		tr {
+		tr:not(:first-child) {
 			border-top-style: dotted;
 		}
 		td {

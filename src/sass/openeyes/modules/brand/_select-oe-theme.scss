@@ -15,7 +15,7 @@
 
 	// fix buttons to always show the theme colours
 	.light-theme {
-		background-color: #ddd;
+		background-color: rgb(221, 220, 220);
 		color: #333;
 
 		.theme-light & {
@@ -24,8 +24,8 @@
 	}
 
 	.dark-theme {
-		background-color: #224;
-		color: #eee;
+		background-color: #191e24;
+		color: #ddd;
 
 		.theme-dark & {
 			border-color: var(--txt-active);

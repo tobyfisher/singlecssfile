@@ -40,13 +40,13 @@
 	// info 
 	.patient-demographics {
 		bottom:0;
-		right:109px;
+		right:111px;
 	}
 	
 	// dude
 	.patient-management {
 		bottom:0;
-		right:77px;
+		right:79px;
 		padding:5px 7px; // increase icon hit-area
 
 		.icon {
@@ -58,7 +58,7 @@
 	// Eye
 	.patient-quicklook {
 		bottom:0;
-		right:45px;
+		right:47px;
 	}
 	
 	// Extra space for 4th Patient icon
@@ -73,7 +73,7 @@
 	// i.e, they are not a PAS integrated patient.
 	.patient-local-edit {
 		top:5px;
-		right:-7px;
+		right:-8px;
 		
 		.icon {
 			&:hover, 

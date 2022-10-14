@@ -20,7 +20,7 @@
 		margin: 5px 0;
 	}
 
-	background: 8px center / 12px var(--txt-invert) var(--i-ui-flag-grey) no-repeat;
+	background: 8px center / 12px var(--txt-invert) var(--i-flag-grey) no-repeat;
 
 	// squeeze down when used inline
 	&.inline {
@@ -30,29 +30,29 @@
 	}
 
 	&.green {
-		background-image: var(--i-ui-flag-green);
+		background-image: var(--i-flag-green);
 		border-color: var(--color-green);
 
 		&.risk {
-			background-image: var(--i-ui-triangle-green);
+			background-image: var(--i-triangle-green);
 		}
 	}
 
 	&.red {
-		background-image: var(--i-ui-flag-red);
+		background-image: var(--i-flag-red);
 		border-color:  var(--color-red);
 
 		&.risk {
-			background-image: var(--i-ui-triangle-red);
+			background-image: var(--i-triangle-red);
 		}
 	}
 
 	&.amber {
-		background-image: var(--i-ui-flag-orange);
+		background-image: var(--i-flag-orange);
 		border-color:  var(--color-orange);
 
 		&.risk {
-			background-image: var(--i-ui-triangle-orange);
+			background-image: var(--i-triangle-orange);
 		}
 	}
 

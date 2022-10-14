@@ -513,7 +513,7 @@ html.theme-dark {
   --btn-icon-opacity: 0.6;
   --color-highlighter: #b8ab88;
   --color-green: hsl(120deg, 90%, 20%);
-  --color-red: hsl(0deg, 90%, 24%);
+  --color-red: hsl(0deg, 92%, 28%);
   --color-burgundy: hsl(11deg, 88%, 20%);
   --color-orange: hsl(32deg, 95%, 30%);
   --color-yellow: #c8b432;
@@ -4053,7 +4053,7 @@ ul.oe-multi-select li {
   font-weight: var(--font-medium);
   border: 1.5px solid var(--gui-line);
   border-radius: 15px;
-  background: 8px center/12px var(--txt-invert) var(--i-ui-flag-grey) no-repeat;
+  background: 8px center/12px var(--txt-invert) var(--i-flag-grey) no-repeat;
 }
 .auto-alert.pad-v {
   margin: 5px 0;
@@ -4064,25 +4064,25 @@ ul.oe-multi-select li {
   padding: 1px 10px 1px 25px;
 }
 .auto-alert.green {
-  background-image: var(--i-ui-flag-green);
+  background-image: var(--i-flag-green);
   border-color: var(--color-green);
 }
 .auto-alert.green.risk {
-  background-image: var(--i-ui-triangle-green);
+  background-image: var(--i-triangle-green);
 }
 .auto-alert.red {
-  background-image: var(--i-ui-flag-red);
+  background-image: var(--i-flag-red);
   border-color: var(--color-red);
 }
 .auto-alert.red.risk {
-  background-image: var(--i-ui-triangle-red);
+  background-image: var(--i-triangle-red);
 }
 .auto-alert.amber {
-  background-image: var(--i-ui-flag-orange);
+  background-image: var(--i-flag-orange);
   border-color: var(--color-orange);
 }
 .auto-alert.amber.risk {
-  background-image: var(--i-ui-triangle-orange);
+  background-image: var(--i-triangle-orange);
 }
 .auto-alert.prefill {
   background-image: var(--i-starline);
@@ -4992,15 +4992,15 @@ svg.oe-openeyes {
   font-weight: 700;
 }
 .select-oe-theme .light-theme {
-  background-color: #ddd;
+  background-color: rgb(221, 220, 220);
   color: #333;
 }
 .theme-light .select-oe-theme .light-theme {
   border-color: var(--txt-active);
 }
 .select-oe-theme .dark-theme {
-  background-color: #224;
-  color: #eee;
+  background-color: #191e24;
+  color: #ddd;
 }
 .theme-dark .select-oe-theme .dark-theme {
   border-color: var(--txt-active);
@@ -7151,11 +7151,11 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 }
 .oe-patient .patient-demographics {
   bottom: 0;
-  right: 109px;
+  right: 111px;
 }
 .oe-patient .patient-management {
   bottom: 0;
-  right: 77px;
+  right: 79px;
   padding: 5px 7px;
 }
 .oe-patient .patient-management .icon {
@@ -7164,7 +7164,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 }
 .oe-patient .patient-quicklook {
   bottom: 0;
-  right: 45px;
+  right: 47px;
 }
 .oe-patient .patient-extra {
   bottom: 0;
@@ -7172,7 +7172,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 }
 .oe-patient .patient-local-edit {
   top: 5px;
-  right: -7px;
+  right: -8px;
 }
 .oe-patient .patient-local-edit .icon:hover, .oe-patient .patient-local-edit .icon:focus, .oe-patient .patient-local-edit .icon:active {
   opacity: 1;
@@ -8040,8 +8040,8 @@ login.multisite .info {
 .quicklook-data-groups .group .label {
   padding: 8px 9px;
   font-size: 0.875rem;
-  font-weight: 300;
-  color: rgba(204, 204, 204, 0.6);
+  font-weight: var(--font-light);
+  color: var(--txt-hd);
 }
 .quicklook-data-groups .group .data {
   padding: 0 10px 5px 10px;
@@ -8063,7 +8063,7 @@ login.multisite .info {
 .quicklook-data-groups table th, .quicklook-data-groups table td {
   vertical-align: top;
   font-size: 0.6875rem;
-  font-weight: 400;
+  font-weight: var(--font-medium);
   padding: 2px 0 2px 5px;
   text-align: left;
 }
@@ -8189,6 +8189,167 @@ table.risks td textarea {
   border-right: 1px solid var(--gui-line);
 }
 
+.oe-patient-quick-overview {
+  position: fixed;
+  z-index: 80;
+  padding: 5px 5px 5px 10px;
+  width: 420px;
+  min-height: 100px;
+  border: 1px solid var(--txt-highlight);
+  border-radius: 3px;
+  background: var(--bg-popup);
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
+}
+.oe-patient-quick-overview .quick-overview-content {
+  overflow-y: auto;
+  padding: 0 2px 0 0;
+}
+.oe-patient-quick-overview .quick-overview-content .subtitle {
+  font-size: 0.8125rem;
+  font-weight: var(--font-medium);
+  margin: 10px 0;
+}
+.oe-patient-quick-overview:not(.full-panel) .quick-overview-content {
+  max-height: 220px;
+}
+.oe-patient-quick-overview.full-panel {
+  top: 120px;
+  left: 0;
+  bottom: 60px;
+}
+.oe-patient-quick-overview.full-panel .quick-overview-content {
+  height: calc( 100vh - 245px);
+}
+.oe-patient-quick-overview.side-panel {
+  top: 60px;
+  right: 0;
+  height: calc( 100vh - 60px);
+  border: none;
+}
+@media only screen and (min-width: 1890px) {
+  .oe-patient-quick-overview.side-panel {
+    right: auto;
+    left: 1020px;
+  }
+}
+@media only screen and (min-width: 2100px) {
+  .oe-patient-quick-overview.side-panel {
+    left: auto;
+    right: 31vw;
+  }
+}
+.oe-patient-quick-overview.side-panel .quick-overview-content {
+  height: calc( 100vh - 110px);
+  padding-bottom: 20px;
+}
+
+.oe-patient-quick-overview .close-icon-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.oe-patient-quick-overview .remove-i-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 23px;
+  height: 23px;
+  background: center/13px var(--i-remove-circle) no-repeat;
+  opacity: 0.5;
+  cursor: pointer;
+}
+.oe-patient-quick-overview .remove-i-btn:hover, .oe-patient-quick-overview .remove-i-btn:focus {
+  opacity: 1;
+}
+
+.oe-patient-quick-overview .situational-awareness {
+  font-size: 0.6875rem;
+  font-weight: var(--font-medium);
+  margin: 8px 6px;
+}
+.oe-patient-quick-overview .situational-awareness .group {
+  border-bottom: 1px dotted var(--gui-line);
+  padding: 0 0 4px 0;
+  margin: 0 0 4px 0;
+}
+.oe-patient-quick-overview .situational-awareness .group:last-child {
+  border-bottom: none;
+}
+
+.oe-patient-quick-overview.side-panel .data-group {
+  margin-bottom: 6px;
+}
+.oe-patient-quick-overview.side-panel .data-group:last-child {
+  margin-bottom: 6px;
+}
+.oe-patient-quick-overview .data-group h3 {
+  font-size: 0.8125rem;
+  font-weight: var(--font-medium);
+  margin: 8px 0 6px 0;
+}
+.oe-patient-quick-overview .data-group .quicklook-data-groups {
+  width: 100%;
+}
+.oe-patient-quick-overview .data-group.split-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.oe-patient-quick-overview .data-group.split-data > .quicklook-data-groups {
+  width: 50%;
+}
+
+.oe-patient-quick-overview .oe-portal-summary {
+  background: lightpink;
+  font-size: 0.75rem;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+}
+.oe-patient-quick-overview .oe-portal-summary h3 {
+  font-size: 0.75rem;
+  font-weight: var(--font-light);
+  padding: 0 0 5px 0;
+}
+.oe-patient-quick-overview .oe-portal-summary ul.checklist {
+  list-style: none;
+}
+.oe-patient-quick-overview .oe-portal-summary ul.checklist li {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin: 0 0 5px 0;
+  padding: 0 0 0 15px;
+  background: top 4px left/8px var(--i-tick-chunky) transparent no-repeat;
+}
+.oe-patient-quick-overview .oe-portal-summary ul.checklist li:last-child {
+  margin: 0;
+}
+.oe-patient-quick-overview .oe-portal-summary ul.checklist li table {
+  width: 100%;
+  margin: 5px 0 0 10px;
+}
+.oe-patient-quick-overview .oe-portal-summary ul.checklist li table th {
+  font-weight: var(--font-light);
+  font-size: 80%;
+}
+
+.oe-patient-quick-overview .set-patient-risk {
+  margin: 5px 0 15px 0;
+  font-size: 0.875rem;
+}
+.oe-patient-quick-overview .set-patient-risk .pr-help {
+  border-top: 1px dotted var(--gui-line);
+  margin: 5px 0 0 0;
+  padding: 5px 0 0 0;
+  font-size: 0.6875rem;
+}
+.oe-patient-quick-overview .set-patient-risk .pr-help > div {
+  margin: 5px 0;
+}
+.oe-patient-quick-overview .set-clinicl-pathway {
+  font-size: 0.875rem;
+}
+
 .locus-data {
   display: flex;
   justify-content: flex-end;
@@ -8273,11 +8434,16 @@ table.past-problems-plans tbody td {
   font-size: 0.6875rem;
 }
 
-table.management-summaries tbody tr {
+table.management-summaries tbody tr:not(:first-child) {
   border-top-style: dotted;
 }
 table.management-summaries tbody td {
   padding-bottom: 12px;
+}
+
+table.patient-trials td:last-child,
+table.patient-demographics td:last-child {
+  text-align: left;
 }
 
 .oe-pathstep-btn {
