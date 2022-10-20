@@ -77,7 +77,8 @@ $font-weight-light: (
 $gui: (
 	"spinner": #00ffff,
 	"vc": #00b4eb,
-	"line": rgb(48, 51, 53), //#28303c,
+	"line": hsl(204, 5%, 20%),
+	"line-hard": hsl(204, 6%, 25%),
 	"line-soft": hsl(216, 18%, 18%),
 	"scroll-track":#0a0a0f,
 	"scroll-thumb":#37373c,
@@ -86,7 +87,8 @@ $gui: (
 $gui-light: (
 	"spinner": #00b4ff,
 	"vc": #00b4eb,
-	"line": #c0bebe,
+	"line": hsl(0, 2%, 75%),
+	"line-hard": hsl(0, 2%, 50%),
 	"line-soft": rgb(166, 172, 172),
 	"scroll-track":#5f5f64,
 	"scroll-thumb":#aaaaaa,
@@ -98,7 +100,7 @@ $btn: (
 	"base": hsl(210, 26%, 16%),
 	"base-light": hsl(211, 71%, 19%), // a 'light' (or subtle) version (can be used with default text colour)
 	"text":#bbb,
-	"text-selected":#ddd,
+	"text-active":#ddd,
 	"blue-hint": #0e4886,
 	"blue": hsl(220, 87%, 28%),
 	"blue-active": hsl(225, 82%, 38%),
@@ -108,7 +110,7 @@ $btn: (
 	"red-hint": #721d1d,
 	"red": #8c0909,
 	"red-active": #911,
-	"disabled": #222,
+	"disabled": hsl(210, 15%, 16%),
 	"icon-hover-filter": none,
 	"icon-opacity": 0.6,
 );
@@ -118,7 +120,7 @@ $btn-light: (
 	"base":hsl(211, 14%, 55%),
 	"base-light": hsl(221, 90%, 94%), // v5 button color (can be used with default text colour)
 	"text":#fff,
-	"text-selected":#fff,
+	"text-active":#fff,
 	"blue-hint": #4285e0,
 	"blue": hsl(211, 80%, 52%),
 	"blue-active": #0c62bd,
@@ -130,7 +132,7 @@ $btn-light: (
 	"red-active": #c11,
 	"disabled": hsl(211, 9%, 70%),
 	"icon-hover-filter": invert(100%) grayscale(100%),
-	"icon-opacity": 0.7,
+	"icon-opacity": 0.8,
 );
 
 // ---- Inputs

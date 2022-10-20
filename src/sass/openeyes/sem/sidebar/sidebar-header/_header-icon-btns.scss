@@ -19,7 +19,7 @@
 		background: center / 21px var(--btn-base) no-repeat;
 
 		&.element-structure {
-			background-image: var(--i-event-elements);
+			background-image: url( svg-white-icon('ui/event-elements'));
 		}
 
 		&.uah {

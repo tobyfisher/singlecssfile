@@ -53,7 +53,7 @@
 				cursor: pointer;
 
 				.unread {
-					color:var(--btn-text-selected);
+					color:var(--btn-text-active);
 					background-color:var(--btn-blue);
 				}
 
@@ -80,7 +80,7 @@
 			padding-right:5px;
 
 			.unread {
-				color:var(--btn-text-selected);
+				color:var(--btn-text-active);
 				background-color:var(--btn-blue);
 			}
 		}

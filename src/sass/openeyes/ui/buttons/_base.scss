@@ -71,6 +71,7 @@ button,
 	&:hover,
 	&:focus,
 	&.active {
+		color: var(--btn-text-active);
 		background: var(--btn-blue);
 		.oe-i {
 			opacity: 1;
@@ -79,7 +80,7 @@ button,
 
 	// override "selected".
 	&.selected {
-		color: var(--btn-text-selected);
+		color: var(--btn-text-active);
 		background: var(--btn-blue-active);
 	}
 

@@ -10,7 +10,6 @@
 // <ul>
 .oescape-icon-btns {
 	@include flex(center, space-between);
-	margin: 1px 0; // visually balances the icons
 
 	// OEScape and Analytics header
 	.oe-full-header & {
@@ -67,16 +66,16 @@
 			&:hover,
 			&:focus,
 			&.selected {
-				color: var(--btn-text-selected);
+				color: var(--btn-text-active);
 				background: var(--btn-blue);
 
 				svg {
-					fill: var(--btn-text-selected);
+					fill: var(--btn-text-active);
 				}
 			}
 
 			&:active {
-				color: var(--btn-text-selected);
+				color: var(--btn-text-active);
 				background: var(--btn-blue-active);
 			}
 		}

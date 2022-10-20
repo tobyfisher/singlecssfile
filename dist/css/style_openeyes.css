@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri Oct 14 2022 09:33:03 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Thu Oct 20 2022 20:50:31 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -491,14 +491,15 @@ html.theme-dark {
   --font-bold: 500;
   --gui-spinner: #00ffff;
   --gui-vc: #00b4eb;
-  --gui-line: rgb(48, 51, 53);
+  --gui-line: hsl(204deg, 5%, 20%);
+  --gui-line-hard: hsl(204deg, 6%, 25%);
   --gui-line-soft: hsl(216deg, 18%, 18%);
   --gui-scroll-track: #0a0a0f;
   --gui-scroll-thumb: #37373c;
   --btn-base: hsl(210deg, 26%, 16%);
   --btn-base-light: hsl(211deg, 71%, 19%);
   --btn-text: #bbb;
-  --btn-text-selected: #ddd;
+  --btn-text-active: #ddd;
   --btn-blue-hint: #0e4886;
   --btn-blue: hsl(220deg, 87%, 28%);
   --btn-blue-active: hsl(225deg, 82%, 38%);
@@ -508,7 +509,7 @@ html.theme-dark {
   --btn-red-hint: #721d1d;
   --btn-red: #8c0909;
   --btn-red-active: #911;
-  --btn-disabled: #222;
+  --btn-disabled: hsl(210deg, 15%, 16%);
   --btn-icon-hover-filter: none;
   --btn-icon-opacity: 0.6;
   --color-highlighter: #b8ab88;
@@ -744,14 +745,15 @@ html.theme-light {
   --font-bold: 700;
   --gui-spinner: #00b4ff;
   --gui-vc: #00b4eb;
-  --gui-line: #c0bebe;
+  --gui-line: hsl(0deg, 2%, 75%);
+  --gui-line-hard: hsl(0deg, 2%, 50%);
   --gui-line-soft: rgb(166, 172, 172);
   --gui-scroll-track: #5f5f64;
   --gui-scroll-thumb: #aaaaaa;
   --btn-base: hsl(211deg, 14%, 55%);
   --btn-base-light: hsl(221deg, 90%, 94%);
   --btn-text: #fff;
-  --btn-text-selected: #fff;
+  --btn-text-active: #fff;
   --btn-blue-hint: #4285e0;
   --btn-blue: hsl(211deg, 80%, 52%);
   --btn-blue-active: #0c62bd;
@@ -763,7 +765,7 @@ html.theme-light {
   --btn-red-active: #c11;
   --btn-disabled: hsl(211deg, 9%, 70%);
   --btn-icon-hover-filter: invert(100%) grayscale(100%);
-  --btn-icon-opacity: 0.7;
+  --btn-icon-opacity: 0.8;
   --color-highlighter: #ebd37b;
   --color-green: #009b00;
   --color-red: hsl(0deg, 96%, 45%);
@@ -2749,7 +2751,7 @@ body.open-eyes {
 
 .oe-lat {
   display: block;
-  height: 13px;
+  height: 14px;
   width: 30px;
   margin: 0 2px;
   background-size: 14px;
@@ -3391,6 +3393,7 @@ button:hover, button:focus, button.active,
 .button:hover,
 .button:focus,
 .button.active {
+  color: var(--btn-text-active);
   background: var(--btn-blue);
 }
 button:hover .oe-i, button:focus .oe-i, button.active .oe-i,
@@ -3401,7 +3404,7 @@ button:hover .oe-i, button:focus .oe-i, button.active .oe-i,
 }
 button.selected,
 .button.selected {
-  color: var(--btn-text-selected);
+  color: var(--btn-text-active);
   background: var(--btn-blue-active);
 }
 button:active,
@@ -3990,7 +3993,7 @@ ul.oe-multi-select li {
 
 .alert-box {
   padding: 4px 10px;
-  margin: 3px 0;
+  margin: 3px 1px;
   font-size: 0.8125rem;
   color: rgba(250, 250, 250, 0.9);
   background: var(--color-grey);
@@ -7373,7 +7376,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   cursor: pointer;
 }
 .home-messages .message-actions .mailbox .mailbox-hd .unread {
-  color: var(--btn-text-selected);
+  color: var(--btn-text-active);
   background-color: var(--btn-blue);
 }
 .home-messages .message-actions .mailbox .mailbox-hd:hover, .home-messages .message-actions .mailbox .mailbox-hd:active {
@@ -7394,7 +7397,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   padding-right: 5px;
 }
 .home-messages .message-actions .all-unread-messages .unread {
-  color: var(--btn-text-selected);
+  color: var(--btn-text-active);
   background-color: var(--btn-blue);
 }
 .home-messages .message-actions .unread {
@@ -7868,7 +7871,6 @@ login.multisite .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 1px 0;
 }
 .oe-full-header .oescape-icon-btns {
   margin: 0 10px;
@@ -7906,14 +7908,14 @@ login.multisite .info {
   font-weight: var(--font-light);
 }
 .oescape-icon-btns .icon-btn a:hover, .oescape-icon-btns .icon-btn a:focus, .oescape-icon-btns .icon-btn a.selected {
-  color: var(--btn-text-selected);
+  color: var(--btn-text-active);
   background: var(--btn-blue);
 }
 .oescape-icon-btns .icon-btn a:hover svg, .oescape-icon-btns .icon-btn a:focus svg, .oescape-icon-btns .icon-btn a.selected svg {
-  fill: var(--btn-text-selected);
+  fill: var(--btn-text-active);
 }
 .oescape-icon-btns .icon-btn a:active {
-  color: var(--btn-text-selected);
+  color: var(--btn-text-active);
   background: var(--btn-blue-active);
 }
 
@@ -10407,7 +10409,6 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   justify-content: space-between;
   align-items: center;
   gap: 1px;
-  background: var(--color-grey);
 }
 .sidebar-header .manage-elements,
 .sidebar-header .add-event {
@@ -10430,7 +10431,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   background: center/21px var(--btn-base) no-repeat;
 }
 .sidebar-header .icon-button.element-structure {
-  background-image: var(--i-event-elements);
+  background-image: url("../svg/in-css/dark/ui/event-elements.svg");
 }
 .sidebar-header .icon-button.uah {
   background-size: 13px;
@@ -10505,7 +10506,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   background: var(--bg-event-list);
 }
 .sidebar .event a:hover, .sidebar .event a:focus, .sidebar .event a:active {
-  color: var(--btn-text-selected);
+  color: var(--btn-text-active);
   background: var(--btn-blue);
 }
 .sidebar .event a:hover .event-type, .sidebar .event a:focus .event-type, .sidebar .event a:active .event-type {
@@ -10525,7 +10526,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   background: transparent;
 }
 .sidebar .event.selected a {
-  color: var(--btn-text-selected);
+  color: var(--btn-text-active);
   background: var(--btn-blue-hint);
 }
 .sidebar .event.selected a .event-type {
@@ -10841,6 +10842,86 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   font-size: 1.125rem;
   color: rgba(255, 255, 255, 0.5);
   font-weight: 300;
+}
+
+.oe-element-selector {
+  position: fixed;
+  top: 60px;
+  left: 200px;
+  width: 1080px;
+  height: 600px;
+  background: var(--bg-popup);
+  z-index: 92;
+}
+.oe-element-selector .close-icon-btn button {
+  height: 32px;
+}
+
+.oe-element-selector .all-elements {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 1080px;
+  height: 568px;
+  padding: 5px 10px;
+}
+
+.oe-element-selector ul.element-list li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 24px;
+  margin: 0 0 2px 0;
+  padding: 0 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+  color: var(--btn-text);
+  background: var(--btn-base);
+}
+.oe-element-selector ul.element-list li:hover, .oe-element-selector ul.element-list li:focus {
+  color: #fff;
+  background-color: var(--btn-blue);
+}
+.oe-element-selector ul.element-list li:active {
+  color: #fff;
+  background-color: var(--btn-blue-hint);
+}
+.oe-element-selector ul.element-list li.added {
+  color: rgb(210, 230, 210);
+  background: var(--btn-green-hint);
+}
+.oe-element-selector ul.element-list li.added:hover, .oe-element-selector ul.element-list li.added:focus {
+  background: center right 3px/11px url("../svg/in-css/dark/i/remove.svg") var(--btn-red-hint) no-repeat;
+}
+.oe-element-selector ul.element-list li.added:active {
+  background-color: var(--btn-red);
+}
+.oe-element-selector ul.element-list li.locked {
+  font-style: italic;
+  color: var(--txt-light);
+  background: center right 3px/11px url("../svg/in-css/dark/ui/no-permissions-white.svg") var(--btn-disabled) no-repeat;
+  pointer-events: none;
+}
+.oe-element-selector ul.element-list li.mandatory {
+  background: center right 3px/11px url("../svg/in-css/dark/ui/asterisk-white.svg") var(--btn-green) no-repeat;
+  pointer-events: none;
+}
+
+.oe-element-selector .selector-group {
+  margin: 0 1px 10px 1px;
+  padding: 0 3px;
+}
+.oe-element-selector .selector-group.outline {
+  padding-top: 4px;
+  border: 1px solid var(--gui-line-hard);
+}
+.oe-element-selector .selector-group h3 {
+  font-size: 0.6875rem;
+  font-weight: var(--font-light);
+  color: var(--txt-light);
+  margin: 0 0 4px 4px;
 }
 
 .in-audit .element,

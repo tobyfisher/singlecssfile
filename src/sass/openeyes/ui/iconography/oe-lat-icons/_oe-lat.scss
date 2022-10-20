@@ -7,9 +7,14 @@
 
 .oe-lat {
 	display: block;
-	height: 13px;
-	width:30px; // allows a 4px center gap
+	height: 14px; // match background-size
+	width:30px; // creates a center gap
 	margin: 0 2px; // space makes up to 36px (2 icons)
+
+	// default set up for all icons (match small icon size)
+	background-size:14px;
+	background-position: center left, center right;
+	background-repeat: no-repeat;
 
 	&.inline {
 		display: inline-block;
@@ -18,11 +23,6 @@
 	@mixin bg( $left, $right ){
 		background-image: var(--i-#{$left}),var(--i-#{$right});
 	}
-
-	// default set up for all icons (match small icon size)
-	background-size:14px;
-	background-position: center left, center right;
-	background-repeat: no-repeat;
 
 	// not sure if this is actually needed/used
 	// but available...
