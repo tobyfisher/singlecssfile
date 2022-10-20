@@ -20,6 +20,8 @@ $element-close-btn-height: 32px;
 	background: var(--bg-popup);
 	z-index: $oe-z-event-quick-view;
 
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
 	.close-icon-btn {
 		button {
 			height: $element-close-btn-height; // increase button height

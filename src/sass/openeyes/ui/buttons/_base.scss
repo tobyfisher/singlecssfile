@@ -64,6 +64,7 @@ button,
 	.oe-i {
 		// if in light mode the icon will need inverting
 		filter: var(--btn-icon-hover-filter);
+		opacity: var(--btn-icon-opacity);
 		pointer-events: none;
 	}
 

@@ -8,6 +8,7 @@
 
 	ul.element-list {
 		li {
+			position: relative;
 			@include flex(center, flex-start);
 
 			height: 24px; // match button heights
@@ -54,12 +55,24 @@
 			&.locked {
 				font-style: italic;
 				color: var(--txt-light);
-				background: center right 3px / 11px url(svg-white-icon("ui/no-permissions-white")) var(--btn-disabled) no-repeat;
+				background: var(--btn-disabled);
 				pointer-events: none;
+
+				&::after {
+					content:"";
+					position:absolute;
+					top:0;
+					bottom:0;
+					right:3px;
+					width:11px;
+					background: center / 11px var(--i-no-permissions) no-repeat;
+					opacity: $oe-icon-opacity;
+				}
 			}
 
 			&.mandatory {
-				background: center right 3px / 11px url(svg-white-icon("ui/asterisk-white")) var(--btn-green) no-repeat;
+				color: var(--btn-text-active);
+				background: center right 3px / 11px url(svg-white-icon("i/asterisk")) var(--btn-green) no-repeat;
 				pointer-events: none;
 			}
 		}

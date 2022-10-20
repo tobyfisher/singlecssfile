@@ -3387,6 +3387,7 @@ button:disabled .oe-i, button.disabled .oe-i, button.inactive .oe-i,
 button .oe-i,
 .button .oe-i {
   filter: var(--btn-icon-hover-filter);
+  opacity: var(--btn-icon-opacity);
   pointer-events: none;
 }
 button:hover, button:focus, button.active,
@@ -10852,6 +10853,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   height: 600px;
   background: var(--bg-popup);
   z-index: 92;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 .oe-element-selector .close-icon-btn button {
   height: 32px;
@@ -10868,6 +10870,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 }
 
 .oe-element-selector ul.element-list li {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -10901,11 +10904,22 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 .oe-element-selector ul.element-list li.locked {
   font-style: italic;
   color: var(--txt-light);
-  background: center right 3px/11px url("../svg/in-css/dark/ui/no-permissions-white.svg") var(--btn-disabled) no-repeat;
+  background: var(--btn-disabled);
   pointer-events: none;
 }
+.oe-element-selector ul.element-list li.locked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 3px;
+  width: 11px;
+  background: center/11px var(--i-no-permissions) no-repeat;
+  opacity: 0.5;
+}
 .oe-element-selector ul.element-list li.mandatory {
-  background: center right 3px/11px url("../svg/in-css/dark/ui/asterisk-white.svg") var(--btn-green) no-repeat;
+  color: var(--btn-text-active);
+  background: center right 3px/11px url("../svg/in-css/dark/i/asterisk.svg") var(--btn-green) no-repeat;
   pointer-events: none;
 }
 
