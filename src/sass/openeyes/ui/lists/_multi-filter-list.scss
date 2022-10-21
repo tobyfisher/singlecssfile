@@ -17,6 +17,17 @@ ul.multi-filter-list {
 		}
 	}
 
+	&.light {
+		li {
+			color: var(--txt-base);
+			background: var(--btn-base-light);
+			&::after {
+				background-image: var(--i-remove-circle);
+			}
+		}
+
+	}
+
 	li {
 		position: relative;
 		cursor: pointer; // used as a button
@@ -50,14 +61,14 @@ ul.multi-filter-list {
 			color:#fff;
 			&::after {
 				opacity: 1;
+				background-image: url(svg-white-icon("i/remove-circle"));
 			}
 		}
 	}
 }
 
-// Multi-select (old)
-// This used an <i> DOM element in <li>
-// User had to click on the icon
+// Multi-select (original)
+// Uses an <i> DOM element in <li>, user has to click on icon
 // <ul>
 ul.oe-multi-select {
 	margin:4px 0;
@@ -76,6 +87,6 @@ ul.oe-multi-select {
 		justify-content: space-between;
 		padding:2px 4px 2px 6px;
 		margin:0 0 2px 0;
-		background: var(--btn-base);
+		background: var(--btn-base-light);
 	}
 }

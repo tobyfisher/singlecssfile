@@ -3943,6 +3943,13 @@ ul.multi-filter-list.inline li {
   display: inline-flex;
   margin: 2px 2px 0 0;
 }
+ul.multi-filter-list.light li {
+  color: var(--txt-base);
+  background: var(--btn-base-light);
+}
+ul.multi-filter-list.light li::after {
+  background-image: var(--i-remove-circle);
+}
 ul.multi-filter-list li {
   position: relative;
   cursor: pointer;
@@ -3973,6 +3980,7 @@ ul.multi-filter-list li:hover, ul.multi-filter-list li:focus {
 }
 ul.multi-filter-list li:hover::after, ul.multi-filter-list li:focus::after {
   opacity: 1;
+  background-image: url("../svg/in-css/dark/i/remove-circle.svg");
 }
 
 ul.oe-multi-select {
@@ -3989,7 +3997,7 @@ ul.oe-multi-select li {
   justify-content: space-between;
   padding: 2px 4px 2px 6px;
   margin: 0 0 2px 0;
-  background: var(--btn-base);
+  background: var(--btn-base-light);
 }
 
 .alert-box {
