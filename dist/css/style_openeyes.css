@@ -11007,7 +11007,7 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
   background: var(--btn-blue);
 }
 .sidebar .event a:hover .event-type, .sidebar .event a:focus .event-type, .sidebar .event a:active .event-type {
-  background-color: var(--bg-popup);
+  background-color: var(--bg-max);
 }
 .sidebar .event a:hover .event-type::after, .sidebar .event a:focus .event-type::after, .sidebar .event a:active .event-type::after {
   opacity: 0.8;
@@ -11027,7 +11027,7 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
   background: var(--btn-blue-hint);
 }
 .sidebar .event.selected a .event-type {
-  background-color: var(--bg-max);
+  background-color: var(--btn-base-light);
 }
 .sidebar .event.selected a .event-type::after {
   opacity: 0.8;
