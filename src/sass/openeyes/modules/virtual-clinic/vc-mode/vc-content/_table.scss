@@ -4,25 +4,25 @@
 
 // OE VC content
 
-.oe-vc-mode {
-	
-	.vc-content {
-		// tables 
-		table {
-			margin:6px 0;
-			width:100%;
-			
-			&.borders {
-				border: 3px solid var(--txt-light);
-				th,td {
-					border: 1px solid var(--txt-light);
-					border-bottom: none;
-					padding:1px 2px;
-				}
+
+.vc-content {
+	// tables
+	table {
+		margin: 6px 0;
+		width: 100%;
+
+		&.borders {
+			border: 3px solid var(--txt-light);
+
+			th, td {
+				border: 1px solid var(--txt-light);
+				border-bottom: none;
+				padding: 1px 2px;
 			}
-			
 		}
+
 	}
 }
+
 
 

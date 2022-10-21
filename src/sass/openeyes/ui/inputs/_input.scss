@@ -9,7 +9,7 @@ input {
 	// match <textarea>
 	padding:0 5px;
 	border-radius: 3px;
-	
+
 	&::placeholder {
 		color: var(--input-placeholder);
 	}

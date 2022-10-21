@@ -4,14 +4,15 @@
 
 // OE VC actions
 
-.oe-vc-mode {
-	.vc-actions {
-		padding:4px 8px;
-		// need to push scrolling up above the version info tag
-		margin:0 0 30px 0; 
-		
-		button {
-			margin:0 0 0 10px;
-		}
+
+.vc-actions {
+	padding: 4px 8px;
+	// need to push scrolling up above the version info tag
+	margin: 0 0 20px 0;
+
+	button {
+		flex: 1 1 0;
+		margin: 0 5px;
 	}
+
 }

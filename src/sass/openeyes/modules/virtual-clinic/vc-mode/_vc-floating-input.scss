@@ -19,24 +19,16 @@
 	// add SVG icon to show that it is draggable:
 	border: 2px solid var(--gui-vc);
 	border-radius: 12px;
-	background:top 5px right 5px / 21px url( svg-fixed('ui/vc-move') ) var(--bg-vc)  no-repeat;
+	background:top 6px right 6px / 21px url( svg-fixed('ui/vc-move') ) var(--bg-vc)  no-repeat;
 	
 	@include boxshadow();
-	
+
+	// "ScratchPad"
 	.title {
 		@include font-size(13);
-		font-weight:500;
-		padding:0 30px 10px 8px;
+		font-weight:var(--font-light);
+		padding:0 0 10px 10px;
 	}
-	
-	// restrict content height in floating input:
-	.vc-content {
-		max-height: 400px;  // must allow for the minimum spec res. displays
-		overflow-y: auto;	// scroll overflow
-		overflow-x: hidden; // otherwise breaks out of popup.
-		padding:0 8px 2px 8px;  // allow for scrollbar
-	}
-	
 }
 
 
