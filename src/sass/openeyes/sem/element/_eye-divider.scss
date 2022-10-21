@@ -8,7 +8,7 @@
 	// adds a background line to divide R & L Eye data
 
 	&.eye-divider {
-		background-image: var(--i-element-divider);
+		background-image: var(--i-elem-rl-vertical);
 		background-position: 50% 0;
 		background-repeat: repeat-y;
 		background-size: 19px;

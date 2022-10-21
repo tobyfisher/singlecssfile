@@ -459,7 +459,7 @@ html.theme-dark {
   --i-warning: url("../svg/in-css/dark/i/warning.svg");
   --i-cross-red: url("../svg/in-css/dark/i/cross-red.svg");
   --i-face: url("../svg/in-css/dark/ui/face.svg");
-  --i-element-divider: url("../svg/in-css/dark/ui/element-divider.svg");
+  --i-elem-rl-vertical: url("../svg/in-css/dark/ui/elem-rl-vertical.svg");
   --i-event-elements: url("../svg/in-css/dark/ui/event-elements.svg");
   --i-btn-goto: url("../svg/in-css/dark/ui/btn-goto.svg");
   --i-tab-more-h: url("../svg/in-css/dark/ui/tab-more-h.svg");
@@ -714,7 +714,7 @@ html.theme-light {
   --i-warning: url("../svg/in-css/light/i/warning.svg");
   --i-cross-red: url("../svg/in-css/light/i/cross-red.svg");
   --i-face: url("../svg/in-css/light/ui/face.svg");
-  --i-element-divider: url("../svg/in-css/light/ui/element-divider.svg");
+  --i-elem-rl-vertical: url("../svg/in-css/light/ui/elem-rl-vertical.svg");
   --i-event-elements: url("../svg/in-css/light/ui/event-elements.svg");
   --i-btn-goto: url("../svg/in-css/light/ui/btn-goto.svg");
   --i-tab-more-h: url("../svg/in-css/light/ui/tab-more-h.svg");
@@ -11704,7 +11704,7 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
 }
 
 .element.eye-divider {
-  background-image: var(--i-element-divider);
+  background-image: var(--i-elem-rl-vertical);
   background-position: 50% 0;
   background-repeat: repeat-y;
   background-size: 19px;
