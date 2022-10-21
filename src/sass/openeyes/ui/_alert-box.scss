@@ -72,11 +72,12 @@
 			right:8px;
 			top:4px;
 
-			button {
-				border: 1px solid var(--bg-html);
-			}
-
 		}
+	}
+
+	// make buttons more obvious on the colour backgrounds:
+	button {
+		border: 1px solid var(--bg-html);
 	}
 
 	// dismissible

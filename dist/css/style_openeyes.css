@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri Oct 21 2022 20:07:44 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Fri Oct 21 2022 21:37:27 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -4051,7 +4051,7 @@ ul.oe-multi-select li {
   right: 8px;
   top: 4px;
 }
-.alert-box.has-actions .alert-actions button {
+.alert-box button {
   border: 1px solid var(--bg-html);
 }
 .alert-box.dismissible {
@@ -5186,6 +5186,85 @@ svg.oe-openeyes {
 }
 .oe-logo-flag-help .oe-i {
   display: none;
+}
+
+.oe-capture {
+  position: relative;
+  min-height: 350px;
+  max-height: calc(100vh - 98px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.oe-capture video {
+  background: rgba(0, 0, 0, 0.1);
+}
+.oe-capture .controls {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+}
+.oe-capture .controls hr {
+  display: block;
+  border: 0;
+  margin: 5px 0;
+  border-bottom: 1px dotted var(--gui-line);
+}
+.oe-capture .controls .rec-duration {
+  border-radius: 5px;
+  padding: 10px 5px;
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 1rem;
+}
+.oe-capture .controls button {
+  width: 100%;
+  margin: 0 0 5px 0;
+}
+.oe-capture .controls button.rec {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: var(--font-bold);
+  border: 3px solid var(--btn-blue-hint);
+}
+
+.capture-clip {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 15px 10px 0;
+}
+.capture-clip .details {
+  padding: 0 5px;
+}
+.capture-clip .details table {
+  margin: 5px 0 0 0;
+}
+.capture-clip .details table th,
+.capture-clip .details table td {
+  font-size: 0.625rem;
+  height: auto;
+}
+.capture-clip.stack {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.capture-clip.stack .details {
+  flex: 1 1 0;
+}
+.capture-clip.stack .details table,
+.capture-clip.stack .details button {
+  width: 100%;
 }
 
 .oe-clinic {
