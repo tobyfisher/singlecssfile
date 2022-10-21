@@ -10,31 +10,4 @@
 @use "event-quick-view";
 
 @use "edit-elements/element-selector";
-
-
-
-//@use "pathway";
-//@use "sidebar-list-controls";
-//
-//// Event list
-//@use "event-list/_all";
-//// Edit elements, old sidebar or new selector both still used
-//@use "edit-elements/element-sidebar/element-overlay";
-//@use "edit-elements/element-sidebar/edit";
-//
-//// new :
-//;
-//
-//@use "event-quick-view/_all";
-//
-//// new V3 filters to replace old dropdown
-//@use "filter/btn";
-//@use "filter/options";
-
-
-
-
-
-
-
-
+@use "edit-elements/element-sidebar";

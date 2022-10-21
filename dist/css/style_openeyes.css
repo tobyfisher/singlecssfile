@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Thu Oct 20 2022 20:50:31 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Fri Oct 21 2022 09:11:58 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -10401,6 +10401,12 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   padding: 0 0 80px 0;
   overflow-y: auto;
 }
+.sidebar.element-overlay {
+  z-index: 65;
+}
+.sidebar.element-overlay .element-structure {
+  padding: 0 0 20px 0;
+}
 
 .sidebar-header {
   grid-area: addevent;
@@ -10892,7 +10898,7 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   background-color: var(--btn-blue-hint);
 }
 .oe-element-selector ul.element-list li.added {
-  color: rgb(210, 230, 210);
+  color: var(--btn-text-active);
   background: var(--btn-green-hint);
 }
 .oe-element-selector ul.element-list li.added:hover, .oe-element-selector ul.element-list li.added:focus {
@@ -10936,6 +10942,64 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
   font-weight: var(--font-light);
   color: var(--txt-light);
   margin: 0 0 4px 4px;
+}
+
+.sidebar .oe-element-list {
+  padding: 0 0 10px 0;
+}
+.sidebar .oe-element-list .element {
+  margin: 0;
+}
+.sidebar .oe-element-list a {
+  position: relative;
+  display: block;
+  margin: 0 0 1px 0;
+  padding: 0 12px 0 8px;
+  min-height: 19px;
+  line-height: 19px;
+  font-size: 0.6875rem;
+  font-weight: var(--font-medium);
+  font-style: italic;
+  color: var(--btn-text);
+  background: var(--btn-base);
+}
+.sidebar .oe-element-list a:hover, .sidebar .oe-element-list a:focus {
+  color: rgb(255, 255, 255);
+  background-color: var(--btn-blue);
+}
+.sidebar .oe-element-list a.added, .sidebar .oe-element-list a.selected {
+  color: var(--btn-text-active);
+  background: var(--btn-green-hint);
+}
+.sidebar .oe-element-list a.added:hover, .sidebar .oe-element-list a.added:focus {
+  background: center right 3px/11px url("../svg/in-css/dark/i/remove.svg") var(--btn-red-hint) no-repeat;
+}
+.sidebar .oe-element-list a.added:active {
+  background: var(--btn-red);
+}
+.sidebar .oe-element-list a.locked {
+  color: var(--txt-light);
+  background: var(--btn-disabled);
+  pointer-events: none;
+}
+.sidebar .oe-element-list a.locked::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 3px;
+  width: 11px;
+  background: center/11px var(--i-no-permissions) no-repeat;
+  opacity: 0.5;
+}
+.sidebar .oe-element-list a.mandatory {
+  font-style: italic;
+  color: var(--btn-text-active);
+  background: center right 3px/11px url("../svg/in-css/dark/i/asterisk.svg") var(--btn-green) no-repeat;
+}
+.sidebar .oe-element-list a.error {
+  color: #fff;
+  background-color: var(--color-red);
 }
 
 .in-audit .element,

@@ -35,7 +35,7 @@
 			}
 
 			&.added {
-				color: rgb(210, 230, 210);
+				color: var(--btn-text-active);
 				background: var(--btn-green-hint);
 
 				// if added it can be removed
