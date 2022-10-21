@@ -1,6 +1,9 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
 .uah {
 	padding: 70px 0 20px 0;
 
@@ -10,7 +13,6 @@
 		margin: 0 auto 20px auto; // center this
 		@include font-size(17);
 		font-weight: var(--font-light);
-		color: $oe-text;
 	}
 
 	.snapshot {
@@ -18,13 +20,12 @@
 		width: 1160px;
 		margin: 0 auto 20px auto; // center this
 		padding: 0 0 20px 0;
-		border-bottom: 1px dotted $oe-text-active;
+		border-bottom: 1px dotted var(--txt-active);
 
 		.change-info {
 			flex: 200px;
 			padding: 0 10px 0 0;
 			@include font-size(11);
-			color: $oe-text;
 
 			.date {
 				@include font-size(14);
@@ -46,7 +47,7 @@
 			.copy-forward-btn {
 				width: 90%;
 				height: 28px;
-				background: center / 16px var(--btn-blue)-hint url(svg-white-icon("i/copy-forward")) no-repeat;
+				background: center / 16px -hint url(svg-white-icon("i/copy-forward")) var(--btn-blue) no-repeat;
 				margin:10px 0;
 			}
 

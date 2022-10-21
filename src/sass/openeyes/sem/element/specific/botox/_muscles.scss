@@ -13,6 +13,7 @@
 		@include flex(center, center);
 		padding: 1px 4px;
 		border-bottom: 1px dotted var(--color-grey);
+		background: var(--bg-event);
 
 	}
 }

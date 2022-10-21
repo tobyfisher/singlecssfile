@@ -100,7 +100,7 @@ $gui-light: (
 // "Dark" - interaction is subtle
 $btn: (
 	"base": hsl(210, 26%, 16%),
-	"base-light": hsl(211, 71%, 19%), // a 'light' (or subtle) version (can be used with default text colour)
+	"base-light": hsl(211, 40%, 18%), // a 'light' (or subtle) version (can be used with default text colour)
 	"text":#bbb,
 	"text-active":#ddd,
 	"blue-hint": #0e4886,

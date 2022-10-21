@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri Oct 21 2022 14:20:43 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Fri Oct 21 2022 20:07:44 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -498,7 +498,7 @@ html.theme-dark {
   --gui-scroll-track: #0a0a0f;
   --gui-scroll-thumb: #37373c;
   --btn-base: hsl(210deg, 26%, 16%);
-  --btn-base-light: hsl(211deg, 71%, 19%);
+  --btn-base-light: hsl(211deg, 40%, 18%);
   --btn-text: #bbb;
   --btn-text-active: #ddd;
   --btn-blue-hint: #0e4886;
@@ -4050,6 +4050,9 @@ ul.oe-multi-select li {
   position: absolute;
   right: 8px;
   top: 4px;
+}
+.alert-box.has-actions .alert-actions button {
+  border: 1px solid var(--bg-html);
 }
 .alert-box.dismissible {
   cursor: pointer;
@@ -9622,6 +9625,142 @@ table.partial-booking tbody td .highlighter {
   pointer-events: none;
 }
 
+.oe-popup-uah {
+  position: relative;
+  background: var(--bg-html);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
+.oe-popup-uah .title {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 0 0 20px;
+  z-index: 1;
+  font-size: 1.125rem;
+  font-weight: var(--font-light);
+  background: var(--bg-title);
+}
+.oe-popup-uah .close-popup-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background: center/22px url("../svg/in-css/dark/i/remove-circle.svg") var(--btn-blue) no-repeat;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.uah {
+  padding: 70px 0 20px 0;
+}
+.uah .uah-view {
+  width: 1160px;
+  margin: 0 auto 20px auto;
+  font-size: 1.0625rem;
+  font-weight: var(--font-light);
+}
+.uah .snapshot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 1160px;
+  margin: 0 auto 20px auto;
+  padding: 0 0 20px 0;
+  border-bottom: 1px dotted var(--txt-active);
+}
+.uah .snapshot .change-info {
+  flex: 200px;
+  padding: 0 10px 0 0;
+  font-size: 0.6875rem;
+}
+.uah .snapshot .change-info .date {
+  font-size: 0.875rem;
+  font-weight: var(--font-medium);
+  margin: 0 0 5px 0;
+}
+.uah .snapshot .change-info .time {
+  margin: 0 0 5px 0;
+  color: var(--txt-light);
+}
+.uah .snapshot .change-info .who {
+  font-size: 0.875rem;
+  font-weight: var(--font-medium);
+}
+.uah .snapshot .change-info .copy-forward-btn {
+  width: 90%;
+  height: 28px;
+  background: center/16px -hint url("../svg/in-css/dark/i/copy-forward.svg") var(--btn-blue) no-repeat;
+  margin: 10px 0;
+}
+.uah .snapshot .view-element {
+  width: 1000px;
+}
+@media only screen and (min-width: 1440px) {
+  .uah .uah-view {
+    width: 1300px;
+  }
+  .uah .snapshot {
+    width: 1300px;
+  }
+  .uah .snapshot .view-element {
+    width: 1100px;
+  }
+}
+
+.uah-event-summary {
+  z-index: 79;
+  position: absolute;
+  top: 38px;
+  left: 0;
+  width: 500px;
+  background: var(--bg-event);
+  padding: 0 10px 10px 11px;
+  border-right: 1px solid var(--txt-highlight);
+  border-bottom: 1px solid var(--txt-highlight);
+  font-size: 0.75rem;
+  font-weight: var(--font-medium);
+}
+.uah-event-summary section {
+  margin: 0 0 15px 0;
+}
+.uah-event-summary section .change-notes {
+  margin: 0 0 5px 0;
+}
+.uah-event-summary .title {
+  font-size: 0.6875rem;
+  color: var(--txt-highlight);
+  margin: 0 0 5px 0;
+}
+.uah-event-summary .who-when {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.uah-event-summary .who-when .who {
+  font-size: 0.8125rem;
+}
+.uah-event-summary .details {
+  font-size: 0.6875rem;
+  color: var(--txt-light);
+}
+.uah-event-summary .activity {
+  font-size: 0.625rem;
+}
+.uah-event-summary .deleted-elements button {
+  width: 100%;
+  color: var(--btn-text);
+  background: center right 10px/13px var(--btn-red-hint) url(svg-all("ui/sidebar-audit-trail")) no-repeat;
+  justify-content: flex-start;
+}
+
 .reports-main {
   padding-right: 10px;
 }
@@ -10618,11 +10757,12 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
 }
 
 .event-footer-actions {
+  height: 38px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin: 3px 0 15px 0;
-  background: var(--color-grey);
+  background: var(--bg-data);
 }
 
 .main-event .patient-overview {
@@ -11874,6 +12014,7 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
   align-items: center;
   padding: 1px 4px;
   border-bottom: 1px dotted var(--color-grey);
+  background: var(--bg-event);
 }
 
 .element .mce-tinymce button:hover {

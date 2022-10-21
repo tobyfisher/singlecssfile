@@ -1,14 +1,16 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
 .uah-event-summary {
 	z-index: $oe-z-quicklook - 1; // make sure it's under the Patient popups
 	position: absolute;
 	top: 38px;
 	left: 0;
 	width: 500px;
-	color: $oe-text;
-	background: $oe-sem-main-event-bg;;
+	background: var(--bg-event);
 	padding: 0 10px 10px 11px;
 
 	border-right: 1px solid var(--txt-highlight);
@@ -54,8 +56,8 @@
 		// overwrite <button> defaults
 		button {
 			width: 100%;
-			color: $oe-btn-text-on-hint;
-			background: center right 10px / 13px $oe-btn-red-hint url(svg-all("ui/sidebar-audit-trail")) no-repeat;
+			color: var(--btn-text);
+			background: center right 10px / 13px var(--btn-red-hint) url(svg-all("ui/sidebar-audit-trail")) no-repeat;
 			justify-content: flex-start;
 		}
 	}
