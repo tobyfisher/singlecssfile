@@ -4961,6 +4961,110 @@ div.plotly-notifier .notifier-note button {
   display: none;
 }
 
+.oe-annotate-image {
+  position: relative;
+  min-height: 350px;
+  max-height: calc( 100vh - 98px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.oe-annotate-image .canvas-js {
+  overflow-y: auto;
+}
+
+.oe-annotate-image .toolbox {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 150px;
+}
+.oe-annotate-image .toolbox hr {
+  display: block;
+  border: 0;
+  margin: 5px 0;
+  border-bottom: 1px dotted var(--gui-line);
+}
+.oe-annotate-image .toolbox svg.colors rect {
+  stroke-width: 2px;
+  stroke: var(--input-base);
+}
+.oe-annotate-image .toolbox svg.colors .selected {
+  stroke: none;
+  outline: 1px dotted var(--txt-highlight);
+}
+.oe-annotate-image .toolbox .line-width {
+  border-radius: 5px;
+  padding: 2px 3px;
+  background: rgba(0, 0, 0, 0.1);
+}
+.oe-annotate-image .toolbox .line-width small {
+  padding: 0 0 0 5px;
+}
+.oe-annotate-image .toolbox button {
+  width: 100%;
+  margin: 0 0 5px 0;
+}
+.oe-annotate-image .toolbox button.tool-manipulate {
+  height: 50px;
+}
+.oe-annotate-image .toolbox button.tool-manipulate svg {
+  pointer-events: none;
+  fill: var(--txt-base);
+  width: 75px;
+  height: 25px;
+}
+.oe-annotate-image .toolbox button.tool-manipulate:hover svg, .oe-annotate-image .toolbox button.tool-manipulate:focus svg, .oe-annotate-image .toolbox button.tool-manipulate.selected svg {
+  fill: #fff;
+}
+.oe-annotate-image .toolbox button.tool-manipulate.draw {
+  background-color: var(--btn-green);
+}
+.oe-annotate-image .toolbox button.tool-manipulate.draw svg {
+  fill: #fff;
+}
+.oe-annotate-image .toolbox button.tool-btn {
+  width: 50px;
+  height: 50px;
+}
+.oe-annotate-image .toolbox button.tool-btn svg {
+  pointer-events: none;
+  fill: var(--txt-base);
+  width: 25px;
+  height: 25px;
+}
+.oe-annotate-image .toolbox button.tool-btn:hover svg, .oe-annotate-image .toolbox button.tool-btn:focus svg, .oe-annotate-image .toolbox button.tool-btn.selected svg {
+  fill: #fff;
+}
+.oe-annotate-image .toolbox button.tool-btn.draw {
+  background-color: var(--btn-green);
+}
+.oe-annotate-image .toolbox button.tool-btn.draw svg {
+  fill: #fff;
+}
+
+.oe-upload-orientation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.oe-upload-orientation .adjustments {
+  position: absolute;
+  margin: auto;
+  font-size: 0.875rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+.oe-upload-orientation .adjustments .flex-btns {
+  margin: 10px 0 0 0;
+}
+
 .openeyes-brand {
   z-index: 100;
   position: fixed;
