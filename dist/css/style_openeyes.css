@@ -538,7 +538,7 @@ html.theme-dark {
   --step-text: rgb(240, 240, 240);
   --step-outline: rgba(170, 170, 170, 0.4);
   --ed3-blue: rgb(218, 230, 241);
-  --ed3-panels: pink;
+  --ed3-panels: rgb(166, 173, 180);
   --ed3-text: rgb(50, 50, 60);
   --ed3-btn: #118afb;
   --ed3-icon-area: #bdcdde;
@@ -793,7 +793,7 @@ html.theme-light {
   --step-text: rgb(245, 245, 245);
   --step-outline: rgba(120, 120, 130, 0.4);
   --ed3-blue: rgb(218, 230, 241);
-  --ed3-panels: pink;
+  --ed3-panels: rgb(220, 230, 240);
   --ed3-text: rgb(50, 50, 60);
   --ed3-btn: #118afb;
   --ed3-icon-area: #bdcdde;

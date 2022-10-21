@@ -1,15 +1,6 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-// CSS Vars (Custom selectors) for theme colours.
-// set <HTML> class to theme
-// e.g. class="theme-light" or "theme-dark"
-@mixin cssVars( $group, $map ) {
-	@each $type, $prop in $map {
-		--#{$group}-#{$type}: #{$prop};
-	}
-}
-
 // defaults groups for "dark" theme settings
 // "Dark": interaction is subtle
 // "Light": interaction is more obvious, with more contrast
@@ -209,7 +200,7 @@ $step-light: (
 // ---- EyeDraw (v3 & v2.5) colours
 $ed3: (
 	"blue": rgb(218, 230, 241), // note": used in Elements too!
-	"panels": pink,
+	"panels": rgb(166, 173, 180),
 	"text": rgb(50, 50, 60),
 	"btn": #118afb,
 	"icon-area": #bdcdde,
@@ -218,7 +209,7 @@ $ed3: (
 
 $ed3-light: (
 	"blue": rgb(218, 230, 241),
-	"panels": pink,
+	"panels": rgb(220, 230, 240	),
 	"text": rgb(50, 50, 60),
 	"btn": #118afb,
 	"icon-area": #bdcdde,
@@ -263,6 +254,16 @@ $uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permi
 
 	@each $icon in $uiIcons {
 		--i-ui-#{$icon}: url("../svg/in-css/all/ui/#{$icon}.svg");
+	}
+}
+
+
+// CSS Vars (Custom selectors) for theme colours.
+// set <HTML> class to theme
+// e.g. class="theme-light" or "theme-dark"
+@mixin cssVars( $group, $map ) {
+	@each $type, $prop in $map {
+		--#{$group}-#{$type}: #{$prop};
 	}
 }
 
@@ -318,7 +319,7 @@ html.theme-light {
 	@include cssVars("color", $color-light);
 	@include cssVars("input", $input-light);
 	@include cssVars("step", $step-light);
-	@include cssVars("ed3", $ed3);
+	@include cssVars("ed3", $ed3-light);
 
 
 }
