@@ -24,7 +24,8 @@ $bg: (
 	"data": hsl(213, 10%, 10%),
 	"title": hsl(214, 18%, 16%),
 	"event": hsl(213, 6%, 16%),
-	"event-list":hsl(210, 26%, 16%)
+	"event-list":hsl(210, 26%, 16%),
+	"vc": rgb(21, 11, 30)
 );
 
 $bg-light: (
@@ -37,6 +38,7 @@ $bg-light: (
 	"title": rgb(201, 200, 200),
 	"event": rgb(251, 250, 250),
 	"event-list": rgb(240, 240, 240),
+	"vc": hsl(328, 25%, 90%)
 );
 
 // ---- Text
@@ -76,7 +78,7 @@ $font-weight-light: (
 // ---- GUI
 $gui: (
 	"spinner": #00ffff,
-	"vc": #00b4eb,
+	"vc": hsl(328, 75%, 45%),
 	"line": hsl(204, 5%, 20%),
 	"line-hard": hsl(204, 6%, 25%),
 	"line-soft": hsl(216, 18%, 18%),
@@ -86,7 +88,7 @@ $gui: (
 
 $gui-light: (
 	"spinner": #00b4ff,
-	"vc": #00b4eb,
+	"vc": hsl(328, 100%, 45%),
 	"line": hsl(0, 2%, 75%),
 	"line-hard": hsl(0, 2%, 50%),
 	"line-soft": rgb(166, 172, 172),

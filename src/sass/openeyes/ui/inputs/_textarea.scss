@@ -9,16 +9,20 @@ textarea {
 	resize: none; // hide corner resize
 	overflow-wrap: break-word; // allow long words to break and wrap
 
-	// needs line-height 1.4 otherwise
-	// user-agent will reset <textarea> to normal
-	line-height: $oe-input-height;
-	padding:0 5px; // do not change! setup for <textarea> autoresize
+	// when showing the placeholder text, make it look like <input>
+	&:placeholder-shown {
+		line-height: $oe-input-height;
+	}
 
-	// match <input> styles
+	// when user is entering data, switch to better line-height
+	line-height: 1.6;
+
+	// match <input>
+	padding:0 5px;
 	border-radius: 3px;
 
 	&::placeholder {
-		color:var(--input-placeholder);
+		color:var(--input-place holder);
 	}
 
 	&:disabled {

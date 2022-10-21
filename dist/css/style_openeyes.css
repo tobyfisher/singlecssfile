@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri Oct 21 2022 09:11:58 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Fri Oct 21 2022 14:20:43 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -479,6 +479,7 @@ html.theme-dark {
   --bg-title: hsl(214deg, 18%, 16%);
   --bg-event: hsl(213deg, 6%, 16%);
   --bg-event-list: hsl(210deg, 26%, 16%);
+  --bg-vc: rgb(21, 11, 30);
   --txt-base: rgb(204, 204, 204);
   --txt-light: rgb(150, 150, 150);
   --txt-hd: rgb(90, 130, 145);
@@ -490,7 +491,7 @@ html.theme-dark {
   --font-medium: 400;
   --font-bold: 500;
   --gui-spinner: #00ffff;
-  --gui-vc: #00b4eb;
+  --gui-vc: hsl(328deg, 75%, 45%);
   --gui-line: hsl(204deg, 5%, 20%);
   --gui-line-hard: hsl(204deg, 6%, 25%);
   --gui-line-soft: hsl(216deg, 18%, 18%);
@@ -733,6 +734,7 @@ html.theme-light {
   --bg-title: rgb(201, 200, 200);
   --bg-event: rgb(251, 250, 250);
   --bg-event-list: rgb(240, 240, 240);
+  --bg-vc: hsl(328deg, 25%, 90%);
   --txt-base: #0a0a0a;
   --txt-light: #5a5a64;
   --txt-hd: rgb(40, 70, 200);
@@ -744,7 +746,7 @@ html.theme-light {
   --font-medium: 500;
   --font-bold: 700;
   --gui-spinner: #00b4ff;
-  --gui-vc: #00b4eb;
+  --gui-vc: hsl(328deg, 100%, 45%);
   --gui-line: hsl(0deg, 2%, 75%);
   --gui-line-hard: hsl(0deg, 2%, 50%);
   --gui-line-soft: rgb(166, 172, 172);
@@ -3180,12 +3182,15 @@ input[type=file] {
 textarea {
   resize: none;
   overflow-wrap: break-word;
-  line-height: 24px;
+  line-height: 1.6;
   padding: 0 5px;
   border-radius: 3px;
 }
+textarea:placeholder-shown {
+  line-height: 24px;
+}
 textarea::placeholder {
-  color: var(--input-placeholder);
+  color: var(--input-place holder);
 }
 textarea:disabled {
   opacity: 0.4;
@@ -6929,21 +6934,21 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   fill: var(--txt-active);
 }
 
-.oe-nav-btn svg.icon {
+.oe-nav-btn .icon {
   display: block;
   width: 42px;
   height: 21px;
   fill: var(--txt-light);
   pointer-events: none;
 }
-.oe-nav-btn svg.icon.open {
+.oe-nav-btn .icon.open {
   fill: var(--txt-highlight);
 }
-.oe-nav-btn svg.icon.hotlist.vc {
+.oe-nav-btn .icon.hotlist.vc {
   fill: var(--gui-vc);
 }
 @media only screen and (min-width: 1200px) and (orientation: portrait) {
-  .oe-nav-btn svg.icon {
+  .oe-nav-btn .icon {
     width: 60px;
     height: 30px;
   }
@@ -9788,6 +9793,162 @@ ul.reports-nav li a:hover, ul.reports-nav li a:active, ul.reports-nav li a:focus
 }
 .schedule-group table.theatre-bookings tfoot .session-comments {
   padding: 15px 10px 10px 10px;
+}
+
+.oe-virtual-clinic-search {
+  padding: 0 0 8px 0;
+  margin: 10px 0 15px 0;
+  border-bottom: 3px solid var(--gui-line);
+}
+.oe-virtual-clinic-search .list-filters {
+  margin: 5px 0 5px 0;
+  font-size: 0.75rem;
+}
+
+table.virtual-clinic tbody td {
+  font-size: 0.8125rem;
+  vertical-align: top;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+table.virtual-clinic tbody td:last-child {
+  padding-right: 0;
+}
+table.virtual-clinic tbody td .actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 10px 0 5px 0;
+}
+table.virtual-clinic tbody td .actions button, table.virtual-clinic tbody td .actions a {
+  margin: 0 2px;
+}
+table.virtual-clinic tbody .scroll-content {
+  font-size: 0.6875rem;
+  max-height: 100px;
+  overflow-y: auto;
+  overflow-wrap: break-word;
+}
+table.virtual-clinic tbody .clinic-info table {
+  margin: 10px 0 0 0;
+  width: 100%;
+}
+table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody .clinic-info table tr th {
+  padding: 5px 0;
+  font-size: 0.6875rem;
+  line-height: 1;
+  text-align: left;
+}
+
+.oe-vc-mode {
+  background-color: var(--bg-vc);
+}
+.oe-vc-mode.in-element {
+  padding: 8px 4px;
+  border-radius: 3px;
+  border: 1px solid var(--gui-vc);
+}
+.tile .oe-vc-mode.in-element {
+  padding: 3px 6px;
+}
+
+.oe-vc-mode .vc-actions {
+  padding: 4px 8px;
+  margin: 0 0 30px 0;
+}
+.oe-vc-mode .vc-actions button {
+  margin: 0 0 0 10px;
+}
+
+.vc-floating-input {
+  z-index: 160;
+  position: fixed;
+  top: 75px;
+  left: 250px;
+  width: 300px;
+  padding: 8px 0 8px 0;
+  border: 2px solid var(--gui-vc);
+  border-radius: 12px;
+  background: top 5px right 5px/21px url("../svg/in-css/all/ui/vc-move.svg") var(--bg-vc) no-repeat;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
+}
+.vc-floating-input .title {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  padding: 0 30px 10px 8px;
+}
+.vc-floating-input .vc-content {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 8px 2px 8px;
+}
+
+.oe-vc-mode .vc-steps li {
+  font-weight: 500;
+  padding: 2px 0 2px 18px;
+}
+.oe-vc-mode .vc-steps li.completed em {
+  opacity: 0.5;
+  font-style: italic;
+}
+.oe-vc-mode .vc-steps li.selected {
+  background: transparent url(svg-themed("i/direction-right")) left center no-repeat;
+  background-size: 13px;
+}
+
+.oe-vc-mode .vc-content {
+  position: relative;
+  padding: 30px 10px 10px 10px;
+}
+
+.oe-vc-mode .vc-content .scratchpad {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.oe-vc-mode .vc-content .priority {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.oe-vc-mode .vc-content .row {
+  margin: 4px 0 6px 0;
+}
+
+.oe-vc-mode .vc-content {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.oe-vc-mode .vc-content h3 {
+  font-size: 0.9375rem;
+  font-weight: var(--font-medium);
+  padding: 0;
+  margin: 0 0 4px 0;
+}
+.oe-vc-mode .vc-content .data-label {
+  margin: 0 0 4px 0;
+  font-weight: var(--font-bold);
+}
+
+.oe-vc-mode .vc-content textarea:read-only {
+  color: var(--txt-light);
+  font-style: italic;
+  background-color: var(--bg-vc);
+}
+
+.oe-vc-mode .vc-content table {
+  margin: 6px 0;
+  width: 100%;
+}
+.oe-vc-mode .vc-content table.borders {
+  border: 3px solid var(--txt-light);
+}
+.oe-vc-mode .vc-content table.borders th, .oe-vc-mode .vc-content table.borders td {
+  border: 1px solid var(--txt-light);
+  border-bottom: none;
+  padding: 1px 2px;
 }
 
 .oe-whiteboard {
