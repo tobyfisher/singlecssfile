@@ -41,10 +41,7 @@ tbody {
 			&:hover,
 			&:focus {
 				cursor: pointer;
-				background: var(--btn-blue); // row is a big button
-				td {
-					color: #fff;
-				}
+				background: var(--btn-base-light); // row is a big button
 			}
 		}
 

@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Fri Oct 21 2022 21:37:27 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sat Oct 22 2022 08:25:01 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -474,7 +474,7 @@ html.theme-dark {
   --bg-page: hsl(215deg, 19%, 14%);
   --bg-max: #000;
   --bg-popup: hsl(212deg, 15%, 14%);
-  --bg-hover-row: hsl(215deg, 18%, 10%);
+  --bg-hover-row: rgb(10, 10, 10);
   --bg-data: hsl(213deg, 10%, 10%);
   --bg-title: hsl(214deg, 18%, 16%);
   --bg-event: hsl(213deg, 6%, 16%);
@@ -729,7 +729,7 @@ html.theme-light {
   --bg-page: rgb(226, 225, 225);
   --bg-max: #fff;
   --bg-popup: rgb(231, 230, 230);
-  --bg-hover-row: rgb(240, 240, 240);
+  --bg-hover-row: rgb(250, 250, 250);
   --bg-data: rgb(240, 239, 239);
   --bg-title: rgb(201, 200, 200);
   --bg-event: rgb(251, 250, 250);
@@ -762,16 +762,16 @@ html.theme-light {
   --btn-green-hint: #0c7915;
   --btn-green: #191;
   --btn-green-active: #1a1;
-  --btn-red-hint: #830c0c;
-  --btn-red: #a11;
-  --btn-red-active: #c11;
+  --btn-red-hint: hsl(0deg, 85%, 35%);
+  --btn-red: hsl(0deg, 90%, 40%);
+  --btn-red-active: hsl(0deg, 100%, 45%);
   --btn-disabled: hsl(211deg, 9%, 70%);
   --btn-icon-hover-filter: invert(100%) grayscale(100%);
   --btn-icon-opacity: 0.8;
   --color-highlighter: #ebd37b;
   --color-green: #009b00;
   --color-red: hsl(0deg, 96%, 45%);
-  --color-burgundy: hsl(14deg, 90%, 30%);
+  --color-burgundy: hsl(10deg, 80%, 25%);
   --color-orange: hsl(31deg, 92%, 42%);
   --color-yellow: #d2aa14;
   --color-grey: rgb(145, 130, 130);
@@ -3640,10 +3640,7 @@ tbody tr.divider td {
 }
 .clickable-rows tbody tr:hover, .clickable-rows tbody tr:focus, tbody tr.clickable:hover, tbody tr.clickable:focus {
   cursor: pointer;
-  background: var(--btn-blue);
-}
-.clickable-rows tbody tr:hover td, .clickable-rows tbody tr:focus td, tbody tr.clickable:hover td, tbody tr.clickable:focus td {
-  color: #fff;
+  background: var(--btn-base-light);
 }
 .highlight-rows tbody tr:hover, .highlight-rows tbody tr:focus, .highlight-rows tbody tr:focus-within {
   background: var(--bg-hover-row);
@@ -11753,7 +11750,7 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
   font-size: 0.6875rem;
   font-weight: var(--font-medium);
   color: var(--txt-hd);
-  background: var(--btn-base);
+  background: var(--btn-base-light);
   height: auto;
   vertical-align: text-top;
   padding: 2px 6px 3px 6px;
@@ -11823,9 +11820,6 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
 .element table.clickable-rows tbody tr td {
   padding-top: 5px;
   padding-bottom: 5px;
-}
-.element table.highlight-rows tbody tr:hover, .element table.highlight-rows tbody tr:focus {
-  background: var(--bg-hover-row);
 }
 .element table.atop tbody th,
 .element table.atop tbody td {
@@ -12374,6 +12368,10 @@ table.inj-mgmt-previous tbody td:last-child {
   justify-content: center;
   align-items: center;
   width: 100px;
+  margin: 0 1px;
+}
+.element .diag-mgmt .diag-date input[type=date] {
+  width: 100%;
 }
 
 .element .da-order-options {
