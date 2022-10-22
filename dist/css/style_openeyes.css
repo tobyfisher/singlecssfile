@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sat Oct 22 2022 08:25:01 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sat Oct 22 2022 14:01:12 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -3583,7 +3583,7 @@ button.add-pathstep:after,
   margin: auto;
   height: 17px;
   width: 17px;
-  background: center/contain transparent url(svg-white-icon("i/plus-bold")) no-repeat;
+  background: center/contain transparent url("../svg/in-css/dark/i/plus-bold.svg") no-repeat;
 }
 
 .flex-btns {
@@ -5975,7 +5975,7 @@ ul.quick-filters {
 }
 .favourites .fav .details:hover, .favourites .fav .details:focus {
   color: #fff;
-  background: var(--btn-blue) url(svg-fixed("ui/shortcut-arrow")) bottom 10px left 8px no-repeat;
+  background: var(--btn-blue) url("../svg/in-css/all/ui/shortcut-arrow.svg") bottom 10px left 8px no-repeat;
   background-size: 15px;
 }
 .favourites .fav .details .name {
@@ -6276,7 +6276,7 @@ span.squiggle {
   position: relative;
   height: 120px;
   width: auto;
-  background: transparent url(svg-fixed("eyedraw/gonio")) center center no-repeat;
+  background: transparent url("../svg/in-css/all/eyedraw/gonio.svg") center center no-repeat;
   background-size: 80px;
   margin: 10px 0;
 }
@@ -6869,7 +6869,7 @@ span.squiggle {
   border-bottom: 1px solid var(--ed3-icon-area);
   align-self: center;
   margin: 0 auto;
-  background: center bottom 5px/60px url(svg-fixed("eyedraw/op-patient")) no-repeat;
+  background: center bottom 5px/60px url("../svg/in-css/all/eyedraw/op-patient.svg") no-repeat;
 }
 .ed3-surgeon-orientation:after {
   content: "";
@@ -6878,7 +6878,7 @@ span.squiggle {
   left: 0;
   width: 50px;
   height: 50px;
-  background: top left/contain url(svg-fixed("eyedraw/op-surgeon")) no-repeat;
+  background: top left/contain url("../svg/in-css/all/eyedraw/op-surgeon.svg") no-repeat;
 }
 .ed3-surgeon-orientation.pos-top:after {
   top: 0;
@@ -8727,7 +8727,7 @@ table.patient-demographics td:last-child {
   border-color: rgba(200, 200, 200, 0.3);
 }
 .oe-pathstep-btn.active.person .step, .oe-pathstep-btn.done.person .step {
-  background-image: url(svg-white-icon("i/person"));
+  background-image: url("../svg/in-css/dark/i/person.svg");
 }
 .oe-pathstep-btn.active {
   background-color: var(--step-blue);
@@ -8983,14 +8983,14 @@ table.patient-demographics td:last-child {
   opacity: 0.8;
 }
 .oe-pathstep-popup .step-actions button.i-btn.trash::after {
-  background-image: url(svg-white-icon("i/trash"));
+  background-image: url("../svg/in-css/dark/i/trash.svg");
   background-size: 19px;
 }
 .oe-pathstep-popup .step-actions button.i-btn.right::after {
-  background-image: url(svg-white-icon("i/direction-right-circle"));
+  background-image: url("../svg/in-css/dark/i/direction-right-circle.svg");
 }
 .oe-pathstep-popup .step-actions button.i-btn.left::after {
-  background-image: url(svg-white-icon("i/direction-left-circle"));
+  background-image: url("../svg/in-css/dark/i/direction-left-circle.svg");
 }
 
 .oe-pathstep-popup .step-content {
@@ -9862,7 +9862,7 @@ table.partial-booking tbody td .highlighter {
 .uah-event-summary .deleted-elements button {
   width: 100%;
   color: var(--btn-text);
-  background: center right 10px/13px var(--btn-red-hint) url(svg-all("ui/sidebar-audit-trail")) no-repeat;
+  background: center right 10px/13px var(--btn-red-hint) url("../svg/in-css/all/ui/sidebar-audit-trail.svg") no-repeat;
   justify-content: flex-start;
 }
 
@@ -11332,7 +11332,7 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
   right: 100%;
   width: 30px;
   height: 38px;
-  background: url(svg-all("sidebar/lightning")) center center no-repeat;
+  background: url("../svg/in-css/all/sidebar/lightning.svg") center center no-repeat;
   background-size: 15px;
 }
 
@@ -11678,7 +11678,7 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
   background-position: top left;
   background-repeat: repeat;
   background-size: 20px;
-  background-image: url(svg-all("patterns/pattern1"));
+  background-image: url("../svg/in-css/all/patterns/pattern1.svg");
   overflow: auto;
 }
 

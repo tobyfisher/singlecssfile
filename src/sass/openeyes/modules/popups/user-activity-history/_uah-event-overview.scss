@@ -57,7 +57,7 @@
 		button {
 			width: 100%;
 			color: var(--btn-text);
-			background: center right 10px / 13px var(--btn-red-hint) url(svg-all("ui/sidebar-audit-trail")) no-repeat;
+			background: center right 10px / 13px var(--btn-red-hint) url(svg-fixed("ui/sidebar-audit-trail")) no-repeat;
 			justify-content: flex-start;
 		}
 	}
