@@ -7561,7 +7561,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 .home-messages .message-actions .mailbox {
   margin: 5px 0;
   padding: 5px 5px 5px 8px;
-  background-color: var(--bg-popup);
+  background-color: var(--bg-hover-row);
 }
 .home-messages .message-actions .mailbox .mailbox-hd {
   display: flex;
@@ -7668,15 +7668,30 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   padding: 10px 10px 5px 10px;
 }
 .oe-hotlist-panel h3 {
-  font-size: 1.0625rem;
-  font-weight: 300;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 0.9375rem;
+  font-weight: var(--font-light);
   pointer-events: none;
 }
 .oe-hotlist-panel h3 .count {
-  display: inline-block;
-  padding: 0 0 0 6px;
-  font-size: 0.9375rem;
-  color: var(--txt-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 16px;
+  width: 16px;
+  border-radius: 3px;
+  background: #555;
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: var(--txt-invert);
+  margin: 0 0 0 10px;
+  opacity: 0.7;
+}
+.oe-hotlist-panel h3 .count.issue {
+  background: var(--color-orange);
+  opacity: 1;
 }
 .oe-hotlist-panel .closed-search {
   position: relative;
@@ -7767,6 +7782,20 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   padding: 5px 15px;
   font-size: 0.8125rem;
   font-weight: 400;
+}
+
+.oe-hotlist-panel .flag-urgent-messages {
+  margin: 10px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.oe-hotlist-panel .flag-urgent-messages a {
+  flex: 1 1 0;
+}
+.oe-hotlist-panel .flag-urgent-messages .urgent {
+  background: var(--color-orange);
+  color: #fff;
 }
 
 .oe-lightning-meta {

@@ -43,7 +43,7 @@
 			// default vertical padding
 			margin: 5px 0;
 			padding: 5px 5px 5px 8px;
-			background-color: var(--bg-popup);
+			background-color: var(--bg-hover-row);
 
 			.mailbox-hd {
 				@include flex(center, space-between);
