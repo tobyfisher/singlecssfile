@@ -3600,6 +3600,10 @@ button.add-pathstep:after,
   flex-direction: column;
   gap: 10px;
 }
+.button-stack button,
+.button-stack .button {
+  width: 100%;
+}
 .button-stack.tight {
   gap: 4px;
 }
@@ -3953,7 +3957,7 @@ ul.multi-filter-list.light li::after {
 ul.multi-filter-list li {
   position: relative;
   cursor: pointer;
-  height: 24px;
+  min-height: 24px;
   display: flex;
   justify-content: flex-start;
   align-items: center;

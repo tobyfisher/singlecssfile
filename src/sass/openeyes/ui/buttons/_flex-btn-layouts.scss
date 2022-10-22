@@ -17,6 +17,13 @@
 	@include flex( flex-start, center );
 	flex-direction: column;
 	gap: 10px;
+
+	button,
+	.button {
+		// assume that buttons should fill area width, kinda standard design
+		width: 100%;
+	}
+
 	&.tight {
 		gap: 4px;
 	}

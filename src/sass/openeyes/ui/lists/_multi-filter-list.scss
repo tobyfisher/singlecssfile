@@ -32,7 +32,8 @@ ul.multi-filter-list {
 		position: relative;
 		cursor: pointer; // used as a button
 
-		height: $oe-input-height;
+		// min-height to allow for long inputs
+		min-height: $oe-input-height;
 		@include flex(center, flex-start);
 
 		padding:0 25px 0 5px;
