@@ -4301,23 +4301,6 @@ ul.oe-multi-select li {
   opacity: 1;
 }
 
-.oe-popup-wrap {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  z-index: 150;
-  background: rgba(60, 60, 65, 0.6);
-}
-.oe-popup-wrap.block-out {
-  background: var(--bg-html);
-}
-.oe-popup-wrap.clear {
-  background: transparent;
-}
-
 @keyframes spinner {
   to {
     transform: rotate(360deg);
@@ -4491,81 +4474,47 @@ hr.soft {
   animation: 2s ease-in forwards fadeout;
 }
 
-.oe-date {
-  white-space: nowrap;
-  display: inline-flex;
-  width: 10.5ch;
+.training-mode .oe-logo {
+  background: rgba(80, 80, 80, 0.5);
+  border-radius: 0 0 5px 5px;
 }
-.oe-date .day {
-  text-align: right;
-  width: 2ch;
-  margin: 0 0.5ch 0 0;
+.training-mode .oe-logo .oe-openeyes {
+  fill: rgb(255, 224, 0);
+  opacity: 1;
 }
-.oe-date .mth {
-  text-align: left !important;
-  width: 4ch;
+.training-mode .oe-login .login h1 {
+  font-size: 3.125rem;
+  color: rgb(255, 224, 0);
+  padding: 15px 30px;
+  background: rgba(80, 80, 80, 0.5);
+  border-radius: 9px;
 }
-.oe-date .yr {
-  text-align: right;
-  width: 4ch;
+.training-mode #oe-admin-notifcation {
+  bottom: 15px;
+  height: 35px;
+  background: rgb(255, 224, 0);
+  color: #000;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  box-shadow: 0 0 4px rgba(80, 80, 80, 0.5);
 }
-.situational-awareness .oe-date {
-  font-size: 0.6875rem;
-  opacity: 0.5;
+.training-mode #oe-admin-notifcation a {
+  color: rgb(0, 0, 200);
 }
-
-.oe-no-date-msg {
-  width: 10.5ch;
-  text-align: right;
-  font-style: italic;
+.training-mode #oe-admin-notifcation #notification-short {
+  opacity: 1;
 }
-
-.oe-user-pin {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
+.training-mode #oe-admin-notifcation .oe-i.info {
+  background-image: var(--i-asterisk);
+  background-color: var(--txt-invert);
   height: 24px;
-  padding: 0 4px 0 28px;
+  width: 24px;
   border-radius: 3px;
-  background: left 6px center/14px var(--color-orange) url("../svg/in-css/dark/i/padlock.svg") no-repeat;
 }
-.oe-user-pin.accepted-pin {
-  background-color: var(--color-green);
-}
-.oe-user-pin.accepted-pin .user-pin-entry {
-  outline-color: var(--color-green);
-}
-.oe-user-pin.wrong-pin {
-  background-color: var(--color-red);
-}
-.oe-user-pin.wrong-pin .user-pin-entry {
-  outline-color: var(--color-red);
-}
-.oe-user-pin.pin-right {
-  background-image: url("../svg/in-css/dark/i/lat-R.svg");
-}
-.oe-user-pin.pin-left {
-  background-image: url("../svg/in-css/dark/i/lat-L.svg");
-}
-.oe-user-pin input.user-pin-entry {
-  height: 22px;
-  margin: 0;
-  width: 10ch;
-  text-align: center;
-  font-weight: 700;
-  outline: 2px solid var(--color-orange);
-}
-.oe-user-pin button.try-pin {
-  height: 22px;
-  font-weight: 700;
-  color: #fff;
-  margin: 0 0 0 6px;
-  padding: 0 8px;
-  background-color: transparent;
-}
-.oe-user-pin button.try-pin:hover, .oe-user-pin button.try-pin:focus {
-  color: #fff;
-  background: var(--btn-blue);
+.training-mode .oe-patient .patient-name {
+  background: rgba(80, 80, 80, 0.5);
+  outline: 4px solid rgba(80, 80, 80, 0.5);
+  color: rgb(255, 224, 0);
 }
 
 .oe-step-progress {
@@ -4678,6 +4627,100 @@ hr.soft {
   pointer-events: none;
 }
 
+.oe-popup-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  z-index: 150;
+  background: rgba(60, 60, 65, 0.6);
+}
+.oe-popup-wrap.block-out {
+  background: var(--bg-html);
+}
+.oe-popup-wrap.clear {
+  background: transparent;
+}
+
+.oe-date {
+  white-space: nowrap;
+  display: inline-flex;
+  width: 10.5ch;
+}
+.oe-date .day {
+  text-align: right;
+  width: 2ch;
+  margin: 0 0.5ch 0 0;
+}
+.oe-date .mth {
+  text-align: left !important;
+  width: 4ch;
+}
+.oe-date .yr {
+  text-align: right;
+  width: 4ch;
+}
+.situational-awareness .oe-date {
+  font-size: 0.6875rem;
+  opacity: 0.5;
+}
+
+.oe-no-date-msg {
+  width: 10.5ch;
+  text-align: right;
+  font-style: italic;
+}
+
+.oe-user-pin {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+  padding: 0 4px 0 28px;
+  border-radius: 3px;
+  background: left 6px center/14px var(--color-orange) url("../svg/in-css/dark/i/padlock.svg") no-repeat;
+}
+.oe-user-pin.accepted-pin {
+  background-color: var(--color-green);
+}
+.oe-user-pin.accepted-pin .user-pin-entry {
+  outline-color: var(--color-green);
+}
+.oe-user-pin.wrong-pin {
+  background-color: var(--color-red);
+}
+.oe-user-pin.wrong-pin .user-pin-entry {
+  outline-color: var(--color-red);
+}
+.oe-user-pin.pin-right {
+  background-image: url("../svg/in-css/dark/i/lat-R.svg");
+}
+.oe-user-pin.pin-left {
+  background-image: url("../svg/in-css/dark/i/lat-L.svg");
+}
+.oe-user-pin input.user-pin-entry {
+  height: 22px;
+  margin: 0;
+  width: 10ch;
+  text-align: center;
+  font-weight: 700;
+  outline: 2px solid var(--color-orange);
+}
+.oe-user-pin button.try-pin {
+  height: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0 6px;
+  padding: 0 8px;
+  background-color: transparent;
+}
+.oe-user-pin button.try-pin:hover, .oe-user-pin button.try-pin:focus {
+  color: #fff;
+  background: var(--btn-blue);
+}
+
 .oe-percentage {
   display: flex;
   justify-content: flex-start;
@@ -4701,47 +4744,53 @@ hr.soft {
   background-color: var(--color-red);
 }
 
-.training-mode .oe-logo {
-  background: rgba(80, 80, 80, 0.5);
-  border-radius: 0 0 5px 5px;
+.oe-attachment-thumbnail {
+  display: inline-block;
+  position: relative;
+  cursor: zoom-in;
 }
-.training-mode .oe-logo .oe-openeyes {
-  fill: rgb(255, 224, 0);
-  opacity: 1;
+.oe-attachment-thumbnail .thumbnail {
+  pointer-events: none;
+  width: 100%;
+  height: auto;
+  min-height: 50px;
 }
-.training-mode .oe-login .login h1 {
-  font-size: 3.125rem;
-  color: rgb(255, 224, 0);
-  padding: 15px 30px;
-  background: rgba(80, 80, 80, 0.5);
-  border-radius: 9px;
+.oe-attachment-thumbnail.pad-v {
+  margin: 10px 0;
 }
-.training-mode #oe-admin-notifcation {
-  bottom: 15px;
-  height: 35px;
-  background: rgb(255, 224, 0);
-  color: #000;
-  font-size: 0.9375rem;
+.oe-attachment-thumbnail .attachment-img-stack {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+  padding: 0 5px;
+  height: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #00d;
+  color: #fff;
+  font-size: 1rem;
   font-weight: 500;
-  box-shadow: 0 0 4px rgba(80, 80, 80, 0.5);
 }
-.training-mode #oe-admin-notifcation a {
-  color: rgb(0, 0, 200);
+.oe-attachment-thumbnail .attachment-meta-data {
+  margin: 8px 0 5px 0;
+  font-size: 0.625rem;
+  opacity: 0.5;
 }
-.training-mode #oe-admin-notifcation #notification-short {
-  opacity: 1;
+.oe-attachment-thumbnail .attachment-meta-data ul.dot-list li {
+  margin-bottom: 1px;
 }
-.training-mode #oe-admin-notifcation .oe-i.info {
-  background-image: var(--i-asterisk);
-  background-color: var(--txt-invert);
-  height: 24px;
-  width: 24px;
-  border-radius: 3px;
-}
-.training-mode .oe-patient .patient-name {
-  background: rgba(80, 80, 80, 0.5);
-  outline: 4px solid rgba(80, 80, 80, 0.5);
-  color: rgb(255, 224, 0);
+.oe-attachment-thumbnail::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  z-index: 1;
+  height: 25px;
+  width: 25px;
+  border-radius: 20%;
+  background: top 3px right 3px/19px url("../svg/in-css/dark/i/zoom-in.svg") #00d no-repeat;
 }
 
 .admin-panels {
@@ -7591,7 +7640,8 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 5px;
+  height: auto;
+  padding: 4px 5px 4px 8px;
 }
 .home-messages .message-actions .all-unread-messages .unread {
   color: var(--btn-text-active);
@@ -7682,12 +7732,11 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   height: 16px;
   width: 16px;
   border-radius: 3px;
-  background: #555;
   font-size: 0.625rem;
   font-weight: 500;
-  color: var(--txt-invert);
+  color: var(--btn-text);
+  background: var(--color-grey);
   margin: 0 0 0 10px;
-  opacity: 0.7;
 }
 .oe-hotlist-panel h3 .count.issue {
   background: var(--color-orange);
@@ -9728,6 +9777,91 @@ table.partial-booking tbody td .highlighter {
 .event-type-list .oe-event-type.add_event_disabled {
   opacity: 0.4;
   pointer-events: none;
+}
+
+.oe-popup-attachment {
+  position: relative;
+  background: var(--bg-html);
+  width: 100vw;
+  height: 100vh;
+}
+.oe-popup-attachment .title {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--txt-base);
+}
+.oe-popup-attachment .close-popup-btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px;
+  background: center/22px var(--btn-blue) url("../svg/in-css/dark/i/remove-circle.svg") no-repeat;
+  z-index: 2;
+  cursor: pointer;
+}
+.oe-popup-attachment .attachment-stack {
+  position: absolute;
+  top: 12px;
+  right: 55px;
+  color: var(--txt-highlight);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+.oe-popup-attachment .file-attachment-content {
+  margin: 50px 0;
+  height: calc(100vh - 100px);
+  background: transparent center center no-repeat;
+  background-size: contain;
+  overflow: auto;
+}
+.oe-popup-attachment .file-attachment-content img {
+  margin: 0 auto;
+}
+.oe-popup-attachment .file-attachment-content.annotation {
+  margin: 50px 0 250px 0;
+  height: calc(100vh - 300px);
+}
+.oe-popup-attachment .attachment-annotation {
+  position: absolute;
+  bottom: 48px;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background-color: var(--bg-data);
+  font-size: 0.75rem;
+  padding: 10px 20px 30px 20px;
+  overflow-y: auto;
+}
+.oe-popup-attachment .attachment-annotation h3 {
+  margin: 0 0 10px 0;
+}
+.oe-popup-attachment .attachment-annotation table.standard {
+  margin: 0;
+}
+.oe-popup-attachment .attachment-annotation table.standard td {
+  font-size: 0.75rem;
+}
+.oe-popup-attachment .file-size-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 5px 0;
+  background: var(--bg-popup);
+}
+.oe-popup-attachment .file-size-controls button {
+  font-size: 1rem;
+  padding: 0 16px;
+  height: 38px;
+  margin: 0 32px 0 0;
+}
+.oe-popup-attachment .file-size-controls button:last-child {
+  margin-right: 0;
 }
 
 .oe-popup-uah {

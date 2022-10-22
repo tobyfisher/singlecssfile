@@ -73,11 +73,13 @@
 			}
 		}
 
-		// button
+		// <button>
 		.all-unread-messages {
 			width:100%;
 			@include flex(center, space-between);
-			padding-right:5px;
+			// override button
+			height: auto;
+			padding: 4px 5px 4px 8px;
 
 			.unread {
 				color:var(--btn-text-active);
