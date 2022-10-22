@@ -39,7 +39,7 @@ tbody {
 		.clickable-rows &,
 		&.clickable {
 			&:hover,
-			&:focus {
+			&:focus-within {
 				cursor: pointer;
 				background: var(--btn-base-light); // row is a big button
 			}
@@ -48,11 +48,9 @@ tbody {
 		// All table rows react to focus/hover to help with using the data
 		.highlight-rows & {
 			&:hover,
-			&:focus,
 			&:focus-within {
 				background: var(--bg-hover-row);
 			}
-
 		}
 
 		// Not sure where this is used. Keeping for support

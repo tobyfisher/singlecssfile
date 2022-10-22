@@ -7,11 +7,10 @@
 
 // ---- Backgrounds
 $bg: (
-	"html": hsl(214, 19%, 12%),
-	"page": hsl(215, 19%, 14%), // same as "html" in dark
 	"max": #000,
-	"popup":hsl(212, 15%, 14%),
-	"hover-row": rgb(10,10,10),
+	"html": hsl(214, 19%, 12%),
+	"popup":hsl(213, 16%, 12%),
+	"hover-row": hsl(212, 11%, 11%),
 	"data": hsl(213, 10%, 10%),
 	"title": hsl(214, 18%, 16%),
 	"event": hsl(213, 6%, 16%),
@@ -20,11 +19,10 @@ $bg: (
 );
 
 $bg-light: (
-	"html": rgb(218, 216, 216),
-	"page": rgb(226, 225, 225),
 	"max": #fff,
-	"popup": rgb(231, 230, 230),
-	"hover-row": rgb(250, 250, 250),
+	"html": rgb(218, 216, 216),
+	"popup": rgb(226, 225, 225),
+	"hover-row": rgb(230, 230, 230),
 	"data": rgb(240, 239, 239),
 	"title": rgb(201, 200, 200),
 	"event": rgb(251, 250, 250),

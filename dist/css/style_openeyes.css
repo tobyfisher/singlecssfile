@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sat Oct 22 2022 14:01:12 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sat Oct 22 2022 19:47:49 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -470,11 +470,10 @@ html.theme-dark {
   --i-nystagmus-arrow-h-1: url("../svg/in-css/dark/ui/nystagmus-arrow-h-1.svg");
   --i-nystagmus-arrow-h-2: url("../svg/in-css/dark/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/dark/ui/nystagmus-arrow-h-3.svg");
-  --bg-html: hsl(214deg, 19%, 12%);
-  --bg-page: hsl(215deg, 19%, 14%);
   --bg-max: #000;
-  --bg-popup: hsl(212deg, 15%, 14%);
-  --bg-hover-row: rgb(10, 10, 10);
+  --bg-html: hsl(214deg, 19%, 12%);
+  --bg-popup: hsl(213deg, 16%, 12%);
+  --bg-hover-row: hsl(212deg, 11%, 11%);
   --bg-data: hsl(213deg, 10%, 10%);
   --bg-title: hsl(214deg, 18%, 16%);
   --bg-event: hsl(213deg, 6%, 16%);
@@ -725,11 +724,10 @@ html.theme-light {
   --i-nystagmus-arrow-h-1: url("../svg/in-css/light/ui/nystagmus-arrow-h-1.svg");
   --i-nystagmus-arrow-h-2: url("../svg/in-css/light/ui/nystagmus-arrow-h-2.svg");
   --i-nystagmus-arrow-h-3: url("../svg/in-css/light/ui/nystagmus-arrow-h-3.svg");
-  --bg-html: rgb(218, 216, 216);
-  --bg-page: rgb(226, 225, 225);
   --bg-max: #fff;
-  --bg-popup: rgb(231, 230, 230);
-  --bg-hover-row: rgb(250, 250, 250);
+  --bg-html: rgb(218, 216, 216);
+  --bg-popup: rgb(226, 225, 225);
+  --bg-hover-row: rgb(230, 230, 230);
   --bg-data: rgb(240, 239, 239);
   --bg-title: rgb(201, 200, 200);
   --bg-event: rgb(251, 250, 250);
@@ -3638,11 +3636,11 @@ tbody tr.divider td {
 .oddeven-rows tbody tr:nth-child(odd) {
   background: var(--bg-title);
 }
-.clickable-rows tbody tr:hover, .clickable-rows tbody tr:focus, tbody tr.clickable:hover, tbody tr.clickable:focus {
+.clickable-rows tbody tr:hover, .clickable-rows tbody tr:focus-within, tbody tr.clickable:hover, tbody tr.clickable:focus-within {
   cursor: pointer;
   background: var(--btn-base-light);
 }
-.highlight-rows tbody tr:hover, .highlight-rows tbody tr:focus, .highlight-rows tbody tr:focus-within {
+.highlight-rows tbody tr:hover, .highlight-rows tbody tr:focus-within {
   background: var(--bg-hover-row);
 }
 tbody tr.selected-row {
@@ -7481,9 +7479,6 @@ li.oe-nav-btn .nav-js-btn.open .icon {
   font-weight: var(--font-bold);
 }
 
-.home-messages {
-  background: var(--bg-page);
-}
 .home-messages.subgrid {
   display: grid;
   grid: 1fr/260px 1fr;
@@ -7610,7 +7605,7 @@ li.oe-nav-btn .nav-js-btn.open .icon {
 .home-messages .message-actions .mailbox {
   margin: 5px 0;
   padding: 5px 5px 5px 8px;
-  background-color: var(--bg-hover-row);
+  background-color: var(--bg-title);
 }
 .home-messages .message-actions .mailbox .mailbox-hd {
   display: flex;
@@ -8084,6 +8079,7 @@ login.multisite .info {
   align-items: center;
   font-size: 0.8125rem;
   font-weight: var(--font-medium);
+  color: var(--btn-text);
   background: var(--btn-base);
   cursor: pointer;
   padding: 0 8px;
