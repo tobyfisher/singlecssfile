@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sat Oct 22 2022 19:47:49 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun Oct 23 2022 10:08:25 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -472,7 +472,7 @@ html.theme-dark {
   --i-nystagmus-arrow-h-3: url("../svg/in-css/dark/ui/nystagmus-arrow-h-3.svg");
   --bg-max: #000;
   --bg-html: hsl(214deg, 19%, 12%);
-  --bg-popup: hsl(213deg, 16%, 12%);
+  --bg-popup: hsl(213deg, 16%, 11%);
   --bg-hover-row: hsl(212deg, 11%, 11%);
   --bg-data: hsl(213deg, 10%, 10%);
   --bg-title: hsl(214deg, 18%, 16%);
@@ -4627,6 +4627,205 @@ hr.soft {
   height: 12px;
   background: top 1px center/11px var(--i-arrow-up-bold) no-repeat;
   pointer-events: none;
+}
+
+.oe-add-select-search {
+  position: fixed;
+  bottom: 0;
+  z-index: 70;
+  background: var(--bg-popup);
+  padding: 5px 10px 35px 10px;
+  min-width: 190px;
+  min-height: 204px;
+  max-height: 290px;
+  font-size: 0.6875rem;
+  font-weight: 400;
+  box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.4);
+}
+
+.oe-add-select-search .close-icon-btn,
+.oe-add-select-search .add-icon-btn {
+  position: absolute;
+  bottom: 0;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.oe-add-select-search .close-icon-btn .oe-i,
+.oe-add-select-search .add-icon-btn .oe-i {
+  filter: var(--btn-icon-hover-filter);
+}
+.oe-add-select-search .close-icon-btn {
+  right: 0;
+  width: 40px;
+  background-color: var(--btn-blue-hint);
+}
+.oe-add-select-search .close-icon-btn:hover, .oe-add-select-search .close-icon-btn:focus, .oe-add-select-search .close-icon-btn:active {
+  background-color: var(--btn-blue);
+}
+.oe-add-select-search .add-icon-btn {
+  left: 0;
+  width: calc(100% - 40px);
+  background-color: var(--btn-green-hint);
+  font-size: 0.8125rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.8);
+}
+.oe-add-select-search .add-icon-btn:hover, .oe-add-select-search .add-icon-btn:focus, .oe-add-select-search .add-icon-btn:active {
+  background-color: var(--btn-green);
+  color: rgb(255, 255, 255);
+}
+
+.oe-add-select-search table.select-options thead th {
+  font-size: 0.625rem;
+  text-align: left;
+  padding: 0 2px 3px 5px;
+}
+.oe-add-select-search table.select-options tbody td {
+  vertical-align: top;
+  font-size: 0.75rem;
+  text-align: left;
+  padding: 0 5px 0 6px;
+  border-left: 2px solid var(--gui-line);
+  white-space: normal;
+}
+.oe-add-select-search table.select-options tbody td:last-child {
+  padding: 0 0 0 6px;
+  text-align: left;
+}
+.oe-add-select-search table.select-options tbody td:first-child {
+  padding: 0 5px 0 0;
+  border-left: none;
+}
+
+.oe-add-select-search .lists-layout {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.oe-add-select-search .lists-layout .list-wrap {
+  margin: 0 0 0 2px;
+}
+.oe-add-select-search .lists-layout .list-wrap:first-child {
+  margin: 0 0 0 0;
+}
+
+.oe-add-select-search .has-input-text input,
+.oe-add-select-search .has-filter input {
+  margin: 0 2px 4px 0;
+}
+.oe-add-select-search .has-input-text .add-options,
+.oe-add-select-search .has-filter .add-options {
+  max-height: 194px;
+}
+
+.oe-add-select-search .add-options {
+  height: 224px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin: 0 2px 0 0;
+  max-width: 400px;
+}
+.oe-add-select-search .add-options.multi li {
+  background-image: linear-gradient(to right, var(--btn-blue-hint) 2px, var(--btn-base-light) 3px);
+}
+.oe-add-select-search .add-options.category-filter li {
+  background: right 2px center/8px url("../svg/in-css/all/ui/arrow-right-blue.svg") no-repeat;
+  padding-right: 14px;
+}
+.oe-add-select-search .add-options.input-templates li {
+  background: right 2px center/13px var(--i-pencil) no-repeat;
+  padding-right: 14px;
+}
+.oe-add-select-search .add-options.number li {
+  min-width: 32px;
+  text-align: center;
+  font-weight: var(--font-bold);
+}
+.oe-add-select-search .add-options.symbols li {
+  padding: 10px 8px;
+  min-width: 32px;
+  text-align: center;
+  font-size: 1rem;
+}
+.oe-add-select-search .add-options li {
+  display: block;
+  cursor: pointer;
+  padding: 3px 8px;
+  margin: 0 0 2px 0;
+  background-color: var(--btn-base-light);
+  min-width: 60px;
+  line-height: 1.2;
+}
+.oe-add-select-search .add-options li .fixed-width,
+.oe-add-select-search .add-options li .restrict-width {
+  display: inline-block;
+  width: 130px;
+  word-break: break-all;
+}
+.oe-add-select-search .add-options li .fixed-width.extended,
+.oe-add-select-search .add-options li .restrict-width.extended {
+  width: 250px;
+}
+.oe-add-select-search .add-options li:hover, .oe-add-select-search .add-options li:focus, .oe-add-select-search .add-options li:active, .oe-add-select-search .add-options li.selected {
+  color: var(--btn-text);
+  background: var(--btn-base);
+}
+.oe-add-select-search .add-options li.selected {
+  color: var(--btn-text-active);
+  background: var(--btn-blue-active);
+}
+.oe-add-select-search .add-options li.active {
+  color: var(--txt-highlight);
+}
+
+.oe-add-select-search .optional-placeholder {
+  margin: 3px 10px 3px 8px;
+  word-break: break-all;
+  font-style: italic;
+  width: 130px;
+}
+.oe-add-select-search .optional-placeholder.extended {
+  width: 250px;
+}
+
+.oe-add-select-search .input-text {
+  margin: 0 3px 0 0;
+  word-break: break-all;
+  font-style: italic;
+  width: 130px;
+}
+.oe-add-select-search .input-text.extended {
+  width: 250px;
+}
+.oe-add-select-search .input-text input,
+.oe-add-select-search .input-text textarea {
+  width: 100%;
+  margin: 0 0 5px 0;
+}
+.oe-add-select-search .input-text .help-text {
+  font-size: 0.625rem;
+  opacity: 0.6;
+}
+
+.oe-add-select-search .search-database {
+  width: 260px;
+}
+.oe-add-select-search .search-database .search-placeholder {
+  margin: 0 0 2px 0;
+  padding: 3px 18px 3px 8px;
+  word-break: break-all;
+  font-style: italic;
+  color: var(--txt-light);
+}
+
+.oe-add-select-search .decimal-point {
+  width: 16px;
+  margin: 0 2px 0 0;
+  font-size: 120%;
+  text-align: center;
 }
 
 .oe-popup-wrap {
@@ -11076,6 +11275,13 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
 .sidebar-header .manage-elements.selected,
 .sidebar-header .add-event.selected {
   background: var(--btn-green-hint);
+}
+.sidebar-header .title {
+  font-size: 0.8125rem;
+  font-weight: var(--font-light);
+  color: var(--txt-light);
+  margin: auto;
+  padding: 0 8px;
 }
 
 .sidebar-header .icon-button {

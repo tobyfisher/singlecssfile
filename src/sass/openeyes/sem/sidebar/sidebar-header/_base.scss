@@ -24,4 +24,14 @@
 			background: var(--btn-green-hint);
 		}
 	}
+
+	// if no button, a title can be used.
+	// not sure of usage
+	.title {
+		@include font-size(13);
+		font-weight:var(--font-light);
+		color: var(--txt-light);
+		margin:auto;
+		padding:0 8px;
+	}
 }
