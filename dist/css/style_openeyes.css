@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Oct 23 2022 11:33:51 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun Oct 23 2022 15:16:08 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -11130,10 +11130,13 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
 .dropdown-btns li {
   height: 38px;
 }
-.dropdown-btns li button {
+.dropdown-btns li .header-tab {
   width: 100%;
   justify-content: flex-start;
   color: var(--btn-text);
+}
+.dropdown-btns li .header-tab:hover, .dropdown-btns li .header-tab:focus {
+  background-color: var(--btn-blue-active);
 }
 
 .main-event {

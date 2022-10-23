@@ -42,12 +42,11 @@
 
 		&:hover,
 		&:focus {
-			color: #fff;
+			var(--btn-text-selected)
 			background-color: var(--btn-blue-active);
 		}
 
 		&:active {
-			color: #fff;
 			background-color: var(--btn-blue);
 		}
 	}

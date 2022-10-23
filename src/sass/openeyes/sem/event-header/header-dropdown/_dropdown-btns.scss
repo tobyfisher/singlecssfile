@@ -18,19 +18,16 @@
 	li {
 		height: $oe-event-header-height;
 
-		button {
+		.header-tab {
 			width: 100%;
 			justify-content: flex-start;
 			color: var(--btn-text);
+
+			&:hover,
+			&:focus {
+				background-color: var(--btn-blue-active);
+			}
+
 		}
 	}
-
-
 }
-	
-
-
-
-
-
-
