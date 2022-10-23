@@ -37,5 +37,17 @@
 			}
 		}
 	}
+
+	// expose pages per page variable
+	.show-per-page {
+		padding:0 0 0 5px;
+		@include flex(center, space-between);
+		@include font-size(10);
+
+		// span "per page"
+		.per {
+			padding:0 3px 0 0;
+		}
+	}
 }
 

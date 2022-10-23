@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Oct 23 2022 15:16:08 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun Oct 23 2022 19:14:44 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -743,7 +743,7 @@ html.theme-light {
   --font-light: 400;
   --font-medium: 500;
   --font-bold: 700;
-  --gui-spinner: #00b4ff;
+  --gui-spinner: #001191;
   --gui-vc: hsl(328deg, 100%, 45%);
   --gui-line: hsl(0deg, 2%, 75%);
   --gui-line-hard: hsl(0deg, 2%, 50%);
@@ -3724,6 +3724,16 @@ table .pagination {
   border-radius: 3px;
   background-color: var(--txt-light);
   color: var(--txt-invert);
+}
+.pagination .show-per-page {
+  padding: 0 0 0 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.625rem;
+}
+.pagination .show-per-page .per {
+  padding: 0 3px 0 0;
 }
 
 .table-sort-order {
