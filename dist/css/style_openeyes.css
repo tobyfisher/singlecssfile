@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Oct 23 2022 10:08:25 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun Oct 23 2022 11:33:51 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -11089,31 +11089,30 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
 .header-icon-btn {
   height: 38px;
   width: 38px;
-  background: center/19px no-repeat;
   opacity: 0.5;
   cursor: pointer;
   margin: 0;
 }
 .header-icon-btn.trash {
-  background-image: var(--i-trash);
+  background: center/19px var(--i-trash) no-repeat;
 }
-.header-icon-btn.trash:hover, .header-icon-btn.trash:focus, .header-icon-btn.trash:active {
+.header-icon-btn.trash:hover, .header-icon-btn.trash:focus {
   opacity: 1;
   background-image: url("../svg/in-css/dark/i/trash.svg");
   background-color: var(--btn-red);
 }
 .header-icon-btn.print {
-  background-image: var(--i-print);
+  background: center/19px var(--i-print) no-repeat;
 }
-.header-icon-btn.print.active, .header-icon-btn.print:hover, .header-icon-btn.print:focus, .header-icon-btn.print:active {
+.header-icon-btn.print.active, .header-icon-btn.print:hover, .header-icon-btn.print:focus {
   opacity: 1;
   background-image: url("../svg/in-css/dark/i/print.svg");
   background-color: var(--btn-blue-hint);
 }
 .header-icon-btn.more {
-  background-image: var(--i-more-h);
+  background: center/19px var(--i-more-h) no-repeat;
 }
-.header-icon-btn.more.active, .header-icon-btn.more:hover, .header-icon-btn.more:focus, .header-icon-btn.more:active {
+.header-icon-btn.more.active, .header-icon-btn.more:hover, .header-icon-btn.more:focus {
   opacity: 1;
   background-image: url("../svg/in-css/dark/i/more-h.svg");
   background-color: var(--btn-blue-hint);
@@ -11128,15 +11127,13 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
   background: var(--btn-blue-hint);
   border-top: 2px solid var(--btn-blue-hint);
 }
-.dropdown-btns li > .button {
-  display: inline-block;
-  width: 100%;
-  color: #fff;
-  text-align: left;
+.dropdown-btns li {
+  height: 38px;
 }
-.dropdown-btns li > .button:hover, .dropdown-btns li > .button:focus, .dropdown-btns li > .button:active {
-  color: #fff;
-  background-color: var(--btn-blue-active);
+.dropdown-btns li button {
+  width: 100%;
+  justify-content: flex-start;
+  color: var(--btn-text);
 }
 
 .main-event {

@@ -15,19 +15,17 @@
 	// buttons in the dropdown list
 	// use the same DOM as in the header bar
 	// but we need to stretch them out to fill container
-	li > .button {
-		display: inline-block;
-		width: 100%;
-		color: #fff;
-		text-align: left;
+	li {
+		height: $oe-event-header-height;
 
-		&:hover,
-		&:focus,
-		&:active {
-			color: #fff;
-			background-color: var(--btn-blue-active);
+		button {
+			width: 100%;
+			justify-content: flex-start;
+			color: var(--btn-text);
 		}
 	}
+
+
 }
 	
 
