@@ -14,7 +14,7 @@
 *
 */
 
-/* 6.0.0 - Sun Oct 23 2022 19:14:44 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sun Oct 23 2022 19:57:43 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -4113,7 +4113,7 @@ ul.oe-multi-select li {
 .auto-alert.prefill {
   background-image: var(--i-starline);
   background-size: 14px;
-  border-color: var(--text-active);
+  border-color: var(--gui-line);
 }
 .auto-alert.has-actions {
   position: relative;
@@ -4124,6 +4124,9 @@ ul.oe-multi-select li {
   position: absolute;
   right: 15px;
   top: 2px;
+}
+.auto-alert button {
+  border: 1px solid var(--bg-html);
 }
 .auto-alert.dismissible {
   cursor: pointer;

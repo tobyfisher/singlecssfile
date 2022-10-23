@@ -59,7 +59,7 @@
 	&.prefill {
 		background-image: var(--i-starline);
 		background-size: 14px;
-		border-color: var(--text-active);
+		border-color: var(--gui-line);
 	}
 
 	&.has-actions {
@@ -72,6 +72,11 @@
 			right:15px;
 			top:2px;
 		}
+	}
+
+	// make buttons more obvious on the colour backgrounds:
+	button {
+		border: 1px solid var(--bg-html);
 	}
 
 	// dismissible
