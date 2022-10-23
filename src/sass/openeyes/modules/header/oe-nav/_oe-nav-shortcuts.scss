@@ -42,7 +42,7 @@
 
 		&:hover,
 		&:focus {
-			var(--btn-text-selected)
+			color: var(--btn-text-active);
 			background-color: var(--btn-blue-active);
 		}
 

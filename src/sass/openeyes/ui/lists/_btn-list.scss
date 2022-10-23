@@ -19,18 +19,17 @@ ul.btn-list {
 		@include font-size(12);
 		font-weight:400;
 
-		color: var(--input-text);
-		background: var(--input-base);
+		color: var(--btn-text);
+		background: var(--btn-base);
 	
 		&:hover,
 		&:focus {
-			background:var(--btn-blue); 	// THEME related (as interaction)
-			color:#fff;
+			background:var(--btn-blue);
 		}
 
 		&.selected {
-			background:var(--btn-blue-hint); 	// THEME related (as interaction)
-			color:#fff;
+			color: var(--btn-text-active);
+			background:var(--btn-blue-active);
 		}
 
 

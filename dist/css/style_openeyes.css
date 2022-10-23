@@ -3289,12 +3289,11 @@ input.date {
 }
 
 input.error, textarea.error, select.error, label.error {
-  color: #fff;
-  background-color: var(--color-red);
+  background-color: var(--color-hint-red);
 }
 
 input.error::placeholder, textarea.error::placeholder {
-  color: #330000;
+  color: var(--txt-light);
 }
 
 .fixed-width-small {
@@ -3858,16 +3857,15 @@ ul.btn-list li {
   margin: 0 0 2px 0;
   font-size: 0.75rem;
   font-weight: 400;
-  color: var(--input-text);
-  background: var(--input-base);
+  color: var(--btn-text);
+  background: var(--btn-base);
 }
 ul.btn-list li:hover, ul.btn-list li:focus {
   background: var(--btn-blue);
-  color: #fff;
 }
 ul.btn-list li.selected {
-  background: var(--btn-blue-hint);
-  color: #fff;
+  color: var(--btn-text-active);
+  background: var(--btn-blue-active);
 }
 ul.btn-list li .oe-i-e {
   margin-right: 10px;
@@ -3921,8 +3919,8 @@ fieldset.btn-list label .li {
   font-size: 0.75rem;
   font-weight: 400;
   cursor: pointer;
-  color: var(--input-text);
-  background: var(--input-base);
+  color: var(--btn-text);
+  background: var(--btn-base);
 }
 fieldset.btn-list label > input[type=radio],
 fieldset.btn-list label > input[type=checkbox] {
@@ -3932,12 +3930,11 @@ fieldset.btn-list label > input[type=radio] + .li:hover, fieldset.btn-list label
 fieldset.btn-list label > input[type=checkbox] + .li:hover,
 fieldset.btn-list label > input[type=checkbox] + .li:focus {
   background: var(--btn-blue);
-  color: #fff;
 }
 fieldset.btn-list label > input[type=radio]:checked + .li,
 fieldset.btn-list label > input[type=checkbox]:checked + .li {
-  background: var(--btn-blue-hint);
-  color: #fff;
+  color: var(--btn-text-active);
+  background: var(--btn-blue-active);
 }
 
 ul.multi-filter-list {
@@ -7300,11 +7297,10 @@ span.squiggle {
   }
 }
 .oe-nav-shortcuts li > a:hover, .oe-nav-shortcuts li > a:focus {
-  color: #fff;
+  color: var(--btn-text-active);
   background-color: var(--btn-blue-active);
 }
 .oe-nav-shortcuts li > a:active {
-  color: #fff;
   background-color: var(--btn-blue);
 }
 
@@ -9476,20 +9472,25 @@ table.partial-booking tbody td .highlighter {
   padding: 0 12px 8px 0;
   margin: 0;
 }
+.oe-popup table thead th:last-child {
+  text-align: left;
+  padding-right: 0;
+}
 .oe-popup table tbody tr {
   border-top: 1px dotted var(--gui-line);
 }
 .oe-popup table tbody tr:first-child, .oe-popup table tbody tr.no-line {
   border-top: none;
 }
-.oe-popup table tbody th, .oe-popup table tbody td {
+.oe-popup table tbody td {
   vertical-align: top;
   text-align: left;
   padding: 8px 12px 8px 0;
   font-size: 0.75rem;
   font-weight: var(--font-medium);
 }
-.oe-popup table tbody th:last-child, .oe-popup table tbody td:last-child {
+.oe-popup table tbody td:last-child {
+  text-align: left;
   padding-right: 0;
 }
 .oe-popup table tbody td.line-l {
@@ -9772,8 +9773,8 @@ table.partial-booking tbody td .highlighter {
   padding-left: 10px;
   font-size: 0.75rem;
   font-weight: var(--font-medium);
-  color: var(--txt-base);
-  background: var(--btn-base-light);
+  color: var(--btn-text);
+  background: var(--btn-base);
   cursor: pointer;
 }
 .oe-create-event-step-through li.oe-specialty-service,
@@ -9792,14 +9793,13 @@ table.partial-booking tbody td .highlighter {
 .oe-create-event-step-through .new-added-subspecialty-service:focus,
 .oe-create-event-step-through .new-added-subspecialty-service.selected {
   background-color: var(--btn-blue);
-  color: var(--btn-text);
 }
 .oe-create-event-step-through li:hover .tag, .oe-create-event-step-through li:focus .tag, .oe-create-event-step-through li.selected .tag,
 .oe-create-event-step-through .new-added-subspecialty-service:hover .tag,
 .oe-create-event-step-through .new-added-subspecialty-service:focus .tag,
 .oe-create-event-step-through .new-added-subspecialty-service.selected .tag {
+  color: var(--btn-text);
   background: transparent;
-  color: var(--txt-highlight);
 }
 
 .oe-create-event-step-through .step-subspecialties .subspecialties-list {
@@ -9884,7 +9884,7 @@ table.partial-booking tbody td .highlighter {
   font-size: 0.6875rem;
   font-weight: var(--font-medium);
   color: var(--txt-light);
-  background: var(--bg-popup);
+  background: var(--btn-base-light);
 }
 
 .oe-add-new-event {
@@ -9915,17 +9915,16 @@ table.partial-booking tbody td .highlighter {
   min-height: 23px;
   font-size: 0.75rem;
   font-weight: var(--font-medium);
-  color: var(--txt-light);
+  color: var(--btn-text);
   background: var(--btn-base);
   cursor: pointer;
 }
 .oe-add-new-event li:hover, .oe-add-new-event li:focus, .oe-add-new-event li:focus-within, .oe-add-new-event li.selected {
   background-color: var(--btn-blue);
-  color: var(--btn-text);
 }
 .oe-add-new-event li:hover .tag, .oe-add-new-event li:focus .tag, .oe-add-new-event li:focus-within .tag, .oe-add-new-event li.selected .tag {
-  background: pink;
-  color: var(--txt-highlight);
+  color: var(--btn-text);
+  background: transparent;
 }
 
 .oe-speciality-service {
@@ -9955,7 +9954,7 @@ table.partial-booking tbody td .highlighter {
   font-size: 0.6875rem;
   font-weight: var(--font-medium);
   color: var(--txt-light);
-  background: pink;
+  background: var(--btn-base-light);
 }
 
 .select-subspeciality .add-new-subspeciality {

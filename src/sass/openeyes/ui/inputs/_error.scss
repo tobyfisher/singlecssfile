@@ -3,13 +3,12 @@
 
 input, textarea, select, label {
 	&.error {
-		color:#fff;
-		background-color: var(--color-red);
+		background-color: var(--color-hint-red);
 	}
 }
 
 input, textarea {
 	&.error::placeholder  {
-		color:#330000;
+		color:var(--txt-light);
 	}
 }

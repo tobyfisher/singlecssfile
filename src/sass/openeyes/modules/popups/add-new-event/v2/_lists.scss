@@ -15,7 +15,7 @@
 
 		@include font-size(12);
 		font-weight: var(--font-medium);
-		color: var(--txt-light);
+		color: var(--btn-text);
 		background: var(--btn-base);
 
 		cursor: pointer;
@@ -25,11 +25,10 @@
 		&:focus-within,
 		&.selected {
 			background-color: var(--btn-blue);
-			color: var(--btn-text);
 
 			.tag {
-				background: pink;
-				color: var(--txt-highlight);
+				color: var(--btn-text);
+				background: transparent;
 			}
 		}
 	}

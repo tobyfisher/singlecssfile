@@ -33,6 +33,11 @@
 				z-index: 10;
 				vertical-align: top;
 				text-align: left;
+
+				&:last-child {
+					text-align: left; // override the general setting
+					padding-right:0;
+				}
 				
 				// match H3
 				@include font-size(13);
@@ -55,15 +60,17 @@
 					border-top: none;
 				}
 			}
-			
-			th, td {
+
+			td {
 				vertical-align: top;
 				text-align: left;
 				padding:8px 12px 8px 0;
 				
 				&:last-child {
+					text-align: left; // override the general setting
 					padding-right:0;
-				} 
+				}
+
 				@include font-size(12);
 				font-weight: var(--font-medium);
 			}
