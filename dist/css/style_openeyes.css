@@ -4140,6 +4140,38 @@ ul.oe-multi-select li {
   background-image: url("../svg/in-css/dark/i/remove-circle.svg");
 }
 
+.task-flag {
+  padding: 4px 8px 4px 32px;
+  margin: 3px 1px;
+  font-size: 0.875rem;
+  border: 4px solid var(--gui-line);
+  background: 6px 6px/15px var(--i-info) no-repeat;
+}
+.task-flag.pad-v {
+  margin: 5px 0;
+}
+.task-flag .task-action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0 0 0;
+  padding: 4px 0 0 0;
+  border-top: 1px dotted var(--gui-line);
+}
+.task-flag.green {
+  background-image: var(--i-flag-green);
+  border-color: var(--color-green);
+}
+.task-flag.red {
+  background-image: var(--i-flag-red);
+  border-color: var(--color-red);
+}
+.task-flag.orange {
+  background-image: var(--i-flag-orange);
+  border-color: var(--color-orange);
+}
+
 .collapse-data {
   margin: 5px 0 10px 0;
 }
