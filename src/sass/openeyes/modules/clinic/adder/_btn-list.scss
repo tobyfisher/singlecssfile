@@ -7,7 +7,8 @@
 	// which are dark-themed... adapting them for clinic use
 	.btn-list {
 		li {
-			background: var(--input-hint);
+			color: var(--txt-base);
+			background: var(--btn-base-light);
 
 			// modify the btn-list default
 			padding: 0 2px; // reduced default padding

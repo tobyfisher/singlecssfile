@@ -7,14 +7,12 @@
 * You should have received a copy of the GNU Affero General Public License along with OpenEyes in a file titled COPYING. If not, see www.gnu.org/licenses.
 *
 * @link www.openeyes.org.uk
-*
 * @author OpenEyes info@openeyes.org.uk
 * @copyright Copyright (C) 2018, OpenEyes Foundation
 * @license www.gnu.org/licenses/agpl-3.0.html The GNU Affero General Public License V3.0
-*
 */
 
-/* 6.0.0 - Sun Oct 23 2022 19:57:43 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Mon Oct 24 2022 10:15:50 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -6052,7 +6050,8 @@ ul.quick-filters {
 }
 
 .oec-adder .btn-list li {
-  background: var(--input-hint);
+  color: var(--txt-base);
+  background: var(--btn-base-light);
   padding: 0 2px;
   height: 23px;
 }
@@ -8380,6 +8379,137 @@ login.multisite .info {
 }
 .oeplot-full.has-title {
   height: calc(100vh - 178px);
+}
+
+.oes-v2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.oes-v2 .oes-left-side,
+.oes-v2 .oes-right-side {
+  flex: 1 1 0;
+}
+.oes-v2 .oes-left-side.fill-2,
+.oes-v2 .oes-right-side.fill-2 {
+  flex: 2 1 0;
+}
+.oes-v2 .oes-left-side.fill-3,
+.oes-v2 .oes-right-side.fill-3 {
+  flex: 3 1 0;
+}
+
+.oe-full-header .data-awareness {
+  height: 38px;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 0 0 20px;
+  border-left: 2px solid var(--gui-line);
+  line-height: 1;
+}
+.oe-full-header .data-awareness .group {
+  position: relative;
+  height: 38px;
+  padding: 6px 0 0 8px;
+  font-size: 0.75rem;
+  border-right: 1px dotted var(--gui-line);
+}
+.oe-full-header .data-awareness .group:last-child {
+  border-right: none;
+}
+.oe-full-header .data-awareness .group .type {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  font-size: 0.71875rem;
+}
+.oe-full-header .data-awareness .group .data {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  font-size: 0.78125rem;
+  font-weight: var(--font-bold);
+}
+.oe-full-header .data-awareness .group .date {
+  display: block;
+  font-size: 0.625rem;
+  opacity: 0.6;
+  padding: 3px 0 0 0;
+}
+
+.oes-ui-change-layout {
+  position: relative;
+  margin: 0 10px;
+}
+.oes-ui-change-layout .layout-select-btn {
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  cursor: pointer;
+}
+.oes-ui-change-layout .layout-select-btn .oes-layout-icon {
+  margin: 0 0 0 6px;
+}
+.oes-ui-change-layout .layout-select-btn.active {
+  background: linear-gradient(rgba(0, 0, 0, 0) 95%, var(--txt-highlight) 96%);
+}
+.oes-ui-change-layout .layout-select-btn * {
+  pointer-events: none;
+}
+.oes-ui-change-layout .layout-options {
+  z-index: 70;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: translateX(-35%);
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--txt-highlight);
+  background: var(--bg-title);
+  padding: 0 10px;
+}
+.oes-ui-change-layout .layout-option-btn {
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  padding: 0 5px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.oes-ui-change-layout .layout-option-btn:hover, .oes-ui-change-layout .layout-option-btn:focus {
+  border-bottom-color: var(--txt-highlight);
+}
+.oes-ui-change-layout .layout-option-btn * {
+  pointer-events: none;
+}
+
+.oes-layout-icon {
+  display: inline-block;
+  width: 38px;
+  height: 17px;
+  background: transparent center center no-repeat;
+  background-size: 38px 17px;
+}
+.oes-layout-icon.i-1-1 {
+  background-image: url("../svg/in-css/all/oes/layout-1-1.svg");
+}
+.oes-layout-icon.i-1-2 {
+  background-image: url("../svg/in-css/all/oes/layout-1-2.svg");
+}
+.oes-layout-icon.i-2-1 {
+  background-image: url("../svg/in-css/all/oes/layout-2-1.svg");
+}
+.oes-layout-icon.i-1-0 {
+  background-image: url("../svg/in-css/all/oes/layout-1-0.svg");
+}
+.oes-layout-icon.i-0-1 {
+  background-image: url("../svg/in-css/all/oes/layout-0-1.svg");
 }
 
 .oescape-icon-btns {
