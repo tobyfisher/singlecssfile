@@ -1,6 +1,7 @@
 @use "openeyes/var" as *;
 @use "openeyes/mix" as *;
-@use 'sass:math';
+@use "sass:math";
+
 
 .oe-profile-panel {
 	display: none; // js controlled
@@ -12,7 +13,7 @@
 	//bottom:  35px;
 	width: math.div($oe-hotlist-panel-width, 1.33);
 
-	padding:20px;
+	padding: 20px;
 
 	background: var(--bg-popup);
 	border: 1px solid var(--btn-blue-hint);
@@ -25,11 +26,11 @@
 		@include font-size(11);
 		font-weight: var(--font-bold);
 		color: var(--txt-light);
-		margin:0 0 10px 0;
+		margin: 0 0 10px 0;
 	}
 
 	.profile-action {
-		margin:10px 0 0 0;
+		margin: 10px 0 0 0;
 	}
 }
 
@@ -46,5 +47,7 @@
 
 
 }
+
+
 
 
