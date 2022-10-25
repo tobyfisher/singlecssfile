@@ -12,7 +12,7 @@
 * @license www.gnu.org/licenses/agpl-3.0.html The GNU Affero General Public License V3.0
 */
 
-/* 6.0.0 - Mon Oct 24 2022 10:15:50 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Tue Oct 25 2022 09:50:45 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -1045,7 +1045,7 @@ body.open-eyes {
   margin: 16px 0 8px 0;
   font-size: 0.9375rem;
   font-weight: var(--font-light);
-  color: var(--txt-light);
+  color: var(--txt-hd);
 }
 .oe-full-side-panel h4 {
   font-size: 0.75rem;

@@ -1,0 +1,25 @@
+@use "openeyes/var" as *;
+@use "openeyes/mix" as *;
+
+li.oe-nav-btn {
+	.user-initials {
+		width: $oe-header-height;
+
+		margin-left: 20px;
+
+		@include font-size(11);
+		font-weight: 700;
+
+		color: var(--txt-light);
+		background: var(--bg-max);
+
+		background-clip: padding-box;
+		border: 10px solid var(--bg-html);
+		border-radius: 50%;
+
+		&.active {
+			background: var(--btn-blue-hint);
+			color: #fff;
+		}
+	}
+}
