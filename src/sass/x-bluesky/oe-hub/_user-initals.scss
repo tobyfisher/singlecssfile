@@ -22,4 +22,11 @@ li.oe-nav-btn {
 			color: #fff;
 		}
 	}
+
+	// flag home icon
+	.icon-btn.open {
+		svg {
+			fill: var(--txt-active);
+		}
+	}
 }
