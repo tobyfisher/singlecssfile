@@ -10,6 +10,10 @@
 	height: $oe-event-header-height * 2;
 	@include flex( center, center );
 	background: var(--bg-title);
+
+	// new grid layout added in 6.0.0 for the big patient search
+	// to use it requires a DOM change
+	grid-area: search;
 	
 	.search-patient {
 		position: relative;

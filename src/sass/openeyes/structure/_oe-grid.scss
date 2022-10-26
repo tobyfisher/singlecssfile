@@ -18,6 +18,15 @@
 		"pageheader" #{$oe-event-header-height}
 		"main" 1fr / 1fr;
 
+	// Big patient search banner
+	&.big-search {
+		grid:
+			"header" #{$oe-header-height}
+			"search" $oe-event-header-height * 2
+			"main" 1fr / 1fr;
+	}
+
+
 	// SEM pages (Overview/Events) require a different structure
 	// 3 rows, 2 columns:
 	&.sem {

@@ -30,22 +30,39 @@
 	}
 
 	.profile-action {
-		margin: 10px 0 0 0;
+		padding: 10px 0 0 0;
 	}
 }
 
-.profile-info {
+.profile-context {
 	@include font-size(13);
 	font-weight: var(--font-medium);
-	padding: 0 0 8px 0;
+	padding:0 0 8px 0;
+
+	.row {
+		margin: 0 0 5px 0;
+	}
+
+	a {
+		display: inline-block;
+		margin:0 0 0 10px;
+		@include font-size(8);
+		font-weight: var(--font-bold);
+		color: var(--txt-active);
+	}
+
 
 	.label {
 		line-height: 1.1;
 		@include font-size(9);
+		font-weight: var(--font-light);
 		color: var(--txt-light);
 	}
+}
 
-
+.profile-reminder {
+	background: var(--bg-popup);
+	padding: 20px; // line up with logo
 }
 
 
