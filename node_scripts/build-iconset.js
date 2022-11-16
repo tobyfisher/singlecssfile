@@ -48,7 +48,7 @@ if( iconset == "events" ){
 	config = {
 		iconPath: './src/icons-events/76x76/', 
 		glob: '*.png',
-		png: './dist/img/event-icons-76x76.png', 
+		png: './dist/img/oe-i-e-76x76.png',
 		scss: './src/sass/openeyes/ui/iconography/oe-i-e/_oe-i-e-spritesheet.scss',
 		sassTemplate( sprite, sheetSize ){
 			const name = sprite[0].slice( config.iconPath.length, -4 );
