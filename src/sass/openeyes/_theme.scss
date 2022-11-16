@@ -8,33 +8,33 @@
 // ---- Backgrounds
 $bg: (
 	"max": #000,
-	"html": hsl(214, 19%, 12%),
-	"popup":hsl(213, 16%, 11%),
-	"hover-row": hsl(212, 11%, 11%),
-	"data": hsl(213, 10%, 10%),
-	"title": hsl(214, 18%, 16%),
-	"event": hsl(213, 6%, 16%),
-	"event-list":hsl(210, 26%, 16%),
-	"vc": rgb(21, 11, 30)
+	"html": #191e24,
+	"popup":#181c21,
+	"hover-row": #191c1f,
+	"data": #17191c,
+	"title": #212830,
+	"event": #26292b,
+	"event-list":#1e2933,
+	"vc": #150b1e
 );
 
 $bg-light: (
 	"max": #fff,
-	"html": rgb(218, 216, 216),
-	"popup": rgb(226, 225, 225),
-	"hover-row": rgb(230, 230, 230),
-	"data": rgb(240, 239, 239),
-	"title": rgb(201, 200, 200),
-	"event": rgb(251, 250, 250),
-	"event-list": rgb(240, 240, 240),
-	"vc": hsl(328, 20%, 90%)
+	"html": #dad8d8,
+	"popup": #e2e1e1,
+	"hover-row": #e6e6e6,
+	"data": #f0efef,
+	"title": #c9c8c8,
+	"event": #fbfafa,
+	"event-list": #f0f0f0,
+	"vc": #ebe0e6
 );
 
 // ---- Text
 $txt: (
-	"base": rgb(204, 204, 204),
-	"light": rgb(150, 150, 150),
-	"hd": rgb(90, 130, 145),
+	"base": #cccccc,
+	"light": #969696,
+	"hd": #5a8291,
 	"active": #46a0b4,
 	"highlight": #00c8cd,
 	"invert": #0d0d0d
@@ -43,9 +43,9 @@ $txt: (
 $txt-light: (
 	"base": #0a0a0a,
 	"light": #5a5a64,
-	"hd": rgb(40, 70, 200),
+	"hd": #2846c8,
 	"active": #2346c8,
-	"highlight": rgb(40, 70, 250),
+	"highlight": #2846fa,
 	"invert": #f0f0f0,
 );
 
@@ -67,20 +67,20 @@ $font-weight-light: (
 // ---- GUI
 $gui: (
 	"spinner": #00ffff,
-	"vc": hsl(328, 75%, 45%),
-	"line": hsl(204, 5%, 20%),
-	"line-hard": hsl(204, 6%, 25%),
-	"line-soft": hsl(216, 18%, 18%),
+	"vc": #c91d78,
+	"line": #303436,
+	"line-hard": #3c4144,
+	"line-soft": #262c36,
 	"scroll-track":#0a0a0f,
 	"scroll-thumb":#37373c,
 );
 
 $gui-light: (
 	"spinner": #001191,
-	"vc": hsl(328, 100%, 45%),
-	"line": hsl(0, 2%, 75%),
-	"line-hard": hsl(0, 2%, 50%),
-	"line-soft": rgb(166, 172, 172),
+	"vc": #e6007a,
+	"line": #c1bebe,
+	"line-hard": #827d7d,
+	"line-soft": #a6acac,
 	"scroll-track":#5f5f64,
 	"scroll-thumb":#aaaaaa,
 );
@@ -88,40 +88,40 @@ $gui-light: (
 // ---- Buttons
 // "Dark" - interaction is subtle
 $btn: (
-	"base": hsl(210, 26%, 16%),
-	"base-light": hsl(211, 40%, 18%), // a 'light' (or subtle) version (can be used with default text colour)
+	"base": #1e2933,
+	"base-light": #1c2d40, // a 'light' (or subtle) version (can be used with default text colour)
 	"text":#bbb,
 	"text-active":#ddd,
 	"blue-hint": #0e4886,
-	"blue": hsl(220, 87%, 28%),
-	"blue-active": hsl(225, 82%, 38%),
+	"blue": #093386,
+	"blue-active": #1139b0,
 	"green-hint": #1a4f1b,
 	"green": #0a6b11,
 	"green-active": #171,
 	"red-hint": #721d1d,
 	"red": #8c0909,
 	"red-active": #911,
-	"disabled": hsl(210, 15%, 16%),
+	"disabled": #23292f,
 	"icon-hover-filter": none,
 	"icon-opacity": 0.6,
 );
 
 // "Light" - interaction is more obvious, with more contrast
 $btn-light: (
-	"base":hsl(211, 14%, 55%),
-	"base-light": hsl(221, 90%, 94%), // v5 button color (can be used with default text colour)
+	"base":#7c8c9c,
+	"base-light": #e2ebfd, // v5 button color (can be used with default text colour)
 	"text":#fff,
 	"text-active":#fff,
 	"blue-hint": #4285e0,
-	"blue": hsl(211, 80%, 52%),
+	"blue": #2381e7,
 	"blue-active": #0c62bd,
 	"green-hint": #0c7915,
 	"green": #191,
 	"green-active": #1a1,
-	"red-hint": hsl(0, 85%, 35%),
-	"red": hsl(0, 90%, 40%),
-	"red-active": hsl(0, 100%, 45%),
-	"disabled": hsl(211, 9%, 70%),
+	"red-hint": #a50d0d,
+	"red": #c20a0a,
+	"red-active": #e60000,
+	"disabled": #acb2b9,
 	"icon-hover-filter": invert(100%) grayscale(100%),
 	"icon-opacity": 0.8,
 );
@@ -130,7 +130,7 @@ $btn-light: (
 $input: (
 	"scheme": "dark",
 	"focus-outline": #096c9a,
-	"base": hsl(210, 25%, 19%),
+	"base": #24303d,
 	"hint": rgba(36, 49, 61, 0.3),
 	"text": #ccc,
 	"placeholder": #787878,
@@ -148,67 +148,67 @@ $input-light: (
 // ---- Colors (alerts, flags, pathsteps, wait, etc)
 $color: (
 	"highlighter": #b8ab88,
-	"green": hsl(120, 90%, 20%),
-	"red": hsl(0, 92%, 28%),
-	"burgundy": hsl(11, 85%, 18%),
-	"orange": hsl(32, 95%, 30%),
+	"green": #056105,
+	"red": #890606,
+	"burgundy": #551507,
+	"orange": #955104,
 	"yellow": #c8b432,
-	"grey": rgb(75, 65, 65),
-	"hint-green": hsl(136, 14%, 22%), // hint colours work with standard theme text
-	"hint-red": hsl(0, 70%, 20%),
-	"hint-orange": hsl(34, 80%, 21%),
+	"grey": #4b4141,
+	"hint-green": #304034, // hint colours work with standard theme text
+	"hint-red": #570f0f,
+	"hint-orange": #603b0b,
 );
 
 $color-light: (
 	"highlighter": #ebd37b,
 	"green": #009b00,
-	"red": hsl(0, 96%, 45%),
-	"burgundy": hsl(10, 80%, 25%),
-	"orange": hsl(31, 92%, 42%),
+	"red": #e10505,
+	"burgundy": #731e0d,
+	"orange": #ce6e09,
 	"yellow": #d2aa14,
-	"grey": rgb(145, 130, 130),
-	"hint-green": hsl(120, 26%, 75%),
-	"hint-red": hsl(0, 82%, 74%),
-	"hint-orange": hsl(24, 64%, 74%),
+	"grey": #918282,
+	"hint-green": #afd0af,
+	"hint-red": #f38686,
+	"hint-orange": #e7b492,
 );
 
 // ---- Path Steps
 $step: (
-	"blue": rgb(20, 100, 200),
-	"green": rgb(50, 53, 50), // was green": rgb(45,70,45
-	"orange": rgb(160, 50, 0),
-	"yellow": rgb(162, 140, 10),
-	"red": rgb(160, 40, 10),
-	"grey": rgb(30, 30, 32),
-	"text": rgb(240, 240, 240),
+	"blue": #1464c8,
+	"green": #323532, // was green": rgb(45,70,45
+	"orange": #a03200,
+	"yellow": #a28c0a,
+	"red": #a0280a,
+	"grey": #1e1e20,
+	"text": #f0f0f0,
 	"outline": rgba(170, 170, 170, 0.4),
 );
 
 $step-light: (
-	"blue": rgb(20, 100, 200),
-	"green": rgb(140, 147, 140),
-	"orange": rgb(180, 80, 0),
-	"yellow": rgb(182, 160, 17),
-	"red": rgb(200, 40, 10),
-	"grey": rgb(235, 235, 235),
-	"text": rgb(245, 245, 245),
+	"blue": #1464c8,
+	"green": #8c938c,
+	"orange": #b45000,
+	"yellow": #b6a011,
+	"red": #c8280a,
+	"grey": #ebebeb,
+	"text": #f5f5f5,
 	"outline": rgba(120, 120, 130, 0.4),
 );
 
 // ---- EyeDraw (v3 & v2.5) colours
 $ed3: (
-	"blue": rgb(218, 230, 241), // note": used in Elements too!
-	"panels": rgb(166, 173, 180),
-	"text": rgb(50, 50, 60),
+	"blue": #dae6f1, // note": used in Elements too!
+	"panels": #a6adb4,
+	"text": #32323c,
 	"btn": #118afb,
 	"icon-area": #bdcdde,
 	"doo-bg": #ccc,
 );
 
 $ed3-light: (
-	"blue": rgb(218, 230, 241),
-	"panels": rgb(220, 230, 240	),
-	"text": rgb(50, 50, 60),
+	"blue": #dae6f1,
+	"panels": #dce6f0,
+	"text": #32323c,
 	"btn": #118afb,
 	"icon-area": #bdcdde,
 	"doo-bg": #ccc,
