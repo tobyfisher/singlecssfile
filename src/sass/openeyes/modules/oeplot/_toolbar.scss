@@ -9,6 +9,7 @@
 	// could be used in OES or Analytics!
 	&.with-toolbar {
 		margin:0 0 $oe-event-header-height 0;
+		height: calc( 100vh - #{$oe-header-height + $oe-event-header-height + $oe-event-header-height});
 	}
 	
 	// toolbar is setup for OES (fixed at the bottom)

@@ -24,7 +24,7 @@
 	&.person {
 		.step {
 			padding-left:13px;
-			background: center left / 11px var(--i-/person) no-repeat;
+			background: center left / 11px var(--i-person) no-repeat;
 		}
 	}
 	// icon: config
@@ -73,6 +73,14 @@
 			.step {
 				background-image: url( svg-white-icon('i/person'));
 			}
+		}
+
+		&.config {
+			background-image: url( svg-white-icon('i/cog'));
+		}
+
+		&.has-comments {
+			background-image: url( svg-white-icon('i/comments-added'));
 		}
 	}
 	

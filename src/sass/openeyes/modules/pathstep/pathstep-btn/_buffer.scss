@@ -20,9 +20,10 @@
 			border-color: var(--txt-base)-light;
 		}
 	}
-	
+
 	// pathway owner column
-	&[class*="comments"] {
+	&.comments,
+	&.comments-added {
 		margin-left:10px;
 		background-color: rgba(var(--txt-base),0.1);
 		border-color: transparent;
