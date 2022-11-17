@@ -19,13 +19,23 @@
 	
 	// all steps have a border for consistent layout	
 	border:2px solid transparent;
-	
-	// --- Outlined steps
-	// Configure is possible first state
+
+	// icon: person
+	&.person {
+		.step {
+			padding-left:13px;
+			background: center left / 11px var(--i-/person) no-repeat;
+		}
+	}
+	// icon: config
 	&.config {
-		border-color: var(--step-outline);
-		background: left 4px top 5px / 11px var(--step-grey) var(--i-cog) no-repeat;
-		padding-left: 20px;	
+		background: left 3px top 3px / 11px var(--i-cog)  no-repeat;
+		padding-left: 16px;
+	}
+	// icon: flag comments
+	&.has-comments {
+		background: right 3px top 3px / 11px var(--i-comments-added) no-repeat;
+		padding-right: 16px;
 	}
 	
 	// todo or todo-next
@@ -72,58 +82,6 @@
 	
 	&.done {
 		background-color: var(--step-green);
-		.step {
-			// opacity:0.8; // reduce the contrast - use opacity because of the icons
-		}
-	}
-	
-	// person
-	&.person {
-		.step {
-			padding-left:13px;
-			background: center left / 11px var(--i-/person)no-repeat;
-		}
-	}
-	
-	// // hold patient for specific mins
-	&.hold {
-		border-radius:50%;
-		width:34px; // see base
-		background: none;
-		border:2px solid var(--step-blue);
-
-		&.active {
-			border-width:0.5px;
-		}
-
-		&.done {
-			border-color:var(--step-outline);
-			.step {
-				color:var(--txt-base);
-			}
-		}
-		
-		.step {
-			@include font-size(12);
-			font-weight: 700;
-			color:var(--step-blue);
-		}
-		
-		// viewBox="0 0 34 34";
-		svg.progress-ring {
-			position: absolute;
-			width: 34px;
-			height: 34px;
-			// rotatate so that effect starts at 12 o'clock
-			transform: rotate(-90deg);
-			transform-origin: 50% 50%;
-			
-			circle {
-				stroke: var(--step-blue);
-				stroke-width: 4;
-				// dont' use transition it messes it up!
-			}
-		}
 	}
 	
 	// locked! another user is using this step
@@ -132,9 +90,6 @@
 		border-style: dotted;
 		border-color: var(--step-outline);
 		.step {
-			//padding-left:14px;
-			//background: var(--i-/no-permissions')) center left no-repeat;
-			//background-size: 11px;
 			opacity:0.5; // use opacity because of the icons
 		}
 	}

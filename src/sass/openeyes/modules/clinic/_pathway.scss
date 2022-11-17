@@ -3,7 +3,8 @@
 
 @use "openeyes/mix" as *;
 
-table.oec-patients {
+// <table>
+.oec-patients {
 	// container for pathway-steps, used by js
 	.pathway {
 		@include flex( flex-start, flex-start );

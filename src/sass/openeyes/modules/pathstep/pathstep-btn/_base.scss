@@ -19,18 +19,14 @@
 	&:last-child {
 		margin-right:0;
 	}
-	
-	line-height: 1; // this needs fixing or else it will affect the layout
+
+	// this needs fixing or else it will affect the layout
+	line-height: 1;
 	
 	@include font-size(12);
 	font-style: italic;
 	font-weight: var(--font-medium);
-	cursor: pointer;	
-	
-	.step {
-		// visual fix!
-		transform: translateY(-1px);
-	}
+	cursor: pointer;
 	
 	// turn off point events for all children
 	// JS needs this:
