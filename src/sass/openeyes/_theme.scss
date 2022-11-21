@@ -246,6 +246,9 @@ $uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permi
 "search-white", "search", "shortcut-arrow", "sidebar-audit-trail", "sidebar-switcher-elements", "sidebar-switcher-events",
 "sidebar", "type-linebreak", "type-paragraph", "vc-move", "watermark-clinic");
 
+$edIcons: ("ed-backward", "ed-forward", "ed-info", "ed-lock", "ed-trash", "ed-zoom");
+
+
 // *********************
 // CSS custom properties
 :root {
@@ -253,8 +256,11 @@ $uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permi
 	@each $icon in $uiIcons {
 		--i-ui-#{$icon}: url("../svg/in-css/all/ui/#{$icon}.svg");
 	}
-}
 
+	@each $icon in $edIcons {
+		--i-ed3-#{$icon}: url("../svg/in-css/all/eyedraw/#{$icon}.svg");
+	}
+}
 
 // CSS Vars (Custom selectors) for theme colours.
 // set <HTML> class to theme

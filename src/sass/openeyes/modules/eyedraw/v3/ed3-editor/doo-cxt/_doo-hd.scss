@@ -38,9 +38,10 @@
 		.doo-name {
 			background: 4px 10px / 7px #f8f8f8 url(svg-fixed("eyedraw/active-dot")) no-repeat;
 			padding-left: 15px;
-			color: #000;
+			color: var(--ed3-btn);
 			@include font-size(12);
 			font-weight: 500;
+			border-left: 2px solid var(--ed3-btn);
 		}
 	}
 }

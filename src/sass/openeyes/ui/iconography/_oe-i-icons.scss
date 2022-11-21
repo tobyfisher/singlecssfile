@@ -314,7 +314,6 @@
 	);
 
 	$eyedraw_icons: (
-		"ed-reset": "ed-reset",
 		"ed-zoom": "ed-zoom",
 		"ed-lock": "ed-lock",
 		"ed-trash": "ed-trash",
@@ -329,18 +328,19 @@
 
 	// @mixin - build specific icon classes
 	// $map: see lists above
-	// $set: where are the SVG files?
-	// $dir: sub-directory within main sets
-	@mixin oe-i( $map, $set:"themed", $dir: "i/" ) {
+	// $set: SVG icon type
+	@mixin oe-i( $map, $set:"themed" ) {
 		@each $name, $svg in $map {
 			// extend .oe-i
 			&.#{$name} {
 
 				// select SVG set to use
 				@if $set == "themed" {
-					background-image: var(--i-#{$svg}); // svg in : "in-css/{dark|light}/i/{svg}"
-				} @else {
-					background-image: var(--i-ui-#{$svg}); // svg in : "in-css/all/i/{svg}"
+					background-image: var(--i-#{$svg});
+				}
+
+				@if( $set == "ed3"){
+					background-image: var(--i-ed3-#{$svg});
 				}
 
 				// set opacity to 1?
@@ -355,6 +355,6 @@
 	// Map | Icon set to use | sub-directory (optional)
 	@include oe-i($themed_icons, "themed");
 	@include oe-i($ROG_icons, "themed");
-	//@include oe-i($eyedraw_icons, "all", "eyedraw/");
+	@include oe-i($eyedraw_icons, "ed3");
 
 }

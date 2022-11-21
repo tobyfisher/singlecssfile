@@ -35,6 +35,7 @@
 	.eye-l & {
 		right: calc(100% - 38px);
 		border-right: none;
+		box-shadow: -3px 0 3px var(--bg-data);
 
 		.close-stack {
 			right: 100%;
@@ -45,6 +46,7 @@
 		flex-direction: row-reverse;
 		left: calc(100% - 38px);
 		border-left: none;
+		box-shadow: 3px 0 3px var(--bg-data);
 
 		.close-stack {
 			left: 100%;
