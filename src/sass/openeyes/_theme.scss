@@ -218,7 +218,7 @@ $ed3-light: (
 // ---- SVG icons
 
 $themedIcons: ("add-blue", "add", "arrow-down-bold", "arrow-down", "arrow-left-bold", "arrow-right-bold", "arrow-up-bold", "arrow-up",
-"asterisk-blue", "asterisk", "audit-trail", "beo", "cancel", "change", "child-arrow", "cog", "collapse", "comments-added", "comments-who", "comments",
+"asterisk-blue", "asterisk-red", "asterisk", "audit-trail", "beo", "cancel", "change", "child-arrow", "cog", "collapse", "comments-added", "comments-who", "comments",
 "copy-forward", "copy-over", "crying", "direction-down-circle", "direction-down", "direction-horizontal",
 "direction-left-circle", "direction-left", "direction-right-circle", "direction-right", "direction-up-circle", "direction-up",
 "double-slash", "doubt-active", "doubt", "download", "downup", "draft", "draft-orange", "draft-green", "drop-done", "drop", "drug-rx", "duplicate", "edit-blue", "edit",
@@ -254,11 +254,11 @@ $edIcons: ("ed-backward", "ed-forward", "ed-info", "ed-lock", "ed-trash", "ed-zo
 :root {
 
 	@each $icon in $uiIcons {
-		--i-ui-#{$icon}: url("../svg/in-css/all/ui/#{$icon}.svg");
+		--i-ui-#{$icon}: url("../svg/v6/all/ui/#{$icon}.svg");
 	}
 
 	@each $icon in $edIcons {
-		--i-ed3-#{$icon}: url("../svg/in-css/all/eyedraw/#{$icon}.svg");
+		--i-ed3-#{$icon}: url("../svg/v6/all/eyedraw/#{$icon}.svg");
 	}
 }
 
@@ -276,15 +276,15 @@ $edIcons: ("ed-backward", "ed-forward", "ed-info", "ed-lock", "ed-trash", "ed-zo
 html.theme-dark {
 
 	@each $icon in $themedIcons {
-		--i-#{$icon}: url("../svg/in-css/dark/i/#{$icon}.svg");
+		--i-#{$icon}: url("../svg/v6/dark/i/#{$icon}.svg");
 	}
 
 	@each $icon in $rgbIcons {
-		--i-#{$icon}: url("../svg/in-css/dark/i/#{$icon}.svg");
+		--i-#{$icon}: url("../svg/v6/dark/i/#{$icon}.svg");
 	}
 
 	@each $icon in $uiThemedIcons {
-		--i-#{$icon}: url("../svg/in-css/dark/ui/#{$icon}.svg");
+		--i-#{$icon}: url("../svg/v6/dark/ui/#{$icon}.svg");
 	}
 
 	@include cssVars("bg", $bg);
@@ -304,15 +304,15 @@ html.theme-dark {
 html.theme-light {
 
 	@each $icon in $themedIcons {
-		--i-#{$icon}: url("../svg/in-css/light/i/#{$icon}.svg");
+		--i-#{$icon}: url("../svg/v6/light/i/#{$icon}.svg");
 	}
 
 	@each $icon in $rgbIcons {
-		--i-#{$icon}: url("../svg/in-css/light/i/#{$icon}.svg");
+		--i-#{$icon}: url("../svg/v6/light/i/#{$icon}.svg");
 	}
 
 	@each $icon in $uiThemedIcons {
-		--i-#{$icon}: url("../svg/in-css/light/ui/#{$icon}.svg");
+		--i-#{$icon}: url("../svg/v6/light/ui/#{$icon}.svg");
 	}
 
 	@include cssVars("bg", $bg-light);

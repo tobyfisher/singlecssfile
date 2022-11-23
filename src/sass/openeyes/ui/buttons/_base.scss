@@ -68,7 +68,7 @@ button,
 		pointer-events: none;
 	}
 
-	// Pseudo & JS class hooks
+	// Pseudo & class hooks
 	&:hover,
 	&:focus,
 	&.active {
@@ -85,9 +85,13 @@ button,
 		background: var(--btn-blue-active);
 	}
 
+	&:focus,
 	&:active {
 		outline: 1px dotted var(--input-focus-outline);
 		outline-offset: 1px;
+	}
+
+	&:active {
 		color: var(--btn-text);;
 		background: var(--btn-blue-active);
 	}

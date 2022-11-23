@@ -209,6 +209,7 @@
 		"download": "download",
 		"asterisk": "asterisk",
 		"asterisk-blue": "asterisk-blue",
+		"asterisk-red": "asterisk-red",
 		"pencil": "pencil",
 		"pencil-blue": "pencil-blue",
 		"draft":"draft",
@@ -287,25 +288,26 @@
 	$ROG_icons: (
 		"circle-green": "circle-green",
 		"circle-yellow": "circle-yellow",
-		"circle-amber": "circle-orange", // amber = orange
+		"circle-amber": "circle-orange", // amber => orange
 		"circle-orange": "circle-orange",
 		"circle-red": "circle-red",
 		"circle-grey": "circle-grey",
 		"flag-green": "flag-green",
-		"flag-amber": "flag-orange", // amber = orange
+		"flag-amber": "flag-orange", // amber => orange
 		"flag-orange": "flag-orange",
 		"flag-red": "flag-red",
 		"flag-grey": "flag-grey",
 		"triangle-green": "triangle-green",
-		"triangle-amber": "triangle-orange", // amber = orange
+		"triangle-amber": "triangle-orange", // amber => orange
 		"triangle-orange": "triangle-orange",
 		"triangle-red": "triangle-red",
 		"triangle-grey": "triangle-grey",
 		"mpr-red": "mpr-red",
-		"mpr-amber": "mpr-amber",
+		"mpr-amber": "mpr-orange",
+		"mpr-orange": "mpr-orange",
 		"mpr-green": "mpr-green",
 		"exclamation-green": "exclamation-green",
-		"exclamation-amber": "exclamation-orange", // amber = orange
+		"exclamation-amber": "exclamation-orange", // amber => orange
 		"exclamation-orange": "exclamation-orange",
 		"exclamation-red": "exclamation-red",
 		"warning": "warning", // RED Risk/Alert triangle
@@ -323,8 +325,7 @@
 	);
 
 	// these icons need to always be at full opacity by default
-	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "lat-R", "lat-L", "lat-n", "lat-Ri", "lat-Li", "beo", "doubt-active", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-amber", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none",
-	"person-green", "status-urgent";
+	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "lat-R", "lat-L", "lat-n", "lat-Ri", "lat-Li", "beo", "doubt-active", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-amber", "mpr-orange", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none", "person-green", "status-urgent", "asterisk-red";
 
 	// @mixin - build specific icon classes
 	// $map: see lists above
