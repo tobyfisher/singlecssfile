@@ -217,7 +217,7 @@ $ed3-light: (
 
 // ---- SVG icons
 
-$themedIcons: ("add-blue", "add", "arrow-down-bold", "arrow-down", "arrow-left-bold", "arrow-right-bold", "arrow-up-bold", "arrow-up",
+$themedIcons: ("accessibility","add-blue", "add", "arrow-down-bold", "arrow-down", "arrow-left-bold", "arrow-right-bold", "arrow-up-bold", "arrow-up",
 "asterisk-blue", "asterisk-red", "asterisk", "audit-trail", "beo", "cancel", "change", "child-arrow", "cog", "collapse", "comments-added", "comments-who", "comments",
 "copy-forward", "copy-over", "crying", "direction-down-circle", "direction-down", "direction-horizontal",
 "direction-left-circle", "direction-left", "direction-right-circle", "direction-right", "direction-up-circle", "direction-up",
@@ -239,7 +239,7 @@ $uiThemedIcons: ("face", "elem-rl-vertical", "event-elements", "btn-goto", "tab-
 // -- these work across both themes:
 $rgbIcons: ("circle-blue", "circle-green", "circle-yellow", "circle-orange", "circle-red", "circle-grey",
 "triangle-blue", "triangle-green", "triangle-orange", "triangle-red", "triangle-grey", "exclamation-green", "exclamation-orange", "exclamation-red",
-"flag-green", "flag-orange", "flag-red", "flag-grey", "mpr-green", "mpr-orange", "mpr-red", "warning-none", "warning", "cross-red",);
+"flag-green", "flag-orange", "flag-red", "flag-grey", "mpr-green", "mpr-orange", "mpr-red", "a11ty-green","a11ty-orange","a11ty-red", "warning-none", "warning", "cross-red",);
 
 
 $uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permissions-white",
