@@ -13,6 +13,17 @@
 	display:inline-block;
 }
 
+// 'display-...' classes are a hack
+// designed to help out Vue which doesn't
+// like inline styles .e.g. style="display: block"
+.display-block {
+	display: block !important;
+}
+
+.display-flex {
+	display: flex !important;
+}
+
 // use visibility to 'hide' a <tr>
 // DOM is hidden & space occupied is removed (as if display: none).
 // BUT! - rows and columns are still calculated as though the cells

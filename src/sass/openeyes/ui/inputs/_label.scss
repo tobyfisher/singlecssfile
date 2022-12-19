@@ -36,12 +36,6 @@ label {
 			}
 		}
 
-		&.hide-input {
-			input {
-				display:none;
-			}
-		}
-
 		// if using "as-button" it requires the text has a DOM wrap
 		// <label> 	|- <input>
 		//			|- <div class="btn" ...
@@ -65,6 +59,38 @@ label {
 				@include flex(center, flex-start);
 				height: 100%;
 				padding:0 5px; // this was 3px 6px
+			}
+		}
+
+		&.as-i-toggle-button {
+			input {
+				display: none;
+			}
+
+			.oe-i {
+				pointer-events: none;
+			}
+
+			// doubt - used in Diagnosis v2 to manage certitude state
+			&.is-doubt {
+				.oe-i {
+					background-image: var(--i-doubt);
+				}
+				input:checked + .oe-i {
+					background-image: var(--i-doubt-active);
+					opacity: 1;
+				}
+			}
+
+			// confirm - confirm a state (admin usage)
+			&.is-confirm {
+				.oe-i {
+					background-image: var(--i-tick-circle);
+				}
+				input:checked + .oe-i {
+					background-image: var(--i-save);
+					opacity: 1;
+				}
 			}
 		}
 		
