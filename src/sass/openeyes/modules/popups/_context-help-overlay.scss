@@ -13,7 +13,7 @@
 		position: fixed;
 		color: #fff;
 		// generic effect to work across both themes
-		background: rgba(60,60,65, 0.6);
+		background: rgba(60,60,60, 0.8);
 
 		padding:10px;
 		border-radius:5px;
@@ -31,27 +31,23 @@
 		}
 		
 		&.top {
-			border-top: 1px solid var(--txt-highlight);
+			border-top: 1px solid var(--color-highlighter);
 			&:after {
 				top: 0;
 				left: 50%;
-				border-bottom-color: var(--txt-highlight);
+				border-bottom-color: var(--color-highlighter);
 				transform: translate(-7px, -14px);
 			}
 		}
 		
 		&.bottom {
-			border-bottom: 1px solid var(--txt-highlight);
+			border-bottom: 1px solid var(--color-highlighter);
 			&:after {
 				bottom: 0;
 				left: 50%;
-				border-top-color: var(--txt-highlight);
+				border-top-color: var(--color-highlighter);
 				transform: translate(-7px, 14px);
 			}
 		}
-		
-		
-		
 	}
-	
 }

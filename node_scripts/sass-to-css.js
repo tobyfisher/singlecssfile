@@ -1,4 +1,5 @@
 'use strict';
+require('dotenv').config();
 
 /**
  * Build CSS files for OpenEyes
@@ -30,7 +31,6 @@ const config = {
  * Get git tag version, this is the version CSS is aiming to release
  * next into the master branch (i.e. it's under development on iDG current)
  */
-require('dotenv').config()
 const tag = process.env.VERSION_TAG;
 
 const chalk = require('chalk');
@@ -73,8 +73,8 @@ const headerLegals = [
  */
 const dartSass = ( style ) => {
 	log(cyan(`Build: ${style}`));
-	const cssOutput = `${config.dist}${style}.css`;
-	const cssIDG = `${config.idg}${tag}_${style}.css`;
+	const cssOutput = `${config.dist + style}.css`;
+	const cssIDG = `${config.idg + tag +'_'+style}.css`;
 
 	try {
 		/**

@@ -7,9 +7,11 @@
 // <span>
 .tabspace {
 	display:inline-block;
-	width:25px;	
+	width:3ch;
+
+	// not sure this is actually used anywhere
 	&.double {
-		width:50px;
+		width:5ch;
 	}
 }
 

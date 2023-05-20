@@ -25,6 +25,10 @@ input, textarea, select {
 	color: var(--input-text);
 	background-color: var(--input-base);
 
+	&.default-val {
+		outline:2px solid var(--color-green);
+	}
+
 	// flag OE prefilled data to Users
 	&.prefilled {
 		outline:2px solid var(--color-orange);
