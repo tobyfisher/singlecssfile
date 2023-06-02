@@ -152,6 +152,7 @@
 		"arrow-up-bold": "arrow-up-bold",
 		"arrow-right-bold": "arrow-right-bold",
 		"arrow-left-bold": "arrow-left-bold",
+		"assist": "assist",
 		"direction-right": "direction-right",
 		"direction-left": "direction-left",
 		"direction-up": "direction-up",
@@ -161,6 +162,7 @@
 		"direction-left-circle": "direction-left-circle",
 		"direction-up-circle": "direction-up-circle",
 		"direction-down-circle": "direction-down-circle",
+		"interval": "interval",
 		"move": "move",
 		"child-arrow": "child-arrow",
 		"parent-arrow": "parent-arrow",
@@ -184,6 +186,7 @@
 		"comments": "comments",
 		"comments-added": "comments-added",
 		"comments-who": "comments-who",
+		"comments-clear": "comments-clear",
 		"start": "start",
 		"stop": "stop",
 		"range": "range",
@@ -223,6 +226,7 @@
 		"drop-done": "drop-done",
 		"star": "star",
 		"starline": "starline",
+		"star-blue": "star-blue",
 		"flag": "flag",
 		"flagline": "flagline",
 		"letter-1": "letter-1",
@@ -231,6 +235,7 @@
 		"letter-GP": "letter-GP",
 		"no-permissions": "no-permissions",
 		"waiting": "waiting",
+		"more-v": "more-v",
 		"more-h": "more-h",
 		"more-h-orange": "more-h-orange",
 		"status-urgent": "status-urgent",
@@ -249,6 +254,7 @@
 		"cog": "cog",
 		"padlock": "padlock",
 		"fork": "fork",
+		"merge": "merge",
 		"path-break": "path-break",
 		"happy": "happy",
 		"crying": "crying",
@@ -282,6 +288,7 @@
 		"finish": "finish",
 		"mpr": "mpr",
 		"tick-green": "tick-green",
+		"accessibility": "accessibility"
 	);
 
 	// red orange green icons
@@ -328,7 +335,7 @@
 	);
 
 	// these icons need to always be at full opacity by default
-	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "lat-R", "lat-L", "lat-n", "lat-Ri", "lat-Li", "beo", "doubt-active", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-amber", "mpr-orange", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none", "person-green", "status-urgent", "asterisk-red", "a11ty-green","a11ty-orange","a11ty-red";
+	$no-opacity: "laterality.R", "laterality.L", "laterality.NA", "lat-R", "lat-L", "lat-n", "lat-Ri", "lat-Li", "beo", "doubt-active", "circle-green", "circle-yellow", "circle-amber", "circle-orange", "circle-red", "circle-grey", "flag-green", "flag-amber", "flag-orange", "flag-red", "flag-grey", "triangle-green", "triangle-amber", "triangle-orange", "triangle-red", "triangle-grey", "triangle-urgent", "mpr", "mpr-red", "mpr-amber", "mpr-orange", "mpr-green", "exclamation-green", "exclamation-amber", "exclamation-orange", "exclamation-red", "tick-green", "cross-red", "warning", "warning-none", "person-green", "status-urgent", "asterisk-red", "a11ty-green","a11ty-orange","a11ty-red", "assist";
 
 	// @mixin - build specific icon classes
 	// $map: see lists above

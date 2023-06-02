@@ -12,7 +12,7 @@ The "newblue" CSS repository allows for the development of OpenEyes UI(X) indepe
 
 * Chrome > 88
 * Edge > 88
-* Safari > 14.1
+* Safari > 14.1.2
 
 ## JS hooks
 
