@@ -31,8 +31,7 @@
 			height:16px;
 			width:16px;
 			margin:0 auto;
-			background: url( svg-white-icon('i/starline')) center center no-repeat;
-			background-size: contain;
+			background: center / contain var(--i-starline) no-repeat;
 			opacity:0.5;
 		}	
 		
@@ -41,6 +40,7 @@
 			background-color: var(--btn-blue);
 			&:after {
 				opacity: 1;
+				background-image: url( svg-white-icon('i/starline'));
 			}
 		}	
 	}
