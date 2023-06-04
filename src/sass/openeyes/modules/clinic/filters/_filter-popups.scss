@@ -54,15 +54,7 @@
 				left:0; 
 				right:0;
 				bottom:0;
-				background: center / 13px var(--i-info) no-repeat;
-				opacity:0.4;
-			}
-			
-			&:hover,
-			&:focus {
-				&:after {
-					opacity:0.8;
-				}
+				background: center / 13px var(--i-assist) no-repeat;
 			}
 			
 		}
