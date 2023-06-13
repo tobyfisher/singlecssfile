@@ -98,6 +98,7 @@ table.oec-patients {
 		text-align: left;  // overide default 'middle'
 		font-weight: var(--font-light);
 		color: var(--txt-light);
+		vertical-align: middle;
 		
 		&:nth-child( 8 ){
 			padding-left:9px;

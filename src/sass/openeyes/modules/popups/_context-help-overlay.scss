@@ -5,12 +5,14 @@
 @use "openeyes/mix" as *;
 
 .context-help-overlay {
+	position: relative;
 	width: 100%;
+	min-width: $oe-minimum-viewport-width;
 	height: 100%; 
 	cursor: pointer;
 	
 	.help-note {
-		position: fixed;
+		position: absolute;
 		color: #fff;
 		// generic effect to work across both themes
 		background: rgba(60,60,60, 0.8);
@@ -19,6 +21,15 @@
 		border-radius:5px;
 		@include font-size(12);
 		@include boxshadow();
+
+		// this allows easy positioning of the help info on the overlay,
+		// you can use x/y co-ordinates from top/left corner
+		transform: translateX(-50%);
+
+		// if anchoring from top/right reverse the shift
+		&.pos-r {
+			transform: translateX(50%);
+		}
 
 		// arrow
 		&:after {
@@ -30,8 +41,9 @@
 			border: 7px solid rgba(0, 0, 0, 0);
 		}
 		
-		&.top {
+		&.below {
 			border-top: 1px solid var(--color-highlighter);
+			margin-top: 15px;
 			&:after {
 				top: 0;
 				left: 50%;
@@ -40,8 +52,9 @@
 			}
 		}
 		
-		&.bottom {
+		&.above {
 			border-bottom: 1px solid var(--color-highlighter);
+			margin-bottom: 15px;
 			&:after {
 				bottom: 0;
 				left: 50%;

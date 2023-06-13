@@ -24,7 +24,7 @@ if( nodeArg !== undefined ){
 const config = {
 	src: './src/sass/',
 	dist: './dist/css/',
-	idg: '../idg/src/build/newblue/dist/css/'
+	idg: '../idg/src/build/nxblu/dist/css/'
 };
 
 /**

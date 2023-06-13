@@ -129,7 +129,7 @@ const processSVG = (svgPath, idgCopy = true) => {
 			 * to copied over manually, this is pretty rare.
 			 */
 			if( idgCopy ){
-				const idgBuild = '../idg/src/build/newblue';
+				const idgBuild = '../idg/src/build/nxblu';
 				fs.copyFile(`./${output}`, `${idgBuild}/${output}`, (err) => {
 					if (err) throw err;
 					log(cyan(`iDG copy: `) + `${svgFile}`);
