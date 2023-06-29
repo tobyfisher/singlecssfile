@@ -45,7 +45,7 @@
 		position: absolute;
 		top:9px;
 		right:8px;
-		pointer-events: all; // JS needs this
+		pointer-events: auto; // JS needs this
 	}
 	
 }

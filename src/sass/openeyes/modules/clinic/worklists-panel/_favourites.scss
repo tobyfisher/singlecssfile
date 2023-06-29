@@ -23,7 +23,7 @@
 
 		.details {
 			flex: 1;
-			background: var(--btn-base);
+			background: var(--btn-base-light);
 			padding: 5px 10px 10px 30px;
 
 			@include font-size(11);
@@ -33,8 +33,7 @@
 			&:hover,
 			&:focus {
 				color: #fff;
-				background: var(--btn-blue) url(svg-fixed("ui/shortcut-arrow")) bottom 10px left 8px no-repeat;
-				background-size: 15px;
+				background: top 10px left 10px / 14px url(svg-fixed("ui/shortcut-arrow")) var(--btn-blue) no-repeat;
 			}
 
 			// Favourite name, as selected by User
@@ -61,10 +60,10 @@
 				li {
 					padding: 3px 0;
 					@include font-size(13);
-					border-top: 1px dotted pink;
+					border-bottom: 1px dotted var(--txt-light);
 
-					&:last-child {
-						border-bottom: 1px dotted pink;
+					&:first-child {
+						border-top: 1px dotted var(--txt-light);
 					}
 				}
 			}
@@ -78,15 +77,36 @@
 		.expand-fav,
 		.remove-fav {
 			width: 30px;
-			background: var(--btn-base);
+			background: var(--btn-base-light);
 			margin: 0 0 0 1px;
 			@include flex(center, center);
 
 			.oe-i {
 				height: 100%;
+				width: 30px;
+			}
+
+			&:hover,
+			&:focus-within {
+				.oe-i {
+					filter: var(--btn-icon-hover-filter);
+				}
 			}
 		}
 
+		.expand-fav {
+			&:hover,
+			&:focus-within {
+				background-color: var(--btn-blue);
+			}
+		}
+
+		.remove-fav {
+			&:hover,
+			&:focus-within {
+				background-color: var(--btn-red);
+			}
+		}
 	}
 }	
 

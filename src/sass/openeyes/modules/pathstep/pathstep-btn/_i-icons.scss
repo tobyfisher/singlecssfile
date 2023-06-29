@@ -37,6 +37,9 @@
 			background-image: var(--i-comments);
 			opacity: 0.5;
 		}
+		&.i-a11ty {
+			background-image: var(--i-a11ty-orange);
+		}
 		&.i-fin {
 			background-image: var(--i-tick);
 		}

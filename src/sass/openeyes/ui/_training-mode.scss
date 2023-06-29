@@ -7,7 +7,7 @@
 	// OE near-live test instances can be confusing for Users
 	// adding "training-mode" to <body> we flag the near-live state in the UI
 
-	$_bg: rgba(80, 80, 80, 0.5);
+	$_bg: rgba(50, 50, 50, 0.8);
 	$_yellow: rgb(255, 224, 0);
 
 	// Make OE logo yellow
@@ -61,9 +61,8 @@
 
 	// Patient name in SEM
 	.oe-patient .patient-name {
-		background: $_bg;
-		outline: 4px solid $_bg;
-		color: $_yellow;
+		outline: 2px dotted var(--color-orange);
+		outline-offset: 4px;
 	}
 
 }

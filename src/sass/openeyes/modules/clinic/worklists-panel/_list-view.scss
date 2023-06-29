@@ -6,14 +6,19 @@
 .oe-worklists-panel {
 	// after filtering and loading still need a way to quickly flick
 	// between lists (IF there is more that one)
-	.list-view {	
-		// all button
+	.list-view {
+		margin:0 10px 0 0;
+
+		// "All" lists button
 		button {
 			justify-content: flex-start;
 			padding:5px 10px;
 		}
 			
 		.worklists {
+			max-height: 200px;
+			overflow-y: auto;
+
 			fieldset {
 				background: var(--btn-base);
 				
@@ -46,8 +51,8 @@
 							}
 						}
 						&:checked + .btn {
-							color:#fff;
-							background: var(--btn-blue);
+							color: var(--btn-text-active);
+							background:var(--btn-blue-active);
 						}
 					}
 				}

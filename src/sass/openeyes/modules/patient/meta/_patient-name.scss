@@ -24,7 +24,9 @@
 		// duplicate name / safeguards (alerts/allergies / risks) / Flags, etc
 		.patient-icons {
 			@include inline-flex(center, flex-start);
-			padding: 0 0 0 5px;
+			.oe-i {
+				background-size: 12px;
+			}
 		}
 	}
 }

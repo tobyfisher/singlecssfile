@@ -52,8 +52,8 @@ button,
 	&.disabled,
 	&.inactive {
 		cursor: default;
-		color: var(--txt-light);
-		background: var(--btn-disabled);
+		color: var(--txt-light) !important;
+		background: var(--btn-disabled) !important;
 		pointer-events: none; // disabled!
 		.oe-i {
 			opacity: 0.2;
