@@ -14,7 +14,7 @@
 	height: 70px;
 	width: 100%;
 	@include flex(center, center);
-	background: var(--color-grey);
+	background: var(--bg-invert);
 	border-top: 3px solid var(--bg-title);
 	transition: bottom 0.2s ease-in-out;
 	// slide up & down:
@@ -25,7 +25,7 @@
 
 	&.up {
 		bottom: 0;
-		border-top-color: var(--btn-blue);
+		border-top-color: var(--bg-max);
 	}
 
 	.openclose-icon-btn {

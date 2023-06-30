@@ -11,11 +11,12 @@ $bg: (
 	"html": #191e24,
 	"popup":#181c21,
 	"hover-row": #191c1f,
-	"data": #17191c,
+	"data": rgb(23, 25, 28),
 	"title": #212830,
 	"event": #26292b,
 	"event-list":#1e2933,
-	"vc": #150b1e
+	"vc": #150b1e,
+	"invert":#adafb2
 );
 
 $bg-light: (
@@ -23,11 +24,12 @@ $bg-light: (
 	"html": #dad8d8,
 	"popup": #e2e1e1,
 	"hover-row": #e6e6e6,
-	"data": #f0efef,
+	"data": rgb(240, 239, 239),
 	"title": #c9c8c8,
 	"event": #fbfafa,
 	"event-list": #f0f0f0,
-	"vc": #ebe0e6
+	"vc": #ebe0e6,
+	"invert": #656464,
 );
 
 // ---- Text
@@ -46,7 +48,7 @@ $txt-light: (
 	"hd": #2846c8,
 	"active": #2346c8,
 	"highlight": #2846fa,
-	"invert": #f0f0f0,
+	"invert": #f0f0f0
 );
 
 // ---- Font weights (because white on dark bleeds and looks thicker)
