@@ -5,8 +5,9 @@ require('dotenv').config();
  * Build CSS files for OpenEyes
  * Production:
  * 1) style_openeyes.css (dark/light theme)
- * 2) style_oe_print.3.css (Print, used for PDF creation)
- * 3) style_eyedraw_doodles.css (Eyedraw doodle icon sprite sheet, only loaded for Eyedraw editting)
+ * 2) style_block-browser-print.css ( media=print)
+ * 2) style_oe_print.3.css (Print, only used for PDF creation)
+ * 3) style_eyedraw_doodles.css (Eyedraw doodle icon sprite sheet, only required for Eyedraw editting)
  *
  * iDG copies are prefixed with VERSION_TAG numbers, to allow testing
  * of different TAGs within iDG
@@ -15,10 +16,28 @@ require('dotenv').config();
  */
 let buildMode = "style_openeyes";
 
+/**
+ * Create a tagged file for iDG UIX testing
+ */
+let versionTagFile = true;
+
+/**
+ * Get git tag version, this is the version CSS is aiming to release
+ * next into the master branch (i.e. it's under development on iDG current)
+ */
+const tag = process.env.VERSION_TAG;
+
 const nodeArg = process.argv[2];
 if( nodeArg !== undefined ){
 	if(nodeArg === "print") buildMode = "style_oe_print.3";
-	if(nodeArg === "eyedraw") buildMode = "style_eyedraw_doodles";
+	if(nodeArg === "eyedraw") {
+		versionTagFile = false;
+		buildMode = "style_eyedraw_doodles";
+	}
+	if(nodeArg === "blocker") {
+		versionTagFile = false;
+		buildMode = "style_block-browser-print";
+	}
 }
 
 const config = {
@@ -27,11 +46,7 @@ const config = {
 	idg: '../idg/src/build/nxblu/dist/css/'
 };
 
-/**
- * Get git tag version, this is the version CSS is aiming to release
- * next into the master branch (i.e. it's under development on iDG current)
- */
-const tag = process.env.VERSION_TAG;
+
 
 const chalk = require('chalk');
 const cyan = chalk.bold.cyan;
@@ -41,7 +56,7 @@ const fs = require('fs');
 const sass = require('sass');
 const chokidar = require('chokidar');
 
-log(cyan(`>>> newblue building: ${buildMode}.css`));
+log(cyan(`>>> Building: ${buildMode}.css`));
 log(sass.info);
 log(chalk.bgYellow(`--- git tag version = ${tag} ---`));
 
@@ -73,8 +88,11 @@ const headerLegals = [
  */
 const dartSass = ( style ) => {
 	log(cyan(`Build: ${style}`));
+
+	const tagFile = `${versionTagFile ? tag+'_' : ''}`;
+
 	const cssOutput = `${config.dist + style}.css`;
-	const cssIDG = `${config.idg + tag +'_'+style}.css`;
+	const cssIDG = `${config.idg}${tagFile}${style}.css`;
 
 	try {
 		/**
@@ -99,7 +117,7 @@ const dartSass = ( style ) => {
 		/**
 		 * TAG prefixed file version for iDG development area
 		 */
-		log(cyan(`iDG copy: `) + `${tag}_${style}`);
+		log(cyan(`iDG copy: `) + `${tagFile}${style}`);
 		const idgStream = fs.createWriteStream(`${cssIDG}`);
 		idgStream.write(headerLegals);
 		idgStream.write(dateStamp);

@@ -23,8 +23,8 @@
 @use "openeyes/structure/oe-grid";
 @use "openeyes/structure/oe-full";
 @use "openeyes/core/admin-notification";
-@use "openeyes/core/print-block-browser";
 @use "openeyes/core/minimum-width-warning";
+@use "openeyes/core/oe-restrict-print";
 
 // keyframe animations
 @use "openeyes/keyframes";

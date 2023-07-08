@@ -19,6 +19,7 @@
   ],
   "scripts": {
     "css": "node node_scripts/sass-to-css.js",
+    "css:blocker": "node node_scripts/sass-to-css.js blocker",
     "css:print": "node node_scripts/sass-to-css.js print",
     "css:eyedraw": "node node_scripts/sass-to-css.js eyedraw",
     "css:bluesky": "node node_scripts/x-bluesky-css.js",
