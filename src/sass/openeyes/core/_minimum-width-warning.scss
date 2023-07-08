@@ -16,8 +16,10 @@
 	z-index: 9999;
 
 	writing-mode: vertical-rl;
-	padding: 10px 5px 30px 5px; // allow for icon
-	background: bottom 5px center / 16px var(--color-red) url(svg-white-icon("i/direction-right")) no-repeat;
+	padding-inline: 10px 30px;
+	padding-block: 5px;
+
+	background: bottom 4px right 4px / 16px var(--color-red) url(svg-white-icon("i/direction-right")) no-repeat;
 
 	@include font-size(10);
 	font-weight: 500;
