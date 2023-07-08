@@ -2,19 +2,15 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 .hidden {
-    display: none;
-}
-
-.invisible {
-	visibility: hidden;
+    display: none !important;
 }
 
 .inline {
 	display:inline-block;
 }
 
-// 'display-...' classes are a hack
-// designed to help out Vue which doesn't
+// 'display-...'
+// added to help out Vue which doesn't
 // like inline styles .e.g. style="display: block"
 .display-block {
 	display: block !important;
@@ -22,6 +18,11 @@
 
 .display-flex {
 	display: flex !important;
+}
+
+
+.invisible {
+	visibility: hidden;
 }
 
 // use visibility to 'hide' a <tr>

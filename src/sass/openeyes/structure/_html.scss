@@ -20,7 +20,7 @@ html {
 
 body.open-eyes {
 	// Smallest monitor size is 1280px (1268px with scrollbars)
-	// (supporting down to 1200px, because of basic tablet device support)
+	// so supporting down to 1200px (and this also provides some tablet device support)
 	min-width: 1199px;
 	padding:0;
 	margin:0;
@@ -28,7 +28,6 @@ body.open-eyes {
 	// set a sensible global default font-size.
 	// Do not change this (unless you want to work through all the UI!)
 	@include font-size(14);
-
 }
 
 
