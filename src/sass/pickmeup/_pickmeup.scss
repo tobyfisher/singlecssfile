@@ -1,3 +1,9 @@
+// OE has yet to replace all date inputs with <input type="date">
+// so, unfortunately we have to still cover this UI... sigh
+
+@use "openeyes/mix" as *;
+@use "openeyes/var" as *;
+
 // @package   PickMeUp
 // @author    Nazar Mokrynskyi <nazar@mokrynskyi.com>
 // @author    Stefan Petre <www.eyecon.ro>
@@ -5,26 +11,28 @@
 // @copyright Copyright (c) 2008-2009, Stefan Petre
 // @license   MIT License, see license.txt
 
-$border-radius                    : 3px;
-$background                       : $oe-user-inputs !default;
-$color                            : $oe-user-input-text !default;
-$background-hover                 : $oe-btn-green !default;
-$color-hover                      : #fff !default;
-$nav-color                        : $color !default;
-$nav-color-hover                  : $color-hover !default;
-$not-in-month                     : #666 !default;
-$not-in-month-hover               : #999 !default;
-$disabled                         : #333 !default;
-$selected                         : $oe-user-inputs !default;
-$selected-background              : var(--txt-highlight) !default;
-$not-in-month-selected-background : #666 !default;
-$day-of-week                      : $not-in-month-hover !default;
-$today-background                 : $not-in-month-selected-background !default;
-$today-color                      : $color-hover !default;
-
 .pickmeup {
-	background      : $background;
-	border-radius   : $border-radius;
+
+	$_border-radius                    : 3px;
+	$_background                       : var(--input-base);
+	$_color                            : var(--input-text);
+	$_background-hover                 : var(--btn-green-hint);
+	$_color-hover                      : #fff;
+	$_nav-color                        : $_color;
+	$_nav-color-hover                  : $_color-hover;
+	$_not-in-month                     : #666;
+	$_not-in-month-hover               : #999;
+	$_disabled                         : #333;
+	$_selected                         : var(--input-base);
+	$_selected-background              : var(--txt-highlight);
+	$_not-in-month-selected-background : #666;
+	$_day-of-week                      : $_not-in-month-hover;
+	$_today-background                 : $_not-in-month-selected-background;
+	$_today-color                      : $_color-hover;
+
+
+	background      : $_background;
+	border-radius   : $_border-radius;
 	display         : inline-block;
 	position        : absolute;
 	touch-action    : manipulation;
@@ -48,50 +56,50 @@ $today-color                      : $color-hover !default;
 		width      : 15em;
 
 		.pmu-button {
-			color           : $color;
+			color           : $_color;
 			cursor          : pointer;
 			outline         : none;
 			text-decoration : none;
 		}
 
 		.pmu-today {
-			background : $today-background;
-			color      : $today-color;
+			background : $_today-background;
+			color      : $_today-color;
 		}
 
 		.pmu-button:hover {
-			background : $background-hover;
-			color      : $color-hover;
+			background : $_background-hover;
+			color      : $_color-hover;
 		}
 
 		.pmu-not-in-month {
-			color : $not-in-month;
+			color : $_not-in-month;
 		}
 
 		.pmu-disabled,
 		.pmu-disabled:hover {
-			color  : $disabled;
+			color  : $_disabled;
 			cursor : default;
 		}
 
 		.pmu-selected {
-			background : $selected-background;
-			color      : $selected;
+			background : $_selected-background;
+			color      : $_selected;
 		}
 
 		.pmu-not-in-month.pmu-selected {
-			background : $not-in-month-selected-background;
+			background : $_not-in-month-selected-background;
 		}
 
 		nav {
-			color       : $nav-color;
+			color       : $_nav-color;
 			display     : -ms-flexbox;
 			display     : -webkit-flex;
 			display     : flex;
 			line-height : 2em;
 
 			*:first-child :hover {
-				color : $nav-color-hover;
+				color : $_nav-color-hover;
 			}
 
 			.pmu-prev,
@@ -115,7 +123,7 @@ $today-color                      : $color-hover !default;
 		}
 
 		.pmu-day-of-week {
-			color  : $day-of-week;
+			color  : $_day-of-week;
 			cursor : default;
 		}
 
