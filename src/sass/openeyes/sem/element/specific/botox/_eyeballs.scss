@@ -6,16 +6,23 @@
 	position: relative;
 	cursor: crosshair;
 
+	:where( .a, .b, .d, .e, .f ){
+		fill: none;
+		stroke: var(--txt-light);
+		stroke-miterlimit: 10;
+		stroke-linecap: round;
+	}
+
 	svg {
 		// JS needs this to use Event delegation pattern
 		pointer-events: none;
 
-		.a, .b, .d, .e, .f {
-			fill: none;
-			stroke: var(--txt-light);
-			stroke-miterlimit: 10;
-			stroke-linecap: round;
-		}
+		//.a, .b, .d, .e, .f {
+		//	fill: none;
+		//	stroke: var(--txt-light);
+		//	stroke-miterlimit: 10;
+		//	stroke-linecap: round;
+		//}
 
 		.a {
 			stroke-width: 6px;

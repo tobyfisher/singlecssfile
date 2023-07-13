@@ -6,16 +6,16 @@
 	position: relative;
 	cursor: crosshair;
 
+	:where( .a, .b, .c, .d, .f, .g, .h, .i ) {
+		fill: none;
+		stroke: var(--txt-light);
+		stroke-miterlimit: 10;
+		stroke-linecap: round;
+	}
+
 	svg {
 		// JS needs this to use Event delegation pattern
 		pointer-events: none;
-
-		.a, .b, .c, .d, .f, .g, .h, .i {
-			fill: none;
-			stroke: var(--txt-light);
-			stroke-miterlimit: 10;
-			stroke-linecap: round;
-		}
 
 		.eb {
 			fill: var(--txt-light); // eyebrows
@@ -25,7 +25,7 @@
 			stroke-width: 6px;
 		}
 
-		.b, .c, .f {
+		:where( .b, .c, .f ){
 			stroke-width: 2px;
 		}
 
@@ -33,7 +33,7 @@
 			fill: rgba(120, 120, 120, 0.5); // Iris
 		}
 
-		.d, .f {
+		:where(.d, .f ){
 			stroke-linejoin: round;
 		}
 
@@ -41,7 +41,7 @@
 			stroke-width: 4px;
 		}
 
-		.g, .h {
+		:where( .g, .h ){
 			stroke-width: 0.5px;
 		}
 

@@ -101,7 +101,7 @@ const dartSass = ( style ) => {
 		 * version for iDG to use
 		 */
 		const result = sass.compile(`${config.src}${style}.scss`,{
-			style: 'compressed', // "expanded" or "compressed"
+			style: 'expanded', // "expanded" or "compressed"
 			loadPaths: ['src/sass/']
 		});
 

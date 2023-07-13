@@ -32,21 +32,20 @@ select {
 	// UI to indicate it's a dropdown vanishes, looks like an input, add a custom arrow
 	background: right 2px center / 13px var(--i-arrow-down-bold) var(--input-base) no-repeat;
 
+	// make select look like basic text with an arrow button next to the text
+	// a "discreet" select dropdown, added to handle a dense UI of multiple
+	// dropdowns e.g. Diagnosis 2
+	&.discreet {
+		background-color: transparent;
+		background-image:  var(--i-arrow-down-bold-blue);
+
+	}
+
 	&.inline {
 		width: auto;
 	}
 
 	&:disabled {
 		opacity: 0.4;
-	}
-
-	//&:default {
-	//	text: pink;
-	//}
-
-	@media print {
-		// Fixed Chrome print bug when selects have transparent background.
-		// See: https://code.google.com/p/chromium/issues/detail?id=282918
-		background: #fff !important;
 	}
 }

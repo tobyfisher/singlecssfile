@@ -1,8 +1,7 @@
 // ** Copyright (C) 2020, OpenEyes Foundation. This file is part of OpenEyes.
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
-button,
-.button {
+:is( button, .button) {
 	// Header Tab Buttons, make buttons work like tabs
 	// (e.g. Event Header, Theatre Diaries, etc
 	&.header-tab {
@@ -13,9 +12,7 @@ button,
 			filter: none;
 		}
 
-		&:hover,
-		&:focus,
-		&:active {
+		&:is(:hover, :focus, :active ) {
 			color: #fff;
 			background: var(--btn-blue);
 			.oe-i {
