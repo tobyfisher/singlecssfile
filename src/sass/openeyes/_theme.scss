@@ -234,6 +234,7 @@ $themedIcons: (
 	"collapse", "expand",
 	"comments", "comments-added", "comments-who", "comments-clear",
 	"copy-forward", "copy-over",
+	"cross-red",
 	"crying", "happy",
 	"direction-down", "direction-left", "direction-right", "direction-up",
 	"direction-down-circle", "direction-left-circle", "direction-right-circle", "direction-up-circle",
@@ -299,23 +300,29 @@ $themedIcons: (
 	"whiteboard",
 	"zoom-in", "zoom-out" );
 
+// red, orange green flavours of icons
+$rogIcons: (
+	"a11ty-green", "a11ty-orange", "a11ty-red",
+	"circle-blue", "circle-green", "circle-yellow", "circle-orange", "circle-red", "circle-grey",
+	"exclamation-green", "exclamation-orange", "exclamation-red",
+	"flag-green", "flag-orange", "flag-red", "flag-grey",
+	"mpr-green", "mpr-orange", "mpr-red",
+	"time-green", "time-orange", "time-red",
+	"triangle-blue", "triangle-green", "triangle-orange", "triangle-red", "triangle-grey"
+);
+
+
 // not available via <i>, only for internal CSS usage (backgrounds)
 $uiThemedIcons: ("face", "elem-rl-vertical", "event-elements", "btn-goto", "tab-more-h", "tab-whiteboard", "tab-print", "tab-trash", "watermark-patient",
 "nystagmus-arrow-h-1", "nystagmus-arrow-h-2", "nystagmus-arrow-h-3");
 
-
-// -- these work across both themes:
-$rgbIcons: ("circle-blue", "circle-green", "circle-yellow", "circle-orange", "circle-red", "circle-grey",
-"triangle-blue", "triangle-green", "triangle-orange", "triangle-red", "triangle-grey", "exclamation-green", "exclamation-orange", "exclamation-red",
-"flag-green", "flag-orange", "flag-red", "flag-grey", "mpr-green", "mpr-orange", "mpr-red", "a11ty-green", "a11ty-orange", "a11ty-red", "warning-none", "warning", "cross-red",);
-
-
+// universal icons
 $uiIcons: ("asterisk-white", "filter", "list-dot", "arrow-right-blue", "no-permissions-white",
 "search-white", "search", "shortcut-arrow", "sidebar-audit-trail", "sidebar-switcher-elements", "sidebar-switcher-events",
 "sidebar", "type-linebreak", "type-paragraph", "vc-move", "watermark-clinic");
 
+// eyedraw specific icons
 $edIcons: ("ed-backward", "ed-forward", "ed-info", "ed-lock", "ed-trash", "ed-zoom");
-
 
 // *********************
 // CSS custom properties
@@ -347,7 +354,7 @@ html.theme-dark {
 		--i-#{$icon}: url("../svg/v6/dark/i/#{$icon}.svg");
 	}
 
-	@each $icon in $rgbIcons {
+	@each $icon in $rogIcons {
 		--i-#{$icon}: url("../svg/v6/dark/i/#{$icon}.svg");
 	}
 
@@ -375,7 +382,7 @@ html.theme-light {
 		--i-#{$icon}: url("../svg/v6/light/i/#{$icon}.svg");
 	}
 
-	@each $icon in $rgbIcons {
+	@each $icon in $rogIcons {
 		--i-#{$icon}: url("../svg/v6/light/i/#{$icon}.svg");
 	}
 

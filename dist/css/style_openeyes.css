@@ -12,7 +12,7 @@
 * @license www.gnu.org/licenses/agpl-3.0.html The GNU Affero General Public License V3.0
 */
 
-/* 6.0.0 - Thu Jul 13 2023 09:24:56 GMT+0100 (British Summer Time) */ 
+/* 6.0.0 - Sat Jul 15 2023 16:43:25 GMT+0100 (British Summer Time) */ 
 /* WOFF2 for Chrome 26+, Opera 23+, Firefox 39+ */
 /* FONT: Roboto - latin_greek, local hosting */
 /* roboto-100 - latin_greek */
@@ -340,6 +340,7 @@ html.theme-dark {
   --i-comments-clear: url("../svg/v6/dark/i/comments-clear.svg");
   --i-copy-forward: url("../svg/v6/dark/i/copy-forward.svg");
   --i-copy-over: url("../svg/v6/dark/i/copy-over.svg");
+  --i-cross-red: url("../svg/v6/dark/i/cross-red.svg");
   --i-crying: url("../svg/v6/dark/i/crying.svg");
   --i-happy: url("../svg/v6/dark/i/happy.svg");
   --i-direction-down: url("../svg/v6/dark/i/direction-down.svg");
@@ -462,17 +463,15 @@ html.theme-dark {
   --i-whiteboard: url("../svg/v6/dark/i/whiteboard.svg");
   --i-zoom-in: url("../svg/v6/dark/i/zoom-in.svg");
   --i-zoom-out: url("../svg/v6/dark/i/zoom-out.svg");
+  --i-a11ty-green: url("../svg/v6/dark/i/a11ty-green.svg");
+  --i-a11ty-orange: url("../svg/v6/dark/i/a11ty-orange.svg");
+  --i-a11ty-red: url("../svg/v6/dark/i/a11ty-red.svg");
   --i-circle-blue: url("../svg/v6/dark/i/circle-blue.svg");
   --i-circle-green: url("../svg/v6/dark/i/circle-green.svg");
   --i-circle-yellow: url("../svg/v6/dark/i/circle-yellow.svg");
   --i-circle-orange: url("../svg/v6/dark/i/circle-orange.svg");
   --i-circle-red: url("../svg/v6/dark/i/circle-red.svg");
   --i-circle-grey: url("../svg/v6/dark/i/circle-grey.svg");
-  --i-triangle-blue: url("../svg/v6/dark/i/triangle-blue.svg");
-  --i-triangle-green: url("../svg/v6/dark/i/triangle-green.svg");
-  --i-triangle-orange: url("../svg/v6/dark/i/triangle-orange.svg");
-  --i-triangle-red: url("../svg/v6/dark/i/triangle-red.svg");
-  --i-triangle-grey: url("../svg/v6/dark/i/triangle-grey.svg");
   --i-exclamation-green: url("../svg/v6/dark/i/exclamation-green.svg");
   --i-exclamation-orange: url("../svg/v6/dark/i/exclamation-orange.svg");
   --i-exclamation-red: url("../svg/v6/dark/i/exclamation-red.svg");
@@ -483,12 +482,14 @@ html.theme-dark {
   --i-mpr-green: url("../svg/v6/dark/i/mpr-green.svg");
   --i-mpr-orange: url("../svg/v6/dark/i/mpr-orange.svg");
   --i-mpr-red: url("../svg/v6/dark/i/mpr-red.svg");
-  --i-a11ty-green: url("../svg/v6/dark/i/a11ty-green.svg");
-  --i-a11ty-orange: url("../svg/v6/dark/i/a11ty-orange.svg");
-  --i-a11ty-red: url("../svg/v6/dark/i/a11ty-red.svg");
-  --i-warning-none: url("../svg/v6/dark/i/warning-none.svg");
-  --i-warning: url("../svg/v6/dark/i/warning.svg");
-  --i-cross-red: url("../svg/v6/dark/i/cross-red.svg");
+  --i-time-green: url("../svg/v6/dark/i/time-green.svg");
+  --i-time-orange: url("../svg/v6/dark/i/time-orange.svg");
+  --i-time-red: url("../svg/v6/dark/i/time-red.svg");
+  --i-triangle-blue: url("../svg/v6/dark/i/triangle-blue.svg");
+  --i-triangle-green: url("../svg/v6/dark/i/triangle-green.svg");
+  --i-triangle-orange: url("../svg/v6/dark/i/triangle-orange.svg");
+  --i-triangle-red: url("../svg/v6/dark/i/triangle-red.svg");
+  --i-triangle-grey: url("../svg/v6/dark/i/triangle-grey.svg");
   --i-face: url("../svg/v6/dark/ui/face.svg");
   --i-elem-rl-vertical: url("../svg/v6/dark/ui/elem-rl-vertical.svg");
   --i-event-elements: url("../svg/v6/dark/ui/event-elements.svg");
@@ -606,6 +607,7 @@ html.theme-light {
   --i-comments-clear: url("../svg/v6/light/i/comments-clear.svg");
   --i-copy-forward: url("../svg/v6/light/i/copy-forward.svg");
   --i-copy-over: url("../svg/v6/light/i/copy-over.svg");
+  --i-cross-red: url("../svg/v6/light/i/cross-red.svg");
   --i-crying: url("../svg/v6/light/i/crying.svg");
   --i-happy: url("../svg/v6/light/i/happy.svg");
   --i-direction-down: url("../svg/v6/light/i/direction-down.svg");
@@ -728,17 +730,15 @@ html.theme-light {
   --i-whiteboard: url("../svg/v6/light/i/whiteboard.svg");
   --i-zoom-in: url("../svg/v6/light/i/zoom-in.svg");
   --i-zoom-out: url("../svg/v6/light/i/zoom-out.svg");
+  --i-a11ty-green: url("../svg/v6/light/i/a11ty-green.svg");
+  --i-a11ty-orange: url("../svg/v6/light/i/a11ty-orange.svg");
+  --i-a11ty-red: url("../svg/v6/light/i/a11ty-red.svg");
   --i-circle-blue: url("../svg/v6/light/i/circle-blue.svg");
   --i-circle-green: url("../svg/v6/light/i/circle-green.svg");
   --i-circle-yellow: url("../svg/v6/light/i/circle-yellow.svg");
   --i-circle-orange: url("../svg/v6/light/i/circle-orange.svg");
   --i-circle-red: url("../svg/v6/light/i/circle-red.svg");
   --i-circle-grey: url("../svg/v6/light/i/circle-grey.svg");
-  --i-triangle-blue: url("../svg/v6/light/i/triangle-blue.svg");
-  --i-triangle-green: url("../svg/v6/light/i/triangle-green.svg");
-  --i-triangle-orange: url("../svg/v6/light/i/triangle-orange.svg");
-  --i-triangle-red: url("../svg/v6/light/i/triangle-red.svg");
-  --i-triangle-grey: url("../svg/v6/light/i/triangle-grey.svg");
   --i-exclamation-green: url("../svg/v6/light/i/exclamation-green.svg");
   --i-exclamation-orange: url("../svg/v6/light/i/exclamation-orange.svg");
   --i-exclamation-red: url("../svg/v6/light/i/exclamation-red.svg");
@@ -749,12 +749,14 @@ html.theme-light {
   --i-mpr-green: url("../svg/v6/light/i/mpr-green.svg");
   --i-mpr-orange: url("../svg/v6/light/i/mpr-orange.svg");
   --i-mpr-red: url("../svg/v6/light/i/mpr-red.svg");
-  --i-a11ty-green: url("../svg/v6/light/i/a11ty-green.svg");
-  --i-a11ty-orange: url("../svg/v6/light/i/a11ty-orange.svg");
-  --i-a11ty-red: url("../svg/v6/light/i/a11ty-red.svg");
-  --i-warning-none: url("../svg/v6/light/i/warning-none.svg");
-  --i-warning: url("../svg/v6/light/i/warning.svg");
-  --i-cross-red: url("../svg/v6/light/i/cross-red.svg");
+  --i-time-green: url("../svg/v6/light/i/time-green.svg");
+  --i-time-orange: url("../svg/v6/light/i/time-orange.svg");
+  --i-time-red: url("../svg/v6/light/i/time-red.svg");
+  --i-triangle-blue: url("../svg/v6/light/i/triangle-blue.svg");
+  --i-triangle-green: url("../svg/v6/light/i/triangle-green.svg");
+  --i-triangle-orange: url("../svg/v6/light/i/triangle-orange.svg");
+  --i-triangle-red: url("../svg/v6/light/i/triangle-red.svg");
+  --i-triangle-grey: url("../svg/v6/light/i/triangle-grey.svg");
   --i-face: url("../svg/v6/light/ui/face.svg");
   --i-elem-rl-vertical: url("../svg/v6/light/ui/elem-rl-vertical.svg");
   --i-event-elements: url("../svg/v6/light/ui/event-elements.svg");
@@ -862,7 +864,7 @@ html.theme-light {
 html {
   background: var(--bg-html, #000);
   color: var(--txt-base, #fff);
-  font: 400 16px/1.4 "Roboto", Helvetica, Arial, sans-serif;
+  font: 400 16px/1.4 "Roboto", system-ui;
 }
 
 body.open-eyes {
@@ -1829,6 +1831,18 @@ body.open-eyes {
 }
 .oe-i.mpr-green {
   background-image: var(--i-mpr-green);
+  opacity: 1;
+}
+.oe-i.time-red {
+  background-image: var(--i-time-red);
+  opacity: 1;
+}
+.oe-i.time-orange {
+  background-image: var(--i-time-orange);
+  opacity: 1;
+}
+.oe-i.time-green {
+  background-image: var(--i-time-green);
   opacity: 1;
 }
 .oe-i.exclamation-green {
@@ -13087,83 +13101,102 @@ table.inj-mgmt-previous tbody td:last-child {
   max-height: 50vh;
 }
 
-.element .diag,
-.element .diag-lat {
+.diag-mgmt {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 4px;
+}
+.diag-mgmt .oe-date,
+.diag-mgmt .oe-i {
+  height: 24px;
+  align-items: center;
+}
+.diag-mgmt.sides .right,
+.diag-mgmt.sides .left {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.diag-mgmt.sides .right {
+  border-right: 2px dotted var(--gui-line);
+  padding: 0 1px 0 0;
+}
+.diag-mgmt.sys {
+  justify-content: center;
+}
+.diag-mgmt.sys .unsided {
+  flex: 1 1 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 400px;
+}
+
+.diag-view,
+.diag-lat {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 5px;
 }
-.element .diag-user {
-  padding: 0 0 0 10px;
-}
-.element .diag-actions {
+
+.diag-actions {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   flex-wrap: nowrap;
-  width: 100px;
+  width: 80px;
 }
-.element .diag-mgmt {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 4px;
-}
-.element .diag-mgmt.sides .right,
-.element .diag-mgmt.sides .left {
-  flex: 1 1 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.element .diag-mgmt.sides .right {
-  border-right: 2px solid var(--gui-line);
-}
-.element .diag-mgmt .diag-state,
-.element .diag-mgmt .state-change,
-.element .diag-mgmt .review {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.element .diag-mgmt .diag-state {
+.diag-actions .oe-i {
   flex: 1 1 0;
 }
-.element .diag-mgmt .state-notes {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 0 0 0 10px;
-}
-.element .diag-mgmt .state-notes .state {
-  margin: 3px 8px 3px 1px;
-}
-.element .diag-mgmt .state-notes button {
-  padding: 0 2px;
-}
-.element .diag-mgmt .state-change {
-  gap: 5px;
-}
-.element .diag-mgmt .state-review {
-  gap: 10px;
-}
-.element .diag-mgmt .diag-record .by-who {
-  display: inline-block;
-  margin: 0 0 0 5px;
-}
-.element .diag-mgmt .diag-record .by-who small {
-  opacity: 0.5;
-}
-.element .diag-mgmt .diag-date {
+
+.diag-mgmt .diag-date {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100px;
-  margin: 0 1px;
 }
-.element .diag-mgmt .diag-date input[type=date] {
+.diag-mgmt .diag-date input[type=date] {
+  width: 100%;
+}
+
+.diag-mgmt .diag-edit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 0 0 0 10px;
+}
+
+.diag-mgmt .diag-review {
+  flex: 1 1 0;
+  min-height: 24px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  padding: 0 0 0 8px;
+}
+
+.diag-mgmt .diag-status {
+  flex: 1 1 0;
+  display: grid;
+  grid: 24px 1fr/1fr 1fr 28px;
+  margin: 0 5px 0 0;
+  max-width: 280px;
+}
+.diag-mgmt .diag-status select {
+  width: 95%;
+}
+.diag-mgmt .diag-status .status-notes {
+  grid-column: auto/span 3;
+  padding: 5px 0;
+}
+.diag-mgmt .diag-status .status-notes input {
   width: 100%;
 }
 
