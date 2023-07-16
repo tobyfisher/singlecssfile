@@ -44,8 +44,7 @@
 	// lists
 	// 'filter-list' is the latest one
 	ul {
-		&:not(.oe-multi-select),
-		&:not(.filter-list){
+		&:not(.oe-multi-select, .filter-list){
 			margin: 10px 0;
 
 			li {
@@ -63,11 +62,9 @@
 
 	table.standard {
 		margin: 0 0;
-
 		// for filters
 		// 'normal-text' is a bit weird renamed it to match Analytics
-		&.custom-filters,
-		&.normal-text {
+		&:is(.custom-filters, .normal-text) {
 			tbody {
 				td {
 					@include font-size(12);

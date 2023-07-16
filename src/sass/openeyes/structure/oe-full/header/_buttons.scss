@@ -5,7 +5,7 @@
 
 .oe-full-header {
 	// create 'tab' buttons (like Event Header)
-	button, .button {
+	:is(button, .button) {
 		vertical-align: top; // overwrite default 'bottom' to fix alignment issues
 		height:$oe-event-header-height;
 		padding:0 16px;

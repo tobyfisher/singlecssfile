@@ -39,9 +39,7 @@
 	// --------------------------------------- Restrict Widths
 
 	// 2 fix widths to better handle complex data layouts in SEM and lightning viewer
-	.event-header,
-	.oe-lightning-viewer,
-	.main-event {
+	:is(.event-header, .oe-lightning-viewer, .main-event) {
 		width: 100%; // $oe-event-main-default-width;
 
 		// must allow space for the hotlist being fixed
@@ -65,9 +63,7 @@
 	// full width header and content allows for the 
 	// hotlist panel which is fixed at large resolutions. 
 	// JS controls the fixing: fixed at 1800px;
-	.oe-full-header,
-	.oe-full-content,
-	.oe-allow-for-fixing-hotlist {
+	:is(.oe-full-header, .oe-full-content, .oe-allow-for-fixing-hotlist) {
 		// "oe-allow-fixing-hotlist" - is probably now redundant
 		// however, it might be used somewhere in production! (this needs reviewing)
 		// -
@@ -93,8 +89,7 @@
 
 	// Home & Whiteboard
 	// Content covers: "pageheader" & "main"
-	.oe-home,
-	.oe-whiteboard {
+	:is(.oe-home, .oe-whiteboard) {
 		grid-area: 2 / 1 / 4 / 3;
 		overflow-y: auto;
 	}
@@ -125,14 +120,12 @@
 	// --------------------------------------- + OEscape, Analytics
 	// OE Full Width, OEscape, Analytics
 	// full width header
-	.oescape-header,
-	.analytics-header {
+	:is(.oescape-header, .analytics-header) {
 		grid-area: 2 / 1 / 3 / 3;
 	}
 
 	// & full width content area
-	.oescape,
-	.oe-analytics {
+	:is(.oescape, .oe-analytics) {
 		grid-area: 3 / 1 / 4 / 3;
 		overflow-y: auto;
 	}
