@@ -56,8 +56,7 @@ ul.multi-filter-list {
 			opacity: $oe-icon-opacity;
 		}
 
-		&:hover,
-		&:focus {
+		&:is( :hover, :focus ) {
 			background-color: var(--btn-blue);
 			color:#fff;
 			&::after {

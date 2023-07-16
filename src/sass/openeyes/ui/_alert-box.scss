@@ -28,15 +28,12 @@
 	&.success {
 		background:var(--color-green);
 	}
-	
-	&.alert,
-	&.issue {
+
+	&:is(.alert, .issue) {
 		background:var(--color-orange);
 	}
-	
-	&.warning,
-	&.error, 
-	&.injection-warning  {
+
+	&:is(.warning, .error, .injection-warning){
 		background:var(--color-red);
 	}
 	
@@ -89,8 +86,7 @@
 		background-size:17px;
 		padding-right:30px; // allow for the background icon
 
-		&:focus,
-		&:hover {
+		&:is(:focus, :hover) {
 			background-color:var(--btn-blue-hint);
 		}
 	}

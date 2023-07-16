@@ -3133,7 +3133,7 @@ a.selected {
   align-self: flex-end;
 }
 
-input, textarea, select {
+:is(input, textarea, select) {
   border: 0;
   outline: none;
   font-family: inherit;
@@ -3146,13 +3146,13 @@ input, textarea, select {
   color: var(--input-text);
   background-color: var(--input-base);
 }
-input.default-val, textarea.default-val, select.default-val {
+:is(input, textarea, select).default-val {
   outline: 2px solid var(--color-green);
 }
-input.prefilled, textarea.prefilled, select.prefilled {
+:is(input, textarea, select).prefilled {
   outline: 2px solid var(--color-orange);
 }
-input:focus-visible, textarea:focus-visible, select:focus-visible {
+:is(input, textarea, select):focus-visible {
   outline: 1px dotted var(--input-focus-outline);
   outline-offset: 1px;
 }
@@ -3707,11 +3707,11 @@ tbody tr.divider td {
 .oddeven-rows tbody tr:nth-child(odd) {
   background: var(--bg-title);
 }
-.clickable-rows tbody tr:hover, .clickable-rows tbody tr:focus-within, tbody tr.clickable:hover, tbody tr.clickable:focus-within {
+.clickable-rows tbody tr:is(:hover, :focus-within), tbody tr.clickable:is(:hover, :focus-within) {
   cursor: pointer;
   background: var(--btn-base-light);
 }
-.highlight-rows tbody tr:hover, .highlight-rows tbody tr:focus-within {
+.highlight-rows tbody tr:is(:hover, :focus-within) {
   background: var(--bg-hover-row);
 }
 tbody tr.selected-row {
@@ -3784,7 +3784,7 @@ table .pagination {
   display: inline-block;
   padding: 1px 4px;
 }
-.pagination .pagination-pages a:hover, .pagination .pagination-pages a:focus {
+.pagination .pagination-pages a:is(:hover, :focus) {
   outline: 1px dotted var(--input-focus-outline);
 }
 .pagination .pagination-pages a.selected {
@@ -3846,7 +3846,7 @@ a.column-sort {
 a.column-sort.descend {
   background-image: var(--i-direction-down);
 }
-a.column-sort:hover, a.column-sort:focus, a.column-sort.active {
+a.column-sort:is(:hover, :focus, .active) {
   opacity: 1;
 }
 
@@ -4000,17 +4000,13 @@ fieldset.btn-list label .li {
   color: var(--btn-text);
   background: var(--btn-base);
 }
-fieldset.btn-list label > input[type=radio],
-fieldset.btn-list label > input[type=checkbox] {
+fieldset.btn-list label > :is(input[type=radio], input[type=checkbox]) {
   display: none;
 }
-fieldset.btn-list label > input[type=radio] + .li:hover, fieldset.btn-list label > input[type=radio] + .li:focus,
-fieldset.btn-list label > input[type=checkbox] + .li:hover,
-fieldset.btn-list label > input[type=checkbox] + .li:focus {
+fieldset.btn-list label > :is(input[type=radio], input[type=checkbox]) + .li:is(:hover, :focus) {
   background: var(--btn-blue);
 }
-fieldset.btn-list label > input[type=radio]:checked + .li,
-fieldset.btn-list label > input[type=checkbox]:checked + .li {
+fieldset.btn-list label > :is(input[type=radio], input[type=checkbox]):checked + .li {
   color: var(--btn-text-active);
   background: var(--btn-blue-active);
 }
@@ -4053,11 +4049,11 @@ ul.multi-filter-list li::after {
   background: center/11px url("../svg/v6/dark/i/remove-circle.svg") no-repeat;
   opacity: 0.5;
 }
-ul.multi-filter-list li:hover, ul.multi-filter-list li:focus {
+ul.multi-filter-list li:is(:hover, :focus) {
   background-color: var(--btn-blue);
   color: #fff;
 }
-ul.multi-filter-list li:hover::after, ul.multi-filter-list li:focus::after {
+ul.multi-filter-list li:is(:hover, :focus)::after {
   opacity: 1;
   background-image: url("../svg/v6/dark/i/remove-circle.svg");
 }
@@ -4093,10 +4089,10 @@ ul.oe-multi-select li {
 .alert-box.success {
   background: var(--color-green);
 }
-.alert-box.alert, .alert-box.issue {
+.alert-box:is(.alert, .issue) {
   background: var(--color-orange);
 }
-.alert-box.warning, .alert-box.error, .alert-box.injection-warning {
+.alert-box:is(.warning, .error, .injection-warning) {
   background: var(--color-red);
 }
 .alert-box.patient {
@@ -4136,7 +4132,7 @@ ul.oe-multi-select li {
   background-size: 17px;
   padding-right: 30px;
 }
-.alert-box.dismissible:focus, .alert-box.dismissible:hover {
+.alert-box.dismissible:is(:focus, :hover) {
   background-color: var(--btn-blue-hint);
 }
 
@@ -4221,12 +4217,12 @@ ul.oe-multi-select li {
   background: center/11px var(--i-remove-circle) no-repeat;
   opacity: 0.5;
 }
-.auto-alert.dismissible:focus, .auto-alert.dismissible:hover {
+.auto-alert.dismissible:is(:focus, :hover) {
   color: #fff;
   background-color: var(--btn-blue-hint);
   border-color: var(--txt-light);
 }
-.auto-alert.dismissible:focus::after, .auto-alert.dismissible:hover::after {
+.auto-alert.dismissible:is(:focus, :hover)::after {
   opacity: 1;
   background-image: url("../svg/v6/dark/i/remove-circle.svg");
 }
@@ -12601,11 +12597,11 @@ table.virtual-clinic tbody .clinic-info table tr td, table.virtual-clinic tbody 
 .element table.label-value.no-lines tr {
   border-bottom: none;
 }
-.element table.clickable-rows tbody tr:hover, .element table.clickable-rows tbody tr:active, .element table.clickable-rows tbody tr:focus {
+.element table.clickable-rows tbody tr:is(:hover, :active, :focus) {
   cursor: pointer;
   background: var(--btn-blue);
 }
-.element table.clickable-rows tbody tr:hover td, .element table.clickable-rows tbody tr:active td, .element table.clickable-rows tbody tr:focus td {
+.element table.clickable-rows tbody tr:is(:hover, :active, :focus) td {
   color: rgb(255, 255, 255);
 }
 .element table.clickable-rows tbody tr td {

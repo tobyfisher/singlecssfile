@@ -44,13 +44,11 @@ fieldset.btn-list {
 			background: var(--btn-base);
 		}
 		
-		> input[type="radio"],
-		> input[type="checkbox"] {
+		> :is(input[type="radio"], input[type="checkbox"]) {
 			display: none;
 			// CSS magic '+' next sibling! 
 			+ .li {
-				&:hover, 
-				&:focus {
+				&:is(:hover, :focus) {
 					background:var(--btn-blue);
 				}
 			}

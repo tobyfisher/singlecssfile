@@ -23,9 +23,7 @@ a.column-sort {
 		background-image: var(--i-direction-down) ;
 	}
 
-	&:hover,
-	&:focus,
-	&.active {
+	&:is(:hover, :focus, .active) {
 		opacity: 1;
 	}
 }

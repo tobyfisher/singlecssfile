@@ -107,8 +107,7 @@
 			opacity: 0.5;
 		}
 
-		&:focus,
-		&:hover {
+		&:is(:focus,:hover) {
 			color:#fff;
 			background-color: var(--btn-blue-hint);
 			border-color: var(--txt-light);

@@ -38,8 +38,7 @@ tbody {
 		// JS will handle the interaction but make the table rows look like buttons
 		.clickable-rows &,
 		&.clickable {
-			&:hover,
-			&:focus-within {
+			&:is(:hover, :focus-within) {
 				cursor: pointer;
 				background: var(--btn-base-light); // row is a big button
 			}
@@ -47,8 +46,7 @@ tbody {
 
 		// All table rows react to focus/hover to help with using the data
 		.highlight-rows & {
-			&:hover,
-			&:focus-within {
+			&:is(:hover, :focus-within) {
 				background: var(--bg-hover-row);
 			}
 		}

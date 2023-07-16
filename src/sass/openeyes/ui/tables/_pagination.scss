@@ -24,8 +24,7 @@
 			display:inline-block;
 			padding:1px 4px;
 
-			&:hover,
-			&:focus {
+			&:is(:hover, :focus) {
 				outline: 1px dotted var(--input-focus-outline);
 			}
 

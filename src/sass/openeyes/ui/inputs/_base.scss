@@ -4,7 +4,7 @@
 @use "openeyes/var" as *;
 @use "openeyes/mix" as *;
 
-input, textarea, select {
+:is(input, textarea, select) {
 	// override browser defaults:
 	border:0;
 	outline:none;
