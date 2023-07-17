@@ -29,8 +29,7 @@
 			//background: ;
 			cursor: pointer;
 
-			&:hover, &:active, &:focus,
-			&.selected {
+			&:is( :hover, :active, :focus, .selected ) {
 				background-color:var(--btn-blue-active);
 				color:#fff;
 			}

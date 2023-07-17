@@ -39,7 +39,8 @@
 						// i think this is only going to be required in this instance.
 						// so I'm leaving it here rather than adding it to all icons
 						opacity:0.25;
-						&:hover, &:focus, &:active {
+
+						&:is(:hover, :focus, :active) {
 							opacity:1;
 						}
 					}

@@ -37,8 +37,7 @@
 		// and shown in a popup
 		// CSS added AFTER JS. so hooking into the JS class
 		// but covered with normal CSS class as well.
-		.js-hotlist-comment-readonly,
-		.hotlist-comment-readonly {
+		:is(.js-hotlist-comment-readonly, .hotlist-comment-readonly ) {
 			font-style: italic;
 			font-weight: 300;
 			width: 105px;

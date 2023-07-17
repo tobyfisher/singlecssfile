@@ -52,8 +52,7 @@
 				padding: 0 0 0 0;
 			}
 
-			&:hover,
-			&:focus {
+			&:is(:hover,:focus) {
 				color: var(--txt-highlight);
 			}
 		}

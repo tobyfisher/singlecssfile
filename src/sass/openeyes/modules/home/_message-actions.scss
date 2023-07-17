@@ -58,8 +58,7 @@
 				}
 
 				// show user interaction
-				&:hover,
-				&:active {
+				&:is(:hover, :active ) {
 					color: var(--txt-highlight);
 					.unread {
 						color:var(--txt-invert);
@@ -115,9 +114,7 @@
 					padding:2px 0;
 					border-bottom: 1px dotted transparent;
 
-					&:hover,
-					&:focus,
-					&.selected {
+					&:is(:hover,:focus,.selected) {
 						color: var(--txt-base);
 						border-bottom-color:var(--txt-light);
 

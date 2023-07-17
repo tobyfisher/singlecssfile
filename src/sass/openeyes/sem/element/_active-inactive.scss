@@ -45,9 +45,7 @@
 			a {
 				color: var(--txt-hd);
 
-				&:hover,
-				&:focus,
-				&:active {
+				&:is(:hover, :focus, :active) {
 					color: var(--txt-highlight);
 				}
 			}

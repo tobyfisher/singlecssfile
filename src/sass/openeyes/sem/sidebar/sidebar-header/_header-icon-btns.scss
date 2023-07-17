@@ -28,15 +28,12 @@
 		}
 
 		// make like a button
-		&.active,
-		&.selected {
+		&:is(.active, .selected) {
 			color: rgb(255, 255, 255);
 			background-color: var(--btn-blue);
 		}
 
-		&:hover,
-		&:focus,
-		&:active {
+		&:is(:hover, :focus, :active) {
 			color: rgb(255, 255, 255);
 			background-color: var(--btn-blue-active);
 		}

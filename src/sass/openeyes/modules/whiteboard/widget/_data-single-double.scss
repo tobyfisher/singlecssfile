@@ -4,9 +4,7 @@
 @use "openeyes/var" as *;
 @use "openeyes/mix" as *;
 
-.data-single,
-.data-single-extra,
-.data-double-extra {
+:is(.data-single, .data-single-extra, .data-double-extra) {
 
 	.wb-data {
 		text-align: center;

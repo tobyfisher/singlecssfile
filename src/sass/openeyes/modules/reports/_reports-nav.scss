@@ -23,8 +23,7 @@ ul.reports-nav {
 			display: block;
 			padding: 3px 0 3px 3px;
 
-			&:hover, &:active, &:focus,
-			&.selected {
+			&:is(:hover, :active, :focus, .selected){
 				color: var(--btn-text);
 				background: var(--btn-blue); // themed
 			}

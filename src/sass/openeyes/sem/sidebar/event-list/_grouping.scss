@@ -59,8 +59,7 @@
 				}
 			}
 
-			&:hover,
-			&:active {
+			&:is(:hover, :active) {
 				color: var(--txt-base);
 			}
 		}

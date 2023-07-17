@@ -43,10 +43,7 @@
 			}
 
 			// hover actions for these states
-			&.available,
-			&.limited,
-			&.full,
-			&.patient-unavailable {
+			&:is(.available, .limited, .full, .patient-unavailable) {
 				&:hover, &:focus {
 					cursor: pointer;
 					color: rgb(255, 255, 255);

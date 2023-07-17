@@ -2,15 +2,13 @@
 // ** OpenEyes is free software; and is distributed, WITHOUT ANY WARRANTY under the terms of AGPL 3.0 licence.
 
 
-.event-header, 
-.event-footer-actions {
+:is(.event-header, .event-footer-actions) {
 	
 	// create 'tab' buttons in header
 	// they also use "header-tab" class which  
 	// is set in the default UI button class...
 	// this needs reviewing at some point!
-	button,
-	.button {
+	:is(button, .button) {
 		height:100%;
 		min-width:40px; // for icon only buttons
 		padding:0 14px;		

@@ -16,8 +16,7 @@
 		background:var(--input-base);
 		white-space: normal;
 
-		&:hover,
-		&:focus-within {
+		&:is(:hover, :focus-within) {
 			input {
 				opacity:1;
 			}

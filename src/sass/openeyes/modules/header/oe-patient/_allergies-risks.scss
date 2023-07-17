@@ -50,16 +50,12 @@
 		}
 
 		// js controlled interaction...
-		&.open,
-		&.active {
+		&:is(.open, .active) {
 			background: var(--btn-blue-hint);
 		}
 
 		// txt and icon
-		&.risk-warning,
-		&.no-risk,
-		&.open,
-		&.active {
+		&:is(.risk-warning, .no-risk, .open, .active) {
 			color: #fff;
 
 			&:after {

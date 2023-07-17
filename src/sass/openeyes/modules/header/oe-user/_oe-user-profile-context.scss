@@ -30,9 +30,7 @@
 			font-weight: var(--font-bold);
 			margin-left: 10px;
 
-			&:hover,
-			&:focus,
-			&:active {
+			&:is(:hover, :focus, :active) {
 				color: var(--txt-highlight);
 			}
 

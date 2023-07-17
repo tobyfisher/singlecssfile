@@ -5,13 +5,16 @@
 // OE Header - Patient
 
 .oe-patient {
-	
+
+
+
 	// icons buttons for...
-	.patient-quicklook, 
+	:is(
+	.patient-quicklook,
 	.patient-demographics, 
 	.patient-management,
 	.patient-local-edit,
-	.patient-extra {
+	.patient-extra ){
 		position:absolute;
 		padding:6px 8px; // increase icon hit-area
 		cursor:pointer;
@@ -76,9 +79,7 @@
 		right:-8px;
 		
 		.icon {
-			&:hover, 
-			&:focus, 
-			&:active {
+			&:is(:hover, :focus, :active ){
 				opacity: 1;
 			}
 			

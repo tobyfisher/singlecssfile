@@ -8,12 +8,13 @@
 // .form-group -|- <label>
 //              |- .element
 
+:is(
 .formio-component-select,
 .formio-component-radio,
 .formio-component-selectboxes,
 .formio-component-textarea,
 .formio-component-number,
-.formio-component-textField {
+.formio-component-textField ){
 	@include flex(flex-start, flex-start);
 
 	> label {

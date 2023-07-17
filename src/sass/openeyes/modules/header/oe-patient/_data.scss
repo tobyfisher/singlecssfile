@@ -15,9 +15,7 @@
 		line-height: 1; // reset here
 		
 		a {
-			&:hover, 
-			&:focus, 
-			&:active {
+			&:is(:hover, :focus, :active) {
 				color: var(--txt-active);
 			}
 		}

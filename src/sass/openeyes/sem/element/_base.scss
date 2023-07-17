@@ -31,8 +31,7 @@
 	border: 1px solid rgba(#fff, 0);
 	transition: border-color 0.2s ease-in; // animate
 
-	&:hover,
-	&:focus-within {
+	&:is(:hover, :focus-within) {
 		border-color: var(--input-focus-outline);
 
 		.element-header {

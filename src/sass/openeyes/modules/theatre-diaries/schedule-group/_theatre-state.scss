@@ -11,15 +11,15 @@
 			@include font-size(14);
 			margin: 0 0 10px 0;
 
-			.max-patients,
-			.minutes {
+			:is(.max-patients, .minutes) {
 				font-weight: var(--font-bold);
 			}
 
+			:is(
 			.procedure-count,
 			.overbooked,
 			.session-unavailable,
-			.max-patients {
+			.max-patients) {
 				margin: 3px 0 0 0;
 			}
 
